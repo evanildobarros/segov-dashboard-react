@@ -28,14 +28,21 @@ export const useStore = create((set, get) => ({
   setMunicipioId: (municipioId) => set({ municipioId }),
   setModo: (modo) => set({ modo }),
 
-  // Carregar dados do D1 via API
+  // Carrega dados únicos do D1 (remove duplicatas por IBGE)
   fetchMunicipios: async () => {
     try {
       const resp = await fetch('/api/municipios', { headers: { 'Cache-Control': 'no-cache' } });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const dados = await resp.json();
-      set({ municipios: dados.municipios || [], municipiosCarregados: true });
-      return dados.municipios || [];
+      // Remove duplicatas por ibge
+      const vistos = new Set();
+      const unicos = (dados.municipios || []).filter(m => {
+        if (vistos.has(m.ibge)) return false;
+        vistos.add(m.ibge);
+        return true;
+      });
+      set({ municipios: unicos, municipiosCarregados: true });
+      return unicos;
     } catch (e) {
       console.error('fetchMunicipios error:', e);
       set({ municipios: [], municipiosCarregados: true });
@@ -105,10 +112,48 @@ export const useStore = create((set, get) => ({
   setMapGrandeInstance: (mapInstance) => set({ mapGrandeInstance }),
   setGeoJSONData: (geoJSONData) => set({ geoJSONData }),
 
+  // Remove duplicata (soft-delete via flag, salva no D1)
+  removerDuplicata: async (ibge) => {
+    const { municipios } = get();
+    const novos = municipios.reduce((acc, m, idx, arr) => {
+      if (m.ibge !== ibge || idx === arr.findIndex(x => x.ibge === ibge)) {
+        acc.push(m);
+      }
+      return acc;
+    }, []);
+    const dados = {
+      metadata: {
+        total_municipios: novos.length,
+        total_obras: novos.reduce((sum, m) => sum + (m.total_obras || 0), 0),
+        total_braide: novos.filter(m => m.grupo === 'Braide').length,
+        total_orleans: novos.filter(m => m.grupo === 'Brandão').length,
+        gerado_em: new Date().toISOString(),
+        versao: '3.2 (admin-d1-dedup)'
+      },
+      municipios: novos
+    };
+    try {
+      const resp = await fetch('/api/municipios', {
+        method: 'POST', credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+      });
+      if (resp.ok) {
+        await get().fetchMunicipios();
+        return { success: true, removidos: municipios.length - novos.length };
+      }
+      throw new Error(`HTTP ${resp.status}`);
+    } catch (e) {
+      // Fallback localStorage
+      localStorage.setItem('dados_municipios_edited', JSON.stringify(dados));
+      set({ municipios: novos });
+      return { success: true, removidos: municipios.length - novos.length, offline: true };
+    }
+  },
+
   getMunicipiosFiltrados: () => {
     const { municipios, grupo, busca } = get();
     let lista = Array.isArray(municipios) ? municipios : [];
-
     if (grupo && grupo !== 'todos') {
       lista = lista.filter(m => m && m.grupo === grupo);
     }
@@ -168,3 +213,5 @@ export const useKPIs = () => {
 export const useMapInstance = () => useStore(state => state.mapInstance);
 export const useMapGrandeInstance = () => useStore(state => state.mapGrandeInstance);
 export const useGeoJSONData = () => useStore(state => state.geoJSONData);
+
+export const useRemoverDuplicata = () => useStore(state => state.removerDuplicata);
