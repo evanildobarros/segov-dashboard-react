@@ -1,9 +1,10 @@
-import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useStore } from './hooks/useStore';
+import { useStore, useAuth } from './hooks/useStore';
 import { Sidebar } from './components/Sidebar';
 import { Topbar } from './components/Topbar';
 import { FiltrosGlobais } from './components/FiltrosGlobais';
+import { BottomNav } from './components/BottomNav';
 import { DashboardPage } from './pages/Dashboard';
 import { MapaPoliticoPage } from './pages/MapaPolitico';
 import { MunicipiosPage } from './pages/Municipios';
@@ -12,9 +13,11 @@ import { RelatoriosPage } from './pages/Relatorios';
 import { AdminPage } from './pages/Admin';
 import { Login } from './pages/Login';
 import './App.css';
+import './index.css';
+import './styles/topbar-mobile.css';
 
 function ProtectedRoute({ children }) {
-  const { isAuthenticated, checkAuth } = useStore();
+  const { isAuthenticated, checkAuth } = useAuth();
   
   useEffect(() => {
     checkAuth();
@@ -28,7 +31,7 @@ function ProtectedRoute({ children }) {
 }
 
 function PublicRoute({ children }) {
-  const { isAuthenticated } = useStore();
+  const { isAuthenticated } = useAuth();
   
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;
@@ -38,41 +41,44 @@ function PublicRoute({ children }) {
 }
 
 function Layout() {
-  const { modo } = useStore();
+  const { isMobileMenuOpen, closeMobileMenu } = useStore();
+  const location = useLocation();
   
-  const isLogin = window.location.pathname === '/login';
+  const isLogin = location.pathname === '/login';
   
   if (isLogin) {
     return <Outlet />;
   }
   
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div className="app-layout">
       <Sidebar />
-      <div style={{ 
-        marginLeft: '232px', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        minHeight: '100vh',
-        background: '#f4f6f8'
-      }}>
+      {isMobileMenuOpen && (
+        <div 
+          className="sidebar-overlay"
+          onClick={closeMobileMenu}
+        />
+      )}
+      <div className="main-wrapper">
         <Topbar />
-        <main style={{ flex: 1, padding: '0 24px 24px' }}>
+        <main className="main-content">
           <FiltrosGlobais />
           <Outlet />
         </main>
+        <BottomNav />
       </div>
     </div>
   );
 }
 
 function App() {
-  const { initTema, checkAuth } = useStore();
+  const { initTema, checkAuth, fetchMunicipios } = useStore();
   
   useEffect(() => {
     initTema();
     checkAuth();
-  }, [initTema, checkAuth]);
+    fetchMunicipios(); // Carrega dados do D1 uma vez no mount
+  }, [initTema, checkAuth, fetchMunicipios]);
   
   return (
     <Routes>
@@ -91,3 +97,4 @@ function App() {
 }
 
 export default App;
+

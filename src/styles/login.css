@@ -1,0 +1,277 @@
+/* ============================================================
+   Sistema de Login — Dashboard SEGOV
+   Corrigido: logo, checkbox, inputs, alinhamento
+   ============================================================ */
+
+/* Overlay de Login — transição de fade */
+.login-overlay {
+  transition: opacity 0.5s ease;
+}
+.login-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Inputs — foco */
+.login-input-group input {
+  transition: all 0.3s ease;
+}
+.login-input-group input:focus {
+  border-color: #3498db;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.15);
+}
+.login-input-group input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Botão — hover/active */
+.login-btn {
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(52,152,219,0.3);
+}
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* Erro — mostra (sobrepõe .hidden do Tailwind) */
+.login-error.show {
+  display: block !important;
+}
+
+/* Botão de logout */
+.logout-btn {
+  background: rgba(231,76,60,0.15);
+  border: 1px solid rgba(231,76,60,0.25);
+  color: #e74c3c;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+.logout-btn:hover {
+  background: rgba(231,76,60,0.25);
+}
+
+/* Tema Light — ajustes no login */
+.theme-light .login-overlay {
+  background: linear-gradient(135deg, #e8ecf1 0%, #d5dbe3 100%) !important;
+}
+.theme-light .login-card {
+  background: rgba(255,255,255,0.95) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12) !important;
+}
+.theme-light .login-title { color: #1a1a2e !important; }
+.theme-light .login-subtitle { color: rgba(0,0,0,0.4) !important; }
+.theme-light .login-input-group input {
+  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.1) !important;
+  color: #1a1a2e !important;
+}
+.theme-light .login-input-group input:focus {
+  border-color: #2980b9;
+  background: rgba(0,0,0,0.06) !important;
+}
+.theme-light .login-remember { color: rgba(0,0,0,0.4); }
+.theme-light .login-footer { color: rgba(0,0,0,0.2); }
+.theme-light .login-footer span { color: rgba(0,0,0,0.3); }
+
+/* ============================================
+   CORRIGIDO: Logo, Checkbox, Inputs, Alinhamento
+   ============================================ */
+
+/* Logo — usar SVG inline em vez de emoji problemático */
+.login-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.login-logo svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Checkbox customizado */
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.login-remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+.login-remember label {
+  cursor: pointer;
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+}
+
+/* Inputs com melhor visibilidade */
+.login-input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login-input-group input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.login-input-group input:focus {
+  border-color: #3498db;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.15);
+}
+.login-input-group input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+.login-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Título e subtítulo */
+.login-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 8px;
+  text-align: center;
+}
+.login-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin: 0 0 32px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+.login-footer {
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  text-align: center;
+  margin-top: 24px;
+}
+.login-footer span {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Card de login — melhor visual */
+.login-card {
+  background: rgba(30,30,50,0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 50px 45px 40px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  max-width: 90vw;
+}
+
+/* Barra superior colorida */
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2980b9, #3498db, #2ecc71);
+}
+
+/* Erro de login */
+.login-error {
+  display: none;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #e74c3c;
+  background: rgba(231,76,60,0.15);
+  border: 1px solid rgba(231,76,60,0.3);
+}
+.login-error.show {
+  display: block;
+}
+
+/* Opções (checkbox) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+
+/* Botão principal */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(52,152,219,0.3);
+}
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 40px 24px 32px;
+    width: 100%;
+    max-width: 360px;
+  }
+  .login-title {
+    font-size: 20px;
+  }
+  .login-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

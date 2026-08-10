@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useStore } from '../hooks/useStore';
-import { Lock, User, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { useAuth } from '../hooks/useStore';
+import { Lock, AlertCircle, Eye, EyeOff } from 'lucide-react';
 
 export function Login() {
-  const { login, checkAuth } = useStore();
+  const { login, checkAuth } = useAuth();
   const [usuario, setUsuario] = useState('evanildobarros');
   const [senha, setSenha] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -22,30 +22,16 @@ export function Login() {
     setLoading(true);
     
     try {
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ usuario, senha })
-      });
+      // Chama a função login do useStore que já possui o fallback local
+      const res = await login(usuario, senha);
       
-      if (!res.ok) throw new Error('Auth endpoint not available');
-      
-      const data = await res.json();
-      if (data.ok) {
-        sessionStorage.setItem('segov_token', 'ok');
-        login({ name: usuario });
+      if (res && res.success) {
         return;
       }
-      setErro('Credenciais inválidas.');
-    } catch {
-      // Fallback local
-      if (usuario === 'evanildobarros' && senha === 'segov2026') {
-        sessionStorage.setItem('segov_token', 'ok');
-        login({ name: usuario });
-        return;
-      }
-      setErro('Credenciais inválidas.');
+      
+      setErro(res?.error || 'Credenciais inválidas.');
+    } catch (err) {
+      setErro('Erro de conexão com o servidor.');
     } finally {
       setLoading(false);
     }

@@ -1,0 +1,225 @@
+/* 
+  ESTILOS GLOBAIS DO DASHBOARD SEGOV-MA 
+  Refatoração Mobile-First & UX App
+*/
+
+:root {
+  --azul: #0b3c5d;
+  --azul2: #12567f;
+  --verde: #1b9e5a;
+  --dourado: #e8b923;
+  --vermelho: #c0392b;
+  --cinza: #f4f6f8;
+  --borda: #dde3ea;
+  --texto: #22313f;
+  --texto-secundario: #7a8a99;
+  --bg-card: #ffffff;
+  --sidebar-width: 232px;
+}
+
+[data-theme='dark'] {
+  --cinza: #1a1a2e;
+  --borda: rgba(255,255,255,0.1);
+  --texto: #ecf0f1;
+  --texto-secundario: #cbd5e1;
+  --bg-card: #242a3d;
+}
+
+body {
+  background-color: var(--cinza);
+  color: var(--texto);
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   LAYOUT BASE
+   ========================================================================== */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background: var(--cinza);
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  min-width: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-content {
+  flex: 1;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   SIDEBAR (Desktop & Mobile)
+   ========================================================================== */
+
+.app-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: var(--azul);
+  color: #cfe0ec;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ==========================================================================
+   TOPBAR
+   ========================================================================== */
+
+.app-topbar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--borda);
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   FILTROS GLOBAIS (UX Mobile)
+   ========================================================================== */
+
+.filtros-globais-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal no mobile */
+  padding: 4px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.filtros-globais-bar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filtros-busca-wrapper {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   GRIDS & CARDS
+   ========================================================================== */
+
+.dashboard-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.mapa-politico-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Cards Standard */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Breakpoints)
+   ========================================================================== */
+
+/* Tablets e Desktops Pequenos */
+@media (max-width: 1024px) {
+  .main-wrapper {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .app-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 10px 0 15px -5px rgba(0,0,0,0.1);
+  }
+
+  .mapa-politico-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 640px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  .app-topbar {
+    padding: 0 12px;
+  }
+
+  .dashboard-charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros-globais-bar {
+    flex-wrap: nowrap; /* Força scroll horizontal */
+    justify-content: flex-start;
+  }
+
+  .filtros-busca-wrapper {
+    display: none; /* Oculta busca no mobile para dar espaço aos chips, ou implementa ícone */
+  }
+
+  /* Ajuste de fontes mobile */
+  h2 { font-size: 18px !important; }
+  h3 { font-size: 14px !important; }
+}
+
+/* Ultra Mobile */
+@media (max-width: 400px) {
+  .app-topbar {
+    height: 56px;
+  }
+}

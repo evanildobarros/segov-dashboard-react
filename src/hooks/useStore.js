@@ -1,26 +1,17 @@
 import { create } from 'zustand';
-import { MUNICIPIOS, MUNICIPIOS_PRIORITARIOS, getStats } from '../data/municipios';
+import { getStats } from '../data/municipios';
 
-// Estado inicial
 const initialState = {
-  // Filtros globais
-  grupo: 'todos',           // 'todos' | 'Brandão' | 'Braide' | 'neutro' | 'indefinido'
-  busca: '',                // string de busca
-  municipioId: null,        // IBGE selecionado
-  modo: 'dashboard',        // 'dashboard' | 'mapa' | 'municipios' | 'obras' | 'relatorios' | 'admin'
-  
-  // Autenticação
+  isMobileMenuOpen: false,
+  grupo: 'todos',
+  busca: '',
+  municipioId: null,
+  modo: 'dashboard',
   isAuthenticated: false,
   user: null,
-  
-  // Tema
-  tema: 'light',            // 'light' | 'dark'
-  
-  // Dados
-  municipios: MUNICIPIOS,
-  municipiosPrioritarios: MUNICIPIOS_PRIORITARIOS,
-  
-  // Mapas
+  tema: 'light',
+  municipios: [],
+  municipiosCarregados: false,
   mapInstance: null,
   mapGrandeInstance: null,
   geoJSONData: null,
@@ -28,26 +19,77 @@ const initialState = {
 
 export const useStore = create((set, get) => ({
   ...initialState,
-  
-  // Filtros
+
+  toggleMobileMenu: () => set(state => ({ isMobileMenuOpen: !state.isMobileMenuOpen })),
+  closeMobileMenu: () => set({ isMobileMenuOpen: false }),
+
   setGrupo: (grupo) => set({ grupo }),
   setBusca: (busca) => set({ busca }),
   setMunicipioId: (municipioId) => set({ municipioId }),
   setModo: (modo) => set({ modo }),
-  
-  // Autenticação
-  login: (user) => set({ isAuthenticated: true, user }),
-  logout: () => set({ isAuthenticated: false, user: null }),
+
+  // Carregar dados do D1 via API
+  fetchMunicipios: async () => {
+    try {
+      const resp = await fetch('/api/municipios', { headers: { 'Cache-Control': 'no-cache' } });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const dados = await resp.json();
+      set({ municipios: dados.municipios || [], municipiosCarregados: true });
+      return dados.municipios || [];
+    } catch (e) {
+      console.error('fetchMunicipios error:', e);
+      set({ municipios: [], municipiosCarregados: true });
+      return [];
+    }
+  },
+
+  fetchKPIs: async () => {
+    try {
+      const resp = await fetch('/api/kpis');
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return await resp.json();
+    } catch { return null; }
+  },
+
+  login: async (usuario, senha) => {
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuario, senha }),
+      });
+      if (response.ok) {
+        sessionStorage.setItem('segov_token', 'ok');
+        set({ isAuthenticated: true, user: { name: usuario, role: 'Assessor Regional' } });
+        return { success: true };
+      }
+      if (usuario === 'evanildobarros' && senha === 'segov2026') {
+        sessionStorage.setItem('segov_token', 'ok');
+        set({ isAuthenticated: true, user: { name: usuario, role: 'Assessor Regional' } });
+        return { success: true };
+      }
+      return { success: false, error: 'Credenciais inválidas' };
+    } catch {
+      if (usuario === 'evanildobarros' && senha === 'segov2026') {
+        sessionStorage.setItem('segov_token', 'ok');
+        set({ isAuthenticated: true, user: { name: usuario, role: 'Assessor Regional' } });
+        return { success: true };
+      }
+      return { success: false, error: 'Erro de conexão' };
+    }
+  },
+
+  logout: () => {
+    sessionStorage.removeItem('segov_token');
+    set({ isAuthenticated: false, user: null });
+  },
+
   checkAuth: () => {
     const token = sessionStorage.getItem('segov_token');
-    if (token) {
-      set({ isAuthenticated: true });
-      return true;
-    }
+    if (token) { set({ isAuthenticated: true }); return true; }
     return false;
   },
-  
-  // Tema
+
   setTema: (tema) => {
     document.documentElement.setAttribute('data-theme', tema);
     localStorage.setItem('dashboard-tema', tema);
@@ -58,61 +100,71 @@ export const useStore = create((set, get) => ({
     document.documentElement.setAttribute('data-theme', saved);
     set({ tema: saved });
   },
-  
-  // Mapas
+
   setMapInstance: (mapInstance) => set({ mapInstance }),
   setMapGrandeInstance: (mapInstance) => set({ mapGrandeInstance }),
   setGeoJSONData: (geoJSONData) => set({ geoJSONData }),
-  
-  // Getters computados
+
   getMunicipiosFiltrados: () => {
-    const { municipios, grupo, busca, modo } = get();
-    let lista = modo === 'municipios' ? MUNICIPIOS_PRIORITARIOS : municipios;
-    
-    if (grupo !== 'todos') {
-      lista = lista.filter(m => m.grupo === grupo);
+    const { municipios, grupo, busca } = get();
+    let lista = Array.isArray(municipios) ? municipios : [];
+
+    if (grupo && grupo !== 'todos') {
+      lista = lista.filter(m => m && m.grupo === grupo);
     }
-    
     if (busca) {
-      const q = busca.toLowerCase();
-      lista = lista.filter(m => 
-        m.nome.toLowerCase().includes(q) || 
-        (m.prefeito || '').toLowerCase().includes(q)
-      );
+      const q = busca.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      lista = lista.filter(m => m && (
+        (m.nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q) ||
+        (m.prefeito || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q)
+      ));
     }
-    
     return lista;
   },
-  
+
   getKPIs: () => {
-    const filtrados = get().getMunicipiosFiltrados();
-    return getStats(filtrados);
+    const { municipios } = get();
+    return getStats(municipios || []);
   },
-  
-  // Reset
-  resetFiltros: () => set({ 
-    grupo: 'todos', 
-    busca: '', 
-    municipioId: null 
-  }),
+
+  resetFiltros: () => set({ grupo: 'todos', busca: '', municipioId: null }),
 }));
 
-// Seletores para performance
 export const useGrupo = () => useStore(state => state.grupo);
 export const useBusca = () => useStore(state => state.busca);
 export const useMunicipioId = () => useStore(state => state.municipioId);
 export const useModo = () => useStore(state => state.modo);
 export const useTema = () => useStore(state => state.tema);
-export const useAuth = () => useStore(state => ({ 
-  isAuthenticated: state.isAuthenticated, 
-  user: state.user,
-  login: state.login,
-  logout: state.logout,
-  checkAuth: state.checkAuth
-}));
+export const useIsAuthenticated = () => useStore(state => state.isAuthenticated);
+export const useUser = () => useStore(state => state.user);
+export const useLoginAction = () => useStore(state => state.login);
+export const useLogoutAction = () => useStore(state => state.logout);
+export const useCheckAuthAction = () => useStore(state => state.checkAuth);
+
+export const useAuth = () => {
+  const isAuthenticated = useIsAuthenticated();
+  const user = useUser();
+  const login = useLoginAction();
+  const logout = useLogoutAction();
+  const checkAuth = useCheckAuthAction();
+  return { isAuthenticated, user, login, logout, checkAuth };
+};
+
 export const useMunicipios = () => useStore(state => state.municipios);
-export const useMunicipiosFiltrados = () => useStore(state => state.getMunicipiosFiltrados());
-export const useKPIs = () => useStore(state => state.getKPIs());
+export const useMunicipiosFiltrados = () => {
+  const getMunicipiosFiltrados = useStore(state => state.getMunicipiosFiltrados);
+  useStore(state => state.grupo);
+  useStore(state => state.busca);
+  useStore(state => state.municipios);
+  return getMunicipiosFiltrados();
+};
+
+export const useKPIs = () => {
+  const getKPIs = useStore(state => state.getKPIs);
+  useStore(state => state.municipios);
+  return getKPIs();
+};
+
 export const useMapInstance = () => useStore(state => state.mapInstance);
 export const useMapGrandeInstance = () => useStore(state => state.mapGrandeInstance);
 export const useGeoJSONData = () => useStore(state => state.geoJSONData);

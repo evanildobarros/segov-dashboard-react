@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "gerado_em": "2026-08-08T14:19:41.042Z",
+    "gerado_em": "2026-08-09T19:35:45.413Z",
     "fonte": "municipios_217.js + dados_municipios.json (merged)",
-    "versao": "3.0",
+    "versao": "3.2 (admin-edits)",
     "total_municipios": 217,
-    "total_orleans": 11,
-    "total_braide": 8,
-    "total_neutro": 1,
-    "total_obras": 130,
-    "total_indefinido": 0,
+    "total_orleans": 179,
+    "total_braide": 14,
+    "total_neutro": 2,
+    "total_obras": 3099,
+    "total_indefinido": 22,
     "data_pesquisa": "30/07/2026",
     "prioritarios": 8,
     "com_dados_detalhados": 217
@@ -20,14 +20,28 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Benjamim de Oliveira"
+      "prefeito": "Benjamim de Oliveira",
+      "alinhamento": "",
+      "total_obras": 27,
+      "obras_em_andamento": 6,
+      "obras_entregues": 11
     },
     {
       "ibge": "2100105",
       "nome": "Afonso Cunha",
-      "grupo": "indefinido",
-      "prioritario": false,
-      "cor": "#BDC3C7"
+      "grupo": "Braide",
+      "prioritario": true,
+      "cor": "#E67E22",
+      "alinhamento": "Braide",
+      "total_obras": 9,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0,
+      "investimento_planner": "",
+      "prefeito": "",
+      "partido": "",
+      "detalhes": "",
+      "apoios_braide": 1,
+      "apoios_orleans": 0
     },
     {
       "ibge": "2100154",
@@ -36,7 +50,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Eliane Dias",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 2
     },
     {
       "ibge": "2100204",
@@ -44,7 +62,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Nivaldo Araújo"
+      "prefeito": "Nivaldo Araújo",
+      "alinhamento": "",
+      "total_obras": 17,
+      "obras_em_andamento": 0,
+      "obras_entregues": 4
     },
     {
       "ibge": "2100303",
@@ -52,7 +74,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Keldson Lima"
+      "prefeito": "Keldson Lima",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2100402",
@@ -60,7 +86,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Marton Pegeú"
+      "prefeito": "Marton Pegeú",
+      "alinhamento": "",
+      "total_obras": 17,
+      "obras_em_andamento": 2,
+      "obras_entregues": 0
     },
     {
       "ibge": "2100436",
@@ -70,14 +100,22 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 51,
       "pesquisa_braide": 49,
-      "prefeito": "Nilsilene"
+      "prefeito": "Nilsilene",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 1,
+      "obras_entregues": 4
     },
     {
       "ibge": "2100477",
       "nome": "Alto Alegre do Pindaré",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2100501",
@@ -85,7 +123,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Rubens Japonês"
+      "prefeito": "Rubens Japonês",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 3,
+      "obras_entregues": 0
     },
     {
       "ibge": "2100550",
@@ -93,7 +135,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Nelene da Costa Gomes (Nelene Gomes)"
+      "prefeito": "Nelene da Costa Gomes (Nelene Gomes)",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2100600",
@@ -101,7 +147,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Vanderly Miranda"
+      "prefeito": "Vanderly Miranda",
+      "alinhamento": "",
+      "total_obras": 19,
+      "obras_em_andamento": 1,
+      "obras_entregues": 5
     },
     {
       "ibge": "2100709",
@@ -109,7 +159,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Hélder Lopes Aragão"
+      "prefeito": "Hélder Lopes Aragão",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 0,
+      "obras_entregues": 5
     },
     {
       "ibge": "2100808",
@@ -118,7 +172,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Dr. Tânios",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2100832",
@@ -126,7 +184,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Açu"
+      "prefeito": "Açu",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 3,
+      "obras_entregues": 4
     },
     {
       "ibge": "2100873",
@@ -150,7 +212,7 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 2,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
       "populacao_estimada": null,
@@ -168,7 +230,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Neto Carvalho",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 37,
+      "obras_em_andamento": 2,
+      "obras_entregues": 20
     },
     {
       "ibge": "2100956",
@@ -177,7 +243,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Pedro Fernandes Ribeiro",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 22,
+      "obras_em_andamento": 7,
+      "obras_entregues": 8
     },
     {
       "ibge": "2101004",
@@ -185,16 +255,37 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Maria Muniz"
+      "prefeito": "Maria Muniz",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2101103",
       "nome": "Axixá",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
+      "grupo": "Braide",
+      "prioritario": true,
+      "cor": "#E67E22",
       "prefeito": "Roberta Barreto",
-      "equipamento_solicitado": "Retroescavadeira"
+      "partido": "MDB",
+      "instagram": "",
+      "email": "",
+      "telefone": "",
+      "site": "",
+      "total_liderancas": 1,
+      "apoios_orleans": 0,
+      "apoios_braide": 1,
+      "apoios_neutro": 0,
+      "alinhamento": "Braide",
+      "assessor": "Otávio",
+      "movimento": "grupo_braide_axixa_10ago2026",
+      "flag_estrategico": false,
+      "detalhes": "Prefeito(a) Roberta Barreto (MDB) - Declaração Braide em 10/08/2026",
+      "investimento_planner": "",
+      "total_obras": 25,
+      "obras_em_andamento": 7,
+      "obras_entregues": 7
     },
     {
       "ibge": "2101202",
@@ -204,7 +295,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 42.2,
       "pesquisa_braide": 40,
-      "prefeito": "José Roberto Costa Santos"
+      "prefeito": "José Roberto Costa Santos",
+      "alinhamento": "",
+      "total_obras": 32,
+      "obras_em_andamento": 3,
+      "obras_entregues": 7
     },
     {
       "ibge": "2101251",
@@ -213,7 +308,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Naila Gonçalo",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 0,
+      "obras_entregues": 5
     },
     {
       "ibge": "2101301",
@@ -223,7 +322,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 45.8,
       "pesquisa_braide": 50,
-      "prefeito": "Márcio Hominho"
+      "prefeito": "Márcio Hominho",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2101350",
@@ -233,7 +336,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 33.3,
       "pesquisa_braide": 66.7,
-      "prefeito": "Letícia Líbia Barros Costa"
+      "prefeito": "Letícia Líbia Barros Costa",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 4,
+      "obras_entregues": 2
     },
     {
       "ibge": "2101400",
@@ -241,7 +348,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Alan da Marissol"
+      "prefeito": "Alan da Marissol",
+      "alinhamento": "",
+      "total_obras": 28,
+      "obras_em_andamento": 4,
+      "obras_entregues": 12
     },
     {
       "ibge": "2101509",
@@ -251,7 +362,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 54,
       "pesquisa_braide": 34,
-      "prefeito": "Antônio Carlos"
+      "prefeito": "Antônio Carlos",
+      "alinhamento": "",
+      "total_obras": 27,
+      "obras_em_andamento": 2,
+      "obras_entregues": 11
     },
     {
       "ibge": "2101608",
@@ -259,7 +374,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Rigo Teles"
+      "prefeito": "Rigo Teles",
+      "alinhamento": "",
+      "total_obras": 27,
+      "obras_em_andamento": 7,
+      "obras_entregues": 12
     },
     {
       "ibge": "2101707",
@@ -267,7 +386,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Vinícius Vale"
+      "prefeito": "Vinícius Vale",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2101731",
@@ -275,7 +398,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Neném Pontes"
+      "prefeito": "Neném Pontes",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2101772",
@@ -283,7 +410,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Adilson da Silva Sousa"
+      "prefeito": "Adilson da Silva Sousa",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2101806",
@@ -294,7 +425,11 @@
       "pesquisa_orleans": 62.5,
       "pesquisa_braide": 37.5,
       "prefeito": "Rodrigo Coelho",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2101905",
@@ -304,7 +439,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 52,
       "pesquisa_braide": 48,
-      "prefeito": "Zé Martins"
+      "prefeito": "Zé Martins",
+      "alinhamento": "",
+      "total_obras": 17,
+      "obras_em_andamento": 3,
+      "obras_entregues": 5
     },
     {
       "ibge": "2101939",
@@ -312,7 +451,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Júnior Xavier"
+      "prefeito": "Júnior Xavier",
+      "alinhamento": "",
+      "total_obras": 1,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2101970",
@@ -336,9 +479,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 4,
       "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "obras_entregues": 1,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -352,7 +495,11 @@
       "nome": "Bom Jardim",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 2,
+      "obras_entregues": 4
     },
     {
       "ibge": "2102036",
@@ -362,21 +509,33 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 39.2,
       "pesquisa_braide": 54.9,
-      "prefeito": "Franklim Duarte"
+      "prefeito": "Franklim Duarte",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2102077",
       "nome": "Bom Lugar",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 4,
+      "obras_entregues": 2
     },
     {
       "ibge": "2102101",
       "nome": "Brejo",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 6,
+      "obras_entregues": 0
     },
     {
       "ibge": "2102150",
@@ -385,7 +544,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Geizianne da Conceição Costa",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2102200",
@@ -393,7 +556,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "André Augusto Keber Introvini"
+      "prefeito": "André Augusto Keber Introvini",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2102309",
@@ -401,14 +568,22 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Luciana Leocádio"
+      "prefeito": "Luciana Leocádio",
+      "alinhamento": "",
+      "total_obras": 15,
+      "obras_em_andamento": 2,
+      "obras_entregues": 7
     },
     {
       "ibge": "2102325",
       "nome": "Buriticupu",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2102358",
@@ -417,7 +592,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Tony Brandão dos Santos Sousa",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 2,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2102374",
@@ -425,7 +604,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "César Castro"
+      "prefeito": "César Castro",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 4,
+      "obras_entregues": 1
     },
     {
       "ibge": "2102408",
@@ -434,7 +617,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Rômulo Roberto Marques Nunes",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 15,
+      "obras_em_andamento": 4,
+      "obras_entregues": 5
     },
     {
       "ibge": "2102507",
@@ -443,7 +630,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Constâncio Alessanco Coelho de Souza",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 6,
+      "obras_entregues": 2
     },
     {
       "ibge": "2102556",
@@ -452,14 +643,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Fernando Bermuda",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2102606",
       "nome": "Cândido Mendes",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2102705",
@@ -467,7 +666,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "José Marinho dos Santos Barros"
+      "prefeito": "José Marinho dos Santos Barros",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 0
     },
     {
       "ibge": "2102754",
@@ -476,7 +679,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Abnadar Portela",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2102804",
@@ -486,7 +693,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 64,
       "pesquisa_braide": 36,
-      "prefeito": "Jayme Fonseca"
+      "prefeito": "Jayme Fonseca",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 3,
+      "obras_entregues": 2
     },
     {
       "ibge": "2102903",
@@ -511,9 +722,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "total_obras": 11,
+      "obras_em_andamento": 1,
+      "obras_entregues": 7,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -529,7 +740,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Gentil Neto",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 37,
+      "obras_em_andamento": 2,
+      "obras_entregues": 10
     },
     {
       "ibge": "2103109",
@@ -539,7 +754,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 50,
       "pesquisa_braide": 50,
-      "prefeito": "Danilo Moraes"
+      "prefeito": "Danilo Moraes",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 0,
+      "obras_entregues": 6
     },
     {
       "ibge": "2103125",
@@ -549,7 +768,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 66.7,
       "pesquisa_braide": 33.3,
-      "prefeito": "Fechinha"
+      "prefeito": "Fechinha",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2103158",
@@ -573,9 +796,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 2,
       "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "obras_entregues": 1,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -590,7 +813,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Júnior Garimpeiro"
+      "prefeito": "Júnior Garimpeiro",
+      "alinhamento": "",
+      "total_obras": 3,
+      "obras_em_andamento": 1,
+      "obras_entregues": 0
     },
     {
       "ibge": "2103208",
@@ -599,7 +826,11 @@
       "prioritario": false,
       "cor": "#E67E22",
       "pesquisa_orleans": 34.4,
-      "pesquisa_braide": 50
+      "pesquisa_braide": 50,
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 0,
+      "obras_entregues": 6
     },
     {
       "ibge": "2103257",
@@ -608,7 +839,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Eustáquio Sampaio",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 4,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2103307",
@@ -617,14 +852,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Chiquinho FC",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 20,
+      "obras_em_andamento": 0,
+      "obras_entregues": 6
     },
     {
       "ibge": "2103406",
       "nome": "Coelho Neto",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2103505",
@@ -634,15 +877,37 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 68.6,
       "pesquisa_braide": 27.5,
-      "prefeito": "Renato Santos"
+      "prefeito": "Renato Santos",
+      "alinhamento": "",
+      "total_obras": 55,
+      "obras_em_andamento": 3,
+      "obras_entregues": 37
     },
     {
       "ibge": "2103554",
       "nome": "Conceição do Lago-Açu",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
-      "prefeito": "Açu"
+      "grupo": "Braide",
+      "prioritario": true,
+      "cor": "#E67E22",
+      "prefeito": "Açu",
+      "partido": "PMDB",
+      "instagram": "",
+      "email": "",
+      "telefone": "",
+      "site": "",
+      "total_liderancas": 1,
+      "apoios_orleans": 0,
+      "apoios_braide": 1,
+      "apoios_neutro": 0,
+      "alinhamento": "Braide",
+      "assessor": "Otávio",
+      "movimento": "grupo_braide_lago_acu_10ago2026",
+      "flag_estrategico": false,
+      "detalhes": "Prefeito(a) Açu (PMDB) - Declaração Braide em 10/08/2026",
+      "investimento_planner": "",
+      "total_obras": 9,
+      "obras_em_andamento": 3,
+      "obras_entregues": 0
     },
     {
       "ibge": "2103604",
@@ -650,7 +915,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Edimar Vaqueiro"
+      "prefeito": "Edimar Vaqueiro",
+      "alinhamento": "",
+      "total_obras": 15,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2103703",
@@ -658,7 +927,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Aldo Luís Borges Lopes"
+      "prefeito": "Aldo Luís Borges Lopes",
+      "alinhamento": "",
+      "total_obras": 21,
+      "obras_em_andamento": 3,
+      "obras_entregues": 9
     },
     {
       "ibge": "2103752",
@@ -667,15 +940,37 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "José Gonçalves Lima (Zé Pequeno)",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 2,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2103802",
       "nome": "Dom Pedro",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
-      "prefeito": "Galego Mota"
+      "grupo": "Braide",
+      "prioritario": true,
+      "cor": "#E67E22",
+      "prefeito": "Galego Mota",
+      "partido": "PSL",
+      "instagram": "",
+      "email": "",
+      "telefone": "",
+      "site": "",
+      "total_liderancas": 1,
+      "apoios_orleans": 0,
+      "apoios_braide": 1,
+      "apoios_neutro": 0,
+      "alinhamento": "Braide",
+      "assessor": "Dom Pedro",
+      "movimento": "grupo_galego_mota_09ago2026",
+      "flag_estrategico": false,
+      "detalhes": "Prefeito Galego Mota (PSL) - Declaração Braide em 09/08/2026",
+      "investimento_planner": "",
+      "total_obras": 14,
+      "obras_em_andamento": 5,
+      "obras_entregues": 2
     },
     {
       "ibge": "2103901",
@@ -701,7 +996,7 @@
       "movimento": "",
       "flag_estrategico": true,
       "detalhes": "Novo prioritário 30/07/2026. 14 obras PLANNER (R$ 10,5M). População: 10.223 hab. IBGE/2022. Área: 317,494km². Fundação: 1º/Jan/1955. Região Timbiras/Microrregião Coelho Neto.",
-      "investimento_planner": "R$ 11.110.409,00",
+      "investimento_planner": "R$ 981.858.958,42",
       "total_obras": 14,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
@@ -719,7 +1014,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Simone Carneiro",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 3,
+      "obras_entregues": 2
     },
     {
       "ibge": "2104057",
@@ -729,7 +1028,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 38.9,
       "pesquisa_braide": 44.4,
-      "prefeito": "Léo Cunha"
+      "prefeito": "Léo Cunha",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 3,
+      "obras_entregues": 1
     },
     {
       "ibge": "2104073",
@@ -738,7 +1041,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Luiza Coutinho Macedo",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 17,
+      "obras_em_andamento": 6,
+      "obras_entregues": 4
     },
     {
       "ibge": "2104081",
@@ -746,7 +1053,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Raimunda do Josemar"
+      "prefeito": "Raimunda do Josemar",
+      "alinhamento": "",
+      "total_obras": 3,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2104099",
@@ -755,7 +1066,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Juceni Oliveira Silva",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2104107",
@@ -764,7 +1079,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Fernanda Lima Nogueira dos Santos",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 29,
+      "obras_em_andamento": 5,
+      "obras_entregues": 7
     },
     {
       "ibge": "2104206",
@@ -774,7 +1093,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 58.3,
       "pesquisa_braide": 29.2,
-      "prefeito": "Sebastião Costa"
+      "prefeito": "Sebastião Costa",
+      "alinhamento": "",
+      "total_obras": 4,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2104305",
@@ -782,7 +1105,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Márcio Heberte Viana Abreu"
+      "prefeito": "Márcio Heberte Viana Abreu",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2104404",
@@ -793,7 +1120,11 @@
       "pesquisa_orleans": 25,
       "pesquisa_braide": 75,
       "prefeito": "Suane Dias",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 6
     },
     {
       "ibge": "2104503",
@@ -802,7 +1133,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Antônia Leide Ferreira da Silva Oliveira",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 1,
+      "obras_entregues": 6
     },
     {
       "ibge": "2104552",
@@ -811,7 +1146,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Flávio Soares",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2104602",
@@ -819,7 +1158,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Chiquinho do Banco"
+      "prefeito": "Chiquinho do Banco",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 0
     },
     {
       "ibge": "2104628",
@@ -829,7 +1172,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 75,
       "pesquisa_braide": 20.8,
-      "prefeito": "Zezão"
+      "prefeito": "Zezão",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 5,
+      "obras_entregues": 3
     },
     {
       "ibge": "2104651",
@@ -837,7 +1184,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Daniel Sena"
+      "prefeito": "Daniel Sena",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 2,
+      "obras_entregues": 2
     },
     {
       "ibge": "2104677",
@@ -861,9 +1212,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 5,
       "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "obras_entregues": 3,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -877,7 +1228,11 @@
       "nome": "Graça Aranha",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 2,
+      "obras_entregues": 0
     },
     {
       "ibge": "2104800",
@@ -888,7 +1243,11 @@
       "pesquisa_orleans": 56.3,
       "pesquisa_braide": 37.5,
       "prefeito": "Dr. Gilson Guerreiro",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 1,
+      "obras_entregues": 4
     },
     {
       "ibge": "2104909",
@@ -912,9 +1271,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -945,9 +1304,9 @@
       "flag_estrategico": false,
       "detalhes": "Reconfirmado Braide em 03/08/2026 — prefeito Luís Fernando postou foto na Convenção Estadual PSD ao lado de Eduardo Braide. @luisfernandohc_",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "total_obras": 12,
+      "obras_em_andamento": 3,
+      "obras_entregues": 2,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -979,7 +1338,7 @@
       "movimento": "postou_nao_seguia",
       "flag_estrategico": true,
       "detalhes": "RECLASSIFICADO Braide->Orleans 29/07. Governador confirmou. Prefeito postou Convencao MDB com Orleans.",
-      "investimento_planner": "R$ 18.381.715,00",
+      "investimento_planner": "R$ 446.439.697,78",
       "total_obras": 23,
       "obras_em_andamento": 5,
       "obras_entregues": 2,
@@ -1005,7 +1364,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Aldenira Silva",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 4,
+      "obras_entregues": 3
     },
     {
       "ibge": "2105203",
@@ -1014,7 +1377,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "João Vitor Peixoto Moura Xavier (João Vitor Xavier)",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 1,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2105302",
@@ -1040,9 +1407,9 @@
       "flag_estrategico": true,
       "detalhes": "Prefeito Rildo Amaral (PSD) declarou apoio a Braide. Convenção PSD 03/08/2026.",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "total_obras": 40,
+      "obras_em_andamento": 3,
+      "obras_entregues": 14,
       "populacao_estimada": 256000,
       "eleitores": 180000,
       "contatos": {},
@@ -1056,7 +1423,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Júnior do Posto",
-      "equipamento_solicitado": "Trator agrícola de pneus"
+      "equipamento_solicitado": "Trator agrícola de pneus",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2105401",
@@ -1066,7 +1437,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 30,
       "pesquisa_braide": 56.7,
-      "prefeito": "Mirim"
+      "prefeito": "Mirim",
+      "alinhamento": "",
+      "total_obras": 27,
+      "obras_em_andamento": 6,
+      "obras_entregues": 6
     },
     {
       "ibge": "2105427",
@@ -1075,7 +1450,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Leny Paula Firmiano Aguiar (Paula do Quininha)",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 4,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2105450",
@@ -1084,14 +1463,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Léo do Banco",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 4,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2105476",
       "nome": "Jenipapo dos Vieiras",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2105500",
@@ -1116,8 +1503,8 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
+      "total_obras": 9,
+      "obras_em_andamento": 2,
       "obras_entregues": 0,
       "populacao_estimada": null,
       "eleitores": null,
@@ -1133,7 +1520,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Raimundo Zuca"
+      "prefeito": "Raimundo Zuca",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 4,
+      "obras_entregues": 1
     },
     {
       "ibge": "2105658",
@@ -1144,7 +1535,11 @@
       "pesquisa_orleans": 41.7,
       "pesquisa_braide": 25,
       "prefeito": "José Ricardo de Almeida Ribeiro",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 2,
+      "obras_entregues": 0
     },
     {
       "ibge": "2105708",
@@ -1153,7 +1548,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Maura Jorge",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 26,
+      "obras_em_andamento": 4,
+      "obras_entregues": 6
     },
     {
       "ibge": "2105807",
@@ -1162,7 +1561,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Ataíde Miranda",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 4,
+      "obras_entregues": 3
     },
     {
       "ibge": "2105906",
@@ -1186,7 +1589,7 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 6,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
       "populacao_estimada": null,
@@ -1206,7 +1609,11 @@
       "pesquisa_orleans": 75,
       "pesquisa_braide": 20.8,
       "prefeito": "Nilton Ribeiro",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 1,
+      "obras_entregues": 8
     },
     {
       "ibge": "2105948",
@@ -1214,7 +1621,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Didi Mota"
+      "prefeito": "Didi Mota",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2105963",
@@ -1222,7 +1633,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Néres Policarpo"
+      "prefeito": "Néres Policarpo",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 2,
+      "obras_entregues": 2
     },
     {
       "ibge": "2105989",
@@ -1231,7 +1646,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Itaires Tratorzão",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2106003",
@@ -1239,7 +1658,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Jailson Fausto Alves"
+      "prefeito": "Jailson Fausto Alves",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 3,
+      "obras_entregues": 1
     },
     {
       "ibge": "2106102",
@@ -1247,7 +1670,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Germano Martins"
+      "prefeito": "Germano Martins",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2106201",
@@ -1257,7 +1684,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 50,
       "pesquisa_braide": 33.3,
-      "prefeito": "Isaque Cirino"
+      "prefeito": "Isaque Cirino",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2106300",
@@ -1265,7 +1696,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Nonato Carvalho"
+      "prefeito": "Nonato Carvalho",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 2,
+      "obras_entregues": 2
     },
     {
       "ibge": "2106326",
@@ -1276,7 +1711,11 @@
       "pesquisa_orleans": 53.8,
       "pesquisa_braide": 46.2,
       "prefeito": "Ruzinaldo Guimarães de Melo",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 3,
+      "obras_entregues": 1
     },
     {
       "ibge": "2106359",
@@ -1285,21 +1724,33 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Neném Machado",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2106375",
       "nome": "Maranhãozinho",
-      "grupo": "indefinido",
+      "grupo": "Braide",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#E67E22",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2106409",
       "nome": "Mata Roma",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 5,
+      "obras_entregues": 2
     },
     {
       "ibge": "2106508",
@@ -1307,7 +1758,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Nilton Everton"
+      "prefeito": "Nilton Everton",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 6,
+      "obras_entregues": 5
     },
     {
       "ibge": "2106607",
@@ -1331,9 +1786,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
+      "total_obras": 6,
       "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "obras_entregues": 1,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},
@@ -1365,7 +1820,7 @@
       "movimento": "",
       "flag_estrategico": false,
       "detalhes": "📅 AGENDA 28/07/2026: Governador esteve no município — Assinatura OS MA-332 (R$ 66,48M) + Entrega Colégio Militar 2 de Julho (96% execução). Dossiê completo criado em 26/07/2026.",
-      "investimento_planner": "R$ 6.221.924,00",
+      "investimento_planner": "R$ 5.137.897,97",
       "total_obras": 8,
       "obras_em_andamento": 2,
       "obras_entregues": 1,
@@ -1383,7 +1838,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "José Augusto Cardoso Caldas (Zé Augusto)"
+      "prefeito": "José Augusto Cardoso Caldas (Zé Augusto)",
+      "alinhamento": "",
+      "total_obras": 3,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2106706",
@@ -1391,7 +1850,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Maria Domingas Gomes Cabral Santana"
+      "prefeito": "Maria Domingas Gomes Cabral Santana",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 3,
+      "obras_entregues": 2
     },
     {
       "ibge": "2106755",
@@ -1400,7 +1863,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Ivaldo",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2106805",
@@ -1410,7 +1877,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 62.5,
       "pesquisa_braide": 37.5,
-      "prefeito": "Deyvison do Posto"
+      "prefeito": "Deyvison do Posto",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2106904",
@@ -1419,7 +1890,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "pesquisa_orleans": 53.3,
-      "pesquisa_braide": 33.3
+      "pesquisa_braide": 33.3,
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2107001",
@@ -1427,7 +1902,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Domingos França"
+      "prefeito": "Domingos França",
+      "alinhamento": "",
+      "total_obras": 3,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2107100",
@@ -1437,7 +1916,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 38.8,
       "pesquisa_braide": 57.1,
-      "prefeito": "Paraíba"
+      "prefeito": "Paraíba",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2107209",
@@ -1446,7 +1929,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Jones Braga",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 1,
+      "obras_entregues": 5
     },
     {
       "ibge": "2107258",
@@ -1456,7 +1943,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 75,
       "pesquisa_braide": 25,
-      "prefeito": "Mariana Pinto Ribeiro Macedo (Dra. Mariana)"
+      "prefeito": "Mariana Pinto Ribeiro Macedo (Dra. Mariana)",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 1,
+      "obras_entregues": 8
     },
     {
       "ibge": "2107308",
@@ -1465,7 +1956,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Daniel Castro",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2107357",
@@ -1475,7 +1970,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 37.5,
       "pesquisa_braide": 50,
-      "prefeito": "Ary Menezes"
+      "prefeito": "Ary Menezes",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2107407",
@@ -1484,7 +1983,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Vaval Gomes",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2107456",
@@ -1492,7 +1995,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Valdenir Diniz"
+      "prefeito": "Valdenir Diniz",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 3,
+      "obras_entregues": 4
     },
     {
       "ibge": "2107506",
@@ -1500,7 +2007,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Fred Maia"
+      "prefeito": "Fred Maia",
+      "alinhamento": "",
+      "total_obras": 27,
+      "obras_em_andamento": 2,
+      "obras_entregues": 13
     },
     {
       "ibge": "2107605",
@@ -1509,7 +2020,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Edson Alvorada",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2107704",
@@ -1517,7 +2032,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Vanessa Furtado"
+      "prefeito": "Vanessa Furtado",
+      "alinhamento": "",
+      "total_obras": 15,
+      "obras_em_andamento": 0,
+      "obras_entregues": 5
     },
     {
       "ibge": "2107803",
@@ -1527,7 +2046,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 74,
       "pesquisa_braide": 22,
-      "prefeito": "Juvenal Francisco Carvalho e Silva"
+      "prefeito": "Juvenal Francisco Carvalho e Silva",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2107902",
@@ -1535,7 +2058,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Chicão da Parabólica"
+      "prefeito": "Chicão da Parabólica",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 2,
+      "obras_entregues": 5
     },
     {
       "ibge": "2108009",
@@ -1544,14 +2071,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Enoque Ferreira Mota Neto (Enoque Mota)",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 6,
+      "obras_entregues": 4
     },
     {
       "ibge": "2108058",
       "nome": "Paulino Neves",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 4,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2108108",
@@ -1560,7 +2095,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Adailson do Nascimento Lima",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2108207",
@@ -1568,7 +2107,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Vanessa Maia"
+      "prefeito": "Vanessa Maia",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 3,
+      "obras_entregues": 6
     },
     {
       "ibge": "2108256",
@@ -1576,7 +2119,11 @@
       "grupo": "indefinido",
       "prioritario": false,
       "cor": "#BDC3C7",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 3,
+      "obras_entregues": 1
     },
     {
       "ibge": "2108306",
@@ -1587,7 +2134,11 @@
       "pesquisa_orleans": 25.3,
       "pesquisa_braide": 58.7,
       "prefeito": "Henrique Guerra",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 2,
+      "obras_entregues": 5
     },
     {
       "ibge": "2108405",
@@ -1597,7 +2148,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 54.2,
       "pesquisa_braide": 45.8,
-      "prefeito": "Heliezer Soares"
+      "prefeito": "Heliezer Soares",
+      "alinhamento": "",
+      "total_obras": 19,
+      "obras_em_andamento": 2,
+      "obras_entregues": 7
     },
     {
       "ibge": "2108454",
@@ -1606,7 +2161,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Dr. Júnior",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 1,
+      "obras_entregues": 4
     },
     {
       "ibge": "2108504",
@@ -1614,7 +2173,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Mirim"
+      "prefeito": "Mirim",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 5,
+      "obras_entregues": 4
     },
     {
       "ibge": "2108603",
@@ -1625,7 +2188,11 @@
       "pesquisa_orleans": 54.1,
       "pesquisa_braide": 40.5,
       "prefeito": "André da Ralpnet",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 4,
+      "obras_entregues": 4
     },
     {
       "ibge": "2108702",
@@ -1633,7 +2200,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Aurélio Pereira de Sousa"
+      "prefeito": "Aurélio Pereira de Sousa",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2108801",
@@ -1641,7 +2212,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Fernando Cutrim"
+      "prefeito": "Fernando Cutrim",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 3,
+      "obras_entregues": 1
     },
     {
       "ibge": "2108900",
@@ -1650,7 +2225,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Jhulio Sousa",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 11,
+      "obras_entregues": 4
     },
     {
       "ibge": "2109007",
@@ -1658,7 +2237,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Deoclides Macedo"
+      "prefeito": "Deoclides Macedo",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2109056",
@@ -1666,7 +2249,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Aldo Brown"
+      "prefeito": "Aldo Brown",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2109106",
@@ -1675,7 +2262,12 @@
       "prioritario": false,
       "cor": "#F1C40F",
       "pesquisa_orleans": 47.6,
-      "pesquisa_braide": 47.6
+      "pesquisa_braide": 47.6,
+      "alinhamento": "",
+      "prefeito": "Pedro Paulo Cantanhede Lemos",
+      "total_obras": 21,
+      "obras_em_andamento": 5,
+      "obras_entregues": 9
     },
     {
       "ibge": "2109205",
@@ -1683,7 +2275,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Pedro Paulo Cantanhede Lemos"
+      "prefeito": "Pedro Paulo Cantanhede Lemos",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2109239",
@@ -1691,7 +2287,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Dr. Caçula Coelho"
+      "prefeito": "Dr. Caçula Coelho",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2109270",
@@ -1699,7 +2299,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Gilson Lima"
+      "prefeito": "Gilson Lima",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2109304",
@@ -1707,7 +2311,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Fabiana Mendes"
+      "prefeito": "Fabiana Mendes",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2109403",
@@ -1716,7 +2324,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Guilherme Carneiro Aguiar (Dr. Guilherme)",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2109452",
@@ -1725,7 +2337,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Eudes Barros",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 5,
+      "obras_entregues": 4
     },
     {
       "ibge": "2109502",
@@ -1733,7 +2349,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Joana Paula Coelho de Oliveira"
+      "prefeito": "Joana Paula Coelho de Oliveira",
+      "alinhamento": "",
+      "total_obras": 22,
+      "obras_em_andamento": 7,
+      "obras_entregues": 7
     },
     {
       "ibge": "2109551",
@@ -1741,7 +2361,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Cociflan"
+      "prefeito": "Cociflan",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2109601",
@@ -1749,7 +2373,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Jonas Magno"
+      "prefeito": "Jonas Magno",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 1,
+      "obras_entregues": 7
     },
     {
       "ibge": "2109700",
@@ -1758,7 +2386,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Fátima Dantas",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 3,
+      "obras_entregues": 4
     },
     {
       "ibge": "2109759",
@@ -1767,7 +2399,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Salomão Barbosa de Sousa",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 14,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2109809",
@@ -1775,14 +2411,22 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Joãozinho Pavão"
+      "prefeito": "Joãozinho Pavão",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 4,
+      "obras_entregues": 4
     },
     {
       "ibge": "2109908",
       "nome": "Santa Inês",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2110005",
@@ -1809,7 +2453,7 @@
       "detalhes": "🚩 ALERTA: Estação Tech em Santa Luzia PARADA (15% execução). Necessário verificar motivo com assessor Otávio. Maior número de secretários mapeados (19 pastas).",
       "investimento_planner": "R$ 16.791.543,00",
       "total_obras": 20,
-      "obras_em_andamento": 8,
+      "obras_em_andamento": 6,
       "obras_entregues": 6,
       "populacao_estimada": 57000,
       "eleitores": 42300,
@@ -1825,7 +2469,11 @@
       "nome": "Santa Luzia do Paruá",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2110104",
@@ -1833,7 +2481,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Sâmia Coelho Moreira"
+      "prefeito": "Sâmia Coelho Moreira",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 3,
+      "obras_entregues": 0
     },
     {
       "ibge": "2110203",
@@ -1843,14 +2495,22 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 37.3,
       "pesquisa_braide": 56.9,
-      "prefeito": "Milton Gonçalo"
+      "prefeito": "Milton Gonçalo",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2110237",
       "nome": "Santana do Maranhão",
       "grupo": "neutro",
       "prioritario": false,
-      "cor": "#F1C40F"
+      "cor": "#F1C40F",
+      "alinhamento": "",
+      "total_obras": 2,
+      "obras_em_andamento": 1,
+      "obras_entregues": 0
     },
     {
       "ibge": "2110278",
@@ -1891,7 +2551,11 @@
       "prioritario": false,
       "cor": "#E67E22",
       "pesquisa_orleans": 33.3,
-      "pesquisa_braide": 66.7
+      "pesquisa_braide": 66.7,
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2110401",
@@ -1900,7 +2564,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Wallas Gonçalves",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 3,
+      "obras_entregues": 4
     },
     {
       "ibge": "2110500",
@@ -1909,7 +2577,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Carlos Dino Penha",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 3,
+      "obras_entregues": 4
     },
     {
       "ibge": "2110609",
@@ -1918,14 +2590,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Chico Carvalho",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2110658",
       "nome": "São Domingos do Azeitão",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2110708",
@@ -1933,7 +2613,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Kleber Tratorzão"
+      "prefeito": "Kleber Tratorzão",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 0,
+      "obras_entregues": 4
     },
     {
       "ibge": "2110807",
@@ -1942,7 +2626,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Heider Martins Nunes",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 10,
+      "obras_em_andamento": 0,
+      "obras_entregues": 5
     },
     {
       "ibge": "2110856",
@@ -1951,7 +2639,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Edinalva Brandão",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 2,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2110906",
@@ -1960,7 +2652,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Francisco do Posto",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 2,
+      "obras_entregues": 1
     },
     {
       "ibge": "2111003",
@@ -1969,14 +2665,22 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Emerson Lívio Soares Pinto",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 24,
+      "obras_em_andamento": 8,
+      "obras_entregues": 5
     },
     {
       "ibge": "2111029",
       "nome": "São João do Carú",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2111052",
@@ -1984,12 +2688,16 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Marcos Vinícius"
+      "prefeito": "Marcos Vinícius",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2111078",
       "nome": "São João do Soter",
-      "grupo": "neutro",
+      "grupo": "Brandão",
       "prioritario": true,
       "cor": "#2980B9",
       "pesquisa_orleans": 72,
@@ -2010,9 +2718,9 @@
       "flag_estrategico": false,
       "detalhes": "NEUTRO (pesquisa 30/07): Orleans 72% vs Braide 22%",
       "investimento_planner": "R$ 0,00",
-      "total_obras": 0,
+      "total_obras": 16,
       "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "obras_entregues": 3,
       "populacao_estimada": 18000,
       "eleitores": 13500,
       "contatos": {
@@ -2027,7 +2735,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Alexandre Magno"
+      "prefeito": "Alexandre Magno",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2111201",
@@ -2035,7 +2747,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Júlio Matos (Dr. Julinho)"
+      "prefeito": "Júlio Matos (Dr. Julinho)",
+      "alinhamento": "",
+      "total_obras": 24,
+      "obras_em_andamento": 6,
+      "obras_entregues": 6
     },
     {
       "ibge": "2111250",
@@ -2079,7 +2795,11 @@
       "nome": "São Luís",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 498,
+      "obras_em_andamento": 86,
+      "obras_entregues": 192
     },
     {
       "ibge": "2111409",
@@ -2088,7 +2808,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Dr. Emanoel Filho",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2111508",
@@ -2096,7 +2820,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Miltinho Aragão"
+      "prefeito": "Miltinho Aragão",
+      "alinhamento": "",
+      "total_obras": 13,
+      "obras_em_andamento": 3,
+      "obras_entregues": 2
     },
     {
       "ibge": "2111532",
@@ -2104,7 +2832,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Samuel Ribeiro"
+      "prefeito": "Samuel Ribeiro",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 0,
+      "obras_entregues": 4
     },
     {
       "ibge": "2111573",
@@ -2112,7 +2844,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Rômulo Arruda"
+      "prefeito": "Rômulo Arruda",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2111607",
@@ -2155,7 +2891,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Jacinto Neto"
+      "prefeito": "Jacinto Neto",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2111672",
@@ -2163,21 +2903,33 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Danielly Coelho Trabulsi Nascimento"
+      "prefeito": "Danielly Coelho Trabulsi Nascimento",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 4,
+      "obras_entregues": 6
     },
     {
       "ibge": "2111706",
       "nome": "São Vicente Ferrer",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 30,
+      "obras_em_andamento": 4,
+      "obras_entregues": 8
     },
     {
       "ibge": "2111722",
       "nome": "Satubinha",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 0,
+      "obras_entregues": 4
     },
     {
       "ibge": "2111748",
@@ -2185,7 +2937,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Nilo Tayrone Arouche Amorim"
+      "prefeito": "Nilo Tayrone Arouche Amorim",
+      "alinhamento": "",
+      "total_obras": 15,
+      "obras_em_andamento": 1,
+      "obras_entregues": 2
     },
     {
       "ibge": "2111763",
@@ -2194,7 +2950,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Professor Bartolomeu Gomes Alves",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2111789",
@@ -2203,7 +2963,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Val Cunha",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2111805",
@@ -2211,7 +2975,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Antônio Coelho Rodrigues"
+      "prefeito": "Antônio Coelho Rodrigues",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 0,
+      "obras_entregues": 4
     },
     {
       "ibge": "2111904",
@@ -2221,7 +2989,11 @@
       "cor": "#2980B9",
       "pesquisa_orleans": 41.7,
       "pesquisa_braide": 45.8,
-      "prefeito": "Marcony da Silva Santos"
+      "prefeito": "Marcony da Silva Santos",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 0,
+      "obras_entregues": 1
     },
     {
       "ibge": "2111953",
@@ -2229,7 +3001,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Walter Azevedo"
+      "prefeito": "Walter Azevedo",
+      "alinhamento": "",
+      "total_obras": 6,
+      "obras_em_andamento": 0,
+      "obras_entregues": 3
     },
     {
       "ibge": "2112001",
@@ -2237,7 +3013,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Kelson Richard Carvalho Holanda Vieira"
+      "prefeito": "Kelson Richard Carvalho Holanda Vieira",
+      "alinhamento": "",
+      "total_obras": 8,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2112100",
@@ -2246,7 +3026,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Paulo",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 5,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2112209",
@@ -2254,7 +3038,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Rafael Brito Sousa"
+      "prefeito": "Rafael Brito Sousa",
+      "alinhamento": "",
+      "total_obras": 54,
+      "obras_em_andamento": 7,
+      "obras_entregues": 15
     },
     {
       "ibge": "2112233",
@@ -2263,7 +3051,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Deibson Balé",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 0
     },
     {
       "ibge": "2112274",
@@ -2271,7 +3063,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Henrique Emanuel Ricardo"
+      "prefeito": "Henrique Emanuel Ricardo",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 3,
+      "obras_entregues": 3
     },
     {
       "ibge": "2112308",
@@ -2280,7 +3076,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Fernando Pessoa",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 34,
+      "obras_em_andamento": 4,
+      "obras_entregues": 8
     },
     {
       "ibge": "2112407",
@@ -2288,7 +3088,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Edésio Cavalcanti"
+      "prefeito": "Edésio Cavalcanti",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 4,
+      "obras_entregues": 2
     },
     {
       "ibge": "2112456",
@@ -2296,7 +3100,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Paulo Curió / Thiago Josino"
+      "prefeito": "Paulo Curió / Thiago Josino",
+      "alinhamento": "",
+      "total_obras": 11,
+      "obras_em_andamento": 2,
+      "obras_entregues": 3
     },
     {
       "ibge": "2112506",
@@ -2305,7 +3113,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Viriato Cardoso",
-      "equipamento_solicitado": "Retroescavadeira"
+      "equipamento_solicitado": "Retroescavadeira",
+      "alinhamento": "",
+      "total_obras": 18,
+      "obras_em_andamento": 1,
+      "obras_entregues": 4
     },
     {
       "ibge": "2112605",
@@ -2316,7 +3128,11 @@
       "pesquisa_orleans": 40,
       "pesquisa_braide": 56,
       "prefeito": "Clemilton Barros",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 9,
+      "obras_em_andamento": 1,
+      "obras_entregues": 3
     },
     {
       "ibge": "2112704",
@@ -2325,7 +3141,11 @@
       "prioritario": false,
       "cor": "#2980B9",
       "pesquisa_orleans": 52.4,
-      "pesquisa_braide": 47.6
+      "pesquisa_braide": 47.6,
+      "alinhamento": "",
+      "total_obras": 16,
+      "obras_em_andamento": 0,
+      "obras_entregues": 2
     },
     {
       "ibge": "2112803",
@@ -2333,7 +3153,11 @@
       "grupo": "Brandão",
       "prioritario": false,
       "cor": "#2980B9",
-      "prefeito": "Carrinho Cidreira"
+      "prefeito": "Carrinho Cidreira",
+      "alinhamento": "",
+      "total_obras": 7,
+      "obras_em_andamento": 1,
+      "obras_entregues": 5
     },
     {
       "ibge": "2112852",
@@ -2342,21 +3166,33 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Jorge Vieira",
-      "equipamento_solicitado": "Trator agrícola"
+      "equipamento_solicitado": "Trator agrícola",
+      "alinhamento": "",
+      "total_obras": 3,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2112902",
       "nome": "Vitória do Mearim",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 12,
+      "obras_em_andamento": 1,
+      "obras_entregues": 1
     },
     {
       "ibge": "2113009",
       "nome": "Vitorino Freire",
       "grupo": "indefinido",
       "prioritario": false,
-      "cor": "#BDC3C7"
+      "cor": "#BDC3C7",
+      "alinhamento": "",
+      "total_obras": 1,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0
     },
     {
       "ibge": "2114007",
@@ -2380,9 +3216,9 @@
       "flag_estrategico": false,
       "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
       "investimento_planner": "",
-      "total_obras": 0,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0,
+      "total_obras": 12,
+      "obras_em_andamento": 1,
+      "obras_entregues": 4,
       "populacao_estimada": null,
       "eleitores": null,
       "contatos": {},

@@ -33,12 +33,12 @@ const COLUNAS = [
 
 export function TabelaMunicipios({ municipios, onRowClick }) {
   return (
-    <div style={{ overflowX: 'auto' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12.5px' }}>
+    <div className="table-container">
+      <table className="responsive-table">
         <thead>
           <tr style={{ background: '#f4f6f8', color: '#7a8a99', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.4px' }}>
-            {COLUNAS.map(col => (
-              <th key={col.key} style={{ textAlign: 'left', padding: '9px 10px', borderBottom: '2px solid #dde3ea' }}>
+            {COLUNAS.map((col, i) => (
+              <th key={col.key} className={i === 0 ? 'sticky-col' : ''} style={{ textAlign: 'left', padding: '9px 10px', borderBottom: '2px solid #dde3ea' }}>
                 {col.label}
               </th>
             ))}
@@ -62,8 +62,8 @@ export function TabelaMunicipios({ municipios, onRowClick }) {
                   borderBottom: '1px solid #dde3ea'
                 }}
               >
-                {COLUNAS.map(col => (
-                  <td key={col.key} style={{ padding: '8px 10px', borderBottom: '1px solid #dde3ea', verticalAlign: 'middle' }}>
+                {COLUNAS.map((col, colIdx) => (
+                  <td key={col.key} className={colIdx === 0 ? 'sticky-col' : ''} style={{ padding: '8px 10px', borderBottom: '1px solid #dde3ea', verticalAlign: 'middle' }}>
                     {col.render(m)}
                   </td>
                 ))}

@@ -1,8 +1,8 @@
-import { useStore } from '../hooks/useStore';
+import { useKPIs } from '../hooks/useStore';
 import { formatCurrency } from '../data/municipios';
 
 export function KPICards() {
-  const kpis = useStore(state => state.getKPIs());
+  const kpis = useKPIs();
   
   const cards = [
     { 

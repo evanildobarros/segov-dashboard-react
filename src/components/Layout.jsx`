@@ -1,0 +1,95 @@
+import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { useData } from '../context/DataContext';
+
+const Layout = () => {
+  const { user, logout } = useAuth();
+  const { filtroGrupo, setFiltroGrupo, busca, setBusca } = useData();
+  const [theme, setTheme] = useState(localStorage.getItem('dashboard-tema') || 'light');
+
+  const toggleTheme = (t) => {
+    setTheme(t);
+    localStorage.setItem('dashboard-tema', t);
+    document.documentElement.setAttribute('data-theme', t);
+  };
+
+  return (
+    <div className="flex min-h-screen bg-segov-cinza text-segov-texto">
+      <aside className="fixed left-0 top-0 bottom-0 w-56 bg-segov-azul text-[#cfe0ec] flex flex-col z-[1000]">
+        <div className="p-4 border-b border-white/10 flex items-center gap-2">
+          <div className="w-9 h-9 rounded-lg bg-segov-verde flex items-center justify-center font-extrabold text-white text-xs shrink-0">MA</div>
+          <div><b className="block text-white text-sm">SEGOV-MA</b><span className="text-[10.5px] text-blue-200">Monitoramento Político</span></div>
+        </div>
+        <nav className="flex-1 p-2 overflow-y-auto">
+          {[
+            { path: '/', label: '📊 Visão Geral', id: 'todos' },
+            { path: '/mapa', label: '🗺️ Mapa Político' },
+            { path: '/municipios', label: '🏛️ Municípios' },
+            { path: '/obras', label: '🏗️ Obras' },
+            { path: '/relatorios', label: '📄 Relatórios' },
+            { path: '/admin', label: '⚙️ Admin' },
+          ].map(item => (
+            <Link 
+              key={item.path} 
+              to={item.path} 
+              className={`flex items-center gap-2 p-2 rounded-lg text-sm transition-colors mb-1 ${
+                (item.path === '/' && filtroGrupo === 'todos') || 
+                // Logic for other active paths would need location from react-router-dom
+                'hover:bg-white/10'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="p-4 text-[10.5px] text-blue-200 border-t border-white/10">v3.0 React · 217 municípios<br />© Governo do Maranhão</div>
+      </aside>
+
+      <div className="flex-1 ml-56 flex flex-col">
+        <div className="topbar bg-white border-b border-gray-200 p-3 px-6 flex items-center justify-between sticky top-0 z-900">
+          <h2 className="text-segov-azul font-semibold text-base">Painel de Controle</h2>
+          <div className="flex items-center gap-3 text-xs">
+            <span className="text-gray-500">📅 {new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
+            <div className="flex gap-1">
+              <button className="p-1 bg-gray-100 rounded hover:bg-gray-200" onClick={() => toggleTheme('light')}>☀️</button>
+              <button className="p-1 bg-gray-100 rounded hover:bg-gray-200" onClick={() => toggleTheme('dark')}>🌙</button>
+            </div>
+            <span className="font-medium">{user?.name}</span>
+            <div className="w-8 h-8 rounded-full bg-segov-azul text-white flex items-center justify-center font-bold">{user?.name?.[0]}</div>
+            <button className="px-2 py-1 border border-red-200 text-red-600 rounded hover:bg-red-50 transition-colors font-semibold" onClick={logout}>🚪 Sair</button>
+          </div>
+        </div>
+
+        <div className="p-6 flex-1">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">🎯 GRUPO:</span>
+            {['todos', 'Brandão', 'Braide', 'neutro', 'indefinido'].map(g => (
+              <button 
+                key={g} 
+                className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
+                  filtroGrupo === g 
+                    ? 'bg-segov-azul text-white border-segov-azul shadow-sm' 
+                    : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                }`}
+                onClick={() => setFiltroGrupo(g)}
+              >
+                {g === 'todos' ? 'Todos' : g === 'Brandão' ? '🔵 Orleans' : g === 'Braide' ? '🟠 Braide' : g === 'neutro' ? '🟡 Neutro' : '⚪ Indefinido'}
+              </button>
+            ))}
+            <input 
+              type="text" 
+              placeholder="🔍 Buscar município..." 
+              className="ml-auto px-3 py-1 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-segov-azul w-64"
+              value={busca}
+              onChange={(e) => setBusca(e.target.value)}
+            />
+          </div>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;

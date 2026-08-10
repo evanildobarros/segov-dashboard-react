@@ -1,0 +1,98 @@
+/* Adicione estas classes ao final do seu App.css */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-date {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  display: none; /* Esconde data no mobile para evitar poluição */
+}
+
+@media (min-width: 1024px) {
+  .topbar-date {
+    display: block;
+  }
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 4px;
+}
+
+.theme-switcher button {
+  padding: 6px;
+  border: 1px solid var(--borda);
+  background: var(--bg-card);
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.theme-switcher button:hover {
+  background: var(--cinza);
+}
+
+.user-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 12px;
+  border-left: 1px solid var(--borda);
+}
+
+.topbar-username {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--azul);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--vermelho);
+  color: var(--vermelho);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: var(--vermelho);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .topbar-username {
+    display: none; /* No mobile, mostramos apenas o avatar e o botão sair para economizar espaço */
+  }
+  
+  .user-profile-section {
+    padding-left: 8px;
+    gap: 8px;
+  }
+}

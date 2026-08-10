@@ -29,7 +29,7 @@ export function RelatoriosPage() {
   };
   
   return (
-    <div style={{ padding: '24px' }}>
+    <div style={{ paddingTop: '8px' }}>
       <div style={{ background: '#fff', border: '1px solid #dde3ea', borderRadius: '10px', padding: '16px 18px' }}>
         <h3 style={{ fontSize: '14px', color: '#0b3c5d', marginBottom: '12px' }}>📄 Exportação de Relatórios</h3>
         <p style={{ fontSize: '13px', color: '#7a8a99', marginBottom: '16px' }}>
