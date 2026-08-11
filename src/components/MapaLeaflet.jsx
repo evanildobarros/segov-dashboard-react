@@ -326,7 +326,7 @@ function LegendControl({ municipios, modoMapa }) {
   }
 
   return (
-    <div className="leaflet-control absolute bottom-4 right-4 z-[1000] bg-white p-3 rounded-xl shadow-lg text-xs border border-gray-200 max-w-[220px]">
+    <div className="absolute bottom-6 right-6 z-[1000] bg-white p-3 rounded-xl shadow-lg text-xs border border-gray-200 max-w-[240px]">
       <h4 className="text-xs font-bold mb-2" style={{ color: '#0b3c5d', textTransform: 'uppercase', letterSpacing: '0.4px' }}>
         {titulo}
       </h4>
