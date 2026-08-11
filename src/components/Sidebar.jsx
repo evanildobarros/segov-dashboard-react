@@ -8,6 +8,7 @@ const PAGES = [
   { id: 'mapa', label: 'Mapa Político', icon: Map },
   { id: 'municipios', label: 'Municípios', icon: Building2 },
   { id: 'obras', label: 'Obras', icon: Hammer },
+  { id: 'equipamentos', label: 'Equipamentos', icon: Settings },
   { id: 'relatorios', label: 'Relatórios', icon: FileText },
   { id: 'admin', label: 'Admin', icon: Settings }
 ];

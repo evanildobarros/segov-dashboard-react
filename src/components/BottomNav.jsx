@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { MapPin, Map, Building2, Hammer, FileText, Settings } from 'lucide-react';
+import { MapPin, Map, Building2, Hammer, Settings, FileText, Download, Printer } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
 
 export function BottomNav() {
@@ -12,6 +12,7 @@ export function BottomNav() {
     { id: 'mapa', label: 'Mapa', icon: Map },
     { id: 'municipios', label: 'Cidades', icon: Building2 },
     { id: 'obras', label: 'Obras', icon: Hammer },
+    { id: 'equipamentos', label: 'Equip.', icon: Settings },
     { id: 'relatorios', label: 'Relat.', icon: FileText },
   ];
 

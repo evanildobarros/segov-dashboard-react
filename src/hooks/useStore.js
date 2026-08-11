@@ -5,6 +5,8 @@ const initialState = {
   isMobileMenuOpen: false,
   grupo: 'todos',
   busca: '',
+  sortKey: null,
+  sortDir: 'asc',
   municipioId: null,
   modo: 'dashboard',
   isAuthenticated: false,
@@ -25,6 +27,7 @@ export const useStore = create((set, get) => ({
 
   setGrupo: (grupo) => set({ grupo }),
   setBusca: (busca) => set({ busca }),
+  setSort: (key, dir = 'asc') => set({ sortKey: key, sortDir: dir }),
   setMunicipioId: (municipioId) => set({ municipioId }),
   setModo: (modo) => set({ modo }),
 
@@ -151,8 +154,29 @@ export const useStore = create((set, get) => ({
     }
   },
 
+  // Exclui município completamente (todas ocorrências do IBGE) via DELETE endpoint
+  excluirMunicipio: async (ibge) => {
+    try {
+      const resp = await fetch(`/api/municipios/${ibge}`, {
+        method: 'DELETE', credentials: 'include',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      if (resp.ok) {
+        await get().fetchMunicipios();
+        return { success: true, removidos: 1 };
+      }
+      throw new Error(`HTTP ${resp.status}`);
+    } catch (e) {
+      // Fallback offline: remove do estado local
+      const { municipios } = get();
+      const novos = municipios.filter(m => m.ibge !== ibge);
+      set({ municipios: novos });
+      return { success: true, removidos: municipios.length - novos.length, offline: true };
+    }
+  },
+
   getMunicipiosFiltrados: () => {
-    const { municipios, grupo, busca } = get();
+    const { municipios, grupo, busca, sortKey, sortDir } = get();
     let lista = Array.isArray(municipios) ? municipios : [];
     if (grupo && grupo !== 'todos') {
       lista = lista.filter(m => m && m.grupo === grupo);
@@ -163,6 +187,15 @@ export const useStore = create((set, get) => ({
         (m.nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q) ||
         (m.prefeito || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q)
       ));
+    }
+    // Sort by key
+    if (sortKey) {
+      lista = [...lista].sort((a, b) => {
+        const av = (a[sortKey] || '').toString();
+        const bv = (b[sortKey] || '').toString();
+        const cmp = av.localeCompare(bv, 'pt-BR', { numeric: true });
+        return sortDir === 'asc' ? cmp : -cmp;
+      });
     }
     return lista;
   },
@@ -200,6 +233,8 @@ export const useMunicipiosFiltrados = () => {
   const getMunicipiosFiltrados = useStore(state => state.getMunicipiosFiltrados);
   useStore(state => state.grupo);
   useStore(state => state.busca);
+  useStore(state => state.sortKey);
+  useStore(state => state.sortDir);
   useStore(state => state.municipios);
   return getMunicipiosFiltrados();
 };
@@ -215,3 +250,4 @@ export const useMapGrandeInstance = () => useStore(state => state.mapGrandeInsta
 export const useGeoJSONData = () => useStore(state => state.geoJSONData);
 
 export const useRemoverDuplicata = () => useStore(state => state.removerDuplicata);
+export const useExcluirMunicipio = () => useStore(state => state.excluirMunicipio);

@@ -1,0 +1,24 @@
+
+<--- Last few GCs --->
+
+[2920:000001F22107D000]      585 ms: Scavenge 64.1 (68.9) -> 62.6 (70.6) MB, pooled: 0 MB, 0.86 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[2920:000001F22107D000]      643 ms: Scavenge 66.1 (71.1) -> 64.8 (80.6) MB, pooled: 0 MB, 1.38 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[2920:000001F22107D000]      676 ms: Scavenge 72.0 (80.9) -> 68.2 (82.1) MB, pooled: 0 MB, 13.97 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: NewSpace::EnsureCurrentCapacity Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF612D44287 
+ 2: 00007FF612CA433B 
+ 3: 00007FF6138B19F1 
+ 4: 00007FF61389E4A6 
+ 5: 00007FF6136FAAF0 
+ 6: 00007FF6136D7840 
+ 7: 00007FF61370174B 
+ 8: 00007FF613703D5E 
+ 9: 00007FF6136F3BBD 
+10: 00007FF6136EF755 
+11: 00007FF613076A8D 

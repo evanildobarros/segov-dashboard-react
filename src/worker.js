@@ -47,7 +47,7 @@ function base64UrlDecode(str) {
 
 // Auth helpers
 const AUTH_COOKIE = 'segov_session';
-const ROTAS_PROTEGIDAS = ['/dados_municipios.json', '/eixos_obras.json', '/api/data', '/api/versoes'];
+const ROTAS_PROTEGIDAS = ['/dados_municipios.json', '/eixos_obras.json', '/api/data'];
 
 function getCookie(header, name) {
   if (!header) return null;
@@ -127,13 +127,34 @@ async function d1Query(env, sql, params = []) {
 }
 
 async function loadDadosAtivos(env) {
-  // Busca a versão mais recente no D1
+  // Busca diretamente da tabela municipios no D1 (sincronizada via sync)
   const result = await d1Query(env,
-    'SELECT conteudo_base64 FROM dados_municipios ORDER BY created_at DESC LIMIT 1'
+    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas FROM municipios ORDER BY nome'
   );
-  if (result.results?.[0]?.conteudo_base64) {
-    const json = new TextDecoder().decode(base64UrlDecode(result.results[0].conteudo_base64));
-    return JSON.parse(json);
+  if (result.results && result.results.length > 0) {
+    const muns = result.results.map(r => ({
+      ibge: String(r.ibge),
+      nome: String(r.nome),
+      grupo: String(r.grupo || 'indefinido'),
+      prioritario: r.prioritario ? true : false,
+      cor: String(r.cor || '#BDC3C7'),
+      prefeito: String(r.prefeito || ''),
+      alinhamento: String(r.alinhamento || ''),
+      total_obras: Number(r.total_obras || 0),
+      obras_em_andamento: Number(r.obras_em_andamento || 0),
+      obras_entregues: Number(r.obras_entregues || 0),
+      equipamento_solicitado: String(r.equipamento_solicitado || ''),
+      equipamento_categoria: String(r.equipamento_categoria || '')
+    }));
+    const totalObras = muns.reduce((s, m) => s + m.total_obras, 0);
+    return {
+      municipios: muns,
+      metadata: {
+        total_municipios: muns.length,
+        total_obras: totalObras,
+        updated_at: new Date().toISOString()
+      }
+    };
   }
   return null; // fallback: usar assets estáticos
 }
@@ -290,15 +311,42 @@ export default {
       }
     }
 
-    // GET /api/versoes (auth) → histórico D1
-    if (path === '/api/versoes' && method === 'GET') {
-      const usuario = await validarSessao(request.headers.get('Cookie'), secret);
-      if (!usuario) return json({ ok: false, erro: 'Não autorizado' }, 401, { 'Cache-Control': 'private, no-store' });
-      const result = await d1Query(env,
-        'SELECT id, total_municipios, total_obras, actor, created_at FROM dados_municipios ORDER BY created_at DESC LIMIT 20'
-      );
-      return json({ ok: true, versions: result.results || [] }, 200, { 'Cache-Control': 'private, no-store' });
-    }
+    // GET /api/versoes (público) → status do dashboard
+            if (path === '/api/versoes' && method === 'GET') {
+              try {
+                const result = await d1Query(env,
+                  'SELECT COUNT(*) as total_municipios, MAX(updated_at) as ultima_atualizacao FROM municipios'
+                );
+                return json({ ok: true, versions: result.results || [] }, 200, { 'Cache-Control': 'public, max-age=300' });
+              } catch (e) {
+                return json({ ok: false, erro: e.message }, 500);
+              }
+            }
+
+        // DELETE /api/municipios/:ibge (público) → excluir do D1
+        const delMatch = path.match(/^\/api\/municipios\/(\d+)$/);
+        if (delMatch && method === 'DELETE') {
+          try {
+            const ibge = delMatch[1];
+            const result = await d1Query(env,
+              'DELETE FROM municipios WHERE ibge = ?',
+              [ibge]
+            );
+            return json({ ok: true, message: 'Município excluído', deleted: result.success }, 200, { 'Cache-Control': 'no-store' });
+          } catch (e) {
+            return json({ ok: false, erro: e.message }, 500);
+          }
+        }
+
+        // GET /api/versoes (auth) → histórico D1
+        if (path === '/api/versoes' && method === 'GET') {
+          const usuario = await validarSessao(request.headers.get('Cookie'), secret);
+          if (!usuario) return json({ ok: false, erro: 'Não autorizado' }, 401, { 'Cache-Control': 'private, no-store' });
+          const result = await d1Query(env,
+            'SELECT id, total_municipios, total_obras, actor, created_at FROM dados_municipios ORDER BY created_at DESC LIMIT 20'
+          );
+          return json({ ok: true, versions: result.results || [] }, 200, { 'Cache-Control': 'private, no-store' });
+        }
 
     // --- Protected assets ---
     const protegida = ROTAS_PROTEGIDAS.some(r => path === r || path.startsWith(r));

@@ -9,6 +9,7 @@ import { DashboardPage } from './pages/Dashboard';
 import { MapaPoliticoPage } from './pages/MapaPolitico';
 import { MunicipiosPage } from './pages/Municipios';
 import { ObrasPage } from './pages/Obras';
+import { EquipamentosPage } from './pages/Equipamentos';
 import { RelatoriosPage } from './pages/Relatorios';
 import { AdminPage } from './pages/Admin';
 import { Login } from './pages/Login';
@@ -45,11 +46,12 @@ function Layout() {
   const location = useLocation();
   
   const isLogin = location.pathname === '/login';
-  
+  const isAdmin = location.pathname === '/admin';
+
   if (isLogin) {
     return <Outlet />;
   }
-  
+
   return (
     <div className="app-layout">
       <Sidebar />
@@ -62,10 +64,10 @@ function Layout() {
       <div className="main-wrapper">
         <Topbar />
         <main className="main-content">
-          <FiltrosGlobais />
+          {!isAdmin && <FiltrosGlobais />}
           <Outlet />
         </main>
-        <BottomNav />
+        {!isAdmin && <BottomNav />}
       </div>
     </div>
   );
@@ -89,6 +91,7 @@ function App() {
         <Route path="/mapa" element={<MapaPoliticoPage />} />
         <Route path="/municipios" element={<MunicipiosPage />} />
         <Route path="/obras" element={<ObrasPage />} />
+        <Route path="/equipamentos" element={<EquipamentosPage />} />
         <Route path="/relatorios" element={<RelatoriosPage />} />
         <Route path="/admin" element={<AdminPage />} />
       </Route>

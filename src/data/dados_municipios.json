@@ -3,15 +3,20 @@
     "gerado_em": "2026-08-09T19:35:45.413Z",
     "fonte": "municipios_217.js + dados_municipios.json (merged)",
     "versao": "3.2 (admin-edits)",
-    "total_municipios": 217,
+    "total_municipios": 219,
     "total_orleans": 179,
-    "total_braide": 14,
+    "total_braide": 13,
     "total_neutro": 2,
-    "total_obras": 3099,
+    "total_obras": 3093,
     "total_indefinido": 22,
     "data_pesquisa": "30/07/2026",
     "prioritarios": 8,
-    "com_dados_detalhados": 217
+    "com_dados_detalhados": 216,
+    "equipamentos": {
+      "total_solicitados": 129,
+      "tratores": 76,
+      "retroescavadeiras": 53
+    }
   },
   "municipios": [
     {
@@ -24,7 +29,9 @@
       "alinhamento": "",
       "total_obras": 27,
       "obras_em_andamento": 6,
-      "obras_entregues": 11
+      "obras_entregues": 11,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100105",
@@ -41,7 +48,9 @@
       "partido": "",
       "detalhes": "",
       "apoios_braide": 1,
-      "apoios_orleans": 0
+      "apoios_orleans": 0,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100154",
@@ -50,11 +59,12 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Eliane Dias",
-      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_solicitado": "Retroescavadeira",
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 2,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2100204",
@@ -66,7 +76,9 @@
       "alinhamento": "",
       "total_obras": 17,
       "obras_em_andamento": 0,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100303",
@@ -78,7 +90,9 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2100402",
@@ -90,7 +104,9 @@
       "alinhamento": "",
       "total_obras": 17,
       "obras_em_andamento": 2,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100436",
@@ -127,7 +143,9 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 3,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2100550",
@@ -151,7 +169,9 @@
       "alinhamento": "",
       "total_obras": 19,
       "obras_em_andamento": 1,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2100709",
@@ -163,7 +183,9 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 0,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100808",
@@ -172,11 +194,12 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Dr. Tânios",
-      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_solicitado": "Trator agrícola",
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100832",
@@ -234,7 +257,8 @@
       "alinhamento": "",
       "total_obras": 37,
       "obras_em_andamento": 2,
-      "obras_entregues": 20
+      "obras_entregues": 20,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2100956",
@@ -247,7 +271,8 @@
       "alinhamento": "",
       "total_obras": 22,
       "obras_em_andamento": 7,
-      "obras_entregues": 8
+      "obras_entregues": 8,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101004",
@@ -259,7 +284,9 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101103",
@@ -285,7 +312,9 @@
       "investimento_planner": "",
       "total_obras": 25,
       "obras_em_andamento": 7,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101202",
@@ -299,7 +328,9 @@
       "alinhamento": "",
       "total_obras": 32,
       "obras_em_andamento": 3,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101251",
@@ -326,7 +357,9 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2101350",
@@ -352,7 +385,9 @@
       "alinhamento": "",
       "total_obras": 28,
       "obras_em_andamento": 4,
-      "obras_entregues": 12
+      "obras_entregues": 12,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2101509",
@@ -366,7 +401,9 @@
       "alinhamento": "",
       "total_obras": 27,
       "obras_em_andamento": 2,
-      "obras_entregues": 11
+      "obras_entregues": 11,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101608",
@@ -378,7 +415,9 @@
       "alinhamento": "",
       "total_obras": 27,
       "obras_em_andamento": 7,
-      "obras_entregues": 12
+      "obras_entregues": 12,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101707",
@@ -390,7 +429,9 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2101731",
@@ -425,11 +466,12 @@
       "pesquisa_orleans": 62.5,
       "pesquisa_braide": 37.5,
       "prefeito": "Rodrigo Coelho",
-      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_solicitado": "Retroescavadeira",
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2101905",
@@ -443,7 +485,9 @@
       "alinhamento": "",
       "total_obras": 17,
       "obras_em_andamento": 3,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2101939",
@@ -670,7 +714,9 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2102754",
@@ -683,7 +729,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2102804",
@@ -697,7 +744,9 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 3,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2102903",
@@ -731,7 +780,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2103000",
@@ -744,7 +794,8 @@
       "alinhamento": "",
       "total_obras": 37,
       "obras_em_andamento": 2,
-      "obras_entregues": 10
+      "obras_entregues": 10,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2103109",
@@ -843,7 +894,8 @@
       "alinhamento": "",
       "total_obras": 4,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2103307",
@@ -856,7 +908,8 @@
       "alinhamento": "",
       "total_obras": 20,
       "obras_em_andamento": 0,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2103406",
@@ -881,7 +934,9 @@
       "alinhamento": "",
       "total_obras": 55,
       "obras_em_andamento": 3,
-      "obras_entregues": 37
+      "obras_entregues": 37,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2103554",
@@ -919,7 +974,9 @@
       "alinhamento": "",
       "total_obras": 15,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2103703",
@@ -931,7 +988,9 @@
       "alinhamento": "",
       "total_obras": 21,
       "obras_em_andamento": 3,
-      "obras_entregues": 9
+      "obras_entregues": 9,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2103752",
@@ -944,7 +1003,8 @@
       "alinhamento": "",
       "total_obras": 2,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2103802",
@@ -1005,7 +1065,8 @@
       "contatos": {},
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Orleans Brandão",
-      "igreja_estrategico": true
+      "igreja_estrategico": true,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2104008",
@@ -1018,7 +1079,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 3,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2104057",
@@ -1045,7 +1107,8 @@
       "alinhamento": "",
       "total_obras": 17,
       "obras_em_andamento": 6,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2104081",
@@ -1070,7 +1133,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2104107",
@@ -1083,7 +1147,8 @@
       "alinhamento": "",
       "total_obras": 29,
       "obras_em_andamento": 5,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2104206",
@@ -1137,7 +1202,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 1,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2104552",
@@ -1150,7 +1216,8 @@
       "alinhamento": "",
       "total_obras": 0,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2104602",
@@ -1176,7 +1243,9 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 5,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2104651",
@@ -1247,40 +1316,8 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 1,
-      "obras_entregues": 4
-    },
-    {
-      "ibge": "2104909",
-      "nome": "Godofredo Viana",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
-      "prefeito": "Sissi",
-      "partido": "PL",
-      "instagram": "",
-      "email": "",
-      "telefone": "",
-      "site": "",
-      "total_liderancas": 0,
-      "apoios_orleans": 0,
-      "apoios_braide": 0,
-      "apoios_neutro": 0,
-      "alinhamento": "Orleans Brandão",
-      "assessor": "",
-      "movimento": "grupo_josimar_braide_03ago2026",
-      "flag_estrategico": false,
-      "detalhes": "Grupo Josimar de Maranhãozinho (PL) - Apoio Braide confirmado 03/08/2026",
-      "investimento_planner": "",
-      "total_obras": 10,
-      "obras_em_andamento": 2,
-      "obras_entregues": 3,
-      "populacao_estimada": null,
-      "eleitores": null,
-      "contatos": {},
-      "pesquisa_orleans": null,
-      "pesquisa_braide": null,
-      "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "obras_entregues": 4,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105005",
@@ -1313,7 +1350,9 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105104",
@@ -1355,7 +1394,9 @@
         "camara": "Robert dos Santos Costa (Presidente) · camaradeicatu@gmail.com · (98) 9.8731-6743"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Braide"
+      "grupo_pesquisa": "Braide",
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105153",
@@ -1368,7 +1409,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 4,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2105203",
@@ -1423,11 +1465,12 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Júnior do Posto",
-      "equipamento_solicitado": "Trator agrícola de pneus",
+      "equipamento_solicitado": "Trator agrícola",
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2105401",
@@ -1441,7 +1484,9 @@
       "alinhamento": "",
       "total_obras": 27,
       "obras_em_andamento": 6,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105427",
@@ -1454,7 +1499,8 @@
       "alinhamento": "",
       "total_obras": 4,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105450",
@@ -1467,7 +1513,8 @@
       "alinhamento": "",
       "total_obras": 4,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2105476",
@@ -1481,7 +1528,7 @@
       "obras_entregues": 2
     },
     {
-      "ibge": "2105500",
+      "ibge": "2105658",
       "nome": "Junco do Maranhão",
       "grupo": "Brandão",
       "prioritario": false,
@@ -1527,21 +1574,6 @@
       "obras_entregues": 1
     },
     {
-      "ibge": "2105658",
-      "nome": "Junco do Maranhão",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
-      "pesquisa_orleans": 41.7,
-      "pesquisa_braide": 25,
-      "prefeito": "José Ricardo de Almeida Ribeiro",
-      "equipamento_solicitado": "Trator agrícola",
-      "alinhamento": "",
-      "total_obras": 9,
-      "obras_em_andamento": 2,
-      "obras_entregues": 0
-    },
-    {
       "ibge": "2105708",
       "nome": "Lago da Pedra",
       "grupo": "Brandão",
@@ -1552,7 +1584,8 @@
       "alinhamento": "",
       "total_obras": 26,
       "obras_em_andamento": 4,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2105807",
@@ -1565,10 +1598,11 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 4,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
-      "ibge": "2105906",
+      "ibge": "2106201",
       "nome": "Luís Domingues",
       "grupo": "Brandão",
       "prioritario": false,
@@ -1613,7 +1647,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 1,
-      "obras_entregues": 8
+      "obras_entregues": 8,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2105948",
@@ -1650,7 +1685,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2106003",
@@ -1662,7 +1698,9 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 3,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2106102",
@@ -1674,21 +1712,9 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
-    },
-    {
-      "ibge": "2106201",
-      "nome": "Luís Domingues",
-      "grupo": "Brandão",
-      "prioritario": false,
-      "cor": "#2980B9",
-      "pesquisa_orleans": 50,
-      "pesquisa_braide": 33.3,
-      "prefeito": "Isaque Cirino",
-      "alinhamento": "",
-      "total_obras": 6,
-      "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106300",
@@ -1700,7 +1726,9 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 2,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106326",
@@ -1715,7 +1743,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 3,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106359",
@@ -1728,18 +1757,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
-    },
-    {
-      "ibge": "2106375",
-      "nome": "Maranhãozinho",
-      "grupo": "Braide",
-      "prioritario": false,
-      "cor": "#E67E22",
-      "alinhamento": "",
-      "total_obras": 6,
-      "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 0,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106409",
@@ -1765,7 +1784,7 @@
       "obras_entregues": 5
     },
     {
-      "ibge": "2106607",
+      "ibge": "2106375",
       "nome": "Maranhãozinho",
       "grupo": "Braide",
       "prioritario": false,
@@ -1830,7 +1849,9 @@
         "camara": "José Wallas Lisboa Sousa (Presidente) · camaramatoesdonorte@hotmail.com · (98) 9.9803-1801"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Orleans Brandão"
+      "grupo_pesquisa": "Orleans Brandão",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106672",
@@ -1854,7 +1875,9 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 3,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2106755",
@@ -1867,7 +1890,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2106805",
@@ -1933,7 +1957,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 1,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2107258",
@@ -1960,7 +1985,8 @@
       "alinhamento": "",
       "total_obras": 0,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2107357",
@@ -1974,7 +2000,9 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2107407",
@@ -1987,7 +2015,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2107456",
@@ -1999,7 +2028,9 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 3,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2107506",
@@ -2024,7 +2055,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2107704",
@@ -2062,7 +2094,9 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 2,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2108009",
@@ -2075,7 +2109,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 6,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2108058",
@@ -2099,7 +2134,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2108207",
@@ -2123,7 +2159,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 3,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2108306",
@@ -2138,7 +2175,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 2,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2108405",
@@ -2165,7 +2203,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 1,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2108504",
@@ -2192,7 +2231,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 4,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2108702",
@@ -2229,7 +2269,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 11,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2109007",
@@ -2241,7 +2282,9 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2109056",
@@ -2279,7 +2322,9 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2109239",
@@ -2291,7 +2336,9 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2109270",
@@ -2328,7 +2375,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2109452",
@@ -2341,7 +2389,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 5,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2109502",
@@ -2353,7 +2402,9 @@
       "alinhamento": "",
       "total_obras": 22,
       "obras_em_andamento": 7,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2109551",
@@ -2386,11 +2437,12 @@
       "prioritario": false,
       "cor": "#2980B9",
       "prefeito": "Fátima Dantas",
-      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_solicitado": "Trator agrícola",
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 3,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2109759",
@@ -2403,7 +2455,8 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2109809",
@@ -2462,7 +2515,9 @@
         "gabinete": "Av. Nagib Haickel, S/N, Centro, CEP 65390-000"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Empate/Neutro"
+      "grupo_pesquisa": "Empate/Neutro",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2110039",
@@ -2485,7 +2540,9 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 3,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2110203",
@@ -2542,7 +2599,9 @@
       "contatos": {
         "prefeitura": "gabinete@santoamaro.ma.gov.br · (98) 8594-2512",
         "endereco": "Praça Nossa Senhora da Conceição, s/n, Centro, CEP 65195-000"
-      }
+      },
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2110302",
@@ -2568,7 +2627,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 3,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2110500",
@@ -2581,7 +2641,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 3,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2110609",
@@ -2594,7 +2655,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2110658",
@@ -2630,7 +2692,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 0,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2110856",
@@ -2643,7 +2706,8 @@
       "alinhamento": "",
       "total_obras": 2,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2110906",
@@ -2656,7 +2720,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111003",
@@ -2669,7 +2734,8 @@
       "alinhamento": "",
       "total_obras": 24,
       "obras_em_andamento": 8,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2111029",
@@ -2727,7 +2793,9 @@
         "camara": "Welson Jose de Sousa Moraes (Presidente, PT) · camaradesaojoaodosoter.ma.gov.br"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Empate/Neutro"
+      "grupo_pesquisa": "Empate/Neutro",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111102",
@@ -2762,7 +2830,7 @@
       "pesquisa_orleans": 62.5,
       "pesquisa_braide": 20.8,
       "prefeito": "Ronaldo Vieira de Sousa Junior",
-      "equipamento_solicitado": "Trator agrícola equipado com arado, carreta agrícola e roçadeira; Retroescavadeira",
+      "equipamento_solicitado": "Trator agrícola",
       "partido": "MDB (Orleans - conforme evidencias 25/07)",
       "instagram": "@ronaldovieiradesousa",
       "email": "",
@@ -2788,7 +2856,8 @@
         "camara": "cmsaojosedosbasilios.ma.gov.br (template Next.js/Workcenter)"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Orleans Brandão"
+      "grupo_pesquisa": "Orleans Brandão",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111300",
@@ -2799,7 +2868,9 @@
       "alinhamento": "",
       "total_obras": 498,
       "obras_em_andamento": 86,
-      "obras_entregues": 192
+      "obras_entregues": 192,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111409",
@@ -2812,7 +2883,8 @@
       "alinhamento": "",
       "total_obras": 0,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111508",
@@ -2824,7 +2896,9 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 3,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111532",
@@ -2883,7 +2957,9 @@
         "prefeitura": "prefeitura@saoraimundodasmangabeiras.ma.gov.br"
       },
       "pesquisa_data": "30/07/2026",
-      "grupo_pesquisa": "Braide"
+      "grupo_pesquisa": "Braide",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2111631",
@@ -2918,7 +2994,9 @@
       "alinhamento": "",
       "total_obras": 30,
       "obras_em_andamento": 4,
-      "obras_entregues": 8
+      "obras_entregues": 8,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2111722",
@@ -2979,7 +3057,9 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 0,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2111904",
@@ -2993,7 +3073,9 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2111953",
@@ -3005,7 +3087,9 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2112001",
@@ -3017,7 +3101,9 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "equipamento_solicitado": "Retroescavadeira",
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2112100",
@@ -3030,7 +3116,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2112209",
@@ -3042,7 +3129,9 @@
       "alinhamento": "",
       "total_obras": 54,
       "obras_em_andamento": 7,
-      "obras_entregues": 15
+      "obras_entregues": 15,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2112233",
@@ -3080,7 +3169,8 @@
       "alinhamento": "",
       "total_obras": 34,
       "obras_em_andamento": 4,
-      "obras_entregues": 8
+      "obras_entregues": 8,
+      "equipamento_categoria": "Retroescavadeira"
     },
     {
       "ibge": "2112407",
@@ -3092,7 +3182,9 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 4,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
     },
     {
       "ibge": "2112456",
@@ -3226,6 +3318,68 @@
       "pesquisa_braide": null,
       "pesquisa_data": "",
       "grupo_pesquisa": ""
+    },
+    {
+      "ibge": "2104909",
+      "nome": "Guimarães",
+      "grupo": "indefinido",
+      "prioritario": false,
+      "cor": "#BDC3C7",
+      "prefeito": "",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0,
+      "total_liderancas": 0,
+      "investimento_planner": "",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
+    },
+    {
+      "ibge": "2105906",
+      "nome": "Lago Verde",
+      "grupo": "indefinido",
+      "prioritario": false,
+      "cor": "#BDC3C7",
+      "prefeito": "",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0,
+      "total_liderancas": 0,
+      "investimento_planner": "",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
+    },
+    {
+      "ibge": "2106607",
+      "nome": "Matões",
+      "grupo": "indefinido",
+      "prioritario": false,
+      "cor": "#BDC3C7",
+      "prefeito": "",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0,
+      "total_liderancas": 0,
+      "investimento_planner": "",
+      "equipamento_solicitado": "Trator agrícola",
+      "equipamento_categoria": "Trator agrícola"
+    },
+    {
+      "ibge": "2105500",
+      "nome": "João Lisboa",
+      "grupo": "Brandão",
+      "prioritario": false,
+      "cor": "#2980B9",
+      "prefeito": "",
+      "alinhamento": "",
+      "total_obras": 0,
+      "obras_em_andamento": 0,
+      "obras_entregues": 0,
+      "equipamento_solicitado": "",
+      "equipamento_categoria": ""
     }
   ]
 }

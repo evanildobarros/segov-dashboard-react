@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useStore';
 import { useData } from '../context/DataContext';
 import '../styles/style.css';
@@ -7,7 +7,10 @@ import '../styles/style.css';
 const Layout = () => {
   const { user, logout } = useAuth();
   const { filtroGrupo, setFiltroGrupo, busca, setBusca } = useData();
+  const location = useLocation();
   const [theme, setTheme] = useState(localStorage.getItem('dashboard-tema') || 'light');
+
+  const isAdmin = location.pathname === '/admin';
 
   const toggleTheme = (t) => {
     setTheme(t);
@@ -49,28 +52,30 @@ const Layout = () => {
         </div>
 
         <div className="content">
-          <div className="filtros">
-            <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-secondary)' }}>🎯 GRUPO:</span>
-            {['todos', 'Brandão', 'Braide', 'neutro', 'indefinido'].map(g => (
-              <button 
-                key={g} 
-                className={`chip ${filtroGrupo === g ? 'on' : ''}`}
-                onClick={() => setFiltroGrupo(g)}
-              >
-                {g === 'todos' ? 'Todos' : g === 'Brandão' ? '🔵 Orleans' : g === 'Braide' ? '🟠 Braide' : g === 'neutro' ? '🟡 Neutro' : '⚪ Indefinido'}
-              </button>
-            ))}
-            <input 
-              type="text" 
-              id="busca" 
-              placeholder="🔍 Buscar município..." 
-              style={{ marginLeft: 'auto' }} 
-              value={busca}
-              onChange={(e) => setBusca(e.target.value)}
-            />
-          </div>
-          <Outlet />
-        </div>
+                  {!isAdmin && (
+                    <div className="filtros">
+                      <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-secondary)' }}>🎯 GRUPO:</span>
+                      {['todos', 'Brandão', 'Braide', 'neutro', 'indefinido'].map(g => (
+                        <button
+                          key={g}
+                          className={`chip ${filtroGrupo === g ? 'on' : ''}`}
+                          onClick={() => setFiltroGrupo(g)}
+                        >
+                          {g === 'todos' ? 'Todos' : g === 'Brandão' ? '🔵 Orleans' : g === 'Braide' ? '🟠 Braide' : g === 'neutro' ? '🟡 Neutro' : '⚪ Indefinido'}
+                        </button>
+                      ))}
+                      <input
+                        type="text"
+                        id="busca"
+                        placeholder="🔍 Buscar município..."
+                        style={{ marginLeft: 'auto' }}
+                        value={busca}
+                        onChange={(e) => setBusca(e.target.value)}
+                      />
+                    </div>
+                  )}
+                  <Outlet />
+                </div>
       </div>
     </div>
   );
