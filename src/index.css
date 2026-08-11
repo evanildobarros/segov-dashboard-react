@@ -23,3 +23,23 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
 }
+
+/* Tooltip do Mapa Coroplético (Leaflet + Tailwind) */
+.segov-tooltip {
+  background: #ffffff;
+  color: #0b3c5d;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  border: none;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.segov-tooltip::before {
+  display: none;
+}
+
+.leaflet-container {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}

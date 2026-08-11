@@ -7,6 +7,7 @@ const initialState = {
   busca: '',
   sortKey: null,
   sortDir: 'asc',
+  mesorregiao: null,
   municipioId: null,
   modo: 'dashboard',
   isAuthenticated: false,
@@ -28,6 +29,7 @@ export const useStore = create((set, get) => ({
   setGrupo: (grupo) => set({ grupo }),
   setBusca: (busca) => set({ busca }),
   setSort: (key, dir = 'asc') => set({ sortKey: key, sortDir: dir }),
+  setMesorregiao: (mesorregiao) => set({ mesorregiao: mesorregiao === 'todas' ? null : mesorregiao }),
   setMunicipioId: (municipioId) => set({ municipioId }),
   setModo: (modo) => set({ modo }),
 
@@ -181,6 +183,9 @@ export const useStore = create((set, get) => ({
     if (grupo && grupo !== 'todos') {
       lista = lista.filter(m => m && m.grupo === grupo);
     }
+    if (get().mesorregiao) {
+      lista = lista.filter(m => m && m.mesorregiao === get().mesorregiao);
+    }
     if (busca) {
       const q = busca.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       lista = lista.filter(m => m && (
@@ -205,7 +210,7 @@ export const useStore = create((set, get) => ({
     return getStats(municipios || []);
   },
 
-  resetFiltros: () => set({ grupo: 'todos', busca: '', municipioId: null }),
+  resetFiltros: () => set({ grupo: 'todos', busca: '', municipioId: null, mesorregiao: null }),
 }));
 
 export const useGrupo = () => useStore(state => state.grupo);
@@ -235,6 +240,7 @@ export const useMunicipiosFiltrados = () => {
   useStore(state => state.busca);
   useStore(state => state.sortKey);
   useStore(state => state.sortDir);
+  useStore(state => state.mesorregiao);
   useStore(state => state.municipios);
   return getMunicipiosFiltrados();
 };

@@ -1,9 +1,19 @@
 import { useStore } from '../hooks/useStore';
 import { Search, Filter } from 'lucide-react';
 
+// Lista de mesorregiões do Maranhão (oficial IBGE)
+const MESORREgIOES = [
+  { value: 'todas', label: 'Todas' },
+  { value: 'Centro Maranhense', label: '🟦 Centro' },
+  { value: 'Leste Maranhense', label: '🟧 Leste' },
+  { value: 'Norte Maranhense', label: '🟩 Norte' },
+  { value: 'Oeste Maranhense', label: '🟥 Oeste' },
+  { value: 'Sul Maranhense', label: '🟪 Sul' },
+];
+
 export function FiltrosGlobais() {
-  const { grupo, setGrupo, busca, setBusca } = useStore();
-  
+  const { grupo, setGrupo, busca, setBusca, mesorregiao, setMesorregiao } = useStore();
+
   const grupos = [
     { value: 'todos', label: 'Todos' },
     { value: 'Brandão', label: '🔵 Orleans' },
@@ -11,7 +21,7 @@ export function FiltrosGlobais() {
     { value: 'neutro', label: '🟡 Neutro' },
     { value: 'indefinido', label: '⚪ Indefinido' }
   ];
-  
+
   return (
     <div className="filtros-globais-bar">
       <span style={{ fontSize: '12px', fontWeight: 700, color: '#7a8a99', whiteSpace: 'nowrap' }}>🎯 GRUPO:</span>
@@ -36,6 +46,28 @@ export function FiltrosGlobais() {
           </button>
         ))}
       </div>
+
+      <span style={{ fontSize: '12px', fontWeight: 700, color: '#7a8a99', whiteSpace: 'nowrap' }}>🗺️ MESORREGIÃO:</span>
+      <select
+        value={mesorregiao || 'todas'}
+        onChange={(e) => setMesorregiao(e.target.value)}
+        style={{
+          padding: '6px 10px',
+          borderRadius: '20px',
+          border: '1px solid #dde3ea',
+          background: '#fff',
+          color: '#22313f',
+          fontSize: '12px',
+          fontWeight: 600,
+          cursor: 'pointer',
+          outline: 'none'
+        }}
+      >
+        {MESORREgIOES.map(m => (
+          <option key={m.value} value={m.value}>{m.label}</option>
+        ))}
+      </select>
+
       <div className="filtros-busca-wrapper">
         <input
           type="text"

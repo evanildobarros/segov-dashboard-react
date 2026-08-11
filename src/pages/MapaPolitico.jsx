@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { useStore } from '../hooks/useStore';
 import { MapaLeaflet } from '../components/MapaLeaflet';
 import { formatCurrency, CORES, LABELS, normalizeString } from '../data/municipios';
@@ -7,17 +7,18 @@ import { useNavigate } from 'react-router-dom';
 
 export function MapaPoliticoPage() {
   const navigate = useNavigate();
-  const { 
-    getMunicipiosFiltrados, 
+  const {
+    getMunicipiosFiltrados,
     municipioId,
     setMunicipioId,
     geoJSONData,
-    initTema
+    initTema,
+    mesorregiao
   } = useStore();
-  
-  const [modoMapa, setModoMapa] = useState('grupo'); // 'grupo' | 'obras' | 'investimento' | 'prioritarios'
+
+  const [modoMapa, setModoMapa] = useState('grupo');
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   const municipiosFiltrados = getMunicipiosFiltrados();
 
   useEffect(() => {
@@ -30,27 +31,39 @@ export function MapaPoliticoPage() {
     }
   }, [geoJSONData, initTema]);
 
+  // Set de IBGEs visíveis após o filtro (para o filtro do GeoJSON)
+  // Se houver mesorregião filtrada, filtra os IBGEs por ela; caso contrário null
+  const filteredIbges = useMemo(() => {
+    if (mesorregiao && municipiosFiltrados.length > 0) {
+      return new Set(municipiosFiltrados.map(m => m.ibge));
+    }
+    return null;
+  }, [municipiosFiltrados, mesorregiao]);
+
   // Município atualmente selecionado
   const selectedMun = useMemo(() => {
     if (!municipioId) return null;
-    return municipiosFiltrados.find(m => m.ibge === municipioId) || null;
+    return municipiosFiltrados.find(m => m.ibge === municipioId) ||
+           municipiosFiltrados.find(m => m.ibge === municipioId);
   }, [municipioId, municipiosFiltrados]);
 
   // Lista para busca rápida na lateral
   const filteredList = useMemo(() => {
     if (!searchTerm.trim()) return municipiosFiltrados.slice(0, 50);
     const norm = normalizeString(searchTerm);
-    return municipiosFiltrados.filter(m => normalizeString(m.nome).includes(norm)).slice(0, 50);
+    return municipiosFiltrados
+      .filter(m => normalizeString(m.nome).includes(norm))
+      .slice(0, 50);
   }, [municipiosFiltrados, searchTerm]);
 
-  const handleMunicipioClick = (ibge) => {
+  const handleMunicipioClick = useCallback((ibge, nome) => {
     setMunicipioId(ibge);
-  };
+  }, [setMunicipioId]);
 
   return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingTop: '8px' }}>
-     
-        {/* Top Controls Bar */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingTop: '8px' }}>
+
+      {/* Top Controls Bar */}
       <div style={{
         background: '#ffffff',
         border: '1px solid #dde3ea',
@@ -69,7 +82,7 @@ export function MapaPoliticoPage() {
           </h2>
         </div>
 
-        {/* Botoes de Modo de Visualização */}
+        {/* Botoes de Modo de Visualizacao */}
         <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
           <button
             onClick={() => setModoMapa('grupo')}
@@ -155,13 +168,15 @@ export function MapaPoliticoPage() {
 
       {/* Grid Principal: Mapa (70%) + Painel Lateral de Detalhes (30%) */}
       <div className="mapa-politico-grid">
-        
-        {/* Lado Esquerdo: Mapa do Maranhão */}
+
+        {/* Lado Esquerdo: Mapa do Maranhao */}
         <div className="mapa-canvas-card">
-          <MapaLeaflet 
+          <MapaLeaflet
             municipios={municipiosFiltrados}
             modoMapa={modoMapa}
             onMunicipioClick={handleMunicipioClick}
+            filteredIbges={filteredIbges}
+            mesorregiaoFilter={mesorregiao}
             height="100%"
             id="mapaPoliticoGIS"
           />
@@ -172,7 +187,7 @@ export function MapaPoliticoPage() {
           {selectedMun ? (
             /* Painel de Detalhes do Município Selecionado */
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              
+
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
                 <div>
                   <span style={{ fontSize: '10px', fontWeight: 700, color: '#7a8a99', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -214,7 +229,7 @@ export function MapaPoliticoPage() {
                   🎯 {LABELS[selectedMun.grupo] || selectedMun.grupo}
                 </span>
 
-                {selectedMun.isPriority && (
+                {selectedMun.prioritario && (
                   <span style={{
                     padding: '4px 10px',
                     borderRadius: '12px',
@@ -228,12 +243,17 @@ export function MapaPoliticoPage() {
                 )}
               </div>
 
-              {/* Informações Políticas */}
+              {/* Informacoes Politicas */}
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '4px' }}>Prefeito / Liderança Principal:</div>
+                <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '4px' }}>Prefeito(a) / Liderança Principal:</div>
                 <div style={{ fontSize: '14px', fontWeight: 700, color: '#0b3c5d' }}>
                   {selectedMun.prefeito || 'Não registrado'}
                 </div>
+                {selectedMun.partido && (
+                  <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>
+                    Partido: {selectedMun.partido}
+                  </div>
+                )}
               </div>
 
               {/* Mapeamento de Obras & Investimentos */}
@@ -269,7 +289,7 @@ export function MapaPoliticoPage() {
                 </div>
               )}
 
-              {/* Botão de Redirecionamento para Obras */}
+              {/* Botoe de Redirecionamento para Obras */}
               <button
                 onClick={() => navigate('/obras')}
                 style={{
@@ -293,7 +313,7 @@ export function MapaPoliticoPage() {
 
             </div>
           ) : (
-            /* Busca e Diretório de Municípios quando nenhum está selecionado */
+            /* Busca e Diretorio de Municípios quando nenhum está selecionado */
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', height: '100%' }}>
               <div>
                 <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#0b3c5d', margin: '0 0 4px' }}>
@@ -327,7 +347,7 @@ export function MapaPoliticoPage() {
                 Exibindo {filteredList.length} município(s):
               </div>
 
-              {/* Lista Scrollável */}
+              {/* Lista Scrollavel */}
               <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 {filteredList.map(mun => (
                   <div

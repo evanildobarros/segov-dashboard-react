@@ -31,7 +31,8 @@
       "obras_em_andamento": 6,
       "obras_entregues": 11,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100105",
@@ -50,7 +51,8 @@
       "apoios_braide": 1,
       "apoios_orleans": 0,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100154",
@@ -64,7 +66,8 @@
       "total_obras": 10,
       "obras_em_andamento": 2,
       "obras_entregues": 2,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100204",
@@ -78,7 +81,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 4,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2100303",
@@ -92,7 +96,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 0,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100402",
@@ -106,7 +111,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 0,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100436",
@@ -120,7 +126,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 1,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100477",
@@ -131,7 +138,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100501",
@@ -145,7 +153,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 0,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2100550",
@@ -157,7 +166,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100600",
@@ -171,7 +181,8 @@
       "obras_em_andamento": 1,
       "obras_entregues": 5,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100709",
@@ -185,7 +196,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 5,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2100808",
@@ -199,7 +211,8 @@
       "total_obras": 18,
       "obras_em_andamento": 2,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100832",
@@ -211,7 +224,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 3,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2100873",
@@ -244,7 +258,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2100907",
@@ -258,7 +273,8 @@
       "total_obras": 37,
       "obras_em_andamento": 2,
       "obras_entregues": 20,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2100956",
@@ -272,7 +288,8 @@
       "total_obras": 22,
       "obras_em_andamento": 7,
       "obras_entregues": 8,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2101004",
@@ -286,7 +303,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 3,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101103",
@@ -314,7 +332,8 @@
       "obras_em_andamento": 7,
       "obras_entregues": 7,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101202",
@@ -330,7 +349,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 7,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2101251",
@@ -343,7 +363,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 0,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101301",
@@ -359,7 +380,8 @@
       "obras_em_andamento": 1,
       "obras_entregues": 2,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101350",
@@ -373,7 +395,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 4,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101400",
@@ -387,7 +410,8 @@
       "obras_em_andamento": 4,
       "obras_entregues": 12,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2101509",
@@ -403,7 +427,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 11,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2101608",
@@ -417,7 +442,8 @@
       "obras_em_andamento": 7,
       "obras_entregues": 12,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2101707",
@@ -431,7 +457,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 1,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101731",
@@ -443,7 +470,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2101772",
@@ -455,7 +483,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101806",
@@ -471,7 +500,8 @@
       "total_obras": 10,
       "obras_em_andamento": 0,
       "obras_entregues": 3,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2101905",
@@ -487,7 +517,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 5,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2101939",
@@ -499,7 +530,8 @@
       "alinhamento": "",
       "total_obras": 1,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2101970",
@@ -532,7 +564,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102002",
@@ -543,7 +576,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 2,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102036",
@@ -557,7 +591,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102077",
@@ -568,7 +603,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 4,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2102101",
@@ -579,7 +615,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 6,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2102150",
@@ -592,7 +629,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102200",
@@ -604,7 +642,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2102309",
@@ -616,7 +655,8 @@
       "alinhamento": "",
       "total_obras": 15,
       "obras_em_andamento": 2,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2102325",
@@ -627,7 +667,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102358",
@@ -640,7 +681,8 @@
       "alinhamento": "",
       "total_obras": 2,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102374",
@@ -652,7 +694,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 4,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2102408",
@@ -665,7 +708,8 @@
       "alinhamento": "",
       "total_obras": 15,
       "obras_em_andamento": 4,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2102507",
@@ -678,7 +722,8 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 6,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2102556",
@@ -691,7 +736,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2102606",
@@ -702,7 +748,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2102705",
@@ -716,7 +763,8 @@
       "obras_em_andamento": 1,
       "obras_entregues": 0,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2102754",
@@ -730,7 +778,8 @@
       "total_obras": 11,
       "obras_em_andamento": 1,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2102804",
@@ -746,7 +795,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 2,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2102903",
@@ -781,7 +831,8 @@
       "pesquisa_braide": null,
       "pesquisa_data": "",
       "grupo_pesquisa": "",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2103000",
@@ -795,7 +846,8 @@
       "total_obras": 37,
       "obras_em_andamento": 2,
       "obras_entregues": 10,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103109",
@@ -809,7 +861,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 0,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2103125",
@@ -823,7 +876,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2103158",
@@ -856,7 +910,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2103174",
@@ -868,7 +923,8 @@
       "alinhamento": "",
       "total_obras": 3,
       "obras_em_andamento": 1,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2103208",
@@ -881,7 +937,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 0,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103257",
@@ -895,7 +952,8 @@
       "total_obras": 4,
       "obras_em_andamento": 2,
       "obras_entregues": 1,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2103307",
@@ -909,7 +967,8 @@
       "total_obras": 20,
       "obras_em_andamento": 0,
       "obras_entregues": 6,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103406",
@@ -920,7 +979,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103505",
@@ -936,7 +996,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 37,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103554",
@@ -962,7 +1023,8 @@
       "investimento_planner": "",
       "total_obras": 9,
       "obras_em_andamento": 3,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2103604",
@@ -976,7 +1038,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 3,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2103703",
@@ -990,7 +1053,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 9,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2103752",
@@ -1004,7 +1068,8 @@
       "total_obras": 2,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2103802",
@@ -1030,7 +1095,8 @@
       "investimento_planner": "",
       "total_obras": 14,
       "obras_em_andamento": 5,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2103901",
@@ -1066,7 +1132,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Orleans Brandão",
       "igreja_estrategico": true,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2104008",
@@ -1080,7 +1147,8 @@
       "total_obras": 10,
       "obras_em_andamento": 3,
       "obras_entregues": 2,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104057",
@@ -1094,7 +1162,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 3,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2104073",
@@ -1108,7 +1177,8 @@
       "total_obras": 17,
       "obras_em_andamento": 6,
       "obras_entregues": 4,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2104081",
@@ -1120,7 +1190,8 @@
       "alinhamento": "",
       "total_obras": 3,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104099",
@@ -1134,7 +1205,8 @@
       "total_obras": 11,
       "obras_em_andamento": 1,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104107",
@@ -1148,7 +1220,8 @@
       "total_obras": 29,
       "obras_em_andamento": 5,
       "obras_entregues": 7,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2104206",
@@ -1162,7 +1235,8 @@
       "alinhamento": "",
       "total_obras": 4,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104305",
@@ -1174,7 +1248,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2104404",
@@ -1189,7 +1264,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104503",
@@ -1203,7 +1279,8 @@
       "total_obras": 8,
       "obras_em_andamento": 1,
       "obras_entregues": 6,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104552",
@@ -1217,7 +1294,8 @@
       "total_obras": 0,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2104602",
@@ -1229,7 +1307,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104628",
@@ -1245,7 +1324,8 @@
       "obras_em_andamento": 5,
       "obras_entregues": 3,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104651",
@@ -1257,7 +1337,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 2,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2104677",
@@ -1290,7 +1371,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2104701",
@@ -1301,7 +1383,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 2,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2104800",
@@ -1317,7 +1400,8 @@
       "total_obras": 14,
       "obras_em_andamento": 1,
       "obras_entregues": 4,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105005",
@@ -1352,7 +1436,8 @@
       "pesquisa_data": "",
       "grupo_pesquisa": "",
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2105104",
@@ -1396,7 +1481,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Braide",
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2105153",
@@ -1410,7 +1496,8 @@
       "total_obras": 10,
       "obras_em_andamento": 4,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2105203",
@@ -1423,7 +1510,8 @@
       "alinhamento": "",
       "total_obras": 1,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105302",
@@ -1456,7 +1544,8 @@
       "eleitores": 180000,
       "contatos": {},
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105351",
@@ -1470,7 +1559,8 @@
       "total_obras": 7,
       "obras_em_andamento": 0,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105401",
@@ -1486,7 +1576,8 @@
       "obras_em_andamento": 6,
       "obras_entregues": 6,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2105427",
@@ -1500,7 +1591,8 @@
       "total_obras": 4,
       "obras_em_andamento": 1,
       "obras_entregues": 1,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105450",
@@ -1514,7 +1606,8 @@
       "total_obras": 4,
       "obras_em_andamento": 0,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2105476",
@@ -1525,7 +1618,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105658",
@@ -1559,7 +1653,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105609",
@@ -1571,7 +1666,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 4,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105708",
@@ -1585,7 +1681,8 @@
       "total_obras": 26,
       "obras_em_andamento": 4,
       "obras_entregues": 6,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105807",
@@ -1599,7 +1696,8 @@
       "total_obras": 14,
       "obras_em_andamento": 4,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2106201",
@@ -1632,7 +1730,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105922",
@@ -1648,7 +1747,8 @@
       "total_obras": 13,
       "obras_em_andamento": 1,
       "obras_entregues": 8,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2105948",
@@ -1660,7 +1760,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2105963",
@@ -1672,7 +1773,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 2,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2105989",
@@ -1686,7 +1788,8 @@
       "total_obras": 8,
       "obras_em_andamento": 3,
       "obras_entregues": 3,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2106003",
@@ -1700,7 +1803,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 1,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2106102",
@@ -1714,7 +1818,8 @@
       "obras_em_andamento": 1,
       "obras_entregues": 3,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2106300",
@@ -1728,7 +1833,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 2,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2106326",
@@ -1744,7 +1850,8 @@
       "total_obras": 5,
       "obras_em_andamento": 3,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2106359",
@@ -1758,7 +1865,8 @@
       "total_obras": 5,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2106409",
@@ -1769,7 +1877,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 5,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2106508",
@@ -1781,7 +1890,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 6,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2106375",
@@ -1814,7 +1924,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2106631",
@@ -1851,7 +1962,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Orleans Brandão",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2106672",
@@ -1863,7 +1975,8 @@
       "alinhamento": "",
       "total_obras": 3,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2106706",
@@ -1877,7 +1990,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 2,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2106755",
@@ -1891,7 +2005,8 @@
       "total_obras": 7,
       "obras_em_andamento": 1,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2106805",
@@ -1905,7 +2020,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 0,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2106904",
@@ -1918,7 +2034,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107001",
@@ -1930,7 +2047,8 @@
       "alinhamento": "",
       "total_obras": 3,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2107100",
@@ -1944,7 +2062,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107209",
@@ -1958,7 +2077,8 @@
       "total_obras": 11,
       "obras_em_andamento": 1,
       "obras_entregues": 5,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107258",
@@ -1972,7 +2092,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 1,
-      "obras_entregues": 8
+      "obras_entregues": 8,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2107308",
@@ -1986,7 +2107,8 @@
       "total_obras": 0,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2107357",
@@ -2002,7 +2124,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 3,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2107407",
@@ -2016,7 +2139,8 @@
       "total_obras": 6,
       "obras_em_andamento": 0,
       "obras_entregues": 2,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2107456",
@@ -2030,7 +2154,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 4,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107506",
@@ -2042,7 +2167,8 @@
       "alinhamento": "",
       "total_obras": 27,
       "obras_em_andamento": 2,
-      "obras_entregues": 13
+      "obras_entregues": 13,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107605",
@@ -2056,7 +2182,8 @@
       "total_obras": 16,
       "obras_em_andamento": 3,
       "obras_entregues": 3,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2107704",
@@ -2068,7 +2195,8 @@
       "alinhamento": "",
       "total_obras": 15,
       "obras_em_andamento": 0,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2107803",
@@ -2082,7 +2210,8 @@
       "alinhamento": "",
       "total_obras": 14,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2107902",
@@ -2096,7 +2225,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 5,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2108009",
@@ -2110,7 +2240,8 @@
       "total_obras": 11,
       "obras_em_andamento": 6,
       "obras_entregues": 4,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2108058",
@@ -2121,7 +2252,8 @@
       "alinhamento": "",
       "total_obras": 4,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108108",
@@ -2135,7 +2267,8 @@
       "total_obras": 6,
       "obras_em_andamento": 2,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2108207",
@@ -2147,7 +2280,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 3,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2108256",
@@ -2160,7 +2294,8 @@
       "total_obras": 6,
       "obras_em_andamento": 3,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108306",
@@ -2176,7 +2311,8 @@
       "total_obras": 12,
       "obras_em_andamento": 2,
       "obras_entregues": 5,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108405",
@@ -2190,7 +2326,8 @@
       "alinhamento": "",
       "total_obras": 19,
       "obras_em_andamento": 2,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108454",
@@ -2204,7 +2341,8 @@
       "total_obras": 10,
       "obras_em_andamento": 1,
       "obras_entregues": 4,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2108504",
@@ -2216,7 +2354,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 5,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2108603",
@@ -2232,7 +2371,8 @@
       "total_obras": 16,
       "obras_em_andamento": 4,
       "obras_entregues": 4,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108702",
@@ -2244,7 +2384,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2108801",
@@ -2256,7 +2397,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 3,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2108900",
@@ -2270,7 +2412,8 @@
       "total_obras": 18,
       "obras_em_andamento": 11,
       "obras_entregues": 4,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2109007",
@@ -2284,7 +2427,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 3,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2109056",
@@ -2296,7 +2440,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109106",
@@ -2310,7 +2455,8 @@
       "prefeito": "Pedro Paulo Cantanhede Lemos",
       "total_obras": 21,
       "obras_em_andamento": 5,
-      "obras_entregues": 9
+      "obras_entregues": 9,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2109205",
@@ -2324,7 +2470,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 1,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109239",
@@ -2338,7 +2485,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 1,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2109270",
@@ -2350,7 +2498,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109304",
@@ -2362,7 +2511,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109403",
@@ -2376,7 +2526,8 @@
       "total_obras": 12,
       "obras_em_andamento": 2,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109452",
@@ -2390,7 +2541,8 @@
       "total_obras": 18,
       "obras_em_andamento": 5,
       "obras_entregues": 4,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109502",
@@ -2404,7 +2556,8 @@
       "obras_em_andamento": 7,
       "obras_entregues": 7,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2109551",
@@ -2416,7 +2569,8 @@
       "alinhamento": "",
       "total_obras": 6,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2109601",
@@ -2428,7 +2582,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 1,
-      "obras_entregues": 7
+      "obras_entregues": 7,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109700",
@@ -2442,7 +2597,8 @@
       "total_obras": 10,
       "obras_em_andamento": 3,
       "obras_entregues": 4,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2109759",
@@ -2456,7 +2612,8 @@
       "total_obras": 14,
       "obras_em_andamento": 0,
       "obras_entregues": 1,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2109809",
@@ -2468,7 +2625,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 4,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2109908",
@@ -2479,7 +2637,8 @@
       "alinhamento": "",
       "total_obras": 13,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2110005",
@@ -2517,7 +2676,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Empate/Neutro",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2110039",
@@ -2528,7 +2688,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2110104",
@@ -2542,7 +2703,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 0,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2110203",
@@ -2556,7 +2718,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2110237",
@@ -2567,7 +2730,8 @@
       "alinhamento": "",
       "total_obras": 2,
       "obras_em_andamento": 1,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2110278",
@@ -2601,7 +2765,8 @@
         "endereco": "Praça Nossa Senhora da Conceição, s/n, Centro, CEP 65195-000"
       },
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2110302",
@@ -2614,7 +2779,8 @@
       "alinhamento": "",
       "total_obras": 10,
       "obras_em_andamento": 2,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2110401",
@@ -2628,7 +2794,8 @@
       "total_obras": 9,
       "obras_em_andamento": 3,
       "obras_entregues": 4,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2110500",
@@ -2642,7 +2809,8 @@
       "total_obras": 12,
       "obras_em_andamento": 3,
       "obras_entregues": 4,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2110609",
@@ -2656,7 +2824,8 @@
       "total_obras": 9,
       "obras_em_andamento": 1,
       "obras_entregues": 2,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2110658",
@@ -2667,7 +2836,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2110708",
@@ -2679,7 +2849,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 0,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2110807",
@@ -2693,7 +2864,8 @@
       "total_obras": 10,
       "obras_em_andamento": 0,
       "obras_entregues": 5,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2110856",
@@ -2707,7 +2879,8 @@
       "total_obras": 2,
       "obras_em_andamento": 0,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2110906",
@@ -2721,7 +2894,8 @@
       "total_obras": 7,
       "obras_em_andamento": 2,
       "obras_entregues": 1,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2111003",
@@ -2735,7 +2909,8 @@
       "total_obras": 24,
       "obras_em_andamento": 8,
       "obras_entregues": 5,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2111029",
@@ -2746,7 +2921,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 0,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2111052",
@@ -2758,7 +2934,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2111078",
@@ -2795,7 +2972,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Empate/Neutro",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2111102",
@@ -2807,7 +2985,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2111201",
@@ -2819,7 +2998,8 @@
       "alinhamento": "",
       "total_obras": 24,
       "obras_em_andamento": 6,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2111250",
@@ -2857,7 +3037,8 @@
       },
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Orleans Brandão",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111300",
@@ -2870,7 +3051,8 @@
       "obras_em_andamento": 86,
       "obras_entregues": 192,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2111409",
@@ -2884,7 +3066,8 @@
       "total_obras": 0,
       "obras_em_andamento": 0,
       "obras_entregues": 0,
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111508",
@@ -2898,7 +3081,8 @@
       "obras_em_andamento": 3,
       "obras_entregues": 2,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111532",
@@ -2910,7 +3094,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 0,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2111573",
@@ -2922,7 +3107,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2111607",
@@ -2959,7 +3145,8 @@
       "pesquisa_data": "30/07/2026",
       "grupo_pesquisa": "Braide",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2111631",
@@ -2971,7 +3158,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111672",
@@ -2983,7 +3171,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 4,
-      "obras_entregues": 6
+      "obras_entregues": 6,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111706",
@@ -2996,7 +3185,8 @@
       "obras_em_andamento": 4,
       "obras_entregues": 8,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2111722",
@@ -3007,7 +3197,8 @@
       "alinhamento": "",
       "total_obras": 8,
       "obras_em_andamento": 0,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111748",
@@ -3019,7 +3210,8 @@
       "alinhamento": "",
       "total_obras": 15,
       "obras_em_andamento": 1,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111763",
@@ -3032,7 +3224,8 @@
       "alinhamento": "",
       "total_obras": 5,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2111789",
@@ -3045,7 +3238,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2111805",
@@ -3059,7 +3253,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 4,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2111904",
@@ -3075,7 +3270,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 1,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2111953",
@@ -3089,7 +3285,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 3,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2112001",
@@ -3103,7 +3300,8 @@
       "obras_em_andamento": 2,
       "obras_entregues": 3,
       "equipamento_solicitado": "Retroescavadeira",
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Sul Maranhense"
     },
     {
       "ibge": "2112100",
@@ -3117,7 +3315,8 @@
       "total_obras": 5,
       "obras_em_andamento": 1,
       "obras_entregues": 1,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2112209",
@@ -3131,7 +3330,8 @@
       "obras_em_andamento": 7,
       "obras_entregues": 15,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2112233",
@@ -3144,7 +3344,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2112274",
@@ -3156,7 +3357,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 3,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2112308",
@@ -3170,7 +3372,8 @@
       "total_obras": 34,
       "obras_em_andamento": 4,
       "obras_entregues": 8,
-      "equipamento_categoria": "Retroescavadeira"
+      "equipamento_categoria": "Retroescavadeira",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2112407",
@@ -3184,7 +3387,8 @@
       "obras_em_andamento": 4,
       "obras_entregues": 2,
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2112456",
@@ -3196,7 +3400,8 @@
       "alinhamento": "",
       "total_obras": 11,
       "obras_em_andamento": 2,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2112506",
@@ -3209,7 +3414,8 @@
       "alinhamento": "",
       "total_obras": 18,
       "obras_em_andamento": 1,
-      "obras_entregues": 4
+      "obras_entregues": 4,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2112605",
@@ -3224,7 +3430,8 @@
       "alinhamento": "",
       "total_obras": 9,
       "obras_em_andamento": 1,
-      "obras_entregues": 3
+      "obras_entregues": 3,
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2112704",
@@ -3237,7 +3444,8 @@
       "alinhamento": "",
       "total_obras": 16,
       "obras_em_andamento": 0,
-      "obras_entregues": 2
+      "obras_entregues": 2,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2112803",
@@ -3249,7 +3457,8 @@
       "alinhamento": "",
       "total_obras": 7,
       "obras_em_andamento": 1,
-      "obras_entregues": 5
+      "obras_entregues": 5,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2112852",
@@ -3262,7 +3471,8 @@
       "alinhamento": "",
       "total_obras": 3,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2112902",
@@ -3273,7 +3483,8 @@
       "alinhamento": "",
       "total_obras": 12,
       "obras_em_andamento": 1,
-      "obras_entregues": 1
+      "obras_entregues": 1,
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2113009",
@@ -3284,7 +3495,8 @@
       "alinhamento": "",
       "total_obras": 1,
       "obras_em_andamento": 0,
-      "obras_entregues": 0
+      "obras_entregues": 0,
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2114007",
@@ -3317,7 +3529,8 @@
       "pesquisa_orleans": null,
       "pesquisa_braide": null,
       "pesquisa_data": "",
-      "grupo_pesquisa": ""
+      "grupo_pesquisa": "",
+      "mesorregiao": "Oeste Maranhense"
     },
     {
       "ibge": "2104909",
@@ -3333,7 +3546,8 @@
       "total_liderancas": 0,
       "investimento_planner": "",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Norte Maranhense"
     },
     {
       "ibge": "2105906",
@@ -3349,7 +3563,8 @@
       "total_liderancas": 0,
       "investimento_planner": "",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Centro Maranhense"
     },
     {
       "ibge": "2106607",
@@ -3365,7 +3580,8 @@
       "total_liderancas": 0,
       "investimento_planner": "",
       "equipamento_solicitado": "Trator agrícola",
-      "equipamento_categoria": "Trator agrícola"
+      "equipamento_categoria": "Trator agrícola",
+      "mesorregiao": "Leste Maranhense"
     },
     {
       "ibge": "2105500",
@@ -3379,7 +3595,8 @@
       "obras_em_andamento": 0,
       "obras_entregues": 0,
       "equipamento_solicitado": "",
-      "equipamento_categoria": ""
+      "equipamento_categoria": "",
+      "mesorregiao": "Oeste Maranhense"
     }
   ]
 }

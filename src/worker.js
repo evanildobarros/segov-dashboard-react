@@ -129,7 +129,7 @@ async function d1Query(env, sql, params = []) {
 async function loadDadosAtivos(env) {
   // Busca diretamente da tabela municipios no D1 (sincronizada via sync)
   const result = await d1Query(env,
-    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas FROM municipios ORDER BY nome'
+    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas, mesorregiao FROM municipios ORDER BY nome'
   );
   if (result.results && result.results.length > 0) {
     const muns = result.results.map(r => ({
@@ -144,7 +144,8 @@ async function loadDadosAtivos(env) {
       obras_em_andamento: Number(r.obras_em_andamento || 0),
       obras_entregues: Number(r.obras_entregues || 0),
       equipamento_solicitado: String(r.equipamento_solicitado || ''),
-      equipamento_categoria: String(r.equipamento_categoria || '')
+      equipamento_categoria: String(r.equipamento_categoria || ''),
+      mesorregiao: String(r.mesorregiao || '')
     }));
     const totalObras = muns.reduce((s, m) => s + m.total_obras, 0);
     return {
