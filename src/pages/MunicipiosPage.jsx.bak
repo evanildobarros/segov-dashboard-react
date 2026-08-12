@@ -11,32 +11,20 @@ const MunicipiosPage = () => {
     ? filtrados.filter(m => m.prioritario) 
     : filtrados;
 
-  const totalPrioritarios = municipios.filter(m => m.prioritario).length;
-  const totalMunicipios = municipios.length;
-
   return (
     <div className="page-municipios">
       <div className="card">
         <h3>📋 Lista de Municípios 
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: '15px' }}>
             <small id="contadorTabela">Exibindo {listaExibicao.length} registros</small>
-            <select
-              value={view}
-              onChange={(e) => setView(e.target.value)}
-              style={{
-                padding: '6px 12px',
-                borderRadius: '6px',
-                border: '1px solid #dde3ea',
-                background: '#fff',
-                color: '#22313f',
-                fontSize: '12px',
-                cursor: 'pointer',
-                fontWeight: 600,
-              }}
-            >
-              <option value="prioritarios">Prioritários ({totalPrioritarios})</option>
-              <option value="todos">Todos ({totalMunicipios})</option>
-            </select>
+            <button 
+              className={`btn small ${view === 'prioritarios' ? 'primary' : ''}`} 
+              onClick={() => setView('prioritarios')}
+            >Prioritários</button>
+            <button 
+              className={`btn small ${view === 'todos' ? 'primary' : ''}`} 
+              onClick={() => setView('todos')}
+            >Todos (217)</button>
           </div>
         </h3>
         <div className="scroll-table">
