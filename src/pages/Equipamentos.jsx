@@ -4,7 +4,7 @@ import { formatCurrency } from '../data/municipios';
 
 export function EquipamentosPage() {
   const { municipios, getMunicipiosFiltrados, setGrupo } = useStore();
-  const [view, setView] = useState('todos');
+  const [view, setView] = useState('prioritarios');
   const [filtroEquipamento, setFiltroEquipamento] = useState('todos');
 
   useEffect(() => {
