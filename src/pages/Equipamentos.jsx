@@ -44,6 +44,9 @@ export function EquipamentosPage() {
     if ((m.equipamento_solicitado || '').toLowerCase().includes('retroescavadeira')) equipamentosPorGrupo[grupo].retro++;
   });
 
+  const totalPrioritarios = listaEquip.filter(m => m.prioritario).length;
+  const totalTodos = listaEquip.length;
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingTop: '8px' }}>
       {/* KPIs */}
@@ -115,24 +118,18 @@ export function EquipamentosPage() {
 
         <div style={{ flex: 1 }} />
 
-        <button
-          onClick={() => setView('prioritarios')}
+        <select
+          value={view}
+          onChange={(e) => setView(e.target.value)}
           style={{
             padding: '6px 12px', borderRadius: '6px', border: '1px solid #dde3ea',
-            background: view === 'prioritarios' ? '#0b3c5d' : '#fff',
-            color: view === 'prioritarios' ? '#fff' : '#22313f',
+            background: '#fff', color: '#22313f',
             fontSize: '12px', cursor: 'pointer', fontWeight: 600
           }}
-        >Prioritários (8)</button>
-        <button
-          onClick={() => setView('todos')}
-          style={{
-            padding: '6px 12px', borderRadius: '6px', border: '1px solid #dde3ea',
-            background: view === 'todos' ? '#0b3c5d' : '#fff',
-            color: view === 'todos' ? '#fff' : '#22313f',
-            fontSize: '12px', cursor: 'pointer', fontWeight: 600
-          }}
-        >Todos ({listaExibicao.length})</button>
+        >
+          <option value="prioritarios">Prioritários ({totalPrioritarios})</option>
+          <option value="todos">Todos ({totalTodos})</option>
+        </select>
       </div>
 
       {/* Resumo por grupo */}
