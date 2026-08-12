@@ -191,38 +191,27 @@ export function ObrasPage() {
         {/* Espaçador flexível */}
         <div style={{ flex: 1 }} />
 
-        {/* Filtro de Prioridades (direita) */}
-        <button
-          onClick={() => setView(view === 'prioritarios' ? 'todos' : 'prioritarios')}
-          style={{
-            padding: '6px 14px',
-            borderRadius: '20px',
-            border: 'none',
-            background: view === 'prioritarios' ? '#0b3c5d' : '#fff',
-            color: view === 'prioritarios' ? '#fff' : '#475569',
-            fontSize: '12px',
-            fontWeight: 700,
-            cursor: 'pointer',
-            border: view === 'prioritarios' ? '1px solid #0b3c5d' : '1px solid #cbd5e1'
-          }}
-        >
-          ⭐ Prioritários ({totalPrioritarios})
-        </button>
-        <button
-          onClick={() => setView('todos')}
-          style={{
-            padding: '6px 14px',
-            borderRadius: '20px',
-            border: view === 'todos' ? '1.5px solid #0b3c5d' : '1px solid #cbd5e1',
-            background: view === 'todos' ? '#0b3c5d' : '#fff',
-            color: view === 'todos' ? '#fff' : '#475569',
-            fontSize: '12px',
-            fontWeight: 700,
-            cursor: 'pointer'
-          }}
-        >
-          Todos ({totalVisiveis})
-        </button>
+        {/* Filtro de Prioridades (select no lugar de botões) */}
+                <select
+                  value={view}
+                  onChange={(e) => setView(e.target.value)}
+                  style={{
+                    padding: '6px 14px',
+                    borderRadius: '20px',
+                    border: '1px solid #cbd5e1',
+                    background: '#fff',
+                    color: '#475569',
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    flex: 1,
+                  }}
+                >
+                  <option value="prioritarios">
+                    ⭐ Prioritários ({totalPrioritarios})
+                  </option>
+                  <option value="todos">Todos ({totalVisiveis})</option>
+                </select>
       </div>
 
       {/* Charts Grid */}
