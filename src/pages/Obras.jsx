@@ -55,7 +55,7 @@ function getListaEixos(municipios = []) {
 
 export function ObrasPage() {
   const { getMunicipiosFiltrados, municipios, setGrupo } = useStore();
-  const [view, setView] = useState('todos');
+  const [municipioSelected, setMunicipioSelected] = useState('todos');
   const [eixoSelected, setEixoSelected] = useState(null);
 
   useEffect(() => {
@@ -85,9 +85,12 @@ export function ObrasPage() {
         const obras = m?.eixos && Array.isArray(m.eixos) ? m.eixos : [];
         match = match && obras.some(o => o.orgao === eixoSelected);
       }
+      if (municipioSelected !== 'todos') {
+        match = match && String(m.ibge || m.id) === String(municipioSelected);
+      }
       return match;
     });
-  }, [municipios, eixoSelected]);
+  }, [municipios, eixoSelected, municipioSelected]);
 
   const totalObras = listaExibicao.reduce((s, m) => s + (m.total_obras || 0), 0);
   const totalInvestimento = listaExibicao.reduce((s, m) => {
@@ -139,79 +142,62 @@ export function ObrasPage() {
         <span style={{ fontSize: '12px', fontWeight: 600, color: '#64748b' }}>Filtro:</span>
 
         {/* Filtro de Eixos de Obras */}
-        <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-          <button
-            onClick={() => setEixoSelected(null)}
-            style={{
-              padding: '6px 12px',
-              borderRadius: '6px',
-              border: '1px solid #cbd5e1',
-              background: '#fff',
-              color: '#475569',
-              fontSize: '12px',
-              cursor: 'pointer',
-              fontWeight: 600,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
-            }}
-          >
-            Todos os Eixos
-          </button>
+        <select
+          value={eixoSelected || ''}
+          onChange={(e) => setEixoSelected(e.target.value || null)}
+          aria-label="Filtrar por eixo de obras"
+          style={{
+            minWidth: '190px',
+            maxWidth: '280px',
+            padding: '6px 12px',
+            borderRadius: '6px',
+            border: '1px solid #cbd5e1',
+            background: '#fff',
+            color: '#334155',
+            fontSize: '12px',
+            cursor: 'pointer',
+            fontWeight: 600
+          }}
+        >
+          <option value="">Todos os Eixos</option>
           {allEixos.map((eixo) => {
             const icon = EIXO_ICONS[eixo] || '🏗️';
             const label = EIXO_LABELS[eixo] || eixo;
-            const isActive = eixoSelected === eixo;
             return (
-              <button
-                key={eixo}
-                onClick={() => toggleEixo(eixo)}
-                style={{
-                  padding: '6px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #cbd5e1',
-                  background: isActive ? '#0b3c5d' : '#fff',
-                  color: isActive ? '#fff' : '#334155',
-                  fontSize: '12px',
-                  cursor: 'pointer',
-                  fontWeight: 600,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px'
-                }}
-                title={label}
-              >
-                <span style={{ fontSize: '13px' }}>{icon}</span>
-                {label.length > 14 ? label.substring(0, 14) + '…' : label}
-              </button>
+              <option key={eixo} value={eixo}>
+                {icon} {label}
+              </option>
             );
           })}
-        </div>
+        </select>
 
         {/* Espaçador flexível */}
         <div style={{ flex: 1 }} />
 
-        {/* Filtro de Prioridades (select no lugar de botões) */}
-                <select
-                  value={view}
-                  onChange={(e) => setView(e.target.value)}
-                  style={{
-                    padding: '6px 14px',
-                    borderRadius: '20px',
-                    border: '1px solid #cbd5e1',
-                    background: '#fff',
-                    color: '#475569',
-                    fontSize: '12px',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    flex: 1,
-                  }}
-                >
-                  <option value="prioritarios">
-                    ⭐ Prioritários ({totalPrioritarios})
-                  </option>
-                  <option value="todos">Todos ({totalVisiveis})</option>
-                </select>
+        {/* Filtro de Município */}
+        <select
+          value={municipioSelected}
+          onChange={(e) => setMunicipioSelected(e.target.value)}
+          aria-label="Filtrar por município"
+          style={{
+            minWidth: '190px',
+            maxWidth: '280px',
+            padding: '6px 12px',
+            borderRadius: '20px',
+            border: '1px solid #cbd5e1',
+            background: '#fff',
+            color: '#475569',
+            fontSize: '12px',
+            fontWeight: 700,
+            cursor: 'pointer',
+            flex: 1
+          }}
+        >
+          <option value="todos">Todos os Municípios (217)</option>
+          {[...municipios].sort((a, b) => (a.nome || '').localeCompare(b.nome || '', 'pt-BR')).map((m) => (
+            <option key={m.ibge || m.id} value={m.ibge || m.id}>{m.nome}</option>
+          ))}
+        </select>
       </div>
 
       {/* Charts Grid */}

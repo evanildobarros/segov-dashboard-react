@@ -104,8 +104,15 @@ function securityHeaders() {
 async function d1Query(env, sql, params = []) {
   // 1) Binding D1 nativo (env.DB)
   if (env.DB) {
-    const { results } = await env.DB.prepare(sql).bind(...params).all();
-    return { results: results || [] };
+    const stmt = env.DB.prepare(sql).bind(...params);
+    const isRead = /^(SELECT|PRAGMA)/i.test(sql.trim());
+    if (isRead) {
+      const { results } = await stmt.all();
+      return { results: results || [] };
+    }
+    // Para INSERT/UPDATE/DELETE usar .run()
+    const info = await stmt.run();
+    return { results: [], success: true, meta: info.meta };
   }
   // 2) Fallback HTTP API
   if (env.CF_ACCOUNT_ID && env.CF_API_TOKEN && env.D1_DB_ID) {
@@ -121,7 +128,7 @@ async function d1Query(env, sql, params = []) {
       }
     );
     const data = await resp.json();
-    return { results: data.result?.[0]?.results || [] };
+    return { results: data.result?.[0]?.results || [], success: data.success, meta: data.result?.[0]?.meta };
   }
   throw new Error('D1 não configurado (binding ou secrets HTTP)');
 }
@@ -145,6 +152,9 @@ async function loadDadosAtivos(env) {
       obras_entregues: Number(r.obras_entregues || 0),
       equipamento_solicitado: String(r.equipamento_solicitado || ''),
       equipamento_categoria: String(r.equipamento_categoria || ''),
+      partido: String(r.partido || ''),
+      investimento_planner: r.investimento_planner != null ? String(r.investimento_planner) : '',
+      total_liderancas: Number(r.total_liderancas || 0),
       mesorregiao: String(r.mesorregiao || ''),
       eixos: (() => {
         try { return JSON.parse(r.eixos || '[]'); } catch { return []; }
@@ -327,22 +337,59 @@ export default {
               }
             }
 
-        // DELETE /api/municipios/:ibge (público) → excluir do D1
-        const delMatch = path.match(/^\/api\/municipios\/(\d+)$/);
-        if (delMatch && method === 'DELETE') {
-          try {
-            const ibge = delMatch[1];
-            const result = await d1Query(env,
-              'DELETE FROM municipios WHERE ibge = ?',
-              [ibge]
-            );
-            return json({ ok: true, message: 'Município excluído', deleted: result.success }, 200, { 'Cache-Control': 'no-store' });
-          } catch (e) {
-            return json({ ok: false, erro: e.message }, 500);
-          }
-        }
+        // PUT /api/municipios/:ibge (auth) → atualiza município na tabela municipios
+                const putMatch = path.match(/^\/api\/municipios\/(\d+)$/);
+                if (putMatch && method === 'PUT') {
+                  const usuario = await validarSessao(request.headers.get('Cookie'), secret);
+                  if (!usuario) return json({ ok: false, erro: 'Não autorizado' }, 401, { 'Cache-Control': 'no-store' });
+                  try {
+                    const ibge = putMatch[1];
+                    const body = await request.json();
+                    // Campos permitidos para atualização
+                    const allowedFields = [
+                      'grupo', 'cor', 'prioritario', 'prefeito', 'alinhamento',
+                      'total_obras', 'obras_em_andamento', 'obras_entregues',
+                      'equipamento_solicitado', 'equipamento_categoria', 'partido',
+                      'investimento_planner', 'total_liderancas', 'mesorregiao', 'eixos'
+                    ];
+                    const updates = [];
+                    const params = [];
+                    for (const field of allowedFields) {
+                      if (field in body) {
+                        updates.push(`${field} = ?`);
+                        params.push(body[field]);
+                      }
+                    }
+                    if (updates.length === 0) {
+                      return json({ ok: false, erro: 'Nenhum campo para atualizar' }, 400);
+                    }
+                    const now = new Date().toISOString();
+                    params.push(now);
+                    params.push(ibge);
+                    const sql = `UPDATE municipios SET ${updates.join(', ')}, updated_at = ? WHERE ibge = ?`;
+                    const result = await d1Query(env, sql, params);
+                    return json({ ok: true, message: 'Município atualizado no D1', updated: result.success }, 200, { 'Cache-Control': 'no-store' });
+                  } catch (err) {
+                    return json({ ok: false, erro: err.message }, 400);
+                  }
+                }
 
-        // GET /api/versoes (auth) → histórico D1
+                // DELETE /api/municipios/:ibge (público) → excluir do D1
+                const delMatch = path.match(/^\/api\/municipios\/(\d+)$/);
+                if (delMatch && method === 'DELETE') {
+                  try {
+                    const ibge = delMatch[1];
+                    const result = await d1Query(env,
+                      'DELETE FROM municipios WHERE ibge = ?',
+                      [ibge]
+                    );
+                    return json({ ok: true, message: 'Município excluído', deleted: result.success }, 200, { 'Cache-Control': 'no-store' });
+                  } catch (e) {
+                    return json({ ok: false, erro: e.message }, 500);
+                  }
+                }
+
+                // GET /api/versoes (auth) → histórico D1
         if (path === '/api/versoes' && method === 'GET') {
           const usuario = await validarSessao(request.headers.get('Cookie'), secret);
           if (!usuario) return json({ ok: false, erro: 'Não autorizado' }, 401, { 'Cache-Control': 'private, no-store' });

@@ -46,7 +46,7 @@ const D1_BADGE_STYLES = {
 };
 
 /* ─── Modal de Edição ─── */
-function EditModal({ municipio, editFormData, setEditFormData, isSaving, onSave, onCancel }) {
+function EditModal({ municipio, editFormData, setEditFormData, isSaving, onSave, onDelete, onCancel }) {
   const handleFieldChange = (field, value) => {
     setEditFormData(prev => ({ ...prev, [field]: value }));
   };
@@ -362,41 +362,35 @@ export function AdminPage() {
   }, [editedData, municipios]);
 
   const salvarEdicao = useCallback(async () => {
-    if (!editMunicipio || !editedData) return;
-    const idx = editedData.municipios.findIndex(m => m.ibge === editMunicipio.ibge);
-    if (idx < 0) return;
-
-    editedData.municipios[idx] = {
-      ...editedData.municipios[idx],
-      grupo: editFormData.grupo,
-      cor: GRUPOS.find(g => g.value === editFormData.grupo)?.cor || '#555',
-      alinhamento: editFormData.grupo === 'Brandão' ? 'Orleans Brandão' : editFormData.grupo === 'Braide' ? 'Braide' : '',
-      total_obras: parseInt(editFormData.total_obras) || 0,
-      investimento_planner: editFormData.investimento_planner || '',
-      prefeito: editFormData.prefeito,
-      partido: editFormData.partido,
-      detalhes: editFormData.detalhes,
-      prioritario: ['Braide', 'Brandão'].includes(editFormData.grupo),
-      apoios_braide: editFormData.grupo === 'Braide' ? 1 : 0,
-      apoios_orleans: editFormData.grupo === 'Brandão' ? 1 : 0,
-    };
-
-    setEditedData({ ...editedData });
+    if (!editMunicipio) return;
     setIsSaving(true);
     try {
-      const resp = await fetch('/api/municipios', {
-        method: 'POST', credentials: 'include',
+      const resp = await fetch(`/api/municipios/${editMunicipio.ibge}`, {
+        method: 'PUT',
+        credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(editedData)
+        body: JSON.stringify({
+          grupo: editFormData.grupo,
+          cor: GRUPOS.find(g => g.value === editFormData.grupo)?.cor || '#555',
+          alinhamento: editFormData.grupo === 'Brandão' ? 'Orleans Brandão' : editFormData.grupo === 'Braide' ? 'Braide' : '',
+          total_obras: parseInt(editFormData.total_obras) || 0,
+          investimento_planner: editFormData.investimento_planner || '',
+          prefeito: editFormData.prefeito,
+          partido: editFormData.partido,
+          detalhes: editFormData.detalhes,
+          prioritario: ['Braide', 'Brandão'].includes(editFormData.grupo),
+        })
       });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       await fetchMunicipios();
       showFeedback('success', `${editMunicipio.nome} salvo no D1.`);
     } catch (err) {
       showFeedback('error', err.message);
-    } finally { setIsSaving(false); }
+    } finally {
+      setIsSaving(false);
+    }
     setEditMunicipio(null);
-  }, [editMunicipio, editedData, editFormData, fetchMunicipios, showFeedback]);
+  }, [editMunicipio, editFormData, fetchMunicipios, showFeedback]);
 
   const handleCancelarEdicao = useCallback(() => {
     if (editMunicipio) {
@@ -631,6 +625,7 @@ export function AdminPage() {
           isSaving={isSaving}
           onSave={salvarEdicao}
           onCancel={handleCancelarEdicao}
+          onDelete={excluirMunicipio}
         />
       )}
 
