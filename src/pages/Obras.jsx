@@ -53,6 +53,19 @@ function getListaEixos(municipios = []) {
   return Array.from(seen).sort();
 }
 
+// Deriva a previsão de conclusão a partir do status/percentual da obra
+function previsaoConclusao(obra) {
+  const status = (obra.status || '').toUpperCase();
+  const pct = typeof obra.pct === 'number' ? obra.pct : 0;
+  if (/CONCLU|ENTREGUE|INAUGURADA/.test(status) || pct >= 100) return 'Concluída';
+  if (/EXECU|ANDAMENTO|MOBILIZA/.test(status)) return 'Em andamento — conclusão a definir';
+  if (/AG\. APROVA|APROVA/.test(status)) return 'Aguardando aprovação orçamentária';
+  if (/AG\. PROJETO|PROJETO E ORC/.test(status)) return 'Aguardando projeto e orçamento';
+  if (/PARALISADA|PARADA|SUSPENSA/.test(status)) return 'Paralisada — sem previsão definida';
+  if (pct > 0) return `Em execução (${pct}%) — conclusão a definir`;
+  return 'A iniciar — sem previsão informada';
+}
+
 export function ObrasPage() {
   const { getMunicipiosFiltrados, municipios, setGrupo } = useStore();
   const [municipioSelected, setMunicipioSelected] = useState('todos');
@@ -199,6 +212,52 @@ export function ObrasPage() {
           ))}
         </select>
       </div>
+
+      {/* Detalhamento das Obras do Município Selecionado */}
+      {municipioSelected !== 'todos' && (() => {
+        const munDetalhe = listaExibicao.find(m => String(m.ibge || m.id) === String(municipioSelected));
+        const obrasMun = (munDetalhe?.eixos && Array.isArray(munDetalhe.eixos)) ? munDetalhe.eixos : [];
+        if (!munDetalhe) return null;
+        return (
+          <div style={{ background: '#fff', border: '1px solid #dde3ea', borderRadius: '12px', padding: '18px 20px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+              <h3 style={{ fontSize: '15px', color: '#0b3c5d', margin: 0 }}>🏗️ Detalhamento das Obras — {munDetalhe.nome}</h3>
+              <span style={{ fontSize: '12px', color: '#7a8a99', fontWeight: 600 }}>{obrasMun.length} obra(s) cadastrada(s)</span>
+            </div>
+            {obrasMun.length === 0 ? (
+              <div style={{ padding: '20px', textAlign: 'center', color: '#94a3b8', fontSize: '13px' }}>
+                Nenhuma obra detalhada cadastrada para este município.
+              </div>
+            ) : (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '14px' }}>
+                {obrasMun.map((obra, idx) => {
+                  const status = obra.status || '—';
+                  const pct = typeof obra.pct === 'number' ? obra.pct : 0;
+                  return (
+                    <div key={idx} style={{
+                      background: '#fbfdff',
+                      border: '1px solid #e2e8f0',
+                      borderRadius: '10px',
+                      padding: '14px 16px',
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.04)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '8px'
+                    }}>
+                      <div style={{ fontSize: '12px', color: '#fb3b2d', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.4px' }}>Obra Nº {idx + 1}</div>
+                      <div className="obra-campo"><span className="obra-label">Objeto:</span><span className="obra-valor">{obra.desc || '—'}</span></div>
+                      <div className="obra-campo"><span className="obra-label">Situação:</span><span className="obra-valor">{status} ({pct}%)</span></div>
+                      <div className="obra-campo"><span className="obra-label">Fonte:</span><span className="obra-valor">{obra.orgao || '—'} · PLANNER SEGOV</span></div>
+                      <div className="obra-campo"><span className="obra-label">Previsão de conclusão:</span><span className="obra-valor">{previsaoConclusao(obra)}</span></div>
+                      <div className="obra-campo"><span className="obra-label">Observação:</span><span className="obra-valor">Orçamento: {formatCurrency(obra.orcamento || 0)}</span></div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Charts Grid */}
       <div className="dashboard-charts-grid">
