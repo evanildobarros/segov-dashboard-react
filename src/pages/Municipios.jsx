@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useStore } from '../hooks/useStore';
 import { TabelaMunicipios } from '../components/TabelaMunicipios';
-import { PRIORITY_IBGES } from '../data/municipios';
 
 export function MunicipiosPage() {
   const { 
@@ -10,36 +9,69 @@ export function MunicipiosPage() {
     geoJSONData,
     initTema,
     municipios,
-    setGrupo
+    setGrupo,
+    grupo: grupoStore
   } = useStore();
   const [view, setView] = useState('todos'); // Default: Todos (217) para melhor UX
   
-  // Reset filtro ao montar a página
+  // Apenas reinicializa o filtro de grupo se for sair da aba de municípios
+  const isReturning = useStore(state => state.modo === 'municipios');
+  
   useEffect(() => {
-    setGrupo('todos');
-  }, [setGrupo]);
+    // Só reseta se entrar pela primeira vez ou voltar
+    if (!isReturning) {
+      setGrupo('todos');
+    }
+  }, [setGrupo, isReturning]);
   
-  const municipiosFiltrados = getMunicipiosFiltrados();
-  
-  // Quando view === 'todos', ignora o filtro do modo e usa todos os 217
-  const listaExibicao = view === 'prioritarios' 
-    ? municipiosFiltrados 
-    : municipios.filter(m => {
-        const { grupo, busca } = useStore.getState();
+  // Filtragem combinada: view + grupo + busca
+  const listaExibicao = useMemo(() => {
+    const { grupo, busca } = useStore.getState();
+    
+    // Se está em visualização de "Todos", usa a lista filtrada do store
+    if (view === 'todos') {
+      // Aplica filtro de grupo e busca
+      return getMunicipiosFiltrados().filter(m => {
         let match = true;
         if (grupo && grupo !== 'todos') {
           match = match && (m.grupo === grupo);
         }
         if (busca) {
-          const q = busca.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+          const q = busca.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
           match = match && (
-            (m.nome || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').includes(q) ||
-            (m.prefeito || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').includes(q)
+            (m.nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q) ||
+            (m.prefeito || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q)
           );
         }
         return match;
       });
+    }
+    
+    // Se está em visualização de "Prioritários", filtra pelos prioritários
+    const todos = getMunicipiosFiltrados();
+    const prioritarios = todos.filter(m => m.prioritario === true);
+    
+    // Aplica filtro de grupo e busca nos prioritários
+    return prioritarios.filter(m => {
+      let match = true;
+      if (grupo && grupo !== 'todos') {
+        match = match && (m.grupo === grupo);
+      }
+      if (busca) {
+        const q = busca.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        match = match && (
+          (m.nome || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q) ||
+          (m.prefeito || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(q)
+        );
+      }
+      return match;
+    });
+  }, [getMunicipiosFiltrados, view, grupoStore]);
 
+  const contagemPrioritarios = useMemo(() => {
+    return municipios.filter(m => m.prioritario).length;
+  }, [municipios]);
+  
   useEffect(() => {
     initTema();
     
@@ -68,7 +100,6 @@ export function MunicipiosPage() {
               {listaExibicao.length} registro(s)
             </small>
             <button 
-              className={`btn small ${view === 'prioritarios' ? 'primary' : ''}`}
               onClick={() => setView('prioritarios')}
               style={{
                 padding: '6px 12px',
@@ -81,10 +112,9 @@ export function MunicipiosPage() {
                 fontWeight: 600,
               }}
             >
-              Prioritários (8)
+              Prioritários ({contagemPrioritarios})
             </button>
             <button 
-              className={`btn small ${view === 'todos' ? 'primary' : ''}`}
               onClick={() => setView('todos')}
               style={{
                 padding: '6px 12px',

@@ -95,7 +95,7 @@ function securityHeaders() {
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'same-origin',
-    'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' https:; frame-ancestors 'none'",
+    'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https:; connect-src 'self' https: wss:; font-src 'self' https:; frame-ancestors 'none'; worker-src 'self' blob:; object-src 'self'",
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   };
 }
@@ -136,7 +136,7 @@ async function d1Query(env, sql, params = []) {
 async function loadDadosAtivos(env) {
   // Busca diretamente da tabela municipios no D1 (sincronizada via sync)
   const result = await d1Query(env,
-    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas, mesorregiao, eixos FROM municipios ORDER BY nome'
+    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas, mesorregiao, eixos, asfalto FROM municipios ORDER BY nome'
   );
   if (result.results && result.results.length > 0) {
     const muns = result.results.map(r => ({
@@ -158,6 +158,9 @@ async function loadDadosAtivos(env) {
       mesorregiao: String(r.mesorregiao || ''),
       eixos: (() => {
         try { return JSON.parse(r.eixos || '[]'); } catch { return []; }
+      })(),
+      asfalto: (() => {
+        try { return JSON.parse(r.asfalto || '{}'); } catch { return null; }
       })()
     }));
     const totalObras = muns.reduce((s, m) => s + m.total_obras, 0);

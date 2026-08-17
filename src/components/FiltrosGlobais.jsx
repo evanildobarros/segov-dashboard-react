@@ -25,7 +25,7 @@ export function FiltrosGlobais() {
   return (
     <div className="filtros-globais-bar">
       <span style={{ fontSize: '12px', fontWeight: 700, color: '#7a8a99', whiteSpace: 'nowrap' }}>🎯 GRUPO:</span>
-      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+      <div className="filtros-grupo-botoes" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
         {grupos.map(g => (
           <button
             key={g.value}

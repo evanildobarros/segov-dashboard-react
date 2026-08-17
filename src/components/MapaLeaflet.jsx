@@ -390,13 +390,30 @@ function MapInitHelper() {
   const setMapInstance = useStore(state => state.setMapInstance);
 
   useEffect(() => {
-    if (map) {
-      setMapInstance(map);
-      const timer = setTimeout(() => {
-        map.invalidateSize();
-      }, 200);
-      return () => clearTimeout(timer);
+    if (!map) return undefined;
+
+    setMapInstance(map);
+
+    // Ao trocar de aba, o Leaflet pode calcular o mapa enquanto o grid
+    // ainda está sendo dimensionado. Recalcular em vários frames evita
+    // mapa cortado, cinza ou com tiles deslocados.
+    const invalidate = () => map.invalidateSize({ pan: false, animate: false });
+    const timers = [50, 200, 500].map(ms => setTimeout(invalidate, ms));
+    const onResize = () => invalidate();
+    window.addEventListener('resize', onResize);
+
+    let observer;
+    const container = map.getContainer();
+    if (typeof ResizeObserver !== 'undefined' && container.parentElement) {
+      observer = new ResizeObserver(invalidate);
+      observer.observe(container.parentElement);
     }
+
+    return () => {
+      timers.forEach(clearTimeout);
+      window.removeEventListener('resize', onResize);
+      observer?.disconnect();
+    };
   }, [map, setMapInstance]);
 
   return null;
@@ -463,18 +480,6 @@ function MapaLeafletBase({
     }
   }, [processedGeoJSON]);
 
-  if (!processedGeoJSON) {
-    return (
-      <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f6f8', borderRadius: '10px', border: '1px solid #dde3ea' }}>
-        <div style={{ textAlign: 'center', color: '#7a8a99' }}>
-          <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🗺️</div>
-          <div style={{ fontWeight: 600, color: '#0b3c5d' }}>Carregando dados cartográficos do Maranhão...</div>
-          <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>Projeção geográfica dos 217 municípios</div>
-        </div>
-      </div>
-    );
-  }
-
   const currentTile = TILE_LAYERS[activeTile] || TILE_LAYERS.carto;
   const geoJsonKey = `${modoMapa}-${municipios.length}-${mesorregiaoFilter || 'all'}`;
 
@@ -492,6 +497,21 @@ function MapaLeafletBase({
     if (!filteredIbges) return true;
     return filteredIbges.has(feature?.properties?.CD_MUN);
   }, [filteredIbges]);
+
+  // O retorno condicional precisa vir depois de todos os hooks. Caso contrário,
+  // a primeira renderização (GeoJSON ainda carregando) executa menos hooks e a
+  // troca para a aba Mapa causa React error #310.
+  if (!processedGeoJSON) {
+    return (
+      <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f6f8', borderRadius: '10px', border: '1px solid #dde3ea' }}>
+        <div style={{ textAlign: 'center', color: '#7a8a99' }}>
+          <div style={{ fontSize: '2.5rem', marginBottom: '8px' }}>🗺️</div>
+          <div style={{ fontWeight: 600, color: '#0b3c5d' }}>Carregando dados cartográficos do Maranhão...</div>
+          <div style={{ fontSize: '12px', color: '#64748b', marginTop: '4px' }}>Projeção geográfica dos 217 municípios</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ position: 'relative', width: '100%', height }}>

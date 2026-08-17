@@ -82,7 +82,7 @@ body {
   color: #cfe0ec;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 1200;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -91,7 +91,7 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
-  z-index: 999;
+  z-index: 1150;
   animation: fadeIn 0.2s ease-out;
 }
 
@@ -152,6 +152,45 @@ body {
   z-index: 900;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Botão de menu mobile (hamburger) — visível apenas em telas pequenas */
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--azul);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--cinza);
+}
+
+.mobile-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #cfe0ec;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.mobile-close-btn:hover {
+  background: rgba(255,255,255,0.18);
 }
 
 /* ==========================================================================
@@ -220,10 +259,15 @@ body {
 
 .mapa-politico-grid {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: minmax(0, 7fr) minmax(280px, 3fr);
   gap: 16px;
   width: 100%;
   min-height: 620px;
+}
+
+/* Evita que o conteúdo interno force overflow ao entrar na aba */
+.mapa-politico-grid > * {
+  min-width: 0;
 }
 
 .mapa-canvas-card {
@@ -263,6 +307,11 @@ body {
 
   .app-sidebar.mobile-open {
     transform: translateX(0);
+    box-shadow: 10px 0 15px -5px rgba(0,0,0,0.1);
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
   }
 
   .mapa-politico-grid {
@@ -288,7 +337,42 @@ body {
   }
 
   .app-topbar {
-    padding: 0 12px;
+    padding: 0 10px;
+    height: 58px;
+  }
+
+  /* Topbar mobile: esconder textos longos e data, manter apenas ícones essenciais */
+  .topbar-date {
+    display: none;
+  }
+
+  .topbar-username {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .theme-switcher {
+    gap: 2px;
+  }
+
+  .theme-switcher button {
+    padding: 5px;
+  }
+
+  .logout-btn span {
+    display: none; /* No mobile, só o ícone de sair */
+  }
+
+  .logout-btn {
+    padding: 6px 8px;
+  }
+
+  .user-profile-section {
+    padding-left: 6px;
+    gap: 6px;
   }
 
   .dashboard-charts-grid {
@@ -296,18 +380,129 @@ body {
   }
 
   .filtros-globais-bar {
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px 10px;
+    align-items: center;
+    overflow-x: visible;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  .filtros-globais-bar > span:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .filtros-grupo-botoes {
+    grid-column: 1 / -1;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px !important;
+    width: 100%;
+  }
+
+  .filtros-grupo-botoes button {
+    min-width: 0;
+    padding: 8px 4px !important;
+    white-space: nowrap;
+    font-size: 11px !important;
+  }
+
+  .filtros-globais-bar > span:nth-of-type(2) {
+    grid-column: 1;
+  }
+
+  .filtros-globais-bar > select {
+    grid-column: 2;
+    min-width: 0;
+    width: 100%;
   }
 
   .filtros-busca-wrapper {
-    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .filtros-busca-wrapper input {
+    max-width: none !important;
+    box-sizing: border-box;
   }
 
   h2 { font-size: 18px !important; }
   h3 { font-size: 14px !important; }
 }
 
+@media (max-width: 400px) {
+  .app-topbar {
+    height: 54px;
+    padding: 0 8px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
 /* ===== Cards de Detalhamento de Obras por Município ===== */
+.obras-filtros-bar {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.obras-filtro-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.obras-filtro-select {
+  min-width: 190px;
+  max-width: 280px;
+  padding: 7px 12px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.obras-filtro-eixo {
+  border-radius: 6px;
+}
+
+.obras-filtro-situacao {
+  border-radius: 6px;
+}
+
+.obras-filtro-municipio {
+  border-radius: 20px;
+  color: #475569;
+  font-weight: 700;
+  flex: 1;
+  min-width: 190px;
+}
+
+.obras-filtro-select:focus {
+  border-color: #0b3c5d;
+}
+
+.obras-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
 .obra-campo {
   display: flex;
   flex-direction: column;
@@ -329,4 +524,22 @@ body {
 }
 @media (max-width: 640px) {
   .obra-campo { font-size: 12px; }
+
+  /* No mobile, os selects de filtro ocupam 100% e empilham */
+  .obras-filtros-bar {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .obras-filtro-select,
+  .obras-filtro-municipio {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .obras-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
