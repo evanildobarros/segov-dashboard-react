@@ -1,0 +1,2345 @@
+{
+  "ALCÂNTARA": {
+    "eixo": 3,
+    "total": 17,
+    "entregues": 4,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 7171776.23,
+    "obras": [
+      {
+        "desc": "SSAA NO POVOADO IGUAÍBA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 428254.8,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA EM ALCÂNTARA (ATENDER OS POVOADOS ITAUAU, PEROLA DE CIMA E SANTA MARIA)",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1403635.2,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO IEMA EM ALCÂNTARA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 402035.33,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nE.M. INÁCIO DE VIVEIROS RAPOSO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REFORMA NO MUSEU EM ALCÂNTARA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PATRIMÔNIO E INSTITUCIONAL"
+      }
+    ]
+  },
+  "ANAJATUBA": {
+    "eixo": 2,
+    "total": 13,
+    "entregues": 5,
+    "andamento": 0,
+    "paradas": 1,
+    "investimento": 4716929.6,
+    "obras": [
+      {
+        "desc": "REVITALIZAÇÃO NA COMUNIDADE BACABEIRA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 341118.78,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NA COMUNIDADE PICADA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 449314.12,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NA COMUNIDADE ILHA JOZINHO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 446569.18,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DO ESCRITÓRIO LOCAL DA AGED DE ANAJATUBA. ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "AGED"
+      },
+      {
+        "desc": "CE EDUCAÇÃO QUILOMBOLA ANAJATUBENSE",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 1027977.85,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "BACABEIRA": {
+    "eixo": 2,
+    "total": 10,
+    "entregues": 5,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 4100017.08,
+    "obras": [
+      {
+        "desc": "COLÉGIO MILITAR  2 DE JULHO - UNIDADE IV\nCOMPLEXO EDUCACIONAL BACABEIRENSE  (SED",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1074138.59,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DA REDE DE ABASTECIMENTO DE ÁGUA POTAVÉL NO BAIRRO SANTA QUITÉRIA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 202293.77,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA ESTADUAL CENTRO DE ENSINO MONSENHOR LUÍS ALVES MADUREIRA EM BA",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLÍCIA CIVIL EM BACABEIRA",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 383555.2,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR  2 DE JULHO - UNIDADE IV\nESCOLA COMPLEXO OSVALDINO J",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 676707.0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      }
+    ]
+  },
+  "BACURI": {
+    "eixo": 3,
+    "total": 13,
+    "entregues": 2,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 12784334.01,
+    "obras": [
+      {
+        "desc": "REVITALIZAÇÃO DA PRAÇA DO RETORNO TRIÂNGULO EM BACURI",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 539217.51,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "ARENINHA NO POVOADO CACHOEIRINHA EM BACURI",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DA ESTAÇÃO TECH NO MUNICIPIO DE BACURI",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "REFORMA DO CENTRO POLIESPORTIVO NO MUNICIPIO DE BACURI ",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 3436241.92,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLÍCIA CIVIL EM BACURI",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 753740.01,
+        "orgao": "DELEGACIAS"
+      }
+    ]
+  },
+  "BACURITUBA": {
+    "eixo": 3,
+    "total": 12,
+    "entregues": 2,
+    "andamento": 4,
+    "paradas": 0,
+    "investimento": 8756815.78,
+    "obras": [
+      {
+        "desc": "SSAA NA COMUNIDADE PAPAGAIO - EMENDA PARLAMENTAR",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 560326.85,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA MILITAR 2 DE JULHO EM BACURITUBA\nPROFESSORA CAMÉLIA FARIAS DIA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM BACURITUBA - QTE 01  MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE ESTAÇÃO TECH EM BACURITUBA ",
+        "status": "EM ANDAMENTO",
+        "pct": 70.0,
+        "orcamento": 400937.28,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA DE EVENTOS DENIZARD ALMEIDA EM BACURITUBA",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 1222789.08,
+        "orgao": "PRAÇA"
+      }
+    ]
+  },
+  "BOM JARDIM": {
+    "eixo": 2,
+    "total": 7,
+    "entregues": 4,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 6039296.76,
+    "obras": [
+      {
+        "desc": "REFORMA CENTRO DE ENSINO NEWTON SERRA EM BOM JARDIM",
+        "status": "EM ANDAMENTO",
+        "pct": 5.0,
+        "orcamento": 2248540.69,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLÍCIA CIVIL EM BOM JARDIM",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 203750.94,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "MANUTENÇÃO CENTRO DE EDUCAÇÃO ESCOLAR  INDIGENA AWA",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 304566.98,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "MANUTENÇÃO CENTRO DE EDUCAÇÃO ESCOLAR  INDIGENA TIRACAMBU",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 404566.32,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "SSAA NO POVOADO TIRIRICAL",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 292872.63,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "BREJO": {
+    "eixo": 3,
+    "total": 10,
+    "entregues": 0,
+    "andamento": 6,
+    "paradas": 0,
+    "investimento": 8529615.3,
+    "obras": [
+      {
+        "desc": "SSAA NO CEM CANDIDO MENDES EM BREJO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DA DELEGACIA DE POLÍCIA EM BREJO",
+        "status": "EM ANDAMENTO",
+        "pct": 45.0,
+        "orcamento": 425909.61,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DO C.E. M. CÂNDIDO MENDES EM BREJO",
+        "status": "EM ANDAMENTO",
+        "pct": 40.0,
+        "orcamento": 2794856.97,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA E VISTORIA NA ELÉTRICA DO CE FRANCISCO MACATRÃO",
+        "status": "EM ANDAMENTO",
+        "pct": 40.0,
+        "orcamento": 1049384.79,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DA QUADRA E VESTIÁRIO NO COLÉGIO MILITAR  2 DE JULHO\nUI ARMANDO BACELAR ",
+        "status": "EM ANDAMENTO",
+        "pct": 25.0,
+        "orcamento": 1162011.07,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      }
+    ]
+  },
+  "BURITICUPU": {
+    "eixo": 2,
+    "total": 8,
+    "entregues": 1,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 4566981.59,
+    "obras": [
+      {
+        "desc": "SSAA NO MUNICÍPIO (VER COM O PREFEITO O LOCAL DO POÇO)",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 842843.21,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO MUNICÍPIO (VER COM O PREFEITO O LOCAL DO POÇO)",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 682374.14,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM BURITICUPU - QTE 02 BR",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "REFORMA DA DELEGACIA EM BURITICUPU",
+        "status": "EM ANDAMENTO",
+        "pct": 70.0,
+        "orcamento": 608980.95,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "SSAA NO CENTRO DE ENSINO DR. FERNANDO CASTRO",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 530936.61,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "CACHOEIRA GRANDE": {
+    "eixo": 2,
+    "total": 8,
+    "entregues": 1,
+    "andamento": 4,
+    "paradas": 0,
+    "investimento": 7098577.16,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE ESTAÇÃO TECH EM CACHOEIRA GRANDE",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM CACHOEIRA GRANDE - QTE 02",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR 2 DE JULHO EM CACHOEIRA GRANDE",
+        "status": "EM ANDAMENTO",
+        "pct": 40.0,
+        "orcamento": 1308287.63,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DO ESTÁDIO MUNICIPAL EM CACHOEIRA GRANDE",
+        "status": "EM ANDAMENTO",
+        "pct": 15.0,
+        "orcamento": 2403269.14,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA ATAIDE SOUSA PINHO EM CACHOEIRA GRANDE",
+        "status": "EM ANDAMENTO",
+        "pct": 85.0,
+        "orcamento": 1774570.63,
+        "orgao": "PRAÇA"
+      }
+    ]
+  },
+  "CARUTAPERA": {
+    "eixo": 2,
+    "total": 11,
+    "entregues": 7,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 4073712.4,
+    "obras": [
+      {
+        "desc": "REQUALIFICAÇÃO DO RESTAURANTE POPULAR DO MUNICÍPIO DE CARUTAPERA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 482882.01,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DO QUARTEL DA 3ª COMPANHIA DO 31º BATALHÃO POLICIA MILITAR E",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1096079.85,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DE PORTAL EM CARUTAPERA - QTE 01 MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM CARUTAPERA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 139717.26,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DE SSAA NO IEMA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "CHAPADINHA": {
+    "eixo": 2,
+    "total": 12,
+    "entregues": 6,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 3262990.87,
+    "obras": [
+      {
+        "desc": "REFORMA DO 16º BATALHÃO POLICIA MILITAR EM CHAPADINHA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1983066.73,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "REFORMA DO CE DR. PAULO RAMOS EM CHAPADINHA-MA ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA IEMA PLENO EM CHAPADINHA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "IEMA"
+      },
+      {
+        "desc": "SSAA NA COMUNIDADE DO POVOADO RIACHO FUNDO EM CHAPADINHA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO BETANIA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "DOM PEDRO": {
+    "eixo": 3,
+    "total": 14,
+    "entregues": 2,
+    "andamento": 5,
+    "paradas": 0,
+    "investimento": 16814736.98,
+    "obras": [
+      {
+        "desc": "REFORMA E ADEQUAÇÃO DELEGACIA DE POLÍCIA CIVIL EM DOM PEDRO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 680196.66,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR 2 DE JULHO NA UNIDADE INTEGRADA ESTADO DA PARAÍBA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "SSAA NO POVOADO CAMPO DE AVIAÇÃO EM DOM PEDRO",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 689045.75,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA POVOADO PACAS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO CANDIDO HERMES",
+        "status": "EM ANDAMENTO",
+        "pct": 70.0,
+        "orcamento": 411353.31,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "ESPERANTINÓPOLIS": {
+    "eixo": 2,
+    "total": 10,
+    "entregues": 2,
+    "andamento": 3,
+    "paradas": 0,
+    "investimento": 4459335.53,
+    "obras": [
+      {
+        "desc": "URBANIZAÇÃO NO BALNEÁRIO - POVOADO PALMEIRAL EM ESPERANTINÓPOLIS",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 35.0,
+        "orcamento": 1026074.66,
+        "orgao": "INFRAESTRUTURA"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA DA FAMÍLIA EM ESPERANTINÓPOLIS",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "REFORMA E MELHORAMENTO DO HOSPITAL SANTA MARTA EM ESPERANTINÓPOLIS",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA CENTRAL (PRAÇA GALDINO CARNEIRO) EM ESPERANTINÓPOLIS",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1104461.25,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "REFORMA CE EDUCA MAIS ANTÔNIO CORREIA",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "GODOFREDO VIANA": {
+    "eixo": 2,
+    "total": 10,
+    "entregues": 3,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 6624429.82,
+    "obras": [
+      {
+        "desc": "ADAPTAÇÕES ESTRUTURAIS PARA CONCLUSÃO DO COLÉGIO MILITAR E IMPLANTAÇÃO DE QUADRA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DE PORTAL EM GODOFREDO VIANA - QTE 02 MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA CENTRAL EM GODOFREDO VIANA",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2950643.5,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "REFORMA DO DESTACAMENTO DE POLÍCIA DO  31º BATALHÃO DE POLÍCIA MILITAR EM GODOFR",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 234761.65,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLÍCIA CIVIL EM GODOFREDO VIANA",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 225779.13,
+        "orgao": "DELEGACIAS"
+      }
+    ]
+  },
+  "HUMBERTO DE CAMPOS": {
+    "eixo": 4,
+    "total": 12,
+    "entregues": 2,
+    "andamento": 3,
+    "paradas": 0,
+    "investimento": 7483387.95,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM HUMBERTO DE CAMPOS - QTE 01 BR",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "SSAA NO RESTAURANTE POPULAR DE HUMBERTO DE CAMPOS ",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PRAÇA DA FAMÍLIA EM HUMBERTO DE CAMPOS",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2328114.98,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "DELEGACIA DE POLÍCIA CIVIL DE HUMBERTO DE CAMPOS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 428374.37,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "REFORMA DO CENTRO DE ENSINO HUMBERTO DE CAMPOS - ANEXO I - POVOADO RAMPA ",
+        "status": "EM ANDAMENTO",
+        "pct": 15.0,
+        "orcamento": 1121146.31,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "ITAPECURU MIRIM": {
+    "eixo": 2,
+    "total": 27,
+    "entregues": 6,
+    "andamento": 6,
+    "paradas": 0,
+    "investimento": 22278302.19,
+    "obras": [
+      {
+        "desc": "REFORMA DA CASA FAMILIAR RURAL EM ITAPECURU-MIRIM",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 831291.25,
+        "orgao": "PATRIMÔNIO E INSTITUCIONAL"
+      },
+      {
+        "desc": "SSAA NO BAIRRO VILA ARAGÃO ",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 754935.55,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO DA TORRE",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 769317.96,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PARQUE AMBIENTAL MUNICIPAL",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PARQUES"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PRAÇA DA FAMÍLIA EM ITAPECURU",
+        "status": "AGUARDAR",
+        "pct": 65.0,
+        "orcamento": 2821696.07,
+        "orgao": "PRAÇA"
+      }
+    ]
+  },
+  "JOSELÂNDIA": {
+    "eixo": 1,
+    "total": 11,
+    "entregues": 1,
+    "andamento": 4,
+    "paradas": 0,
+    "investimento": 9695185.66,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nE.M.  ANTÔNIO MENDES PEREIRA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1750991.32,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "SSAA NO POVOADO ALTO BRASIL",
+        "status": "AG. DELIBERAÇÃO GAB. GOV",
+        "pct": 0.0,
+        "orcamento": 716954.36,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO PORTELINHA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "PRAÇA DE EVENTOS EM JOSELÂNDIA",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1683332.09,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM JOSELÂNDIA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 325880.02,
+        "orgao": "ESTAÇÃO TECH"
+      }
+    ]
+  },
+  "MATINHA": {
+    "eixo": 2,
+    "total": 13,
+    "entregues": 5,
+    "andamento": 6,
+    "paradas": 1,
+    "investimento": 7411931.83,
+    "obras": [
+      {
+        "desc": "SSAA NO POVOADO MAGNÓLIA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 373137.51,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLICIA CIVIL EM MATINHA",
+        "status": "EM ANDAMENTO",
+        "pct": 40.0,
+        "orcamento": 656791.79,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR 2 DE JULHO EM MATINHA\nINSTITUTO EDUCACIONAL ALBERTO ",
+        "status": "EM ANDAMENTO",
+        "pct": 76.0,
+        "orcamento": 623056.06,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "SSAA NA AVENIDA JOSÉ SARNEY - CENTRO (AUTORIZADA PELO GOVERNADOR NO EVENTO NA CA",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 373137.51,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO GALISA (AUTORIZADA PELO GOVERNADOR NO EVENTO NA CASA DO PREFEITO)",
+        "status": "EM ANDAMENTO",
+        "pct": 95.0,
+        "orcamento": 373137.51,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "MATÕES DO NORTE": {
+    "eixo": 1,
+    "total": 8,
+    "entregues": 1,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 6221924.06,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM MATÕES DO NORTE - QTE 02 BR | 01 MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE VIVA PROCON EM MATÕES DO NORTE ",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "VIVA PROCON"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE ARENINHA ESPORTIVA EM MATÕES DO NORTE",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2416585.01,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR  2 DE JULHO\nE.M. JÚLIA FONSECA BARBOSA",
+        "status": "EM ANDAMENTO",
+        "pct": 96.0,
+        "orcamento": 670134.04,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PRAÇA DA FAMÍLIA NO POVOADO COIVARAS EM MATÕES DO NORTE.",
+        "status": "EM ANDAMENTO",
+        "pct": 57.99999999999999,
+        "orcamento": 647138.01,
+        "orgao": "PRAÇA"
+      }
+    ]
+  },
+  "MILAGRES DO MARANHÃO": {
+    "eixo": 4,
+    "total": 3,
+    "entregues": 2,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 2165825.92,
+    "obras": [
+      {
+        "desc": "CENTRO DE ENSINO DEP. ALEXANDRE COSTA - ESCOLA PADRÃO FNDE DE 06 SALAS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 2055241.3933226662,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM MILAGRES DO MARANHÃO",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 110584.53,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM MILAGRES DO MARANHÃO - QTE",
+        "status": "VISITA TÉCNICA",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      }
+    ]
+  },
+  "MIRANDA DO NORTE": {
+    "eixo": 2,
+    "total": 7,
+    "entregues": 1,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 3684333.58,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR  2 DE JULHO\nU.E. EDIVALDA BONFIM",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1719692.93,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REFORMA CENTRO EDUCA MAIS CE FORTUNATO MOREIRA NETO EM MIRANDA DO NORTE",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA NO PRÉDIO DA ULSAV DE MIRANDA DO NORTE",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "AGED"
+      },
+      {
+        "desc": "REFORMA DA DELEGACIA DE MIRANDA DO NORTE",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "REFORMA C.E. JOSÉ FURTADO BEZERRA EM MIRANDA DO NORTE",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1399612.67,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "NINA RODRIGUES": {
+    "eixo": 2,
+    "total": 11,
+    "entregues": 5,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 12425513.58,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nU. I. JOSELIA ELICE COSTA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1177690.0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REFORMA ABATEDOURO PÚBLICO EM NINA RODRIGUES",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 3145395.64,
+        "orgao": "INFRAESTRUTURA"
+      },
+      {
+        "desc": "REFORMA DO ESTÁDIO DE FUTEBOL JOSÉ MARIA VALE NO BAIRRO LAGOINHA EM NINA RODRIGU",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2654425.4,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "REFORMA DA PRAÇA DA FAMÍLIA EM NINA RODRIGUES",
+        "status": "EM ANDAMENTO",
+        "pct": 39.0,
+        "orcamento": 1299141.63,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "REFORMA DO CENTRO DE ENSINO MAJOR ERICO GOMES BRAGA EM NINA RODRIGUES",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "OLINDA NOVA DO MARANHÃO": {
+    "eixo": 2,
+    "total": 14,
+    "entregues": 4,
+    "andamento": 3,
+    "paradas": 0,
+    "investimento": 6197080.21,
+    "obras": [
+      {
+        "desc": "SSAA NO BAIRRO QUELUZ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 511641.17,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO FLORESTA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 527845.93,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO SANTA CLARA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 530424.3,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO FLORESTA EM OLINDA NOVA DO MARANHÃO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "CENTRO EDUCA MAIS PROFESSOR JOSÉ DE RIBAMAR SANTOS SILVA",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "PAÇO DO LUMIAR": {
+    "eixo": 1,
+    "total": 27,
+    "entregues": 13,
+    "andamento": 2,
+    "paradas": 1,
+    "investimento": 17948317.69,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO RESTAURANTE POPULAR EM PAÇO DO LUMIAR",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "RESTAURANTE POPULAR"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR 2 DE JULHO\nUEB TACITO CALDAS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 390686.1,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR 2 DE JULHO\nUEB MONTEIRO LOBATO",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 985697.46,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR 2 DE JULHO\nUEB VEREADOR JOSÉ CARLOS COSTA PEREIRA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 777704.9,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nC.E. ERASMO DIAS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 1191272.78,
+        "orgao": "ESCOLA MILITAR - PM"
+      }
+    ]
+  },
+  "PAULINO NEVES": {
+    "eixo": 4,
+    "total": 4,
+    "entregues": 1,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 727974.24,
+    "obras": [
+      {
+        "desc": "REQUALIFICAÇÃO DA FACHADA DO HOSPITAL EM PAULINO NEVES",
+        "status": "EM ANDAMENTO",
+        "pct": 10.0,
+        "orcamento": 232196.95,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "IMPLANTAÇÃO RESTAURANTE POPULAR EM PAULINO NEVES",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 495777.29,
+        "orgao": "RESTAURANTE POPULAR"
+      },
+      {
+        "desc": "REFORMA E ADEQUAÇÃO DO DELEGACIA DE POLICIA EM PAULINO NEVES",
+        "status": "PEND. INFORMAÇÕES",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM PAULINO NEVES - QTE 01 MA",
+        "status": "PEND. INFORMAÇÕES",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      }
+    ]
+  },
+  "PAULO RAMOS": {
+    "eixo": 2,
+    "total": 6,
+    "entregues": 1,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 3046695.01,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE SUBESTAÇÃO PARA ESCOLA FAMILIA AGRICOLA FRANCISCO DAS CHAGAS VIEI",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 237139.69,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE VIVA PROCON EM PAULO RAMOS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 230668.08,
+        "orgao": "VIVA PROCON"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nU. I. NOSSA SENHORA DA CONCEIÇÃO",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 1507228.83,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "SSAA NO POVOADO ASSENTAMENTO",
+        "status": "EM ANDAMENTO",
+        "pct": 80.0,
+        "orcamento": 437907.16,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM PAULO RAMOS ",
+        "status": "MOBILIZAÇÃO",
+        "pct": 0.0,
+        "orcamento": 633751.25,
+        "orgao": "ESTAÇÃO TECH"
+      }
+    ]
+  },
+  "PEDRO DO ROSÁRIO": {
+    "eixo": 3,
+    "total": 6,
+    "entregues": 1,
+    "andamento": 3,
+    "paradas": 0,
+    "investimento": 1530091.04,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE ESTAÇÃO TECH EM PEDRO DO ROSÁRIO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM PEDRO DO ROSÁRIO - QTE 04 MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "REVITALIZAÇÃO NO SSAA NO POVOADO BOA ESPERANÇA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 365167.14,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REVITALIZAÇÃO SSAA NO POVOADO CRIMINOSA",
+        "status": "EM ANDAMENTO",
+        "pct": 75.0,
+        "orcamento": 361405.69,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REVITALIZAÇÃO SSAA NO POVOADO IMBIZAL",
+        "status": "EM ANDAMENTO",
+        "pct": 75.0,
+        "orcamento": 389032.24,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "PENALVA": {
+    "eixo": 2,
+    "total": 12,
+    "entregues": 5,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 9088843.92,
+    "obras": [
+      {
+        "desc": "SSAA NO BAIRRO VILA CORUJA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 636253.05,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO SÃO JOAQUIM",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 574804.05,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO CATUMBI",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 629547.46,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO CASA DA MULHER MARANHENSE EM PENALVA-MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "CASA DA MULHER MARANHENSE"
+      },
+      {
+        "desc": "SSAA NO CENTRO DE ENSINO TANCREDO NEVES - MUNICÍPIO DE PENALVA ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "PERI MIRIM": {
+    "eixo": 1,
+    "total": 19,
+    "entregues": 7,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 5001584.63,
+    "obras": [
+      {
+        "desc": "SSAA NA ASSOCIAÇÃO DAS MULHERES EMPREEDEDORAS",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 647388.31,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO IGARAPE-AÇU (NOVO LOCAL POVOADO PERICUMÃ)",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 549524.27,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DO POSTO AVANÇADO DO BATALHÃO DE POLICIA MILITAR RODOVIÁRIA EM TRÊS MARI",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 241015.18,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "AMPLIAÇÃO DO COLÉGIO MILITAR  2 DE JULHO EM PERI MIRIM\nESCOLA MUNICIPAL KEILA AB",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DO CAMPO DE FUTEBOL POVOADO JUSSARAL EM PERI MIRIM",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESPORTE E LAZER"
+      }
+    ]
+  },
+  "PERITORÓ": {
+    "eixo": 2,
+    "total": 10,
+    "entregues": 4,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 2625533.88,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR 2 DE JULHO EM PERITORÓ\nU. E. M. FRANCISCO XAVIER ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DA PRAÇA DA PARÓQUIA NOSSA SENHORA DAS GRAÇAS DO BOM CAMINHO NO MUNI",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1147137.03,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE VIVA PROCON EM PERITORÓ",
+        "status": "EM ANDAMENTO",
+        "pct": 45.0,
+        "orcamento": 483765.39,
+        "orgao": "VIVA PROCON"
+      },
+      {
+        "desc": "REFORMA DA BIBLIOTECA NO FAROL DO SABER LUIZA LIMAMILHOMEM",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 174109.91,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM PERITORÓ",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 220041.27,
+        "orgao": "ESTAÇÃO TECH"
+      }
+    ]
+  },
+  "PIRAPEMAS": {
+    "eixo": 2,
+    "total": 7,
+    "entregues": 1,
+    "andamento": 3,
+    "paradas": 1,
+    "investimento": 4774481.24,
+    "obras": [
+      {
+        "desc": "REFORMA DA DELEGACIA EM PIRAPEMAS",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 564824.32,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM PIRAPEMAS",
+        "status": "EM ANDAMENTO",
+        "pct": 40.0,
+        "orcamento": 360864.65,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "IMPLANTAÇÃO RESTAURANTE POPULAR EM PIRAPEMAS",
+        "status": "EM ANDAMENTO",
+        "pct": 60.0,
+        "orcamento": 680016.56,
+        "orgao": "RESTAURANTE POPULAR"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR EM PIRAPEMAS\nESCOLA HILDENORA DE GUSMÃO CASTELO B",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 816917.52,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REFORMA DE INSTALAÇÕES ELÉTRICAS NO CENTRO EDUCA MAIS PIRAPEMAS",
+        "status": "MOBILIZAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1112974.22,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "PRESIDENTE SARNEY": {
+    "eixo": 2,
+    "total": 11,
+    "entregues": 2,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 5841368.35,
+    "obras": [
+      {
+        "desc": "MPLANTAÇÃO CENTRO DE CONVIVENCIA DOS IDOSOS EM PRESIDENTE SARNEY",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 884101.96,
+        "orgao": "SOCIAL"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR 2 DE JULHO EM PRESIDENTE SARNEY",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA MUNICIPAL INAH REGO EM PRESIDENTE SARNEY",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA MUNICIPAL DOM RICARDO PEDRO  (CE D. JACKON LAGO.) ",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DE PRAÇA EM PRESIDENTE SARNEY",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1611145.0,
+        "orgao": "PRAÇA"
+      }
+    ]
+  },
+  "PRESIDENTE VARGAS": {
+    "eixo": 3,
+    "total": 8,
+    "entregues": 1,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 4231082.6,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR 2 DE JULHO\nESCOLA MUNICIPAL MARIA LUZIA FRAZÃO SI",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nESCOLA RAIMUNDO BARTOLOMEU SANTOS AGUI",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "CENTRO DE ENSINO SANTA LUZIA EM PRESIDENTE VARGAS",
+        "status": "EM ANDAMENTO",
+        "pct": 5.0,
+        "orcamento": 2352783.75,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DELEGACIA DE POLÍCIA CIVIL EM PRESIDENTE VARGAS",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 324939.48,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "REFORMA E ADEQUAÇÕES NO CENTRO EDUCA MAIS TANCREDO DE ALMEIDA NEVES EM PRESIDENT",
+        "status": "MOBILIZAÇÃO",
+        "pct": 0.0,
+        "orcamento": 733135.35,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "PRIMEIRA CRUZ": {
+    "eixo": 3,
+    "total": 12,
+    "entregues": 1,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 5421291.79,
+    "obras": [
+      {
+        "desc": "REFORMA DA CASA FAMILIAR RURAL ALEGRIA EM PRIMEIRA CRUZ",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1271350.21,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM PRIMEIRA CRUZ",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 240681.04,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "SSAA NO POVOADO DE APARECIDA ",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 433615.1,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO CAMPO NOVO (POVOADO AREINHA)",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 524609.57,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO CASSÓ",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 450954.49,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SANTA HELENA": {
+    "eixo": 2,
+    "total": 16,
+    "entregues": 4,
+    "andamento": 4,
+    "paradas": 0,
+    "investimento": 7094319.31,
+    "obras": [
+      {
+        "desc": "MELHORIA NA ARENA DE BEACH SOCCER EM SANTA HELENA JEMs 2026",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM SANTA HELENA - QTE 01 MA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DE PRAÇAS ESPORTIVAS EM SANTA HELENA JEMs 2026",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nCENTRO DE ENSINO LUÍS ROCHA - QUADRA P",
+        "status": "EM ANDAMENTO",
+        "pct": 90.0,
+        "orcamento": 1573808.96,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "SSAA NO POVOADO SAMAÚMA",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 405254.8,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SANTA RITA": {
+    "eixo": 1,
+    "total": 7,
+    "entregues": 2,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 4577677.36,
+    "obras": [
+      {
+        "desc": "SSAA NA SEDE - BAIRRO GONÇALO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 536035.56,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "RETIRADA E DESTINAÇÃO DE PASSIVO METÁLICO INSERVÍVEL (ADULTORA) LOCALIZADO ÀS MA",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "INFRAESTRUTURA"
+      },
+      {
+        "desc": "REFORMA ESCRITÓRIO AGED EM SANTA RITA",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 117599.38,
+        "orgao": "AGED"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM SANTA RITA",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 253344.85,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "REFORMA DA QUADRA NO CENTRO EDUCA MAIS JOÃO BATISTA DE CARVALHO EM SANTA RITA - ",
+        "status": "MOBILIZAÇÃO",
+        "pct": 0.0,
+        "orcamento": 799121.19,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "SANTANA DO MARANHÃO": {
+    "eixo": 3,
+    "total": 2,
+    "entregues": 0,
+    "andamento": 1,
+    "paradas": 1,
+    "investimento": 1349456.73,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO RESTAURANTE POPULAR EM SANTANA DO MARANHÃO",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 782467.64,
+        "orgao": "RESTAURANTE POPULAR"
+      },
+      {
+        "desc": "REFORMA C.E. SÃO FRANCISCO - ANEXO 1  NO POVOADO SÃO JÕAO EM SANTANA DO MARANHÃO",
+        "status": "PARADA",
+        "pct": 10.0,
+        "orcamento": 566989.09,
+        "orgao": "EDUCAÇÃO"
+      }
+    ]
+  },
+  "SANTO AMARO DO MARANHÃO": {
+    "eixo": 3,
+    "total": 7,
+    "entregues": 4,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 4299100.66,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇAO DE ARENINHA ESPORTIVA EM SANTO AMARO DO MARANHÃO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 2070912.31,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "REFORMA DA 3º COMPANHIA E 2º BATALHÃO DE TURISMO DA PM EM SANTO AMARO DO MARANHÃ",
+        "status": "EM ANDAMENTO",
+        "pct": 63.0,
+        "orcamento": 846118.91,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "REFORMA DA 3º COMPANHIA E 2º BATALHÃO DE TURISMO DA PM EM SANTO AMARO DO MARANHÃ",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 361200.1,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "ADEQUAÇÕES DO VIVA PROCON  EM SANTO AMARO DO MARANHÃO",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "VIVA PROCON"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nCMT XXII - E.M. PAVÃO NETO (COMPLEXO E",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      }
+    ]
+  },
+  "SANTO ANTÔNIO DOS LOPES": {
+    "eixo": 4,
+    "total": 10,
+    "entregues": 1,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 5808297.32,
+    "obras": [
+      {
+        "desc": "SSAA NA SEDE E NA ZONA RURAL EM SANTO ANTÔNIO DOS LOPES",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1338209.61,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO SENADOR POMPEU EM SANTO ANTÔNIO DOS LOPES",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM SANTO ANTÔNIO DOS LOPES - QTE: 02 BR",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "REFORMA, MODERNIZAÇÃO E AMPLIAÇÃO DA UNIDADE MISTA DR. ZERBINI EM SANTO ANTÔNIO ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "SSAA NO BAIRRO SANTA MADALENA EM SANTO ANTÔNIO DOS LOPES",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SÃO BENEDITO DO RIO PRETO": {
+    "eixo": 2,
+    "total": 9,
+    "entregues": 4,
+    "andamento": 3,
+    "paradas": 0,
+    "investimento": 7573835.16,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO PARQUE AMBIENTAL EM SÃO BENEDITO DO RIO PRETO",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1612823.25,
+        "orgao": "PARQUES"
+      },
+      {
+        "desc": "REFORMA DELEGACIA EM SÃO BENEDITO DO RIO PRETO",
+        "status": "EM ANDAMENTO",
+        "pct": 26.0,
+        "orcamento": 686390.29,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA ODILON SILVA EM SÃO BENEDITO DO RIO PRETO",
+        "status": "EM ANDAMENTO",
+        "pct": 20.0,
+        "orcamento": 2289338.98,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PRAÇA NO BAIRRO CIDADE ALTA EM SÃO BENEDITO DO RIO PRETO",
+        "status": "EM ANDAMENTO",
+        "pct": 70.0,
+        "orcamento": 1498791.55,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR  2 DE JULHO\nCMCB XXXVI",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      }
+    ]
+  },
+  "SÃO DOMINGOS DO AZEITÃO": {
+    "eixo": 4,
+    "total": 11,
+    "entregues": 3,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 9221407.42,
+    "obras": [
+      {
+        "desc": "REFORMA DELEGACIA EM SÃO DOMINGOS DO AZEITÃO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "SSAA LOTEAMENTO CIDADE NOVA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 380000.0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA LOTEAMENTO CHAPADA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 442490.46,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DE COLÉGIO MILITAR TIRADENTES\nCOLÉGIO MUNICIPAL LUCAS COELHO",
+        "status": "EM ANDAMENTO",
+        "pct": 88.0,
+        "orcamento": 1148610.57,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "URBANIZAÇÃO DO BALNEÁRIO - 2ª ETAPA EM SÃO DOMINGOS DO AZEITÃO",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 2823390.51,
+        "orgao": "INFRAESTRUTURA"
+      }
+    ]
+  },
+  "SÃO JOÃO DOS PATOS": {
+    "eixo": 3,
+    "total": 9,
+    "entregues": 3,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 11945430.21,
+    "obras": [
+      {
+        "desc": "REFORMA DO PARQUE DE VAQUEJADA  EM SÃO JOÃO DOS PATOS",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PARQUES"
+      },
+      {
+        "desc": "REVITALIZAÇÃO DO PARQUE DA BANDEIRA E DO ASA DELTA EM SÃO JOÃO DOS PATOS",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1302566.25,
+        "orgao": "PARQUES"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE ESTAÇÃO TECH EM SÃO JOÃO DOS PATOS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 351805.67,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR E DE JULHO EM SÃO JOÃO DOS PATOS\nESCOLA PADRE SAN",
+        "status": "EM ANDAMENTO",
+        "pct": 50.0,
+        "orcamento": 598742.29,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REFORMA ESCRITÓRIO AGED/AGERP EM SÃO JOÃO DOS PATOS",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 138962.41999999998,
+        "orgao": "AGED"
+      }
+    ]
+  },
+  "SÃO JOSÉ DE RIBAMAR": {
+    "eixo": 2,
+    "total": 24,
+    "entregues": 6,
+    "andamento": 6,
+    "paradas": 1,
+    "investimento": 10816094.22,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRANDENTES - COMPLEXO EDUCACIONAL CURIAR BILINGU",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTE NA ESCOLA ALTO DO TURU ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REFORMA NO CENTRO SOCIOEDUCATIVO DE INTERNAÇÃO SÃO JOSÉ DE RIBAMAR - CSISC",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "FUNAC"
+      },
+      {
+        "desc": "REFORMA MODULAR DO 10º BATALHÃO DE BOMBEIRO MILITAR EM SÃO JOSÉ DE RIBAMAR",
+        "status": "AG. RELATÓRIO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SEGURANÇA/\nBOMBEIRO"
+      },
+      {
+        "desc": "CONSTRUÇÃO ETE NO RESIDENCIAL MAGNO CRUZ EM SÃO JOSÉ DE RIBAMAR",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 1199400.0,
+        "orgao": "INFRAESTRUTURA"
+      }
+    ]
+  },
+  "SÃO PEDRO DOS CRENTES": {
+    "eixo": 3,
+    "total": 12,
+    "entregues": 2,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 4000405.8,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE ILUMINAÇÃO LED",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 382526.82,
+        "orgao": "ILUMINAÇÃO"
+      },
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DA UBS MARIA LIBÂNIA EMSÃO PEDRO DOS CRENTES",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 1167190.47,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "REFORMA DO PRÉDIO DA DELEGACIA DE POLÍCIA DE SÃO PEDRO DOS CRENTES",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "DELEGACIAS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO ESTAÇÃO TECH EM SÃO PEDRO DOS CRENTES",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "REFORMA DO CENTRO DE REREFERÊNCIA DE ASSISTÊNCIA SOCIAL - CRAS EM SÃO PEDRO DOS ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SOCIAL"
+      }
+    ]
+  },
+  "SÃO RAIMUNDO DAS MANGABEIRAS": {
+    "eixo": 1,
+    "total": 12,
+    "entregues": 6,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 5534462.65,
+    "obras": [
+      {
+        "desc": "COBERTURA NAS ARQUIBANCADAS DO ESTÁDIO MUNICIPAL EM SÃO RAIMUNDO DAS MANGABEIRAS",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESPORTE E LAZER"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE PORTAL EM SÃO RAIMUNDO DAS MANGABEIRAS - QTE 02 BR",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PORTAL"
+      },
+      {
+        "desc": "CONSTRUÇÃO DE PRAÇA DA FAMÍLIA NO BAIRRO VILA CECI EM SÃO RAIMUNDO DAS MANGABEIR",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2980138.72,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "REFORMA ESTAÇÃO TECH EM SÃO RAIMUNDO DAS MANGABEIRAS",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 260007.86,
+        "orgao": "ESTAÇÃO TECH"
+      },
+      {
+        "desc": "SSAA NO BAIRRO CHUPÉ",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SÃO VICENTE FÉRRER": {
+    "eixo": 3,
+    "total": 30,
+    "entregues": 8,
+    "andamento": 4,
+    "paradas": 0,
+    "investimento": 14154296.83,
+    "obras": [
+      {
+        "desc": "REFORMA DO COLÉGIO MILITAR 2 DE JULHO - UNIDADE XXII EM SÃO VICENTE FÉRRER",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 472519.01,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "REFORMA E MANUTENÇÃO ESTRUTURAL - IEMA PLENO DE SÃO VICENTE FERRER",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "IEMA"
+      },
+      {
+        "desc": "REFORMA DA SEDE DO MUNICÍPIO NO BAIRRO CASA GRANDE",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "PATRIMÔNIO E INSTITUCIONAL"
+      },
+      {
+        "desc": "SSAA - IEMA PLENO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA DA UNIDADE BASICA DE SAUDE NO BAIRRO CASA GRANDE, NO MUNICIPIO DE SÃO VI",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SAÚDE"
+      }
+    ]
+  },
+  "SERRANO DO MARANHÃO": {
+    "eixo": 1,
+    "total": 16,
+    "entregues": 3,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 8382678.97,
+    "obras": [
+      {
+        "desc": "IMPLANTAÇÃO DE CASTELOS D’ÁGUA E REDE DE DISTRIBUIÇÃO DE ÁGUA PARA AS COMUNIDADE",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 4724349.95,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO QUILOMBO SANTO ANTÔNIO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO QUILOMBOLA SANTA FILOMENA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO QUILOMBOLA RIO DE PEIXE",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO QUILOMBOLA VERA CRUZ",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SÍTIO NOVO": {
+    "eixo": 1,
+    "total": 8,
+    "entregues": 4,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 2112764.91,
+    "obras": [
+      {
+        "desc": "SSAA DO POVOADO SALTO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 700451.67,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO GRUPO NOVO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO LAGOA DO MATO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA ALDEIA JERUSALÉM",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO POVOADO DOIS BURITIS",
+        "status": "INAUGURADA",
+        "pct": 1.0,
+        "orcamento": 506418.95,
+        "orgao": "POÇOS"
+      }
+    ]
+  },
+  "SUCUPIRA DO NORTE": {
+    "eixo": 1,
+    "total": 5,
+    "entregues": 1,
+    "andamento": 0,
+    "paradas": 0,
+    "investimento": 2534337.43,
+    "obras": [
+      {
+        "desc": "REFORMA DO DESTACAMENTO DE POLÍCIA MILITAR DE SUCUPIRA DO NORTE",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "SSAA POVOADO LARANJEIRAS",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 863067.39,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO MUNICÍPIO",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 909948.67,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO COLÉGIO MILITAR 2 DE JULHO\nU.E. BÁSICO MARIA BENIGNO DOS SANTO",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 761321.37,
+        "orgao": "ESCOLA MILITAR - BOMBEIRO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE ESTAÇÃO TECH EM SUCUPIRA DO NORTE",
+        "status": "PEND. INFORMAÇÕES",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "ESTAÇÃO TECH"
+      }
+    ]
+  },
+  "TURILÂNDIA": {
+    "eixo": 3,
+    "total": 11,
+    "entregues": 3,
+    "andamento": 2,
+    "paradas": 0,
+    "investimento": 8942891.76,
+    "obras": [
+      {
+        "desc": "REFORMA E AMPLIAÇÃO DA ESCOLA MUNICIPAL ALCELINO RIBEIRO RODRIGUES EM  TURILÂNDI",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 801812.48,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "SSAA NO BAIRRO SÃO PEDRO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 182252.41,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NO BAIRRO SANTO ANTONIO",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 185937.74,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "REFORMA NO HOSPITAL MUNICIPAL PEDRO LUCAS FONSECA",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "SAÚDE"
+      },
+      {
+        "desc": "REFORMA DO RESTAURANTE POPULAR EM TURILÂNDIA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 323179.95,
+        "orgao": "RESTAURANTE POPULAR"
+      }
+    ]
+  },
+  "VIANA": {
+    "eixo": 2,
+    "total": 7,
+    "entregues": 5,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 8269470.19,
+    "obras": [
+      {
+        "desc": "REFORMA NO CE NOSSA SENHORA DA CONCEIÇÃO EM VIANA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 2982659.83,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE COLÉGIO MILITAR TIRADENTES\nU.E. LUÍS CARLOS GUIMARÃES",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 809721.0,
+        "orgao": "ESCOLA MILITAR - PM"
+      },
+      {
+        "desc": "REFORMA NO IEMA DE VIANA",
+        "status": "CONCLUÍDA",
+        "pct": 1.0,
+        "orcamento": 1934913.92,
+        "orgao": "IEMA"
+      },
+      {
+        "desc": "REFORMA DA ESCOLA EDUCA MAIS RAIMUNDO MARCELINO CAMPELO EM VIANA.",
+        "status": "EM ANDAMENTO",
+        "pct": 20.0,
+        "orcamento": 2137663.16,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DA COBERTURA DA DELEGACIA DE POLÍCIA CIVIL EM VIANA",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 86891.59,
+        "orgao": "DELEGACIAS"
+      }
+    ]
+  },
+  "VITÓRIA DO MEARIM": {
+    "eixo": 2,
+    "total": 12,
+    "entregues": 1,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 9700000.23,
+    "obras": [
+      {
+        "desc": "SSAA POVOADO COQUE 02 EM VITÓRIA DO MEARIM",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 588419.54,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "SSAA NOS POVOADOS: BOCA DO CAMPO, BOA ESPERANÇA, CUTIÚBA E CAÇOADA (AMBOS REGIÃO",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DA SEDE DA CÂMARA MUNICIPAL EM VITÓRIA DO MEARIM.",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 1234554.71,
+        "orgao": "PATRIMÔNIO E INSTITUCIONAL"
+      },
+      {
+        "desc": "REFORMA PRAÇA EM VITÓRIA DO MEARIM",
+        "status": "AGUARDAR",
+        "pct": 0.0,
+        "orcamento": 2169981.51,
+        "orgao": "PRAÇA"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DO VIVA PROCON EM VITÓRIA DO MEARIM",
+        "status": "EM ANDAMENTO",
+        "pct": 70.0,
+        "orcamento": 370596.96,
+        "orgao": "VIVA PROCON"
+      }
+    ]
+  },
+  "ZÉ DOCA": {
+    "eixo": 3,
+    "total": 12,
+    "entregues": 4,
+    "andamento": 1,
+    "paradas": 0,
+    "investimento": 6584286.18,
+    "obras": [
+      {
+        "desc": "REFORMA DO 29° BATALHÃO DE POLÍCIA MILITAR EM ZÉ DOCA",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 852631.25,
+        "orgao": "SEGURANÇA/PM"
+      },
+      {
+        "desc": "IMPLANTAÇÃO DE INFRAESTRUTURA FÍSICA (LABORATÓRIO DE INFERMAGEM, SETOR ADMINISTR",
+        "status": "AG. APROVAÇÃO",
+        "pct": 0.0,
+        "orcamento": 878332.3,
+        "orgao": "UEMA"
+      },
+      {
+        "desc": "REFORMA DO CENTRO DE ENSINO FRANCISCO DE ASSIS AMORIM EM ZÉ DOCA -  (PROX. A UEM",
+        "status": "AG. PROJETO E ORÇAMENTO",
+        "pct": 0.0,
+        "orcamento": 0,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "REFORMA DO CENTRO DE ENSINO ANTIHON TEOPLO RAMOS ROCHA",
+        "status": "EM ANDAMENTO",
+        "pct": 5.0,
+        "orcamento": 961045.05,
+        "orgao": "EDUCAÇÃO"
+      },
+      {
+        "desc": "SSAA CAMPOS DA UEMA",
+        "status": "ENTREGUE",
+        "pct": 1.0,
+        "orcamento": 0,
+        "orgao": "POÇOS"
+      }
+    ]
+  }
+}
