@@ -15,6 +15,9 @@ const initialState = {
   tema: 'light',
   municipios: [],
   municipiosCarregados: false,
+  carregandoMunicipios: false,
+  erroMunicipios: null,
+  ultimaAtualizacao: null,
   mapInstance: null,
   mapGrandeInstance: null,
   geoJSONData: null,
@@ -35,10 +38,13 @@ export const useStore = create((set, get) => ({
 
   // Carrega dados únicos do D1 (remove duplicatas por IBGE)
   fetchMunicipios: async () => {
+    if (get().carregandoMunicipios) return get().municipios;
+    set({ carregandoMunicipios: true, erroMunicipios: null });
     try {
-      const resp = await fetch('/api/municipios', { headers: { 'Cache-Control': 'no-cache' } });
+      const resp = await fetch('/api/municipios', { signal: AbortSignal.timeout(15000), headers: { 'Cache-Control': 'no-cache' } });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const dados = await resp.json();
+      if (!Array.isArray(dados.municipios)) throw new Error('Resposta de dados inválida');
       // Remove duplicatas por ibge
       const vistos = new Set();
       const unicos = (dados.municipios || []).filter(m => {
@@ -46,11 +52,11 @@ export const useStore = create((set, get) => ({
         vistos.add(m.ibge);
         return true;
       });
-      set({ municipios: unicos, municipiosCarregados: true });
+      set({ municipios: unicos, municipiosCarregados: true, carregandoMunicipios: false, erroMunicipios: null, ultimaAtualizacao: dados.metadata?.updated_at || dados.metadata?.gerado_em || null });
       return unicos;
     } catch (e) {
       console.error('fetchMunicipios error:', e);
-      set({ municipios: [], municipiosCarregados: true });
+      set({ municipiosCarregados: true, carregandoMunicipios: false, erroMunicipios: e.message });
       return [];
     }
   },
@@ -246,9 +252,15 @@ export const useMunicipiosFiltrados = () => {
 };
 
 export const useKPIs = () => {
-  const getKPIs = useStore(state => state.getKPIs);
-  useStore(state => state.municipios);
-  return getKPIs();
+  const municipios = useStore(state => state.municipios);
+  const grupo = useStore(state => state.grupo);
+  const busca = useStore(state => state.busca);
+  const mesorregiao = useStore(state => state.mesorregiao);
+  const getMunicipiosFiltrados = useStore(state => state.getMunicipiosFiltrados);
+
+  // O selector assina os filtros; o cálculo usa somente a lista filtrada.
+  const filtrados = getMunicipiosFiltrados();
+  return getStats(filtrados || []);
 };
 
 export const useMapInstance = () => useStore(state => state.mapInstance);

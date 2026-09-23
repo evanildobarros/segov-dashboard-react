@@ -134,9 +134,22 @@ async function d1Query(env, sql, params = []) {
 }
 
 async function loadDadosAtivos(env) {
-  // Busca diretamente da tabela municipios no D1 (sincronizada via sync)
+  // Query municipios table (clean reference) and join with obras and veiculos tables
   const result = await d1Query(env,
-    'SELECT ibge, nome, grupo, prioritario, cor, prefeito, alinhamento, total_obras, obras_em_andamento, obras_entregues, equipamento_solicitado, equipamento_categoria, partido, investimento_planner, total_liderancas, mesorregiao, eixos, asfalto FROM municipios ORDER BY nome'
+    `SELECT 
+      m.ibge, m.nome, m.grupo, m.prioritario, m.cor, m.prefeito, m.alinhamento,
+      COALESCE(o.total_obras, 0) as total_obras,
+      COALESCE(o.obras_em_andamento, 0) as obras_em_andamento,
+      COALESCE(o.obras_entregues, 0) as obras_entregues,
+      COALESCE(o.obras_paradas, 0) as obras_paradas,
+      m.partido, COALESCE(o.investimento_planner, '') as investimento_planner, m.total_liderancas, m.mesorregiao,
+      COALESCE(o.eixos, '[]') as eixos, COALESCE(o.asfalto, '{}') as asfalto,
+      COALESCE(v.equipamento_solicitado, '') as equipamento_solicitado_veiculo,
+      COALESCE(v.equipamento_categoria, '') as equipamento_categoria_veiculo
+    FROM municipios m
+    LEFT JOIN obras o ON CAST(m.ibge AS INTEGER) = o.municipio_ibge AND o.nome_obra = m.nome
+    LEFT JOIN veiculos v ON CAST(m.ibge AS INTEGER) = v.municipio_ibge
+    ORDER BY m.nome`
   );
   if (result.results && result.results.length > 0) {
     const muns = result.results.map(r => ({
@@ -150,8 +163,9 @@ async function loadDadosAtivos(env) {
       total_obras: Number(r.total_obras || 0),
       obras_em_andamento: Number(r.obras_em_andamento || 0),
       obras_entregues: Number(r.obras_entregues || 0),
-      equipamento_solicitado: String(r.equipamento_solicitado || ''),
-      equipamento_categoria: String(r.equipamento_categoria || ''),
+      obras_paradas: Number(r.obras_paradas || 0),
+      equipamento_solicitado: r.equipamento_solicitado_veiculo != null ? String(r.equipamento_solicitado_veiculo) : '',
+      equipamento_categoria: r.equipamento_categoria_veiculo != null ? String(r.equipamento_categoria_veiculo) : '',
       partido: String(r.partido || ''),
       investimento_planner: r.investimento_planner != null ? String(r.investimento_planner) : '',
       total_liderancas: Number(r.total_liderancas || 0),
@@ -220,27 +234,29 @@ export default {
     }
 
     // GET /api/municipios → dados ativos (do D1 ou assets fallback)
-    if (path === '/api/municipios' && method === 'GET') {
-      try {
-        const dados = await loadDadosAtivos(env);
-        if (dados) {
-          return json(dados, 200, {
-            'Cache-Control': 'public, max-age=300, stale-while-revalidate=60',
-            'CDN-Cache-Control': 'public, max-age=300'
-          });
+        // Handle optional trailing slash (e.g. "/api/municipios/")
+                const normalizedPath = path.replace(/\/+$/, '');
+                if (normalizedPath === '/api/municipios' && method === 'GET') {
+          try {
+            const dados = await loadDadosAtivos(env);
+            if (dados) {
+              return json(dados, 200, {
+                'Cache-Control': 'public, max-age=300, stale-while-revalidate=60',
+                'CDN-Cache-Control': 'public, max-age=300'
+              });
+            }
+            // Fallback: assets estáticos
+            const resp = await env.ASSETS.fetch(request);
+            if (resp.status === 404) return json({ ok: false, erro: 'Dados não encontrados' }, 404);
+            const h = new Headers(resp.headers);
+            h.set('Cache-Control', 'public, max-age=300');
+            return new Response(resp.body, { status: 200, headers: h });
+          } catch (e) {
+            console.error('loadDadosAtivos error:', e);
+            const resp = await env.ASSETS.fetch(request);
+            return new Response(resp.body, { status: resp.status, headers: resp.headers });
+          }
         }
-        // Fallback: assets estáticos
-        const resp = await env.ASSETS.fetch(request);
-        if (resp.status === 404) return json({ ok: false, erro: 'Dados não encontrados' }, 404);
-        const h = new Headers(resp.headers);
-        h.set('Cache-Control', 'public, max-age=300');
-        return new Response(resp.body, { status: 200, headers: h });
-      } catch (e) {
-        console.error('loadDadosAtivos error:', e);
-        const resp = await env.ASSETS.fetch(request);
-        return new Response(resp.body, { status: resp.status, headers: resp.headers });
-      }
-    }
 
     // GET /api/municipios/[ibge] → município específico
     const mIbgeMatch = path.match(/^\/api\/municipios\/(\d+)$/);
@@ -348,29 +364,50 @@ export default {
                   try {
                     const ibge = putMatch[1];
                     const body = await request.json();
-                    // Campos permitidos para atualização
-                    const allowedFields = [
-                      'grupo', 'cor', 'prioritario', 'prefeito', 'alinhamento',
-                      'total_obras', 'obras_em_andamento', 'obras_entregues',
-                      'equipamento_solicitado', 'equipamento_categoria', 'partido',
-                      'investimento_planner', 'total_liderancas', 'mesorregiao', 'eixos'
-                    ];
-                    const updates = [];
+                    // Campos permitidos para atualização (obra fields go to obras, veiculo fields go to veiculos, others to municipios)
+                    const muniFields = ['grupo', 'cor', 'prioritario', 'prefeito', 'alinhamento',
+                      'partido', 'solicitante', 'total_liderancas', 'mesorregiao'];
+                    const obraFields = ['total_obras', 'obras_em_andamento', 'obras_entregues',
+                      'obras_paradas', 'investimento_planner', 'eixos', 'asfalto'];
+                    const veiculoFields = ['equipamento_solicitado', 'equipamento_categoria'];
+                    const muniUpdates = [];
+                    const obraUpdates = [];
+                    const veiculoUpdates = [];
                     const params = [];
-                    for (const field of allowedFields) {
+                    const obraParams = [];
+                    const veiculoParams = [];
+                    for (const field of muniFields) {
                       if (field in body) {
-                        updates.push(`${field} = ?`);
+                        muniUpdates.push(`${field} = ?`);
                         params.push(body[field]);
                       }
                     }
-                    if (updates.length === 0) {
-                      return json({ ok: false, erro: 'Nenhum campo para atualizar' }, 400);
+                    for (const field of obraFields) {
+                      if (field in body) {
+                        obraUpdates.push(`${field} = ?`);
+                        obraParams.push(body[field]);
+                      }
+                    }
+                    for (const field of veiculoFields) {
+                      if (field in body) {
+                        veiculoUpdates.push(`${field} = ?`);
+                        veiculoParams.push(body[field]);
+                      }
                     }
                     const now = new Date().toISOString();
-                    params.push(now);
-                    params.push(ibge);
-                    const sql = `UPDATE municipios SET ${updates.join(', ')}, updated_at = ? WHERE ibge = ?`;
-                    const result = await d1Query(env, sql, params);
+                    const allParams = [...params, now, ibge];
+                    let sql = `UPDATE municipios SET ${muniUpdates.join(', ')}, updated_at = ? WHERE ibge = ?`;
+                    let result = await d1Query(env, sql, allParams);
+                    if (obraUpdates.length > 0) {
+                      const obraAllParams = [...obraParams, now, ibge];
+                      const obraSql = `UPDATE obras SET ${obraUpdates.join(', ')} WHERE municipio_ibge = CAST(? AS INTEGER) AND nome_obra IN (SELECT nome FROM municipios WHERE ibge = ?)`;
+                      result = await d1Query(env, obraSql, obraAllParams);
+                    }
+                    if (veiculoUpdates.length > 0) {
+                      const veiculoAllParams = [...veiculoParams, now, ibge];
+                      const veiculoSql = `UPDATE veiculos SET ${veiculoUpdates.join(', ')}, updated_at = ? WHERE municipio_ibge = CAST(? AS INTEGER)`;
+                      result = await d1Query(env, veiculoSql, veiculoAllParams);
+                    }
                     return json({ ok: true, message: 'Município atualizado no D1', updated: result.success }, 200, { 'Cache-Control': 'no-store' });
                   } catch (err) {
                     return json({ ok: false, erro: err.message }, 400);

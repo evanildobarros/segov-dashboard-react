@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
 import { Sun, Moon, LogOut, Menu } from 'lucide-react';
 
 export function Topbar() {
-  const { setTema, modo, user, logout, toggleMobileMenu } = useStore();
+  const { setTema, tema, user, logout, toggleMobileMenu } = useStore();
+  const modo = useLocation().pathname.slice(1) || 'dashboard';
   const [date] = useState(() => new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }));
   
   const titulos = {
@@ -11,8 +13,9 @@ export function Topbar() {
     mapa: 'Mapa Político',
     municipios: 'Municípios',
     obras: 'Obras',
+    equipamentos: 'Veículos',
     relatorios: 'Relatórios',
-    admin: 'Admin'
+    admin: 'Administração'
   };
 
   // Formata o nome do usuário (ex: evanildobarros -> Evanildo Barros)
@@ -32,7 +35,7 @@ export function Topbar() {
         >
           <Menu size={22} />
         </button>
-        <h2 style={{ fontSize: '17px', color: '#0b3c5d', margin: 0 }}>
+        <h2 style={{ fontSize: '17px', color: 'var(--heading)', margin: 0 }}>
           {titulos[modo] || modo}
         </h2>
       </div>
@@ -41,10 +44,10 @@ export function Topbar() {
         <span className="topbar-date">📅 {date}</span>
         
         <div className="theme-switcher">
-          <button onClick={() => setTema('light')} title="Modo Claro">
+          <button onClick={() => setTema('light')} aria-pressed={tema === 'light'} title="Modo Claro">
             <Sun size={16} />
           </button>
-          <button onClick={() => setTema('dark')} title="Modo Escuro">
+          <button onClick={() => setTema('dark')} aria-pressed={tema === 'dark'} title="Modo Escuro">
             <Moon size={16} />
           </button>
         </div>
@@ -54,7 +57,7 @@ export function Topbar() {
           <div className="user-avatar">
             {(user?.name || 'E').charAt(0).toUpperCase()}
           </div>
-          <button onClick={logout} className="logout-btn">
+          <button onClick={logout} className="logout-btn" aria-label="Sair">
             <LogOut size={16} /> <span>Sair</span>
           </button>
         </div>

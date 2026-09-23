@@ -1,6 +1,8 @@
 // Processa e exporta os dados dos municípios
 import municipiosData from './dados_municipios.json';
 import eixosData from './eixos_obras.json';
+import { parseCurrency, formatCurrency } from '../utils/formatters';
+export { formatCurrency };
 
 // Cores por grupo
 export const CORES = {
@@ -72,25 +74,13 @@ export function getStats(municipios = MUNICIPIOS) {
     braide: municipios.filter(m => m.grupo === 'Braide').length,
     neutro: municipios.filter(m => m.grupo === 'neutro').length,
     indefinido: municipios.filter(m => m.grupo === 'indefinido').length,
-    totalObras: municipios.reduce((s, m) => s + (m.total_obras || 0), 0),
-    totalLiderancas: municipios.reduce((s, m) => s + (m.total_liderancas || 0), 0),
+    totalObras: municipios.reduce((s, m) => s + (Number(m.total_obras) || 0), 0),
+    totalLiderancas: municipios.reduce((s, m) => s + (Number(m.total_liderancas) || 0), 0),
     totalInvestimento: municipios.reduce((s, m) => {
-      const val = parseFloat(String(m.investimento_planner || '0').replace(/[R$\s.]/g, '').replace(',', '.')) || 0;
+      const val = parseCurrency(m.investimento_planner) || 0;
       return s + val;
     }, 0)
   };
-}
-
-// Formata moeda
-export function formatCurrency(val) {
-  if (!val) return '—';
-  const num = typeof val === 'string' 
-    ? parseFloat(val.replace(/[R$\s.]/g, '').replace(',', '.')) 
-    : Number(val);
-  if (isNaN(num)) return '—';
-  if (num >= 1e6) return `R$ ${(num/1e6).toFixed(2)} mi`;
-  if (num >= 1e3) return `R$ ${(num/1e3).toFixed(1)} mil`;
-  return `R$ ${num.toFixed(0)}`;
 }
 
 // Abrevia nome do município para gráficos

@@ -1,5 +1,6 @@
 import { Bar } from 'react-chartjs-2';
-import { CORES } from '../data/municipios';
+import { useStore } from '../hooks/useStore';
+import { formatCurrency, parseCurrency } from '../utils/formatters';
 
 /**
  * ChartEixos — Gráfico de barras horizontal dos eixos (órgãos) com total de obras e investimento.
@@ -23,21 +24,6 @@ const EIXO_LABELS = {
   'PATRIMÔNIO E INSTITUCIONAL': 'Patrimônio',
   'OUTROS': 'Outros'
 };
-
-function formatCurrency(val) {
-  if (!val) return '—';
-  if (val >= 1e6) return `R$ ${(val/1e6).toFixed(2)} mi`;
-  if (val >= 1e3) return `R$ ${(val/1e3).toFixed(1)} mil`;
-  return `R$ ${val.toFixed(0)}`;
-}
-
-function parseCurrency(val) {
-  if (!val) return 0;
-  const num = typeof val === 'string'
-    ? parseFloat(val.replace(/[R$\s.]/g, '').replace(',', '.'))
-    : Number(val);
-  return isNaN(num) ? 0 : num;
-}
 
 /**
  * Extrai stats de eixos a partir da lista de municípios.
@@ -69,9 +55,10 @@ function getEixosStats(municipios = []) {
 }
 
 export function ChartEixos({ municipios }) {
+  const tema = useStore(state => state.tema);
   const colors = {
-    textColor: '#7a8a99',
-    gridColor: 'rgba(0,0,0,0.05)'
+    textColor: tema === 'dark' ? '#bbc9d9' : '#526477',
+    gridColor: tema === 'dark' ? '#40536a' : '#e2e8f0'
   };
 
   const stats = getEixosStats(municipios);

@@ -45,119 +45,122 @@ const D1_BADGE_STYLES = {
   checking: { bg: 'bg-amber-100', text: 'text-amber-800', label: '🟡 Conectando...' },
 };
 
-/* ─── Modal de Edição ─── */
+/* ─── Painel de Edição (stacked inline) ─── */
 function EditModal({ municipio, editFormData, setEditFormData, isSaving, onSave, onDelete, onCancel }) {
   const handleFieldChange = (field, value) => {
     setEditFormData(prev => ({ ...prev, [field]: value }));
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gray-50 rounded-t-2xl">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+      <div className="flex items-center justify-between p-5 border-b border-gray-200 bg-gray-50">
+        <div>
           <h3 className="text-lg font-semibold text-gray-900">Editar: {municipio.nome}</h3>
-          <button onClick={onCancel} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+          <p className="text-xs text-gray-500 mt-0.5">IBGE {municipio.ibge}</p>
         </div>
+        <button onClick={onCancel} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
 
-        <form onSubmit={(e) => { e.preventDefault(); onSave(); }} className="p-6 space-y-8">
-          <div>
-            <h4 className="text-sm font-medium text-gray-500 mb-4">Dados do Município</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-6">
-              <div className="sm:col-span-4">
-                <label className="block text-sm font-medium text-gray-700">Código IBGE</label>
-                <input type="text" value={municipio.ibge} readOnly
-                  className="mt-1 block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-700" />
-              </div>
-              <div className="sm:col-span-6">
-                <label className="block text-sm font-medium text-gray-700">Nome</label>
-                <input type="text" value={municipio.nome} readOnly
-                  className="mt-1 block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-700" />
-              </div>
-              <div className="sm:col-span-3">
-                <label className="block text-sm font-medium text-gray-700">Alinhamento</label>
-                <div className="mt-1 relative">
-                  <select value={editFormData.grupo} onChange={(e) => handleFieldChange('grupo', e.target.value)}
-                    className="appearance-none w-full rounded-md bg-white py-1.5 pr-8 pl-3 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600">
-                    {GRUPO_OPTIONS.map(g => (<option key={g.value} value={g.value}>{g.label}</option>))}
-                  </select>
-                  <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 size-4 text-gray-500" />
-                </div>
-              </div>
-              <div className="sm:col-span-3">
-                <label className="block text-sm font-medium text-gray-700">Total Obras</label>
-                <input type="number" value={editFormData.total_obras} onChange={(e) => handleFieldChange('total_obras', e.target.value)}
-                  className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
-              </div>
-              <div className="sm:col-span-6">
-                <label className="block text-sm font-medium text-gray-700">Investimento Planner</label>
-                <input type="text" value={editFormData.investimento_planner} onChange={(e) => handleFieldChange('investimento_planner', e.target.value)} placeholder="R$ 1.000.000,00"
-                  className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
-              </div>
-              <div className="sm:col-span-6">
-                <label className="block text-sm font-medium text-gray-700">Prefeito</label>
-                <input type="text" value={editFormData.prefeito} onChange={(e) => handleFieldChange('prefeito', e.target.value)}
-                  className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
-              </div>
-              <div className="sm:col-span-3">
-                <label className="block text-sm font-medium text-gray-700">Partido</label>
-                <input type="text" value={editFormData.partido} onChange={(e) => handleFieldChange('partido', e.target.value)}
-                  className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
-              </div>
-              <div className="sm:col-span-3">
-                <label className="block text-sm font-medium text-gray-700">Detalhes</label>
-                <input type="text" value={editFormData.detalhes} onChange={(e) => handleFieldChange('detalhes', e.target.value)}
-                  className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+      <form onSubmit={(e) => { e.preventDefault(); onSave(); }} className="p-5 space-y-8">
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 mb-4">Dados do Município</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-6">
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Código IBGE</label>
+              <input type="text" value={municipio.ibge} readOnly
+                className="mt-1 block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-700" />
+            </div>
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Nome</label>
+              <input type="text" value={municipio.nome} readOnly
+                className="mt-1 block w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm text-gray-700" />
+            </div>
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Alinhamento</label>
+              <div className="mt-1 relative">
+                <select value={editFormData.grupo} onChange={(e) => handleFieldChange('grupo', e.target.value)}
+                  className="appearance-none w-full rounded-md bg-white py-1.5 pr-8 pl-3 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600">
+                  {GRUPO_OPTIONS.map(g => (<option key={g.value} value={g.value}>{g.label}</option>))}
+                </select>
+                <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 size-4 text-gray-500" />
               </div>
             </div>
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Total Obras</label>
+              <input type="number" value={editFormData.total_obras} onChange={(e) => handleFieldChange('total_obras', e.target.value)}
+                className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+            </div>
+            <div className="sm:col-span-6">
+              <label className="block text-sm font-medium text-gray-700">Investimento Planner</label>
+              <input type="text" value={editFormData.investimento_planner} onChange={(e) => handleFieldChange('investimento_planner', e.target.value)} placeholder="R$ 1.000.000,00"
+                className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+            </div>
+            <div className="sm:col-span-6">
+              <label className="block text-sm font-medium text-gray-700">Prefeito</label>
+              <input type="text" value={editFormData.prefeito} onChange={(e) => handleFieldChange('prefeito', e.target.value)}
+                className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+            </div>
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Partido</label>
+              <input type="text" value={editFormData.partido} onChange={(e) => handleFieldChange('partido', e.target.value)}
+                className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+            </div>
+            <div className="sm:col-span-3">
+              <label className="block text-sm font-medium text-gray-700">Detalhes</label>
+              <input type="text" value={editFormData.detalhes} onChange={(e) => handleFieldChange('detalhes', e.target.value)}
+                className="mt-1 block w-full rounded-md bg-white px-3 py-1.5 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+            </div>
           </div>
+        </div>
 
-          <div className="flex gap-3 pt-4 border-t border-gray-200">
-            <button type="submit" disabled={isSaving}
-              className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-md font-medium hover:bg-indigo-700 disabled:opacity-60">
-              {isSaving ? 'Salvando...' : 'Salvar no D1'}
-            </button>
-            <button type="button" onClick={() => {
-              if (window.confirm(`Excluir ${municipio.nome} (${municipio.ibge}) do D1?`)) {
-                onDelete(municipio.ibge);
-              }
-            }} className="flex-1 bg-red-100 text-red-700 py-2 px-4 rounded-md font-medium hover:bg-red-200">
-              Excluir
-            </button>
-            <button type="button" onClick={onCancel}
-              className="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-md font-medium hover:bg-gray-200">
-              Cancelar
-            </button>
-          </div>
-        </form>
-      </div>
+        <div className="flex gap-3 pt-4 border-t border-gray-200">
+          <button type="submit" disabled={isSaving}
+            className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded-md font-medium hover:bg-indigo-700 disabled:opacity-60">
+            {isSaving ? 'Salvando...' : 'Salvar no D1'}
+          </button>
+          <button type="button" onClick={() => {
+            if (window.confirm(`Excluir ${municipio.nome} (${municipio.ibge}) do D1?`)) {
+              onDelete(municipio.ibge);
+            }
+          }} className="flex-1 bg-red-100 text-red-700 py-2 px-4 rounded-md font-medium hover:bg-red-200">
+            Excluir
+          </button>
+          <button type="button" onClick={onCancel}
+            className="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-md font-medium hover:bg-gray-200">
+            Cancelar
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
 
-/* ─── Modal de Novo Município ─── */
+/* ─── Painel de Novo Município (stacked inline) ─── */
 function NewMunicipioModal({ newMunicipio, setNewMunicipio, isSaving, onCreate, onCancel }) {
   const handleChange = (field, value) => {
     setNewMunicipio(prev => ({ ...prev, [field]: value }));
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gray-50 rounded-t-2xl">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+      <div className="flex items-center justify-between p-5 border-b border-gray-200 bg-gray-50">
+        <div>
           <h3 className="text-lg font-semibold text-gray-900">Novo Município</h3>
-          <button onClick={onCancel} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+          <p className="text-xs text-gray-500 mt-0.5">Inserção direta no D1</p>
         </div>
+        <button onClick={onCancel} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
 
-        <form onSubmit={(e) => { e.preventDefault(); onCreate(); }} className="p-6 space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Código IBGE *</label>
-              <input type="text" value={newMunicipio.ibge} onChange={(e) => handleChange('ibge', e.target.value)}
-                placeholder="2100055" maxLength="7" required
-                className="mt-1 block w-full rounded-md bg-white px-3 py-2 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Nome do Município *</label>
+      <form onSubmit={(e) => { e.preventDefault(); onCreate(); }} className="p-5 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Código IBGE *</label>
+            <input type="text" value={newMunicipio.ibge} onChange={(e) => handleChange('ibge', e.target.value)}
+              placeholder="2100055" maxLength="7" required
+              className="mt-1 block w-full rounded-md bg-white px-3 py-2 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Nome do Município *</label>
               <input type="text" value={newMunicipio.nome} onChange={(e) => handleChange('nome', e.target.value)}
                 placeholder="Ex: Açailândia" required
                 className="mt-1 block w-full rounded-md bg-white px-3 py-2 text-sm text-gray-900 outline outline-gray-300 focus:outline-2 focus:outline-indigo-600" />
@@ -209,7 +212,6 @@ function NewMunicipioModal({ newMunicipio, setNewMunicipio, isSaving, onCreate, 
             </button>
           </div>
         </form>
-      </div>
     </div>
   );
 }
@@ -496,6 +498,29 @@ export function AdminPage() {
         </div>
       </div>
 
+      {/* ─── Painéis Stacked (Edição / Novo) ─── */}
+      {editMunicipio && (
+        <EditModal
+          municipio={editMunicipio}
+          editFormData={editFormData}
+          setEditFormData={setEditFormData}
+          isSaving={isSaving}
+          onSave={salvarEdicao}
+          onCancel={handleCancelarEdicao}
+          onDelete={excluirMunicipio}
+        />
+      )}
+
+      {showNewMunicipio && (
+        <NewMunicipioModal
+          newMunicipio={newMunicipio}
+          setNewMunicipio={setNewMunicipio}
+          isSaving={isSaving}
+          onCreate={handleNovoMunicipio}
+          onCancel={() => setShowNewMunicipio(false)}
+        />
+      )}
+
       {/* ─── Tabela de Municípios ─── */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
         {/* Toolbar */}
@@ -615,29 +640,6 @@ export function AdminPage() {
           </table>
         </div>
       </div>
-
-      {/* ─── Modais ─── */}
-      {editMunicipio && (
-        <EditModal
-          municipio={editMunicipio}
-          editFormData={editFormData}
-          setEditFormData={setEditFormData}
-          isSaving={isSaving}
-          onSave={salvarEdicao}
-          onCancel={handleCancelarEdicao}
-          onDelete={excluirMunicipio}
-        />
-      )}
-
-      {showNewMunicipio && (
-        <NewMunicipioModal
-          newMunicipio={newMunicipio}
-          setNewMunicipio={setNewMunicipio}
-          isSaving={isSaving}
-          onCreate={handleNovoMunicipio}
-          onCancel={() => setShowNewMunicipio(false)}
-        />
-      )}
     </div>
   );
 }

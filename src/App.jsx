@@ -4,6 +4,7 @@ import { useStore, useAuth } from './hooks/useStore';
 import { Sidebar } from './components/Sidebar';
 import { Topbar } from './components/Topbar';
 import { FiltrosGlobais } from './components/FiltrosGlobais';
+import { DataStatus } from './components/DataStatus';
 import { BottomNav } from './components/BottomNav';
 import { DashboardPage } from './pages/Dashboard';
 import { MapaPoliticoPage } from './pages/MapaPolitico';
@@ -16,35 +17,36 @@ import { Login } from './pages/Login';
 import './App.css';
 import './index.css';
 import './styles/topbar-mobile.css';
+import './styles/ux.css';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, checkAuth } = useAuth();
-  
+
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
-  
+
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
-  
+
   return children;
 }
 
 function PublicRoute({ children }) {
   const { isAuthenticated } = useAuth();
-  
+
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;
   }
-  
+
   return children;
 }
 
 function Layout() {
   const { isMobileMenuOpen, closeMobileMenu } = useStore();
   const location = useLocation();
-  
+
   const isLogin = location.pathname === '/login';
   const isAdmin = location.pathname === '/admin';
 
@@ -56,18 +58,18 @@ function Layout() {
     <div className="app-layout">
       <Sidebar />
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="sidebar-overlay"
           onClick={closeMobileMenu}
         />
       )}
-      <div className="main-wrapper">
+      <div className={`main-wrapper ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <Topbar />
         <main className="main-content">
           {!isAdmin && <FiltrosGlobais />}
-          <Outlet />
+          <DataStatus><Outlet /></DataStatus>
         </main>
-        {!isAdmin && <BottomNav />}
+        <BottomNav isMobileMenuOpen={isMobileMenuOpen} />
       </div>
     </div>
   );
@@ -75,13 +77,13 @@ function Layout() {
 
 function App() {
   const { initTema, checkAuth, fetchMunicipios } = useStore();
-  
+
   useEffect(() => {
     initTema();
     checkAuth();
     fetchMunicipios(); // Carrega dados do D1 uma vez no mount
   }, [initTema, checkAuth, fetchMunicipios]);
-  
+
   return (
     <Routes>
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
@@ -91,6 +93,7 @@ function App() {
         <Route path="/mapa" element={<MapaPoliticoPage />} />
         <Route path="/municipios" element={<MunicipiosPage />} />
         <Route path="/obras" element={<ObrasPage />} />
+        <Route path="/alertas" element={<Navigate to="/relatorios" replace />} />
         <Route path="/equipamentos" element={<EquipamentosPage />} />
         <Route path="/relatorios" element={<RelatoriosPage />} />
         <Route path="/admin" element={<AdminPage />} />
@@ -100,4 +103,3 @@ function App() {
 }
 
 export default App;
-

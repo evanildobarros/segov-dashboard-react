@@ -14,9 +14,9 @@ export const ALL_MUNS = [
   {
     "ibge": "2100105",
     "nome": "Afonso Cunha",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2100154",
@@ -33,7 +33,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Nivaldo Araújo"
+    "prefeito": "Nivaldo Araújo",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2100303",
@@ -49,7 +50,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Marton Pegeú"
+    "prefeito": "Marton Pegeú",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2100436",
@@ -74,7 +76,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Rubens Japonês"
+    "prefeito": "Rubens Japonês",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2100550",
@@ -90,7 +93,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Vanderly Miranda"
+    "prefeito": "Vanderly Miranda",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2100709",
@@ -98,7 +102,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Hélder Lopes Aragão"
+    "prefeito": "Hélder Lopes Aragão",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2100808",
@@ -115,7 +120,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Açu"
+    "prefeito": "Açu",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2100873",
@@ -148,16 +154,17 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Maria Muniz"
+    "prefeito": "Maria Muniz",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2101103",
     "nome": "Axixá",
-    "grupo": "Brandão",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#2980B9",
+    "cor": "#E67E22",
     "prefeito": "Roberta Barreto",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101202",
@@ -167,7 +174,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 42.2,
     "pesquisa_braide": 40.0,
-    "prefeito": "José Roberto Costa Santos"
+    "prefeito": "José Roberto Costa Santos",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2101251",
@@ -176,7 +184,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Naila Gonçalo",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2101301",
@@ -204,7 +212,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Alan da Marissol"
+    "prefeito": "Alan da Marissol",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101509",
@@ -214,7 +223,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 54.0,
     "pesquisa_braide": 34.0,
-    "prefeito": "Antônio Carlos"
+    "prefeito": "Antônio Carlos",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2101608",
@@ -222,7 +232,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Rigo Teles"
+    "prefeito": "Rigo Teles",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101707",
@@ -230,7 +241,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Vinícius Vale"
+    "prefeito": "Vinícius Vale",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2101731",
@@ -238,7 +250,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Neném Pontes"
+    "prefeito": "Neném Pontes",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101772",
@@ -246,7 +259,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Adilson da Silva Sousa"
+    "prefeito": "Adilson da Silva Sousa",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101806",
@@ -257,7 +271,7 @@ export const ALL_MUNS = [
     "pesquisa_orleans": 62.5,
     "pesquisa_braide": 37.5,
     "prefeito": "Rodrigo Coelho",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2101905",
@@ -267,7 +281,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 52.0,
     "pesquisa_braide": 48.0,
-    "prefeito": "Zé Martins"
+    "prefeito": "Zé Martins",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2101939",
@@ -275,7 +290,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Júnior Xavier"
+    "prefeito": "Júnior Xavier",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2101970",
@@ -283,14 +299,15 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Dilcilene Oliveira"
+    "prefeito": "Lucidalva"
   },
   {
     "ibge": "2102002",
     "nome": "Bom Jardim",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2102036",
@@ -300,14 +317,15 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 39.2,
     "pesquisa_braide": 54.9,
-    "prefeito": "Franklim Duarte"
+    "prefeito": "Franklim Duarte",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2102077",
     "nome": "Bom Lugar",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2102101",
@@ -323,7 +341,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Geizianne da Conceição Costa",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2102200",
@@ -331,7 +349,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "André Augusto Keber Introvini"
+    "prefeito": "André Augusto Keber Introvini",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2102309",
@@ -339,7 +358,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Luciana Leocádio"
+    "prefeito": "Luciana Leocádio",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2102325",
@@ -363,7 +383,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "César Castro"
+    "prefeito": "César Castro",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2102408",
@@ -397,7 +418,8 @@ export const ALL_MUNS = [
     "nome": "Cândido Mendes",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2102705",
@@ -405,7 +427,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "José Marinho dos Santos Barros"
+    "prefeito": "José Marinho dos Santos Barros",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2102754",
@@ -424,7 +447,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 64.0,
     "pesquisa_braide": 36.0,
-    "prefeito": "Jayme Fonseca"
+    "prefeito": "Jayme Fonseca",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2102903",
@@ -432,7 +456,7 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Amin Quiel",
+    "prefeito": "André",
     "equipamento_solicitado": "Retroescavadeira"
   },
   {
@@ -452,7 +476,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 50.0,
     "pesquisa_braide": 50.0,
-    "prefeito": "Danilo Moraes"
+    "prefeito": "Danilo Moraes",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2103125",
@@ -511,7 +536,8 @@ export const ALL_MUNS = [
     "nome": "Coelho Neto",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2103505",
@@ -526,18 +552,20 @@ export const ALL_MUNS = [
   {
     "ibge": "2103554",
     "nome": "Conceição do Lago-Açu",
-    "grupo": "Brandão",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#2980B9",
-    "prefeito": "Açu"
+    "cor": "#E67E22",
+    "prefeito": "Açu",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2103604",
     "nome": "Coroatá",
-    "grupo": "Brandão",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#2980B9",
-    "prefeito": "Edimar Vaqueiro"
+    "cor": "#E67E22",
+    "prefeito": "Edimar Vaqueiro",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2103703",
@@ -545,7 +573,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Aldo Luís Borges Lopes"
+    "prefeito": "Aldo Luís Borges Lopes",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2103752",
@@ -559,21 +588,21 @@ export const ALL_MUNS = [
   {
     "ibge": "2103802",
     "nome": "Dom Pedro",
-    "grupo": "Brandão",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#2980B9",
+    "cor": "#E67E22",
     "prefeito": "Galego Mota"
   },
   {
     "ibge": "2103901",
     "nome": "Duque Bacelar",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 54.2,
     "pesquisa_braide": 37.5,
     "prefeito": "Flávio Furtado",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2104008",
@@ -592,7 +621,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 38.9,
     "pesquisa_braide": 44.4,
-    "prefeito": "Léo Cunha"
+    "prefeito": "Léo Cunha",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2104073",
@@ -609,7 +639,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Raimunda do Josemar"
+    "prefeito": "Raimunda do Josemar",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2104099",
@@ -637,7 +668,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 58.3,
     "pesquisa_braide": 29.2,
-    "prefeito": "Sebastião Costa"
+    "prefeito": "Sebastião Costa",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2104305",
@@ -665,7 +697,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Antônia Leide Ferreira da Silva Oliveira",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2104552",
@@ -682,7 +714,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Chiquinho do Banco"
+    "prefeito": "Chiquinho do Banco",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2104628",
@@ -700,7 +733,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Daniel Sena"
+    "prefeito": "Daniel Sena",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2104677",
@@ -714,7 +748,8 @@ export const ALL_MUNS = [
     "nome": "Graça Aranha",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2104800",
@@ -725,15 +760,16 @@ export const ALL_MUNS = [
     "pesquisa_orleans": 56.3,
     "pesquisa_braide": 37.5,
     "prefeito": "Dr. Gilson Guerreiro",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2104909",
     "nome": "Godofredo Viana",
-    "grupo": "Brandão",
+    "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#2980B9",
-    "prefeito": "Márcio Heberte Viana Abreu"
+    "cor": "#BDC3C7",
+    "prefeito": "Márcio Heberte Viana Abreu",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2105005",
@@ -746,11 +782,12 @@ export const ALL_MUNS = [
     "ibge": "2105104",
     "nome": "Icatu",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 43.1,
     "pesquisa_braide": 47.1,
-    "prefeito": "Walace Azevedo"
+    "prefeito": "Walace Azevedo Mendes",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2105153",
@@ -759,7 +796,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Aldenira Silva",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2105203",
@@ -768,7 +805,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "João Vitor Peixoto Moura Xavier (João Vitor Xavier)",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2105302",
@@ -788,7 +825,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Júnior do Posto",
-    "equipamento_solicitado": "Trator agrícola de pneus"
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2105401",
@@ -798,7 +835,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 30.0,
     "pesquisa_braide": 56.7,
-    "prefeito": "Mirim"
+    "prefeito": "Mirim",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2105427",
@@ -816,7 +854,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Léo do Banco",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2105476",
@@ -827,12 +865,12 @@ export const ALL_MUNS = [
   },
   {
     "ibge": "2105500",
-    "nome": "Junco do Maranhão",
+    "nome": "João Lisboa",
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "José Ricardo de Almeida Ribeiro",
-    "equipamento_solicitado": "Trator agrícola"
+    "prefeito": "Vilson Soares Ferreira Lima (Vilson)",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2105609",
@@ -840,7 +878,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Raimundo Zuca"
+    "prefeito": "Raimundo Zuca",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2105658",
@@ -850,7 +889,7 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 41.7,
     "pesquisa_braide": 25.0,
-    "prefeito": "José Ricardo de Almeida Ribeiro",
+    "prefeito": "Antônio",
     "equipamento_solicitado": "Trator agrícola"
   },
   {
@@ -869,14 +908,14 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Ataíde Miranda",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2105906",
     "nome": "Luís Domingues",
-    "grupo": "Brandão",
+    "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#2980B9",
+    "cor": "#BDC3C7",
     "prefeito": "Isaque Cirino"
   },
   {
@@ -913,7 +952,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Itaires Tratorzão",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2106003",
@@ -921,7 +960,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Jailson Fausto Alves"
+    "prefeito": "Jailson Fausto Alves",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2106102",
@@ -929,7 +969,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Germano Martins"
+    "prefeito": "Germano Martins",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2106201",
@@ -939,7 +980,7 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 50.0,
     "pesquisa_braide": 33.3,
-    "prefeito": "Isaque Cirino"
+    "prefeito": "Gilberto"
   },
   {
     "ibge": "2106300",
@@ -972,9 +1013,9 @@ export const ALL_MUNS = [
   {
     "ibge": "2106375",
     "nome": "Maranhãozinho",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2106409",
@@ -994,19 +1035,21 @@ export const ALL_MUNS = [
   {
     "ibge": "2106607",
     "nome": "Maranhãozinho",
-    "grupo": "Braide",
+    "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#E67E22"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2106631",
     "nome": "Matões do Norte",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 45.8,
     "pesquisa_braide": 41.7,
-    "prefeito": "Nonatinho"
+    "prefeito": "Solimar Alves de Oliveira",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2106672",
@@ -1022,7 +1065,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Maria Domingas Gomes Cabral Santana"
+    "prefeito": "Maria Domingas Gomes Cabral Santana",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2106755",
@@ -1058,7 +1102,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Domingos França"
+    "prefeito": "Domingos França",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2107100",
@@ -1068,7 +1113,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 38.8,
     "pesquisa_braide": 57.1,
-    "prefeito": "Paraíba"
+    "prefeito": "Paraíba",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2107209",
@@ -1087,7 +1133,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 75.0,
     "pesquisa_braide": 25.0,
-    "prefeito": "Mariana Pinto Ribeiro Macedo (Dra. Mariana)"
+    "prefeito": "Mariana Pinto Ribeiro Macedo (Dra. Mariana)",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2107308",
@@ -1123,7 +1170,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Valdenir Diniz"
+    "prefeito": "Valdenir Diniz",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2107506",
@@ -1131,7 +1179,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Fred Maia"
+    "prefeito": "Fred Maia",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2107605",
@@ -1148,7 +1197,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Vanessa Furtado"
+    "prefeito": "Vanessa Furtado",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2107803",
@@ -1158,7 +1208,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 74.0,
     "pesquisa_braide": 22.0,
-    "prefeito": "Juvenal Francisco Carvalho e Silva"
+    "prefeito": "Juvenal Francisco Carvalho e Silva",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2107902",
@@ -1166,7 +1217,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Chicão da Parabólica"
+    "prefeito": "Chicão da Parabólica",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2108009",
@@ -1175,7 +1227,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Enoque Ferreira Mota Neto (Enoque Mota)",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2108058",
@@ -1199,7 +1251,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Vanessa Maia"
+    "prefeito": "Vanessa Maia",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2108256",
@@ -1218,7 +1271,7 @@ export const ALL_MUNS = [
     "pesquisa_orleans": 25.3,
     "pesquisa_braide": 58.7,
     "prefeito": "Henrique Guerra",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2108405",
@@ -1228,7 +1281,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 54.2,
     "pesquisa_braide": 45.8,
-    "prefeito": "Heliezer Soares"
+    "prefeito": "Heliezer Soares",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2108454",
@@ -1245,7 +1299,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Mirim"
+    "prefeito": "Mirim",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2108603",
@@ -1289,7 +1344,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Deoclides Macedo"
+    "prefeito": "Deoclides Macedo",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2109056",
@@ -1297,14 +1353,15 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Aldo Brown"
+    "prefeito": "Aldo Brown",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2109106",
     "nome": "Presidente Dutra",
-    "grupo": "neutro",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#F1C40F",
+    "cor": "#E67E22",
     "pesquisa_orleans": 47.6,
     "pesquisa_braide": 47.6
   },
@@ -1314,7 +1371,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Pedro Paulo Cantanhede Lemos"
+    "prefeito": "Pedro Paulo Cantanhede Lemos",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2109239",
@@ -1322,7 +1380,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Dr. Caçula Coelho"
+    "prefeito": "Dr. Caçula Coelho",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2109270",
@@ -1347,7 +1406,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Guilherme Carneiro Aguiar (Dr. Guilherme)",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2109452",
@@ -1356,7 +1415,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Eudes Barros",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2109502",
@@ -1364,7 +1423,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Joana Paula Coelho de Oliveira"
+    "prefeito": "Joana Paula Coelho de Oliveira",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2109551",
@@ -1380,7 +1440,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Jonas Magno"
+    "prefeito": "Jonas Magno",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2109700",
@@ -1389,7 +1450,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Fátima Dantas",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2109759",
@@ -1406,24 +1467,27 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Joãozinho Pavão"
+    "prefeito": "Joãozinho Pavão",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2109908",
     "nome": "Santa Inês",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2110005",
     "nome": "Santa Luzia",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 45.8,
     "pesquisa_braide": 45.8,
-    "prefeito": "Juscelino Marreca"
+    "prefeito": "Jucelino Marreca (Juscelino da Cruz Filgueira Jr.)",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2110039",
@@ -1438,7 +1502,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Sâmia Coelho Moreira"
+    "prefeito": "Sâmia Coelho Moreira",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2110203",
@@ -1448,14 +1513,15 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 37.3,
     "pesquisa_braide": 56.9,
-    "prefeito": "Milton Gonçalo"
+    "prefeito": "Milton Gonçalo",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2110237",
     "nome": "Santana do Maranhão",
-    "grupo": "neutro",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#F1C40F"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2110278",
@@ -1513,7 +1579,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Kleber Tratorzão"
+    "prefeito": "Kleber Tratorzão",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2110807",
@@ -1554,9 +1621,9 @@ export const ALL_MUNS = [
   {
     "ibge": "2111029",
     "nome": "São João do Carú",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2111052",
@@ -1564,7 +1631,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Marcos Vinícius"
+    "prefeito": "Marcos Vinícius",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2111078",
@@ -1589,25 +1657,26 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Júlio Matos (Dr. Julinho)"
+    "prefeito": "Júlio Matos (Dr. Julinho)",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2111250",
     "nome": "São José dos Basílios",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 62.5,
     "pesquisa_braide": 20.8,
-    "prefeito": "Ronaldo Vieira",
+    "prefeito": "Ronaldo Vieira de Sousa Junior",
     "equipamento_solicitado": "Trator agrícola equipado com arado, carreta agrícola e roçadeira; Retroescavadeira"
   },
   {
     "ibge": "2111300",
     "nome": "São Luís",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2111409",
@@ -1616,7 +1685,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Dr. Emanoel Filho",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2111508",
@@ -1624,7 +1693,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Miltinho Aragão"
+    "prefeito": "Miltinho Aragão",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2111532",
@@ -1640,17 +1710,19 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Rômulo Arruda"
+    "prefeito": "Rômulo Arruda",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2111607",
     "nome": "São Raimundo das Mangabeiras",
     "grupo": "Brandão",
-    "prioritario": false,
+    "prioritario": true,
     "cor": "#2980B9",
     "pesquisa_orleans": 44.0,
     "pesquisa_braide": 56.0,
-    "prefeito": "Ronaldo Vieira / Accioly Cardoso"
+    "prefeito": "Accioly Cardoso",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2111631",
@@ -1666,21 +1738,23 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Danielly Coelho Trabulsi Nascimento"
+    "prefeito": "Danielly Coelho Trabulsi Nascimento",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2111706",
     "nome": "São Vicente Ferrer",
-    "grupo": "indefinido",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#E67E22"
   },
   {
     "ibge": "2111722",
     "nome": "Satubinha",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2111748",
@@ -1693,9 +1767,9 @@ export const ALL_MUNS = [
   {
     "ibge": "2111763",
     "nome": "Senador La Rocque",
-    "grupo": "Brandão",
+    "grupo": "Braide",
     "prioritario": false,
-    "cor": "#2980B9",
+    "cor": "#E67E22",
     "prefeito": "Professor Bartolomeu Gomes Alves",
     "equipamento_solicitado": "Trator agrícola"
   },
@@ -1706,7 +1780,7 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Val Cunha",
-    "equipamento_solicitado": "Retroescavadeira"
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2111805",
@@ -1714,7 +1788,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Antônio Coelho Rodrigues"
+    "prefeito": "Antônio Coelho Rodrigues",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2111904",
@@ -1724,7 +1799,8 @@ export const ALL_MUNS = [
     "cor": "#2980B9",
     "pesquisa_orleans": 41.7,
     "pesquisa_braide": 45.8,
-    "prefeito": "Marcony da Silva Santos"
+    "prefeito": "Marcony da Silva Santos",
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2111953",
@@ -1740,7 +1816,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Kelson Richard Carvalho Holanda Vieira"
+    "prefeito": "Kelson Richard Carvalho Holanda Vieira",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2112100",
@@ -1757,7 +1834,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Rafael Brito Sousa"
+    "prefeito": "Rafael Brito Sousa",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2112233",
@@ -1774,7 +1852,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Henrique Emanuel Ricardo"
+    "prefeito": "Henrique Emanuel Ricardo",
+    "equipamento_solicitado": "Trator agrícola"
   },
   {
     "ibge": "2112308",
@@ -1791,7 +1870,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Edésio Cavalcanti"
+    "prefeito": "Edésio Cavalcanti",
+    "equipamento_solicitado": "Carro; Retroescavadeira"
   },
   {
     "ibge": "2112456",
@@ -1836,7 +1916,8 @@ export const ALL_MUNS = [
     "grupo": "Brandão",
     "prioritario": false,
     "cor": "#2980B9",
-    "prefeito": "Carrinho Cidreira"
+    "prefeito": "Carrinho Cidreira",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2112852",
@@ -1845,14 +1926,15 @@ export const ALL_MUNS = [
     "prioritario": false,
     "cor": "#2980B9",
     "prefeito": "Jorge Vieira",
-    "equipamento_solicitado": "Trator agrícola"
+    "equipamento_solicitado": "Carro; Trator agrícola"
   },
   {
     "ibge": "2112902",
     "nome": "Vitória do Mearim",
     "grupo": "indefinido",
     "prioritario": false,
-    "cor": "#BDC3C7"
+    "cor": "#BDC3C7",
+    "equipamento_solicitado": "Retroescavadeira"
   },
   {
     "ibge": "2113009",
@@ -1866,15 +1948,7 @@ export const ALL_MUNS = [
     "nome": "Zé Doca",
     "grupo": "Braide",
     "prioritario": false,
-    "cor": "#E67E22"
+    "cor": "#E67E22",
+    "equipamento_solicitado": "Retroescavadeira"
   }
 ];
-
-const TOTAIS = {
-  "total": 217,
-  "orleans": 182,
-  "braide": 10,
-  "neutro": 2,
-  "indefinido": 23,
-  "prioritarios": 8
-};

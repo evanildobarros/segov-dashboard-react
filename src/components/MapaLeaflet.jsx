@@ -4,6 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { CORES, LABELS, PRIORITY_IBGES, formatCurrency } from '../data/municipios';
 import { useStore } from '../hooks/useStore';
+import { parseCurrency } from '../utils/formatters';
 
 // Corrigir ícones padrão do Leaflet no bundler Vite
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
@@ -13,33 +14,15 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
 
-// Provedores de mapas base (Tile Layers)
+// A malha municipal local permanece disponível sem serviços externos.
 const TILE_LAYERS = {
-  carto: {
-    name: '🎨 Mapa Claro (CARTO)',
-    url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
-  },
-  osm: {
-    name: '🗺️ OpenStreetMap',
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  },
-  satellite: {
-    name: '🛰️ Satélite (Esri)',
-    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attribution: 'Tiles &copy; Esri'
-  }
+  osm: { name: 'Ruas (OpenStreetMap)', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' },
+  none: { name: 'Somente municípios', attribution: 'Malha municipal: IBGE' },
+  satellite: { name: 'Satélite (Esri)', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attribution: 'Tiles &copy; Esri' }
 };
 
 // Helper para parse de investimento
-function parseInvestimento(val) {
-  if (!val) return 0;
-  const num = typeof val === 'string'
-    ? parseFloat(val.replace(/[R$\s.]/g, '').replace(',', '.'))
-    : Number(val);
-  return isNaN(num) ? 0 : num;
-}
+function parseInvestimento(val) { return parseCurrency(val) || 0; }
 
 // Escala de cores para coroplético de obras
 const OBRAS_COLOR_SCALE = [
@@ -199,6 +182,16 @@ export const setupFeature = (
   // Estado para destaque
   let isHighlighted = false;
 
+  // Bind tooltip customizado PRIMEIRO (antes dos event listeners)
+  // Isso garante que o tooltip existe quando mouseover disparar updateContent
+  const tooltipContent = buildTooltipContent(mun, nome, modoMapa);
+  layer.bindTooltip(tooltipContent, {
+    sticky: true,
+    direction: 'top',
+    className: 'segov-tooltip',
+    offset: [0, 8]
+  });
+
   layer.on({
     mouseover: (e) => {
       isHighlighted = true;
@@ -206,7 +199,13 @@ export const setupFeature = (
       l.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 0.95 });
       l.bringToFront();
       const tooltip = l?.getTooltip?.();
-      if (tooltip) tooltip.updateContent(buildTooltipContent(mun, nome, modoMapa));
+      // L.Tooltip (Leaflet 1.9.x) só expõe setContent() publicamente.
+      // updateContent() é interno (_updateContent) e quebra com TypeError.
+      // setContent() substitui o HTML e força update() — leve "piscar" no hover,
+      // mas o tooltip volta a aparecer corretamente.
+      if (tooltip && tooltip.isOpen()) {
+        tooltip.setContent(buildTooltipContent(mun, nome, modoMapa));
+      }
       flyToCallback?.('hover', ibge);
     },
     mouseout: (e) => {
@@ -226,15 +225,6 @@ export const setupFeature = (
       }
       if (onMunicipioClick) onMunicipioClick(ibge, nome);
     }
-  });
-
-  // Bind tooltip customizado (Tailwind-based DivIcon content)
-  const tooltipContent = buildTooltipContent(mun, nome, modoMapa);
-  layer.bindTooltip(tooltipContent, {
-    sticky: true,
-    direction: 'top',
-    className: 'segov-tooltip',
-    offset: [0, 8]
   });
 };
 
@@ -373,6 +363,7 @@ function MapOverlayControls({ activeTile, setActiveTile, geoJSONData }) {
 
       {/* Layer selector */}
       <select
+        aria-label="Fundo do mapa"
         value={activeTile}
         onChange={(e) => setActiveTile(e.target.value)}
         className="bg-white border border-gray-300 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-[#0b3c5d] cursor-pointer shadow-md outline-none focus:ring-1 focus:ring-indigo-500"
@@ -441,18 +432,21 @@ function MapaLeafletBase({
   mesorregiaoFilter = null // string | null
 }) {
   const { geoJSONData, setGeoJSONData } = useStore();
-  const [activeTile, setActiveTile] = useState('carto');
+  const [activeTile, setActiveTile] = useState('osm');
+  const [tileFailed, setTileFailed] = useState(false);
+  const [geoError, setGeoError] = useState(false);
+  const [retryGeo, setRetryGeo] = useState(0);
   const mapRef = useRef(null);
 
   // Carregar GeoJSON uma vez
   useEffect(() => {
     if (!geoJSONData) {
       fetch('/ma_municipios.min.geojson')
-        .then(r => r.json())
-        .then(data => setGeoJSONData(data))
-        .catch(err => console.error('Erro ao carregar GeoJSON:', err));
+        .then(r => { if (!r.ok) throw new Error('Mapa indisponível'); return r.json(); })
+        .then(data => { setGeoJSONData(data); setGeoError(false); })
+        .catch(() => setGeoError(true));
     }
-  }, [geoJSONData, setGeoJSONData]);
+  }, [geoJSONData, setGeoJSONData, retryGeo]);
 
   // Memoizar dados processados do GeoJSON (evitar re-cálculos)
   const processedGeoJSON = useMemo(() => {
@@ -480,8 +474,8 @@ function MapaLeafletBase({
     }
   }, [processedGeoJSON]);
 
-  const currentTile = TILE_LAYERS[activeTile] || TILE_LAYERS.carto;
-  const geoJsonKey = `${modoMapa}-${municipios.length}-${mesorregiaoFilter || 'all'}`;
+  const currentTile = TILE_LAYERS[activeTile] || TILE_LAYERS.osm;
+  const geoJsonKey = `${modoMapa}-${municipios.map(m => m.ibge).join(',')}`;
 
   // Memoizar handlers para evitar re-criações
   const handleEachFeature = useCallback((feature, layer) => {
@@ -495,12 +489,13 @@ function MapaLeafletBase({
   // Filtro por mesorregião
   const geoJsonFilter = useCallback((feature) => {
     if (!filteredIbges) return true;
-    return filteredIbges.has(feature?.properties?.CD_MUN);
+    return filteredIbges.has(String(feature?.properties?.CD_MUN));
   }, [filteredIbges]);
 
   // O retorno condicional precisa vir depois de todos os hooks. Caso contrário,
   // a primeira renderização (GeoJSON ainda carregando) executa menos hooks e a
   // troca para a aba Mapa causa React error #310.
+  if (geoError && !processedGeoJSON) return <div className="data-state" role="alert"><h3>Não foi possível carregar o mapa</h3><button className="primary-button" onClick={() => { setGeoError(false); setRetryGeo(n => n + 1); }}>Tentar novamente</button></div>;
   if (!processedGeoJSON) {
     return (
       <div style={{ height, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f6f8', borderRadius: '10px', border: '1px solid #dde3ea' }}>
@@ -514,7 +509,8 @@ function MapaLeafletBase({
   }
 
   return (
-    <div style={{ position: 'relative', width: '100%', height }}>
+    <div className="map-frame" style={{ position: 'relative', width: '100%', height }}>
+      {tileFailed && <div className="map-notice" role="status">Fundo indisponível. A malha dos municípios continua disponível.</div>}
       <MapContainer
         center={center}
         zoom={zoom}
@@ -526,13 +522,8 @@ function MapaLeafletBase({
       >
         <MapInitHelper />
         <AutoFitMaranhao geoJSONData={processedGeoJSON} />
-        <TileLayer
-          key={activeTile}
-          url={currentTile.url}
-          attribution={currentTile.attribution}
-          subdomains="abcd"
-          maxZoom={19}
-        />
+        {currentTile.url && <TileLayer key={activeTile} url={currentTile.url} attribution={currentTile.attribution} referrerPolicy="strict-origin-when-cross-origin" maxZoom={19}
+          eventHandlers={{ tileerror: () => { setTileFailed(true); setActiveTile('none'); } }} />}
         <GeoJSON
           key={geoJsonKey}
           data={processedGeoJSON}
@@ -542,7 +533,7 @@ function MapaLeafletBase({
         />
         <MapController municipios={municipios} modoMapa={modoMapa} geoJSONData={processedGeoJSON} />
         <LegendControl municipios={municipios} modoMapa={modoMapa} />
-        <MapOverlayControls activeTile={activeTile} setActiveTile={setActiveTile} geoJSONData={processedGeoJSON} />
+        <MapOverlayControls activeTile={activeTile} setActiveTile={value => { setTileFailed(false); setActiveTile(value); }} geoJSONData={processedGeoJSON} />
       </MapContainer>
     </div>
   );

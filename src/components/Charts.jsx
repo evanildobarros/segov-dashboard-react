@@ -20,7 +20,7 @@ function getChartColors() {
 
 // Distribuição por Grupo (Donut)
 export function ChartDistribuicaoGrupos({ municipios }) {
-  const { grupo } = useStore();
+  useStore(state => state.tema);
   const colors = getChartColors();
   
   const counts = {
@@ -34,6 +34,9 @@ export function ChartDistribuicaoGrupos({ municipios }) {
     if (counts[m.grupo] !== undefined) counts[m.grupo]++;
   });
   
+  const total = municipios.length;
+  const totalDataset = counts['Brandão'] + counts['Braide'] + counts['neutro'] + counts['indefinido'];
+  
   const data = {
     labels: ['Orleans Brandão', 'Braide', 'Neutro', 'Indefinido'],
     datasets: [{
@@ -44,8 +47,24 @@ export function ChartDistribuicaoGrupos({ municipios }) {
     }]
   };
   
+  // Center badge components
+  const centerBadge = (
+    <div style={{
+      position: 'absolute',
+      top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+      textAlign: 'center', color: 'var(--texto)'
+    }}>
+      <div style={{ fontSize: '14px', fontWeight: 'bold', marginBottom: '4px' }}>
+        {total} Municípios
+      </div>
+      <div style={{ fontSize: '11px', opacity: 0.8 }}>
+        {(total ? Math.round((totalDataset / total) * 100) : 0)}% do total
+      </div>
+    </div>
+  );
+  
   return (
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '300px', position: 'relative' }}>
       <Doughnut
         data={data}
         options={{
@@ -55,17 +74,30 @@ export function ChartDistribuicaoGrupos({ municipios }) {
             legend: {
               position: 'bottom',
               labels: { color: colors.textColor, font: { size: 11 }, padding: 16 }
+            },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const label = ctx.label || '';
+                  const value = ctx.parsed;
+                  const totalCtx = ctx.dataset.data.reduce((a, b) => a + b, 0) || 1;
+                  const percentage = Math.round((value / totalCtx) * 100);
+                  return `${label}: ${value} (${percentage}%)`;
+                }
+              }
             }
           },
           cutout: '60%'
         }}
       />
+      {centerBadge}
     </div>
   );
 }
 
 // Lideranças por Município (Bar)
 export function ChartLiderancas({ municipios }) {
+  useStore(state => state.tema);
   const colors = getChartColors();
   
   const sorted = [...municipios].sort((a, b) => b.total_liderancas - a.total_liderancas).slice(0, 15);
@@ -109,6 +141,7 @@ export function ChartLiderancas({ municipios }) {
 
 // Obras por Status (Stacked Bar)
 export function ChartObrasStatus({ municipios }) {
+  useStore(state => state.tema);
   const colors = getChartColors();
   
   const sorted = [...municipios].sort((a, b) => b.total_obras - a.total_obras).slice(0, 15);

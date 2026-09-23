@@ -34,10 +34,7 @@ export function MapaPoliticoPage() {
   // Set de IBGEs visíveis após o filtro (para o filtro do GeoJSON)
   // Se houver mesorregião filtrada, filtra os IBGEs por ela; caso contrário null
   const filteredIbges = useMemo(() => {
-    if (mesorregiao && municipiosFiltrados.length > 0) {
-      return new Set(municipiosFiltrados.map(m => m.ibge));
-    }
-    return null;
+    return new Set(municipiosFiltrados.map(m => String(m.ibge)));
   }, [municipiosFiltrados, mesorregiao]);
 
   // Município atualmente selecionado
@@ -65,8 +62,8 @@ export function MapaPoliticoPage() {
 
       {/* Top Controls Bar */}
       <div style={{
-        background: '#ffffff',
-        border: '1px solid #dde3ea',
+        background: 'var(--bg-card)',
+        border: '1px solid var(--borda)',
         borderRadius: '10px',
         padding: '14px 18px',
         display: 'flex',
@@ -77,8 +74,8 @@ export function MapaPoliticoPage() {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Layers size={20} color="#0b3c5d" />
-          <h2 style={{ fontSize: '16px', fontWeight: 700, color: '#0b3c5d', margin: 0 }}>
-            Mapa Político-Estratégico Interativo (GIS)
+          <h2 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--heading)', margin: 0 }}>
+            Mapa dos municípios
           </h2>
         </div>
 
@@ -89,9 +86,9 @@ export function MapaPoliticoPage() {
             style={{
               padding: '6px 14px',
               borderRadius: '20px',
-              border: modoMapa === 'grupo' ? '1.5px solid #0b3c5d' : '1px solid #cbd5e1',
-              background: modoMapa === 'grupo' ? '#0b3c5d' : '#ffffff',
-              color: modoMapa === 'grupo' ? '#ffffff' : '#475569',
+              border: modoMapa === 'grupo' ? '1.5px solid #0b3c5d' : '1px solid var(--borda)',
+              background: modoMapa === 'grupo' ? '#0b3c5d' : 'var(--bg-card)',
+              color: modoMapa === 'grupo' ? '#ffffff' : 'var(--texto)',
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
@@ -109,9 +106,9 @@ export function MapaPoliticoPage() {
             style={{
               padding: '6px 14px',
               borderRadius: '20px',
-              border: modoMapa === 'obras' ? '1.5px solid #0b3c5d' : '1px solid #cbd5e1',
-              background: modoMapa === 'obras' ? '#0b3c5d' : '#ffffff',
-              color: modoMapa === 'obras' ? '#ffffff' : '#475569',
+              border: modoMapa === 'obras' ? '1.5px solid #0b3c5d' : '1px solid var(--borda)',
+              background: modoMapa === 'obras' ? '#0b3c5d' : 'var(--bg-card)',
+              color: modoMapa === 'obras' ? '#ffffff' : 'var(--texto)',
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
@@ -129,9 +126,9 @@ export function MapaPoliticoPage() {
             style={{
               padding: '6px 14px',
               borderRadius: '20px',
-              border: modoMapa === 'investimento' ? '1.5px solid #0b3c5d' : '1px solid #cbd5e1',
-              background: modoMapa === 'investimento' ? '#0b3c5d' : '#ffffff',
-              color: modoMapa === 'investimento' ? '#ffffff' : '#475569',
+              border: modoMapa === 'investimento' ? '1.5px solid #0b3c5d' : '1px solid var(--borda)',
+              background: modoMapa === 'investimento' ? '#0b3c5d' : 'var(--bg-card)',
+              color: modoMapa === 'investimento' ? '#ffffff' : 'var(--texto)',
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
@@ -149,9 +146,9 @@ export function MapaPoliticoPage() {
             style={{
               padding: '6px 14px',
               borderRadius: '20px',
-              border: modoMapa === 'prioritarios' ? '1.5px solid #0b3c5d' : '1px solid #cbd5e1',
-              background: modoMapa === 'prioritarios' ? '#0b3c5d' : '#ffffff',
-              color: modoMapa === 'prioritarios' ? '#ffffff' : '#475569',
+              border: modoMapa === 'prioritarios' ? '1.5px solid #0b3c5d' : '1px solid var(--borda)',
+              background: modoMapa === 'prioritarios' ? '#0b3c5d' : 'var(--bg-card)',
+              color: modoMapa === 'prioritarios' ? '#ffffff' : 'var(--texto)',
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
@@ -190,10 +187,10 @@ export function MapaPoliticoPage() {
 
               <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
                 <div>
-                  <span style={{ fontSize: '10px', fontWeight: 700, color: '#7a8a99', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                  <span style={{ fontSize: '10px', fontWeight: 700, color: 'var(--texto-secundario)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                     IBGE {selectedMun.ibge}
                   </span>
-                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#0b3c5d', margin: '2px 0 0' }}>
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--heading)', margin: '2px 0 0' }}>
                     {selectedMun.nome}
                   </h3>
                 </div>
@@ -201,7 +198,7 @@ export function MapaPoliticoPage() {
                   onClick={() => setMunicipioId(null)}
                   title="Fechar detalhes"
                   style={{
-                    background: '#f1f5f9',
+                    background: 'var(--surface-muted)',
                     border: 'none',
                     borderRadius: '50%',
                     width: '28px',
@@ -234,7 +231,7 @@ export function MapaPoliticoPage() {
                     padding: '4px 10px',
                     borderRadius: '12px',
                     background: '#e8b923',
-                    color: '#0b3c5d',
+                    color: 'var(--heading)',
                     fontSize: '11px',
                     fontWeight: 700
                   }}>
@@ -244,13 +241,13 @@ export function MapaPoliticoPage() {
               </div>
 
               {/* Informacoes Politicas */}
-              <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <div style={{ fontSize: '12px', color: '#64748b', marginBottom: '4px' }}>Prefeito(a) / Liderança Principal:</div>
-                <div style={{ fontSize: '14px', fontWeight: 700, color: '#0b3c5d' }}>
+              <div style={{ background: 'var(--surface-muted)', padding: '12px', borderRadius: '8px', border: '1px solid var(--borda)' }}>
+                <div style={{ fontSize: '12px', color: 'var(--texto-secundario)', marginBottom: '4px' }}>Prefeito(a) / Liderança Principal:</div>
+                <div style={{ fontSize: '14px', fontWeight: 700, color: 'var(--heading)' }}>
                   {selectedMun.prefeito || 'Não registrado'}
                 </div>
                 {selectedMun.partido && (
-                  <div style={{ fontSize: '11px', color: '#64748b', marginTop: '2px' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--texto-secundario)', marginTop: '2px' }}>
                     Partido: {selectedMun.partido}
                   </div>
                 )}
@@ -258,14 +255,14 @@ export function MapaPoliticoPage() {
 
               {/* Mapeamento de Obras & Investimentos */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                <div style={{ background: '#f8fafc', padding: '10px', borderRadius: '8px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
-                  <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600 }}>TOTAL DE OBRAS</div>
+                <div style={{ background: 'var(--surface-muted)', padding: '10px', borderRadius: '8px', border: '1px solid var(--borda)', textAlign: 'center' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--texto-secundario)', fontWeight: 600 }}>TOTAL DE OBRAS</div>
                   <div style={{ fontSize: '18px', fontWeight: 800, color: '#2980B9', marginTop: '2px' }}>
                     {selectedMun.total_obras || 0}
                   </div>
                 </div>
-                <div style={{ background: '#f8fafc', padding: '10px', borderRadius: '8px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
-                  <div style={{ fontSize: '11px', color: '#64748b', fontWeight: 600 }}>INVESTIMENTO</div>
+                <div style={{ background: 'var(--surface-muted)', padding: '10px', borderRadius: '8px', border: '1px solid var(--borda)', textAlign: 'center' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--texto-secundario)', fontWeight: 600 }}>INVESTIMENTO</div>
                   <div style={{ fontSize: '14px', fontWeight: 800, color: '#27ae60', marginTop: '4px' }}>
                     {formatCurrency(selectedMun.investimento_planner)}
                   </div>
@@ -316,10 +313,10 @@ export function MapaPoliticoPage() {
             /* Busca e Diretorio de Municípios quando nenhum está selecionado */
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', height: '100%' }}>
               <div>
-                <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#0b3c5d', margin: '0 0 4px' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--heading)', margin: '0 0 4px' }}>
                   🔍 Localizar Município no Mapa
                 </h3>
-                <p style={{ fontSize: '11px', color: '#7a8a99', margin: 0 }}>
+                <p style={{ fontSize: '11px', color: 'var(--texto-secundario)', margin: 0 }}>
                   Digite o nome da cidade para destacar e aproximar a câmera.
                 </p>
               </div>
@@ -336,15 +333,15 @@ export function MapaPoliticoPage() {
                     width: '100%',
                     padding: '8px 10px 8px 32px',
                     borderRadius: '8px',
-                    border: '1px solid #dde3ea',
+                    border: '1px solid var(--borda)',
                     fontSize: '12px',
                     outline: 'none'
                   }}
                 />
               </div>
 
-              <div style={{ fontSize: '11px', fontWeight: 600, color: '#7a8a99', marginTop: '4px' }}>
-                Exibindo {filteredList.length} município(s):
+              <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--texto-secundario)', marginTop: '4px' }}>
+                Mostrando {filteredList.length} de {municipiosFiltrados.length} municípios:
               </div>
 
               {/* Lista Scrollavel */}
@@ -356,8 +353,8 @@ export function MapaPoliticoPage() {
                     style={{
                       padding: '8px 10px',
                       borderRadius: '6px',
-                      border: '1px solid #e2e8f0',
-                      background: '#f8fafc',
+                      border: '1px solid var(--borda)',
+                      background: 'var(--surface-muted)',
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
@@ -368,10 +365,10 @@ export function MapaPoliticoPage() {
                     onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
                   >
                     <div>
-                      <div style={{ fontSize: '12px', fontWeight: 600, color: '#0b3c5d' }}>
+                      <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--heading)' }}>
                         {mun.nome}
                       </div>
-                      <div style={{ fontSize: '10px', color: '#64748b' }}>
+                      <div style={{ fontSize: '10px', color: 'var(--texto-secundario)' }}>
                         {LABELS[mun.grupo] || mun.grupo} • {mun.total_obras || 0} obras
                       </div>
                     </div>

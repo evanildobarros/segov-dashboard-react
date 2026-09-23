@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
-import { Map, MapPin, Building2, Hammer, FileText, Settings, LogOut, Sun, Moon, Menu, X, ChevronRight } from 'lucide-react';
+import { Map, MapPin, Building2, Hammer, FileText, Settings, X } from 'lucide-react';
 
 const PAGES = [
   { id: 'dashboard', label: 'Visão Geral', icon: MapPin },
   { id: 'mapa', label: 'Mapa Político', icon: Map },
   { id: 'municipios', label: 'Municípios', icon: Building2 },
   { id: 'obras', label: 'Obras', icon: Hammer },
-  { id: 'equipamentos', label: 'Equipamentos', icon: Settings },
+  { id: 'equipamentos', label: 'Veículos', icon: Settings },
   { id: 'relatorios', label: 'Relatórios', icon: FileText },
-  { id: 'admin', label: 'Admin', icon: Settings }
+  { id: 'admin', label: 'Administração', icon: Settings }
 ];
 
 export function Sidebar() {
-  const { modo, setModo, setTema, logout, user, isMobileMenuOpen, closeMobileMenu } = useStore();
+  const { modo, setModo, isMobileMenuOpen, closeMobileMenu } = useStore();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,12 +26,6 @@ export function Sidebar() {
   }, [location.pathname, modo, setModo]);
 
   const handlePageClick = (pageId) => {
-    // Reset filtros ao mudar de página (exceto se for a mesma página)
-    const currentModo = useStore.getState().modo;
-    if (pageId !== currentModo) {
-      useStore.getState().resetFiltros();
-    }
-    setModo(pageId);
     closeMobileMenu();
     navigate('/' + pageId);
   };
@@ -62,7 +56,7 @@ export function Sidebar() {
         </div>
 
         <button 
-          className="mobile-close-btn"
+          className="mobile-close-btn" aria-label="Fechar menu"
           onClick={closeMobileMenu}
           style={{ background: 'transparent', border: 'none', color: '#cfe0ec', cursor: 'pointer' }}
         >
@@ -74,10 +68,11 @@ export function Sidebar() {
       <nav style={{ flex: 1, padding: '12px 8px', overflowY: 'auto' }}>
         {PAGES.map(page => {
           const Icon = page.icon;
-          const isActive = modo === page.id;
+          const isActive = location.pathname === '/' + page.id;
           return (
             <button
               key={page.id}
+              aria-current={isActive ? 'page' : undefined}
               onClick={() => handlePageClick(page.id)}
               style={{
                 display: 'flex', alignItems: 'center', gap: '10px',

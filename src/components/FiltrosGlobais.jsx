@@ -1,92 +1,30 @@
+import { useState } from 'react';
+import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
-import { Search, Filter } from 'lucide-react';
-
-// Lista de mesorregiões do Maranhão (oficial IBGE)
-const MESORREgIOES = [
-  { value: 'todas', label: 'Todas' },
-  { value: 'Centro Maranhense', label: '🟦 Centro' },
-  { value: 'Leste Maranhense', label: '🟧 Leste' },
-  { value: 'Norte Maranhense', label: '🟩 Norte' },
-  { value: 'Oeste Maranhense', label: '🟥 Oeste' },
-  { value: 'Sul Maranhense', label: '🟪 Sul' },
-];
-
+import { LABELS } from '../data/municipios';
+const REGIOES = ['Centro Maranhense', 'Leste Maranhense', 'Norte Maranhense', 'Oeste Maranhense', 'Sul Maranhense'];
 export function FiltrosGlobais() {
-  const { grupo, setGrupo, busca, setBusca, mesorregiao, setMesorregiao } = useStore();
-
-  const grupos = [
-    { value: 'todos', label: 'Todos' },
-    { value: 'Brandão', label: '🔵 Orleans' },
-    { value: 'Braide', label: '🟠 Braide' },
-    { value: 'neutro', label: '🟡 Neutro' },
-    { value: 'indefinido', label: '⚪ Indefinido' }
-  ];
-
-  return (
-    <div className="filtros-globais-bar">
-      <span style={{ fontSize: '12px', fontWeight: 700, color: '#7a8a99', whiteSpace: 'nowrap' }}>🎯 GRUPO:</span>
-      <div className="filtros-grupo-botoes" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-        {grupos.map(g => (
-          <button
-            key={g.value}
-            onClick={() => setGrupo(g.value)}
-            style={{
-              padding: '6px 12px',
-              borderRadius: '20px',
-              border: '1px solid #dde3ea',
-              background: grupo === g.value ? '#0b3c5d' : '#fff',
-              color: grupo === g.value ? '#fff' : '#22313f',
-              fontSize: '12px',
-              cursor: 'pointer',
-              fontWeight: 600,
-              transition: 'all 0.2s'
-            }}
-          >
-            {g.label}
-          </button>
-        ))}
-      </div>
-
-      <span style={{ fontSize: '12px', fontWeight: 700, color: '#7a8a99', whiteSpace: 'nowrap' }}>🗺️ MESORREGIÃO:</span>
-      <select
-        value={mesorregiao || 'todas'}
-        onChange={(e) => setMesorregiao(e.target.value)}
-        style={{
-          padding: '6px 10px',
-          borderRadius: '20px',
-          border: '1px solid #dde3ea',
-          background: '#fff',
-          color: '#22313f',
-          fontSize: '12px',
-          fontWeight: 600,
-          cursor: 'pointer',
-          outline: 'none'
-        }}
-      >
-        {MESORREgIOES.map(m => (
-          <option key={m.value} value={m.value}>{m.label}</option>
-        ))}
-      </select>
-
-      <div className="filtros-busca-wrapper">
-        <input
-          type="text"
-          id="busca"
-          placeholder="🔍 Buscar município..."
-          value={busca}
-          onChange={(e) => setBusca(e.target.value)}
-          style={{
-            width: '100%',
-            maxWidth: '320px',
-            padding: '8px 12px',
-            border: '1px solid #dde3ea',
-            borderRadius: '7px',
-            fontSize: '13px',
-            background: '#fff',
-            color: '#22313f'
-          }}
-        />
-      </div>
+  const [aberto, setAberto] = useState(false);
+  const { grupo, setGrupo, busca, setBusca, mesorregiao, setMesorregiao, resetFiltros, municipios, getMunicipiosFiltrados } = useStore();
+  const ativos = Number(grupo !== 'todos') + Number(!!mesorregiao) + Number(!!busca);
+  return <section className="global-filters" aria-label="Filtros de municípios">
+    <div className="filter-toolbar">
+      <label className="search-field"><Search size={18} aria-hidden="true" />
+        <input aria-label="Buscar município ou prefeito" placeholder="Buscar município ou prefeito" value={busca} onChange={e => setBusca(e.target.value)} />
+        {busca && <button aria-label="Limpar busca" onClick={() => setBusca('')}><X size={16} /></button>}
+      </label>
+      <button className="filter-toggle" aria-expanded={aberto} aria-controls="filter-options" onClick={() => setAberto(!aberto)}><SlidersHorizontal size={18} /> Filtros{ativos > 0 && ` (${ativos})`}</button>
     </div>
-  );
+    <div id="filter-options" className={`filter-options ${aberto ? 'is-open' : ''}`}>
+      <fieldset className="group-filter"><legend>Grupo político</legend><div className="filter-pills">
+        {['todos', ...Object.keys(LABELS)].map(value => <button key={value} aria-pressed={grupo === value} onClick={() => setGrupo(value)}>{LABELS[value] || 'Todos'}</button>)}
+      </div></fieldset>
+      <label className="region-filter">Mesorregião<select value={mesorregiao || 'todas'} onChange={e => setMesorregiao(e.target.value)}><option value="todas">Todas as regiões</option>{REGIOES.map(regiao => <option key={regiao}>{regiao}</option>)}</select></label>
+    </div>
+    <div className="filter-summary"><span aria-live="polite">{getMunicipiosFiltrados().length} de {municipios.length} municípios</span>
+      {grupo !== 'todos' && <button className="filter-chip" onClick={() => setGrupo('todos')} aria-label={`Remover filtro ${LABELS[grupo]}`}>{LABELS[grupo]} <X size={13} /></button>}
+      {mesorregiao && <button className="filter-chip" onClick={() => setMesorregiao(null)} aria-label="Remover filtro de mesorregião">{mesorregiao} <X size={13} /></button>}
+      {ativos > 0 && <button className="text-button" onClick={resetFiltros}>Limpar tudo</button>}
+    </div>
+  </section>;
 }

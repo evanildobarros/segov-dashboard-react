@@ -1,12 +1,11 @@
 import { Bar } from 'react-chartjs-2';
 import { useStore } from '../hooks/useStore';
-import { CORES, LABELS } from '../data/municipios';
+import { CORES } from '../data/municipios';
+import { formatCurrency, parseCurrency } from '../utils/formatters';
 
 export function ChartSituacao({ municipios }) {
-  const colors = {
-    textColor: '#7a8a99',
-    gridColor: 'rgba(0,0,0,0.05)'
-  };
+  const tema = useStore(state => state.tema);
+  const colors = { textColor: tema === 'dark' ? '#bbc9d9' : '#526477', gridColor: tema === 'dark' ? '#40536a' : '#e2e8f0' };
   
   const entregues = municipios.reduce((s, m) => s + (m.obras_entregues || 0), 0);
   const andamento = municipios.reduce((s, m) => s + (m.obras_em_andamento || 0), 0);
@@ -47,23 +46,15 @@ export function ChartSituacao({ municipios }) {
 }
 
 export function ChartInvestimento({ municipios }) {
-  const colors = {
-    textColor: '#7a8a99',
-    gridColor: 'rgba(0,0,0,0.05)'
-  };
+  const tema = useStore(state => state.tema);
+  const colors = { textColor: tema === 'dark' ? '#bbc9d9' : '#526477', gridColor: tema === 'dark' ? '#40536a' : '#e2e8f0' };
   
-  const formatCurrency = (val) => {
-    if (!val) return '—';
-    if (val >= 1e6) return `R$ ${(val/1e6).toFixed(2)} mi`;
-    if (val >= 1e3) return `R$ ${(val/1e3).toFixed(1)} mil`;
-    return `R$ ${val.toFixed(0)}`;
-  };
   
   const sorted = [...municipios]
     .filter(m => m.investimento_planner)
     .sort((a, b) => {
-      const va = parseFloat(String(a.investimento_planner).replace(/[R$\s.]/g, '').replace(',', '.')) || 0;
-      const vb = parseFloat(String(b.investimento_planner).replace(/[R$\s.]/g, '').replace(',', '.')) || 0;
+      const va = parseCurrency(a.investimento_planner) || 0;
+      const vb = parseCurrency(b.investimento_planner) || 0;
       return vb - va;
     })
     .slice(0, 10);
@@ -72,7 +63,7 @@ export function ChartInvestimento({ municipios }) {
     labels: sorted.map(m => m.nome),
     datasets: [{
       label: 'Investimento (R$)',
-      data: sorted.map(m => parseFloat(String(m.investimento_planner).replace(/[R$\s.]/g, '').replace(',', '.')) || 0),
+      data: sorted.map(m => parseCurrency(m.investimento_planner) || 0),
       backgroundColor: sorted.map(m => CORES[m.grupo] || '#555'),
       borderRadius: 4
     }]
