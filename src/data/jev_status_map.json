@@ -1,0 +1,80 @@
+{
+ "modelo": "typesafe/jev-1.13",
+ "endpoint": "https://openrouter.ai/api/alpha/decisions",
+ "fonte_status": "2026 PLANNER DE OBRAS SEGOV - 15 09 2026 - gab.xlsx",
+ "gerado_em": "2026-09-23",
+ "conf_min": 0.6,
+ "legenda": {
+  "CONCLUIDA": "obra finalizada -> D1 obras_entregues",
+  "ANDAMENTO": "em execucao -> D1 obras_em_andamento",
+  "PARALISADA": "parada -> D1 obras_paradas",
+  "NAO_INICIADA": "pre-inicio -> so D1 total_obras"
+ },
+ "mapa": {
+  "EM ANDAMENTO": {
+   "situacao": "ANDAMENTO",
+   "conf": 1,
+   "obras": 552
+  },
+  "INAUGURADA": {
+   "situacao": "CONCLUIDA",
+   "conf": 0.99,
+   "obras": 489
+  },
+  "ENTREGUE": {
+   "situacao": "CONCLUIDA",
+   "conf": 1,
+   "obras": 345
+  },
+  "MOBILIZAÇÃO": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 343
+  },
+  "AGUARDAR": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 336
+  },
+  "AG. PROJETO E ORÇAMENTO": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 319
+  },
+  "AG. APROVAÇÃO": {
+   "situacao": "NAO_INICIADA",
+   "conf": 0.99,
+   "obras": 222
+  },
+  "VISITA TÉCNICA": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 185
+  },
+  "CONCLUÍDA": {
+   "situacao": "CONCLUIDA",
+   "conf": 1,
+   "obras": 174
+  },
+  "PARADA": {
+   "situacao": "PARALISADA",
+   "conf": 1,
+   "obras": 95
+  },
+  "PEND. INFORMAÇÕES": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 83
+  },
+  "AG. RELATÓRIO": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 29
+  },
+  "AG. DELIBERAÇÃO GAB. GOV": {
+   "situacao": "NAO_INICIADA",
+   "conf": 1,
+   "obras": 4
+  }
+ }
+}
