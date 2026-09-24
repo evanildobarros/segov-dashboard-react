@@ -18,14 +18,14 @@ const EIXOS_POR_MUNICIPIO = (() => {
   return map;
 })();
 
-// Retorna o município com eixos garantidos (D1 quando preenchido, senão PLANNER)
+// Retorna o município com eixos garantidos (snapshot local completo; D1 como fallback)
 export function enriquecerMunicipios(municipios = []) {
   return municipios.map(m => {
-    const temEixos = m?.eixos && Array.isArray(m.eixos) && m.eixos.length > 0;
-    if (temEixos) return m;
-    const fallback = EIXOS_POR_MUNICIPIO[normalizeNome(m.nome)];
-    if (!fallback || fallback.length === 0) return m;
-    return { ...m, eixos: fallback };
+    // Snapshot local (15/09/2026) tem a lista COMPLETA + `situacao` + `sei`;
+    // o D1 só tem ~5 stubs p/ 52 municípios — priorizar o snapshot, D1 como fallback.
+    const snapshot = EIXOS_POR_MUNICIPIO[normalizeNome(m.nome)];
+    if (snapshot && snapshot.length > 0) return { ...m, eixos: snapshot };
+    return m;
   });
 }
 

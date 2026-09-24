@@ -123,6 +123,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
           grupo: mun.grupo,
           prefeito: mun.prefeito,
           eixo: obra.orgao || '—',
+          sei: obra.sei || '',
           objeto: obra.desc || obra.objeto || '—',
           status: obra.status || '—',
           pct: typeof obra.pct === 'number' ? obra.pct : 0,
@@ -216,6 +217,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
       Municipio: o.municipio,
       Grupo: o.grupo,
       Eixo: o.eixo,
+      SEI: o.sei,
       Objeto: o.objeto,
       Situacao: o.status,
       Pct: o.pct,
@@ -245,6 +247,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
     { key: 'municipio', label: 'Município' },
     { key: 'grupo', label: 'Grupo' },
     { key: 'eixo', label: 'Eixo' },
+    { key: 'sei', label: 'Nº SEI' },
     { key: 'objeto', label: 'Objeto' },
     { key: 'status', label: 'Situação', align: 'center' },
     { key: 'orcamento', label: 'Orçamento', align: 'right' },
@@ -359,6 +362,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
                     <td style={{ padding: '8px 12px', color: 'var(--heading)', fontWeight: 600 }}>{o.municipio}</td>
                     <td style={{ padding: '8px 12px' }}>{LABELS[o.grupo] || o.grupo}</td>
                     <td style={{ padding: '8px 12px' }}>{o.eixo}</td>
+                    <td style={{ padding: '8px 12px', fontFamily: 'ui-monospace, Menlo, Consolas, monospace', fontSize: '11px', whiteSpace: 'nowrap', maxWidth: '150px', overflow: 'hidden', textOverflow: 'ellipsis', color: 'var(--texto-secundario)' }} title={o.sei || ''}>{o.sei || '—'}</td>
                     <td style={{ padding: '8px 12px', maxWidth: '360px', minWidth: '210px', whiteSpace: 'normal', lineHeight: 1.5 }} title={o.objeto}>{o.objeto}</td>
                     <td style={{ padding: '8px 12px', textAlign: 'center' }}>
                       <span style={{
@@ -459,6 +463,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
               </span></div>
               <div className="obra-campo"><span className="obra-label">Prefeito:</span> <span className="obra-valor">{obraDetalhe.prefeito || '—'}</span></div>
               <div className="obra-campo"><span className="obra-label">Eixo:</span> <span className="obra-valor">{obraDetalhe.eixo}</span></div>
+              <div className="obra-campo"><span className="obra-label">Nº SEI:</span> <span className="obra-valor" style={{ fontFamily: 'ui-monospace, Menlo, Consolas, monospace' }}>{obraDetalhe.sei || '—'}</span></div>
               <div style={{ borderTop: '1px dashed #e2e8f0' }} />
               <div className="obra-campo"><span className="obra-label">Situação:</span> <span className="obra-valor">{(() => { const b = getBadge(obraDetalhe.status); return (
                 <span style={{ display: 'inline-block', padding: '3px 8px', borderRadius: '4px', fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: b.color, background: b.bg }}>{b.label}</span>
