@@ -18,6 +18,18 @@ const EIXOS_POR_MUNICIPIO = (() => {
   return map;
 })();
 
+// Classificação canônica de situação (alinhada à regra dos pareceres e ao
+// `situacao` do upstream): MOBILIZAÇÃO e demais status de planejamento
+// entram como NAO_INICIADA; INAUGURADA/ENTREGUE/CONCLUÍDA = CONCLUIDA.
+export function situacaoCanonica(obra) {
+  if (obra?.situacao) return obra.situacao;
+  const u = String(obra?.status || '').toUpperCase();
+  if (/PARALISADA|PARADA|SUSPENSA/.test(u)) return 'PARALISADA';
+  if (/CONCLU|ENTREGUE|INAUGURADA/.test(u)) return 'CONCLUIDA';
+  if (/EXECU|ANDAMENTO/.test(u)) return 'ANDAMENTO';
+  return 'NAO_INICIADA';
+}
+
 // Retorna o município com eixos garantidos (snapshot local completo; D1 como fallback)
 export function enriquecerMunicipios(municipios = []) {
   return municipios.map(m => {

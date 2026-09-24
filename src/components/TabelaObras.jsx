@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { formatCurrency, normalizeString, LABELS } from '../data/municipios';
-import { enriquecerMunicipios, previsaoConclusao } from '../utils/obrasEnrich';
+import { enriquecerMunicipios, previsaoConclusao, situacaoCanonica } from '../utils/obrasEnrich';
 import { Download, Search, X } from 'lucide-react';
 
 export function TabelaObras({ municipios: municipiosRaw }) {
@@ -40,10 +40,13 @@ export function TabelaObras({ municipios: municipiosRaw }) {
   // ========== OPÇÕES DOS SELECTS ==========
   const OPCOES_STATUS = [
     { value: 'todos', label: '📋 Todas Situações' },
+    // Classificação canônica (campo `situacao`)
     { value: 'entregues', label: '✅ Entregue / Concluída / Inaugurada' },
-    { value: 'andamento', label: '🔄 Em Andamento / Mobilização' },
+    { value: 'andamento', label: '🔄 Em Andamento' },
     { value: 'paralisadas', label: '⛔ Paralisada / Parada' },
-    { value: 'nao_iniciadas', label: '⏳ Não Iniciada / Planejamento' },
+    { value: 'nao_iniciadas', label: '⏳ Não Iniciada / A Iniciar' },
+    // Etapa do processo (status bruto)
+    { value: 'mobilizacao', label: '🚚 Mobilização (A Iniciar)' },
     { value: 'aguardar', label: '⏳ Aguardar' },
     { value: 'projeto', label: '📋 Projeto e Orçamento' },
     { value: 'aprovacao', label: '📝 Aprovação' },
@@ -72,11 +75,11 @@ export function TabelaObras({ municipios: municipiosRaw }) {
     NAO_INICIADA: { label: 'Não Iniciada', color: 'var(--texto-secundario)', bg: '#f1f5f9' },
   };
 
-  function getBadge(status) {
-    const upper = (status || '').toUpperCase();
-    if (/CONCLU|ENTREGUE|INAUGURADA/.test(upper)) return STATUS_BADGES.CONCLUIDA;
-    if (/EXECU|ANDAMENTO|MOBILIZA/.test(upper)) return STATUS_BADGES.ANDAMENTO;
-    if (/PARALISADA|PARADA|SUSPENSA/.test(upper)) return STATUS_BADGES.PARALISA;
+  function getBadge(o) {
+    const sit = situacaoCanonica(o);
+    if (sit === 'CONCLUIDA') return STATUS_BADGES.CONCLUIDA;
+    if (sit === 'ANDAMENTO') return STATUS_BADGES.ANDAMENTO;
+    if (sit === 'PARALISADA') return STATUS_BADGES.PARALISA;
     return STATUS_BADGES.NAO_INICIADA;
   }
 
@@ -90,19 +93,17 @@ export function TabelaObras({ municipios: municipiosRaw }) {
   function matchStatusFilter(o, filtro) {
     if (filtro === 'todos') return true;
     const upper = (o.status || '').toUpperCase();
-    const pct = typeof o.pct === 'number' ? o.pct : 0;
-    if (filtro === 'entregues') return /CONCLU|ENTREGUE|INAUGURADA/.test(upper) || pct >= 100;
-    if (filtro === 'andamento') return (/EXECU|ANDAMENTO|MOBILIZA/.test(upper) || (pct > 0 && pct < 100)) && !/PARADA|PARALISADA|SUSPENSA/.test(upper);
-    if (filtro === 'paralisadas') return /PARALISADA|PARADA|SUSPENSA/.test(upper);
-    if (filtro === 'nao_iniciadas') {
-      const isConcluida = /CONCLU|ENTREGUE|INAUGURADA/.test(upper) || pct >= 100;
-      const isAndamento = (/EXECU|ANDAMENTO|MOBILIZA/.test(upper) || (pct > 0 && pct < 100)) && !/PARADA|PARALISADA|SUSPENSA/.test(upper);
-      const isParada = /PARALISADA|PARADA|SUSPENSA/.test(upper);
-      return !isConcluida && !isAndamento && !isParada;
-    }
+    const sit = situacaoCanonica(o);
+    // Classificação canônica (campo `situacao`)
+    if (filtro === 'entregues') return sit === 'CONCLUIDA';
+    if (filtro === 'andamento') return sit === 'ANDAMENTO';
+    if (filtro === 'paralisadas') return sit === 'PARALISADA';
+    if (filtro === 'nao_iniciadas') return sit === 'NAO_INICIADA';
+    // Etapa do processo (status bruto)
+    if (filtro === 'mobilizacao') return /MOBILIZA/.test(upper);
     if (filtro === 'aguardar') return /AGUARDAR/.test(upper);
     if (filtro === 'projeto') return /PROJETO E ORÇAMENTO/.test(upper);
-    if (filtro === 'aprovacao') return /APROVA(Ç|C)/.test(upper) || /AG\./.test(upper);
+    if (filtro === 'aprovacao') return /APROVA(Ç|C)/.test(upper);
     if (filtro === 'pendente') return /PEND/.test(upper);
     if (filtro === 'visita') return /VISITA TÉCNICA/.test(upper);
     if (filtro === 'deliberacao') return /DELIBERAÇÃO GAB/.test(upper);
@@ -124,6 +125,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
           prefeito: mun.prefeito,
           eixo: obra.orgao || '—',
           sei: obra.sei || '',
+          situacao: obra.situacao || '',
           objeto: obra.desc || obra.objeto || '—',
           status: obra.status || '—',
           pct: typeof obra.pct === 'number' ? obra.pct : 0,
@@ -220,6 +222,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
       SEI: o.sei,
       Objeto: o.objeto,
       Situacao: o.status,
+      Classificacao: o.situacao,
       Pct: o.pct,
       Orcamento: o.orcamento,
     }));
@@ -356,7 +359,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
               </tr>
             ) : (
               pagAtual.map(o => {
-                const badge = getBadge(o.status);
+                const badge = getBadge(o);
                 return (
                   <tr key={o.id} style={{ borderBottom: '1px solid var(--borda)' }}>
                     <td style={{ padding: '8px 12px', color: 'var(--heading)', fontWeight: 600 }}>{o.municipio}</td>
@@ -465,7 +468,7 @@ export function TabelaObras({ municipios: municipiosRaw }) {
               <div className="obra-campo"><span className="obra-label">Eixo:</span> <span className="obra-valor">{obraDetalhe.eixo}</span></div>
               <div className="obra-campo"><span className="obra-label">Nº SEI:</span> <span className="obra-valor" style={{ fontFamily: 'ui-monospace, Menlo, Consolas, monospace' }}>{obraDetalhe.sei || '—'}</span></div>
               <div style={{ borderTop: '1px dashed #e2e8f0' }} />
-              <div className="obra-campo"><span className="obra-label">Situação:</span> <span className="obra-valor">{(() => { const b = getBadge(obraDetalhe.status); return (
+              <div className="obra-campo"><span className="obra-label">Situação:</span> <span className="obra-valor">{(() => { const b = getBadge(obraDetalhe); return (
                 <span style={{ display: 'inline-block', padding: '3px 8px', borderRadius: '4px', fontSize: '10.5px', fontWeight: 700, textTransform: 'uppercase', color: b.color, background: b.bg }}>{b.label}</span>
               ); })()} · {(obraDetalhe.status || '—')} ({obraDetalhe.pct ?? 0}%)</span></div>
               <div className="obra-campo"><span className="obra-label">Orçamento:</span> <span className="obra-valor" style={{ fontWeight: 700 }}>{formatCurrency(obraDetalhe.orcamento)}</span></div>

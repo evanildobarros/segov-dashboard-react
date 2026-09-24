@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { formatCurrency, normalizeString } from '../data/municipios';
 import { ChevronDown, ChevronUp, MapPin, Briefcase, Clock, TrendingUp, AlertTriangle } from 'lucide-react';
+import { situacaoCanonica } from '../utils/obrasEnrich';
 
 /**
  * ObrasListView — Visão em cards/lista para obras por município
@@ -34,6 +35,7 @@ export function ObrasListView({ municipios }) {
           objeto: obra.desc || obra.objeto || '—',
           orgao: obra.orgao || '—',
           status: obra.status || '—',
+          situacao: obra.situacao || '',
           pct: typeof obra.pct === 'number' ? obra.pct : 0,
           orcamento: obra.orcamento || 0,
         }))
@@ -107,9 +109,9 @@ export function ObrasListView({ municipios }) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '12px' }}>
         {filtrados.map((mun, idx) => {
           const isExpanded = expandedMunicipio === mun.ibge;
-          const concluidas = mun.obras.filter(o => /CONCLU|ENTREGUE|INAUGURADA/.test(o.status)).length;
-          const andamento = mun.obras.filter(o => /EXECU|ANDAMENTO|MOBILIZA/.test(o.status)).length;
-          const paralisadas = mun.obras.filter(o => /PARALISADA|PARADA|SUSPENSA/.test(o.status)).length;
+          const concluidas = mun.obras.filter(o => situacaoCanonica(o) === 'CONCLUIDA').length;
+          const andamento = mun.obras.filter(o => situacaoCanonica(o) === 'ANDAMENTO').length;
+          const paralisadas = mun.obras.filter(o => situacaoCanonica(o) === 'PARALISADA').length;
 
           return (
             <div key={mun.ibge || idx} style={{

@@ -4,7 +4,7 @@ import { ChartSituacao } from '../components/ChartsObras';
 import { ChartEixos } from '../components/ChartEixos';
 import { TabelaObras } from '../components/TabelaObras';
 import { ObrasListView } from '../components/ObrasListView';
-import { enriquecerMunicipios } from '../utils/obrasEnrich';
+import { enriquecerMunicipios, situacaoCanonica } from '../utils/obrasEnrich';
 
 export function ObrasPage() {
   const municipiosRaw = useMunicipiosFiltrados();
@@ -27,21 +27,21 @@ export function ObrasPage() {
   const totalConcluidas = useMemo(() => {
     return listaExibicao.reduce((s, m) => {
       const obs = (m?.eixos && Array.isArray(m.eixos)) ? m.eixos : [];
-      return s + obs.filter(o => /CONCLU|ENTREGUE|INAUGURADA/.test(o.status || '') || (typeof o.pct === 'number' && o.pct >= 100)).length;
+      return s + obs.filter(o => situacaoCanonica(o) === 'CONCLUIDA').length;
     }, 0);
   }, [listaExibicao]);
 
   const totalEmAndamento = useMemo(() => {
     return listaExibicao.reduce((s, m) => {
       const obs = (m?.eixos && Array.isArray(m.eixos)) ? m.eixos : [];
-      return s + obs.filter(o => /EXECU|ANDAMENTO|MOBILIZA/.test(o.status || '') && !/PARADA|PARALISADA|SUSPENSA/.test(o.status || '') && typeof o.pct === 'number' && o.pct > 0 && o.pct < 100).length;
+      return s + obs.filter(o => situacaoCanonica(o) === 'ANDAMENTO').length;
     }, 0);
   }, [listaExibicao]);
 
   const totalParalisadas = useMemo(() => {
     return listaExibicao.reduce((s, m) => {
       const obs = (m?.eixos && Array.isArray(m.eixos)) ? m.eixos : [];
-      return s + obs.filter(o => /PARALISADA|PARADA|SUSPENSA/.test(o.status || '')).length;
+      return s + obs.filter(o => situacaoCanonica(o) === 'PARALISADA').length;
     }, 0);
   }, [listaExibicao]);
 
