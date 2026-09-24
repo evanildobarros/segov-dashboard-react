@@ -4045,7 +4045,7 @@
    "ibge": "2108603",
    "nome": "Pinheiro",
    "grupo": "Braide",
-   "prioritario": 1,
+   "prioritario": 0,
    "cor": "#E67E22",
    "prefeito": "André da Ralpnet",
    "alinhamento": "Braide",
@@ -6391,7 +6391,7 @@
  "metadata": {
   "gerado_em": "2026-09-24T22:55:28+00:00",
   "fonte": "municipios_217.js + dados_municipios.json (merged)",
-  "versao": "3.4 (admin-d1 sync24/09)",
+  "versao": "3.4.1 (corr. prioritarios24/09)",
   "total_municipios": 217,
   "total_orleans": 174,
   "total_braide": 23,
@@ -6399,7 +6399,7 @@
   "total_obras": 3176,
   "total_indefinido": 20,
   "data_pesquisa": "30/07/2026",
-  "prioritarios": 9,
+  "prioritarios": 8,
   "com_dados_detalhados": 217,
   "equipamentos": {
    "total_solicitados": 126,
@@ -6408,6 +6408,6 @@
    "carros": 0
   },
   "updated_at": "2026-09-24T22:55:28",
-  "atualizacao": "Sync admin-D124/09/2026: export admin-d1 integro (partido, obras_paradas, eixos, asfalto, investimento_planner); Pinheiro → Braide/prioritario (9 prioritarios)"
+  "atualizacao": "Sync admin-D124/09/2026: export admin-d1 integro (partido, obras_paradas, eixos, asfalto, investimento_planner); Pinheiro grupo Braide (admin); CORRECAO: Pinheiro NAO e prioritario — prioritarios=8"
  }
 }
