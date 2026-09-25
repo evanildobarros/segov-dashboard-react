@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { useStore, useAuth } from './hooks/useStore';
 import { Sidebar } from './components/Sidebar';
 import { Topbar } from './components/Topbar';
@@ -13,7 +13,7 @@ import { ObrasPage } from './pages/Obras';
 import { EquipamentosPage } from './pages/Equipamentos';
 import { RelatoriosPage } from './pages/Relatorios';
 import { AdminPage } from './pages/Admin';
-import Projecao2026 from './components/Projecao2026';
+const Projecao2026 = lazy(() => import('./components/Projecao2026'));
 import { Login } from './pages/Login';
 import './App.css';
 import './index.css';
@@ -98,7 +98,7 @@ function App() {
         <Route path="/equipamentos" element={<EquipamentosPage />} />
         <Route path="/relatorios" element={<RelatoriosPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/projecao" element={<Projecao2026 />} />
+        <Route path="/projecao" element={<Suspense fallback={<p role="status">Carregando projeção…</p>}><Projecao2026 /></Suspense>} />
       </Route>
     </Routes>
   );

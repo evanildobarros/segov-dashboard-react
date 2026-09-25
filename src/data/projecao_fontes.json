@@ -1,0 +1,123 @@
+{
+  "source": "eleicao_governador_maranhao_2026.xlsx",
+  "polls": [
+    {
+      "date": "fev/2025 (aprox.)*",
+      "institute": "Paraná Pesquisas",
+      "sample": null,
+      "margin": null,
+      "braide": 32.7,
+      "orleans": 16.9,
+      "lahesio": 24.9,
+      "camarao": 12.9,
+      "rocha": null,
+      "others": 12.6,
+      "lead": 15.8
+    },
+    {
+      "date": "10/mar/2026",
+      "institute": "Paraná Pesquisas",
+      "sample": 1300,
+      "margin": "n.d.",
+      "braide": 34.6,
+      "orleans": 30.3,
+      "lahesio": 16.1,
+      "camarao": 6.9,
+      "rocha": null,
+      "others": 12.1,
+      "lead": 4.3
+    },
+    {
+      "date": "mar/2026 (campo)",
+      "institute": "Veritá (válidos)",
+      "sample": 1525,
+      "margin": "3,0 p.p.",
+      "braide": 53.4,
+      "orleans": 19.2,
+      "lahesio": 18.9,
+      "camarao": 8.4,
+      "rocha": null,
+      "others": 0.1,
+      "lead": 34.2
+    },
+    {
+      "date": "08-13/mai/2026",
+      "institute": "AtlasIntel",
+      "sample": 1180,
+      "margin": "3 p.p.",
+      "braide": 50.1,
+      "orleans": 23.1,
+      "lahesio": null,
+      "camarao": 14,
+      "rocha": null,
+      "others": 12.8,
+      "lead": 27
+    },
+    {
+      "date": "11/ago/2026**",
+      "institute": "Veritá",
+      "sample": null,
+      "margin": null,
+      "braide": 39.1,
+      "orleans": 47.5,
+      "lahesio": null,
+      "camarao": null,
+      "rocha": null,
+      "others": null,
+      "lead": 8.4
+    },
+    {
+      "date": "27-28/ago/2026",
+      "institute": "Real Time Big Data",
+      "sample": 1200,
+      "margin": "3 p.p.",
+      "braide": 35,
+      "orleans": 25,
+      "lahesio": 19,
+      "camarao": null,
+      "rocha": null,
+      "others": 21,
+      "lead": 10
+    },
+    {
+      "date": "05-09/set/2026",
+      "institute": "n.i. (registro MA-02569/2026)",
+      "sample": 1600,
+      "margin": "2,0 p.p.",
+      "braide": 45,
+      "orleans": 32,
+      "lahesio": null,
+      "camarao": 11,
+      "rocha": 5,
+      "others": 7,
+      "lead": 13
+    }
+  ],
+  "notes": [
+    "1) Institutos diferentes usam metodologias, amostras e datas de campo diferentes — os números não formam uma série única e comparável ponto a ponto (efeito-casa de cada instituto). Trate como retrato de cada pesquisa, não como uma média móvel.",
+    "2) A linha 'Veritá (válidos)' de março/2026 usa % sobre votos válidos (exclui branco/nulo/NS-NR), enquanto as demais linhas geralmente somam 100% incluindo indecisos — não são diretamente comparáveis em base idêntica.",
+    "3) Carlos Brandão (governador atual) não é candidato à reeleição em 2026; a aprovação de seu governo é um indicador de fundo de quadro (coattail), não um número de intenção de voto para governador.",
+    "4) 1º turno: 04/out/2026. 2º turno, se necessário: 25/out/2026.",
+    "5) Dados não localizados nesta pesquisa: tempo de TV/rádio por coligação, financiamento de campanha (TSE/DivulgaCandContas), resultados por município/microrregião.",
+    "Fontes consultadas:",
+    "- Poder360 (poder360.com.br) — candidatos, pesquisas Veritá, AtlasIntel",
+    "- Gazeta do Povo (gazetadopovo.com.br) — pesquisa Paraná Pesquisas (cenário espontâneo/estimulado, ~fev/2025)",
+    "- Metrópoles (metropoles.com) — pesquisa Paraná Pesquisas de 10/mar/2026",
+    "- PDFs de pesquisas registradas no TSE hospedados em static.poder360.com.br e paranapesquisas.com.br",
+    "- CartaCapital (cartacapital.com.br) — pesquisa Real Time Big Data",
+    "- O Imparcial (oimparcial.com.br) — cobertura da corrida e resultado oficial 2022",
+    "- Exame, InfoMoney, Diário do Nordeste — resultado oficial do 1º turno de 2022 (apuração TSE)"
+  ],
+  "approval": [
+    {
+      "date": "08-11/jan/2026",
+      "institute": "Econométrica",
+      "value": 65.1
+    },
+    {
+      "date": "05-09/set/2026",
+      "institute": "n.i. (MA-02569/2026)",
+      "value": 53
+    }
+  ]
+}

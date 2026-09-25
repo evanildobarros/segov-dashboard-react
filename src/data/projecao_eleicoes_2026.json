@@ -98,6 +98,76 @@
     "Braide": 38,
     "Indefinido": 16
    }
+  },
+  "trend_full": [
+   {
+    "date": "fev/2025",
+    "braide": 32.7,
+    "orleans": 16.9
+   },
+   {
+    "date": "mar/2026",
+    "braide": 34.6,
+    "orleans": 30.3
+   },
+   {
+    "date": "mai/2026",
+    "braide": 50.1,
+    "orleans": 23.1
+   },
+   {
+    "date": "ago/2026",
+    "braide": 35.0,
+    "orleans": 25.0
+   },
+   {
+    "date": "set/2026",
+    "braide": 45.0,
+    "orleans": 32.0
+   }
+  ],
+  "ultima_pesquisa_1T": {
+   "data": "05-09/set/2026",
+   "instituto": "n.i. (registro MA-02569/2026)",
+   "amostra": 1600,
+   "margem": "2,0 p.p.",
+   "votos": [
+    {
+     "candidato": "Braide (PSD)",
+     "pct": 45
+    },
+    {
+     "candidato": "Orleans (MDB)",
+     "pct": 32
+    },
+    {
+     "candidato": "Camarão (PT)",
+     "pct": 11
+    },
+    {
+     "candidato": "Rocha (PRTB)",
+     "pct": 5
+    },
+    {
+     "candidato": "Outros/NS-NR",
+     "pct": 7
+    }
+   ]
+  },
+  "cenario_2T": {
+   "fonte": "Pesquisa06-07/jul/2026 (registro MA-04...)",
+   "votos": [
+    {
+     "nome": "Eduardo Braide (PSD)",
+     "pct": 52
+    },
+    {
+     "nome": "Orleans Brandão (MDB)",
+     "pct": 38
+    }
+   ],
+   "nulo_branco": 4,
+   "ns_nr": 6
   }
  },
  "municipalities": [
