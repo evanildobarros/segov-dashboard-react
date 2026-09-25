@@ -13,6 +13,7 @@ import { ObrasPage } from './pages/Obras';
 import { EquipamentosPage } from './pages/Equipamentos';
 import { RelatoriosPage } from './pages/Relatorios';
 import { AdminPage } from './pages/Admin';
+import Projecao2026 from './components/Projecao2026';
 import { Login } from './pages/Login';
 import './App.css';
 import './index.css';
@@ -97,6 +98,7 @@ function App() {
         <Route path="/equipamentos" element={<EquipamentosPage />} />
         <Route path="/relatorios" element={<RelatoriosPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/projecao" element={<Projecao2026 />} />
       </Route>
     </Routes>
   );

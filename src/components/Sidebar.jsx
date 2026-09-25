@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '../hooks/useStore';
-import { Map, MapPin, Building2, Hammer, FileText, Settings, X } from 'lucide-react';
+import { Map, MapPin, Building2, Hammer, FileText, Settings, X, TrendingUp } from 'lucide-react';
 
 const PAGES = [
   { id: 'dashboard', label: 'Visão Geral', icon: MapPin },
@@ -10,6 +10,7 @@ const PAGES = [
   { id: 'obras', label: 'Obras', icon: Hammer },
   { id: 'equipamentos', label: 'Veículos', icon: Settings },
   { id: 'relatorios', label: 'Relatórios', icon: FileText },
+  { id: 'projecao', label: 'Projeção 2026', icon: TrendingUp },
   { id: 'admin', label: 'Administração', icon: Settings }
 ];
 
