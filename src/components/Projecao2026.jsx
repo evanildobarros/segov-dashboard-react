@@ -25,7 +25,8 @@ export default function Projecao2026() {
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const analysis = projection.state_metrics.jev_analysis;
-  const latest = sources.polls.at(-1);
+  const latestBraide = [...sources.polls].reverse().find(p => p.braide != null && p.chart !== false);
+  const latestOrleans = [...sources.polls].reverse().find(p => p.orleans != null);
   const approval = sources.approval.at(-1);
   const faixas = ['Muito baixa', 'Baixa', 'Moderada', 'Alta', 'Muito alta'];
   const probsFaixas = analysis ? faixas.map((f, i) => ({
@@ -33,7 +34,7 @@ export default function Projecao2026() {
     Braide: Math.round(Number((analysis.prob_vitoria_braide.probs || {})[i] || 0) * 100),
     Orleans: Math.round(Number((analysis.prob_vitoria_orleans.probs || {})[i] || 0) * 100),
   })) : [];
-  const serie = sources.polls.filter(p => p.braide != null);
+  const serie = sources.polls.filter(p => p.chart !== false && p.braide != null && p.orleans != null);
   useEffect(() => {
     const controller = new AbortController();
     setError(false);
@@ -46,16 +47,19 @@ export default function Projecao2026() {
   return <div className="projection-container">
     <header><h1>Projeção Eleitoral 2026</h1><p>Análise preditiva e pesquisas de referência para o Maranhão.</p></header>
     <section className="projection-grid" aria-label="Indicadores de referência">
-      <article className="projection-card"><h2>Braide · intenção de voto</h2><strong className="projection-value">{percent(latest.braide)}</strong><p>Pesquisa estimulada · {latest.date}</p><small>{latest.institute} · {latest.sample} entrevistas · margem {latest.margin}</small></article>
-      <article className="projection-card"><h2>Aprovação do governo Brandão</h2><strong className="projection-value">{percent(approval.value)}</strong><p>{approval.date} · {approval.institute}</p><small>Referência anterior: {percent(sources.approval[0].value)} em {sources.approval[0].date}.</small></article>
+      <article className="projection-card"><h2>Braide · registro mais recente divulgado</h2><strong className="projection-value">{percent(latestBraide?.braide)}</strong><p>{latestBraide?.date} · {latestBraide?.institute}</p><small>{latestBraide?.sample ? `n=${latestBraide.sample}` : 'Amostra não informada'} · margem {latestBraide?.margin || 'não informada'}. Não comparar diretamente com levantamentos de outra data/instituto.</small></article>
+      <article className="projection-card"><h2>Orleans · registro mais recente divulgado</h2><strong className="projection-value">{percent(latestOrleans?.orleans)}</strong><p>{latestOrleans?.date} · {latestOrleans?.institute}</p><small>Resultado unilateral reportado; os demais candidatos não foram informados, portanto não indica liderança.</small></article>
+      <article className="projection-card"><h2>Aprovação do governo Brandão</h2><strong className="projection-value">{percent(approval.value)}</strong><p>{approval.date} · {approval.institute}</p><small>Referência anterior: {percent(sources.approval[0].value)} em {sources.approval[0].date}. Indicador de contexto, não intenção de voto.</small></article>
     </section>
     {analysis && <section className="projection-card"><h2>Análise preditiva JEV</h2><p>Gerada em {new Date(analysis.gerado_em).toLocaleString('pt-BR')} · Modelo {analysis.model}</p>
       <div className="projection-grid">
-        <article><h3>Cenário de primeiro turno</h3><p>{outcomes[analysis.desfecho_1t.escolha] ?? analysis.desfecho_1t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_1t.probs[analysis.desfecho_1t.escolha] * 100)}</small></article>
-        <article><h3>Confronto de segundo turno</h3><p>{outcomes[analysis.desfecho_2t.escolha] ?? analysis.desfecho_2t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_2t.probs[analysis.desfecho_2t.escolha] * 100)}</small></article>
-        <article><h3>Chance de vitória · Braide</h3><p>{analysis.prob_vitoria_braide.faixa}</p></article>
-        <article><h3>Chance de vitória · Orleans</h3><p>{analysis.prob_vitoria_orleans.faixa}</p></article>
-      </div><p className="projection-note">Estimativas do modelo registrado, distintas dos percentuais de intenção de voto. A página apresenta a análise salva; não executa uma nova previsão.</p>
+        <article><h3>Cenário de primeiro turno</h3><p>{outcomes[analysis.desfecho_1t.escolha] ?? analysis.desfecho_1t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_1t.probs[analysis.desfecho_1t.escolha] * 100)} · confiança {percent(Number(analysis.desfecho_1t.confianca || 0) * 100)}</small></article>
+        <article><h3>Confronto de segundo turno</h3><p>{outcomes[analysis.desfecho_2t.escolha] ?? analysis.desfecho_2t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_2t.probs[analysis.desfecho_2t.escolha] * 100)} · confiança {percent(Number(analysis.desfecho_2t.confianca || 0) * 100)}</small></article>
+        <article><h3>Chance de vitória · Braide</h3><p>{analysis.prob_vitoria_braide.faixa}</p><small>Distribuição por faixa: moderada62%, alta36%.</small></article>
+        <article><h3>Chance de vitória · Orleans</h3><p>{analysis.prob_vitoria_orleans.faixa}</p><small>Distribuição próxima: baixa49%, moderada45%.</small></article>
+        <article><h3>Orleans no 2º turno</h3><p>{analysis.risco_orleans_2t.faixa}</p><small>Distribuição: moderada49%, baixa40%.</small></article>
+        <article><h3>Fator de maior peso</h3><p>{analysis.fator_determinante?.escolha === 'volatilidade_braide' ? 'Volatilidade das pesquisas de Braide' : analysis.fator_determinante?.escolha}</p><small>Confiança do JEV: {percent(Number(analysis.fator_determinante?.confianca || 0) * 100)}</small></article>
+      </div><p className="projection-note">JEV é uma avaliação estruturada, não uma simulação estatística calibrada. A faixa não é um percentual exato de votos. Recalibração incorporou novas pesquisas reportadas no DOCX, concentração do eleitorado (15 maiores:37,71%) e abstenção histórica22,21% (2022); o registro MA-02569 permanece conflitante.</p>
     </section>}
     <section className="projection-card"><h2>Gráficos de projeção</h2>
       <div className="projection-grid">
@@ -93,11 +97,11 @@ export default function Projecao2026() {
         </article>}
       </div>
     </section>
-    <section className="projection-card"><h2>Pesquisas de referência</h2><p>Institutos, cenários e bases diferentes. A linha Veritá de março utiliza votos válidos; os resultados não compõem uma série diretamente comparável.</p>
-      <div className="projection-table-wrap" tabIndex={0} role="region" aria-label="Tabela de pesquisas"><table><thead><tr>{['Data', 'Instituto', 'Amostra', 'Margem', 'Braide', 'Orleans'].map(label => <th key={label} scope="col">{label}</th>)}</tr></thead><tbody>{sources.polls.map(poll => <tr key={`${poll.date}-${poll.institute}`}><td>{poll.date}</td><td>{poll.institute}</td><td>{poll.sample ?? 'Não informada'}</td><td>{poll.margin ?? 'Não informada'}</td><td>{percent(poll.braide)}</td><td>{percent(poll.orleans)}</td></tr>)}</tbody></table></div>
-      <small>Fonte: {sources.source}, aba “1o turno - estimulada”. n.i.: instituto não identificado; n.d.: não divulgado. Agosto/Veritá: somente os dois primeiros colocados informados.</small>
+    <section className="projection-card"><h2>Pesquisas de referência</h2><p>Institutos, cenários e bases diferentes. A linha Veritá de março utiliza votos válidos. Os pontos pareados do gráfico excluem registros unilaterais e o conflito documental MA-02569; pesquisas de 14 e20/set informam apenas Orleans.</p>
+      <div className="projection-table-wrap" tabIndex={0} role="region" aria-label="Tabela de pesquisas"><table><thead><tr>{['Data', 'Instituto', 'Amostra', 'Margem', 'Braide', 'Orleans', 'Nota'].map(label => <th key={label} scope="col">{label}</th>)}</tr></thead><tbody>{sources.polls.map(poll => <tr key={`${poll.date}-${poll.institute}`}><td>{poll.date}</td><td>{poll.institute}</td><td>{poll.sample ?? 'Não informada'}</td><td>{poll.margin ?? 'Não informada'}</td><td>{percent(poll.braide)}</td><td>{percent(poll.orleans)}</td><td>{poll.note || '—'}</td></tr>)}</tbody></table></div>
+      <small>Fontes: planilha de pesquisas enviada anteriormente e Análise Eleitoral Maranhão 2026.docx (novas linhas). Identificação, registro e metadados das pesquisas do DOCX não foram verificados de forma independente. Questões metodológicas/judiciais citadas são alegações do documento, não decisões confirmadas.</small>
     </section>
-    <section className="projection-card"><h2>Apoio municipal · {projection.municipalities.length} municípios</h2><div className="projection-legend">{Object.entries(counts).map(([name, count]) => <span key={name}><i style={{ background: colors[name] }} />{name}: <strong>{count}</strong></span>)}</div><p>Classificação da base SEGOV utilizada na análise. Contagem de municípios, sem ponderação pelo eleitorado; evidências individuais de apoio não estão preenchidas.</p>
+    <section className="projection-card"><h2>Apoio municipal · {projection.municipalities.length} municípios</h2><div className="projection-legend">{Object.entries(counts).map(([name, count]) => <span key={name}><i style={{ background: colors[name] }} />{name}: <strong>{count}</strong></span>)}</div><p>Classificação oficial SEGOV: Orleans156 · Braide38 · indefinidos23. O JEV manteve os23 sem evidência direta como indefinidos; não tratar a contagem de municípios como proporção de votos. Os15 maiores colégios somariam37,71% do eleitorado conforme o DOCX.</p>
       {error ? <p role="alert">Não foi possível carregar o mapa. <button onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button></p> : !geometry ? <p role="status">Carregando limites municipais…</p> : <div className="projection-map"><MapContainer bounds={[[-10.3, -48.8], [-1, -41.7]]} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}><TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /><GeoJSON data={geometry} style={styleFeature} onEachFeature={bindFeature} /></MapContainer></div>}
     </section>
   </div>;
