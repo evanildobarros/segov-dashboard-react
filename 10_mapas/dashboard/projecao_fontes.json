@@ -108,30 +108,20 @@
   },
   {
    "date": "05-09/set/2026",
-   "institute": "MA-02569/2026 — conflito de identificação",
-   "sample": 1600,
-   "margin": "2,0 p.p.",
-   "braide": 45,
-   "orleans": 32,
-   "lahesio": null,
-   "camarao": 11,
-   "rocha": 5,
-   "others": 7,
-   "lead": 13,
-   "chart": false,
-   "note": "Base anterior informava45/32; DOCX identifica Real Time e não informa Orleans. Não usar como comparação confirmada."
-  },
-  {
-   "date": "05–09/set/2026",
-   "institute": "Real Time Big Data (DOCX; conflito MA-02569)",
+   "institute": "Real Time Big Data (MA-02569/2026)",
    "sample": 1600,
    "margin": "2,0 p.p.",
    "braide": 45.0,
-   "orleans": null,
-   "camarao": null,
-   "others": null,
-   "chart": false,
-   "note": "DOCX não informa percentual de Orleans; conflito com registro anterior45/32."
+   "orleans": 32.0,
+   "lahesio": null,
+   "camarao": 11.0,
+   "rocha": 5.0,
+   "others": 1.0,
+   "lead": 13,
+   "chart": true,
+   "note": "Registro e percentuais confirmados em cobertura pública; o DOCX anterior omitia Orleans.",
+   "undecided": 3.0,
+   "blank_null": 2.0
   },
   {
    "date": "14/set/2026",
@@ -143,31 +133,56 @@
    "camarao": null,
    "others": null,
    "chart": false,
-   "note": "Somente resultado de Orleans divulgado; não é comparação head-to-head."
+   "note": "Resultado unilateral reportado no DOCX; registro/metadados não confirmados. Mantido separado da pesquisa MA-02374 divulgada20/set."
   },
   {
    "date": "15/set/2026",
-   "institute": "IPPI (DOCX)",
-   "sample": null,
-   "margin": null,
+   "institute": "IPPI/Café Quente — 6ª onda (MA-09665/2026)",
+   "sample": 1500,
+   "margin": "2,5 p.p.",
    "braide": 44.5,
    "orleans": 27.8,
    "camarao": 7.7,
-   "others": 20.0,
+   "others": 2.3,
    "chart": true,
-   "note": "Amostra/margem não informadas no DOCX."
+   "note": "Campo10–14/set; n=1.500 em80 municípios; 95%. Válidos: Braide51,7×Orleans32,3. Espontânea:32,9×16,5.",
+   "rocha": 3.8,
+   "undecided": 8.9,
+   "blank_null": 4.9,
+   "valid_braide": 51.7,
+   "valid_orleans": 32.3,
+   "spontaneous_braide": 32.9,
+   "spontaneous_orleans": 16.5
   },
   {
    "date": "20/set/2026",
-   "institute": "IP Sensus (DOCX)",
-   "sample": null,
-   "margin": null,
-   "braide": null,
+   "institute": "IP Sensus (MA-02374/2026)",
+   "sample": 1000,
+   "margin": "3,1 p.p.",
+   "braide": 35.7,
    "orleans": 43.6,
-   "camarao": null,
-   "others": null,
-   "chart": false,
-   "note": "Somente resultado de Orleans divulgado; não é comparação head-to-head."
+   "camarao": 8.1,
+   "others": 3.6,
+   "chart": true,
+   "note": "Campo14–18/set; divulgado20/set. Registro MA-02374; n=1.000 em62 municípios; 95%.",
+   "rocha": 3.0,
+   "undecided": 3.3,
+   "blank_null": 2.7
+  },
+  {
+   "date": "21–24/set/2026",
+   "institute": "Quaest (MA-07074/2026; TV Mirante)",
+   "sample": 900,
+   "margin": "3,0 p.p.",
+   "braide": 46.0,
+   "orleans": 27.0,
+   "camarao": 10.0,
+   "rocha": 3.0,
+   "others": 2.0,
+   "undecided": 9.0,
+   "blank_null": 3.0,
+   "chart": true,
+   "note": "Divulgada25/set; 95%. 2º turno: Braide55×Orleans33. Escolha declarada definitiva70%; ainda pode mudar28%."
   }
  ],
  "notes": [
@@ -188,7 +203,12 @@
   "Conflito: MA-02569/2026 de05–09/set aparece na planilha anterior como instituto n.i. e 45% Braide/32% Orleans; o DOCX identifica Real Time Big Data e informa Braide45% sem percentual de Orleans. Mantido como registro contestado, excluído da série gráfica comparativa até reconciliação.",
   "IP Sensus de14/set e20/set reporta apenas Orleans (43,0% e43,6%); não comparar diretamente nem inferir liderança sem os percentuais dos demais candidatos.",
   "Questionamentos jurídicos/metodológicos a pesquisas são alegações narradas no DOCX; não foram validados como decisões judiciais e não geram desconto automático.",
-  "A série mistura institutos, metodologias e bases diferentes; gráfico é apenas registro de levantamentos, não tendência amostral homogênea."
+  "A série mistura institutos, metodologias e bases diferentes; gráfico é apenas registro de levantamentos, não tendência amostral homogênea.",
+  "Atualização25/09: adicionada Quaest21-24/set (MA-07074; TV Mirante; n900; margem3 p.p.; Braide46×Orleans27; 2º turno55×33).",
+  "IPPI/Café Quente 6ª onda, divulgação15/set (MA-09665): campo10-14/set, n1500/80 municípios, margem2,5 p.p.; Braide44,5×Orleans27,8 no total e51,7×32,3 nos votos válidos.",
+  "IP Sensus MA-02374, divulgação20/set: resultado completo confirmado por cobertura, Orleans43,6×Braide35,7; campo14-18/set, n1000/62 municípios, margem3,1 p.p. O registro unilateral de14/set no DOCX é mantido separado, sem substituir este.",
+  "MA-02569 Real Time Big Data reconciliado por CartaCapital: Braide45×Orleans32 (campo05-09/set); o DOCX omitia Orleans, não é divergência do resultado da pesquisa.",
+  "Institutos e datas diferentes: diferenças de resultados não demonstram uma variação temporal equivalente; considerar efeito-casa, amostra e composição territorial."
  ],
  "approval": [
   {
@@ -198,8 +218,18 @@
   },
   {
    "date": "05-09/set/2026",
-   "institute": "n.i. (MA-02569/2026)",
-   "value": 53
+   "institute": "Real Time Big Data (MA-02569/2026)",
+   "value": 53,
+   "sample": 1600,
+   "margin": "2,0 p.p."
+  },
+  {
+   "date": "10-14/set/2026",
+   "institute": "IPPI/Café Quente (MA-09665/2026)",
+   "value": 49.5,
+   "disapproval": 40.3,
+   "sample": 1500,
+   "margin": "2,5 p.p."
   }
  ]
 }

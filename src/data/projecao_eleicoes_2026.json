@@ -1,116 +1,103 @@
 {
  "state_metrics": {
-  "braide_current_pct": 45,
-  "gov_approval_pct": 53,
+  "braide_current_pct": 46.0,
+  "gov_approval_pct": 53.0,
   "trend": [
    {
-    "date": "fev/2025",
-    "value": 32.7
+    "date": "15/set/2026",
+    "value": 44.5
    },
    {
-    "date": "mar/2026",
-    "value": 34.6
-   },
-   {
-    "date": "mai/2026",
-    "value": 50.1
-   },
-   {
-    "date": "ago/2026",
-    "value": 39.1
-   },
-   {
-    "date": "set/2026",
-    "value": 45.0
+    "date": "25/set/2026 (Quaest)",
+    "value": 46.0
    }
   ],
   "jev_analysis": {
    "model": "typesafe/jev-1.13-20260917",
    "provider": "TypeSafe",
-   "gerado_em": "2026-09-25T14:18:22",
+   "gerado_em": "2026-09-26T14:09:21",
    "usage": {
-    "input_tokens": 12874,
-    "output_tokens": 1372,
-    "cost": 0.000540708
+    "input_tokens": 15550,
+    "output_tokens": 1370,
+    "cost": 0.0006531
    },
-   "revision": "Recalibração com Análise Eleitoral Maranhão 2026.docx; pesquisas complementares e eleitorado dos grandes colégios.",
+   "revision": "Reavaliação25/set: IPPI/Café Quente 6ª onda confirmada (MA-09665) + Quaest25/set (MA-07074) + IP Sensus20/set (MA-02374) + Real Time (MA-02569).",
    "desfecho_1t": {
     "tipo": "choice",
     "escolha": "segundo_turno_braide_lidera",
-    "confianca": 0.83,
+    "confianca": 0.68,
     "probs": {
-     "segundo_turno_orleans_lidera": 0.06,
-     "vitoria_1t_braide": 0.01,
-     "segundo_turno_braide_lidera": 0.87,
-     "disputa_muito_apertada": 0.06
+     "vitoria_1t_braide": 0.22,
+     "segundo_turno_braide_lidera": 0.75,
+     "disputa_muito_apertada": 0.02,
+     "segundo_turno_orleans_lidera": 0.01
     }
    },
    "desfecho_2t": {
     "tipo": "choice",
     "escolha": "braide_x_orleans",
-    "confianca": 0.98,
+    "confianca": 1,
     "probs": {
-     "braide_x_orleans": 0.99,
-     "outro_confronto": 0,
-     "braide_x_camarao": 0.01
+     "braide_x_camarao": 0,
+     "braide_x_orleans": 1,
+     "outro_confronto": 0
     }
    },
    "prob_vitoria_braide": {
-    "nota": 2.35,
-    "faixa": "Moderada (40-60%) — maior massa62%",
+    "nota": 2.39,
+    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada61%, Alta39%",
     "probs": {
      "0": 0,
-     "1": 0.02,
-     "2": 0.62,
-     "3": 0.36,
+     "1": 0,
+     "2": 0.61,
+     "3": 0.39,
      "4": 0
     }
    },
    "prob_vitoria_orleans": {
-    "nota": 1.52,
-    "faixa": "Transição Baixa/Moderada — 49%/45%",
+    "nota": 1.23,
+    "faixa": "Baixa (20-40% rubrica); distribuição JEV: Baixa72%, Moderada25%",
     "probs": {
-     "0": 0.02,
-     "1": 0.49,
-     "2": 0.45,
-     "3": 0.04,
+     "0": 0.03,
+     "1": 0.72,
+     "2": 0.25,
+     "3": 0,
      "4": 0
     }
    },
    "risco_orleans_2t": {
-    "nota": 1.59,
-    "faixa": "Transição Baixa/Moderada — 40%/49%",
+    "nota": 1.88,
+    "faixa": "Moderada (30-45% rubrica); distribuição JEV: Moderada84%",
     "probs": {
-     "0": 0.04,
-     "1": 0.4,
-     "2": 0.49,
-     "3": 0.06,
+     "0": 0.02,
+     "1": 0.11,
+     "2": 0.84,
+     "3": 0.02,
      "4": 0.01
     }
    },
    "fator_determinante": {
     "tipo": "choice",
-    "escolha": "volatilidade_braide",
-    "confianca": 0.58,
+    "escolha": "queda_aprovacao",
+    "confianca": 0.43,
     "probs": {
-     "rejeicao_orleans": 0.01,
-     "estrutura_municipal": 0.27,
-     "volatilidade_braide": 0.68,
-     "queda_aprovacao": 0.04
+     "queda_aprovacao": 0.58,
+     "estrutura_municipal": 0.14,
+     "volatilidade_braide": 0.26,
+     "rejeicao_orleans": 0.02
     }
    },
-   "queda_aprovacao_limita_base_sim": 0.71,
+   "queda_aprovacao_limita_base_sim": 0.69,
    "confianca_mapa_municipal": {
-    "nota": 1.42,
-    "faixa": "Baixa/Moderada — 55%/43%"
+    "nota": 1.41,
+    "faixa": "Baixa/Moderada; distribuição 55%/43%"
    },
    "mapa_apoio_final": {
     "Orleans": 156,
     "Braide": 38,
     "Indefinido": 23
    },
-   "metodologia": "JEV é julgamento estruturado, não modelo estatístico calibrado nem simulação Monte Carlo. Não interpretar faixas como percentuais exatos de votos/vitória.",
-   "map_fix_note": "Códigos IBGE, grupo SEGOV e campos de apoio reconciliados por nome normalizado com src/data/dados_municipios.json; confiança JEV dos23 indefinidos preservada."
+   "metodologia": "JEV é decisão estruturada, não previsão estatística calibrada. Probabilidades sobre categorias da rubrica não são probabilidades eleitorais absolutas; a votação não foi simulada por município/turnout."
   },
   "trend_full": [
    {
@@ -160,27 +147,37 @@
     "braide": 44.5,
     "orleans": 27.8,
     "institute": "IPPI (DOCX; amostra/margem n.d.)"
+   },
+   {
+    "date": "set/2026 (Quaest25set)",
+    "braide": 46.0,
+    "orleans": 27.0,
+    "institute": "Quaest MA-07074/2026"
    }
   ],
   "ultima_pesquisa_1T": {
-   "data": "15/set/2026",
-   "instituto": "IPPI (reportado no DOCX)",
-   "amostra": null,
-   "margem": "Não informada",
+   "data": "21–24/set/2026",
+   "instituto": "Quaest (MA-07074/2026)",
+   "amostra": 900,
+   "margem": "3,0 p.p.",
    "votos": [
     {
      "candidato": "Braide (PSD)",
-     "pct": 44.5
+     "pct": 46.0
     },
     {
      "candidato": "Orleans (MDB)",
-     "pct": 27.8
+     "pct": 27.0
     },
     {
      "candidato": "Camarão (PT)",
-     "pct": 7.7
+     "pct": 10.0
     }
-   ]
+   ],
+   "segundo_turno": {
+    "braide": 55.0,
+    "orleans": 33.0
+   }
   },
   "cenario_2T": {
    "fonte": "Pesquisa06-07/jul/2026 (registro MA-04...)",
@@ -198,16 +195,31 @@
    "ns_nr": 6
   },
   "contexto_adicional": {
-   "source": "Análise Eleitoral Maranhão 2026.docx",
-   "registro_pesquisas": "Incluídos resultados adicionais reportados no documento; metadados e registros TSE não verificados independentemente.",
-   "conflito_MA_02569": "Pesquisa 05-09/set: base anterior45/32 vs DOCX45/N/D para Orleans; excluída da série comparativa.",
-   "concentracao_eleitoral": {
-    "total_eleitorado": 5186562,
-    "15_maiores_eleitores": 1955753,
-    "share_pct": 37.71
+   "latest_poll": "Quaest divulged25/set; campo21-24/set",
+   "ippi_6a_onda": {
+    "field": "10-14/set",
+    "sample": 1500,
+    "margin_pp": 2.5,
+    "registration": "MA-09665/2026",
+    "total_braide": 44.5,
+    "total_orleans": 27.8,
+    "valid_braide": 51.7,
+    "valid_orleans": 32.3
    },
-   "abstencao_2022_pct": 22.21,
-   "confianca": "Baixa/Moderada; falta base municipal de votos/abstenção por localidade."
+   "ipsensus": {
+    "field": "14-18/set",
+    "sample": 1000,
+    "registration": "MA-02374/2026",
+    "orleans": 43.6,
+    "braide": 35.7
+   },
+   "real_time": {
+    "field": "05-09/set",
+    "registration": "MA-02569/2026",
+    "braide": 45,
+    "orleans": 32
+   },
+   "caveat": "Pesquisas de casas/metodologias distintas divergem; não são série comparável."
   },
   "projection_source_document": "Análise Eleitoral Maranhão 2026.docx"
  },

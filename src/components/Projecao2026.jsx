@@ -12,6 +12,7 @@ const byCode = new Map(projection.municipalities.map(m => [String(m['Código IBG
 const counts = projection.municipalities.reduce((acc, m) => { acc[supportOf(m)]++; return acc; }, { Orleans: 0, Braide: 0, Indefinido: 0 });
 const percent = value => value == null ? 'Não informado' : `${value.toLocaleString('pt-BR')}%`;
 const outcomes = { segundo_turno_braide_lidera: 'Segundo turno com Braide na liderança', segundo_turno_orleans_lidera: 'Segundo turno com Orleans na liderança', vitoria_1t_braide: 'Vitória de Braide no primeiro turno', disputa_muito_apertada: 'Disputa muito apertada', braide_x_orleans: 'Braide × Orleans', braide_x_camarao: 'Braide × Camarão', outro_confronto: 'Outro confronto' };
+const factorLabels = { queda_aprovacao: 'Possível queda na aprovação do governo', estrutura_municipal: 'Estrutura municipal', volatilidade_braide: 'Volatilidade das pesquisas de Braide', rejeicao_orleans: 'Rejeição de Orleans' };
 const styleFeature = feature => ({ color: '#ffffff', weight: 1, fillColor: colors[supportOf(byCode.get(String(feature.properties.CD_MUN)))], fillOpacity: 0.7 });
 function bindFeature(feature, layer) {
   const m = byCode.get(String(feature.properties.CD_MUN));
@@ -29,6 +30,7 @@ export default function Projecao2026() {
   const latestOrleans = [...sources.polls].reverse().find(p => p.orleans != null);
   const approval = sources.approval.at(-1);
   const faixas = ['Muito baixa', 'Baixa', 'Moderada', 'Alta', 'Muito alta'];
+  const topBins = result => Object.entries(result?.probs || {}).map(([i, value]) => [faixas[Number(i)] || i, Number(value) || 0]).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([label, value]) => `${label} ${percent(Math.round(value * 100))}`).join(' · ');
   const probsFaixas = analysis ? faixas.map((f, i) => ({
     faixa: f,
     Braide: Math.round(Number((analysis.prob_vitoria_braide.probs || {})[i] || 0) * 100),
@@ -48,18 +50,18 @@ export default function Projecao2026() {
     <header><h1>Projeção Eleitoral 2026</h1><p>Análise preditiva e pesquisas de referência para o Maranhão.</p></header>
     <section className="projection-grid" aria-label="Indicadores de referência">
       <article className="projection-card"><h2>Braide · registro mais recente divulgado</h2><strong className="projection-value">{percent(latestBraide?.braide)}</strong><p>{latestBraide?.date} · {latestBraide?.institute}</p><small>{latestBraide?.sample ? `n=${latestBraide.sample}` : 'Amostra não informada'} · margem {latestBraide?.margin || 'não informada'}. Não comparar diretamente com levantamentos de outra data/instituto.</small></article>
-      <article className="projection-card"><h2>Orleans · registro mais recente divulgado</h2><strong className="projection-value">{percent(latestOrleans?.orleans)}</strong><p>{latestOrleans?.date} · {latestOrleans?.institute}</p><small>Resultado unilateral reportado; os demais candidatos não foram informados, portanto não indica liderança.</small></article>
-      <article className="projection-card"><h2>Aprovação do governo Brandão</h2><strong className="projection-value">{percent(approval.value)}</strong><p>{approval.date} · {approval.institute}</p><small>Referência anterior: {percent(sources.approval[0].value)} em {sources.approval[0].date}. Indicador de contexto, não intenção de voto.</small></article>
+      <article className="projection-card"><h2>Orleans · registro mais recente divulgado</h2><strong className="projection-value">{percent(latestOrleans?.orleans)}</strong><p>{latestOrleans?.date} · {latestOrleans?.institute}</p><small>Resultado reportado pela pesquisa; diferenças entre institutos e períodos de campo não são uma série diretamente comparável.</small></article>
+      <article className="projection-card"><h2>Aprovação do governo Brandão</h2><strong className="projection-value">{percent(approval.value)}</strong><p>{approval.date} · {approval.institute}</p><small>Pesquisa e método diferentes da referência anterior ({percent(sources.approval[0].value)} em {sources.approval[0].date}); não interpretar a diferença como evolução homogênea. Indicador de contexto, não intenção de voto.</small></article>
     </section>
     {analysis && <section className="projection-card"><h2>Análise preditiva JEV</h2><p>Gerada em {new Date(analysis.gerado_em).toLocaleString('pt-BR')} · Modelo {analysis.model}</p>
       <div className="projection-grid">
         <article><h3>Cenário de primeiro turno</h3><p>{outcomes[analysis.desfecho_1t.escolha] ?? analysis.desfecho_1t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_1t.probs[analysis.desfecho_1t.escolha] * 100)} · confiança {percent(Number(analysis.desfecho_1t.confianca || 0) * 100)}</small></article>
         <article><h3>Confronto de segundo turno</h3><p>{outcomes[analysis.desfecho_2t.escolha] ?? analysis.desfecho_2t.escolha}</p><small>Probabilidade atribuída pelo modelo: {percent(analysis.desfecho_2t.probs[analysis.desfecho_2t.escolha] * 100)} · confiança {percent(Number(analysis.desfecho_2t.confianca || 0) * 100)}</small></article>
-        <article><h3>Chance de vitória · Braide</h3><p>{analysis.prob_vitoria_braide.faixa}</p><small>Distribuição por faixa: moderada62%, alta36%.</small></article>
-        <article><h3>Chance de vitória · Orleans</h3><p>{analysis.prob_vitoria_orleans.faixa}</p><small>Distribuição próxima: baixa49%, moderada45%.</small></article>
-        <article><h3>Orleans no 2º turno</h3><p>{analysis.risco_orleans_2t.faixa}</p><small>Distribuição: moderada49%, baixa40%.</small></article>
-        <article><h3>Fator de maior peso</h3><p>{analysis.fator_determinante?.escolha === 'volatilidade_braide' ? 'Volatilidade das pesquisas de Braide' : analysis.fator_determinante?.escolha}</p><small>Confiança do JEV: {percent(Number(analysis.fator_determinante?.confianca || 0) * 100)}</small></article>
-      </div><p className="projection-note">JEV é uma avaliação estruturada, não uma simulação estatística calibrada. A faixa não é um percentual exato de votos. Recalibração incorporou novas pesquisas reportadas no DOCX, concentração do eleitorado (15 maiores:37,71%) e abstenção histórica22,21% (2022); o registro MA-02569 permanece conflitante.</p>
+        <article><h3>Faixa JEV · vitória Braide</h3><p>{analysis.prob_vitoria_braide.faixa}</p><small>Distribuição de avaliação: {topBins(analysis.prob_vitoria_braide)}.</small></article>
+        <article><h3>Faixa JEV · vitória Orleans</h3><p>{analysis.prob_vitoria_orleans.faixa}</p><small>Distribuição de avaliação: {topBins(analysis.prob_vitoria_orleans)}.</small></article>
+        <article><h3>Faixa JEV · Orleans em 2º turno</h3><p>{analysis.risco_orleans_2t.faixa}</p><small>Distribuição de avaliação: {topBins(analysis.risco_orleans_2t)}.</small></article>
+        <article><h3>Fator de maior peso</h3><p>{factorLabels[analysis.fator_determinante?.escolha] ?? analysis.fator_determinante?.escolha}</p><small>Confiança do JEV: {percent(Number(analysis.fator_determinante?.confianca || 0) * 100)}</small></article>
+      </div><p className="projection-note">Atualização25/set: IPPI/Café Quente MA-09665, IP Sensus MA-02374, Quaest MA-07074 e Real Time MA-02569 reconciliado. JEV é julgamento estruturado, não simulação estatística calibrada; faixas e massas não são probabilidades eleitorais absolutas. Pesquisas de institutos/períodos diferentes não formam série homogênea.</p>
     </section>}
     <section className="projection-card"><h2>Gráficos de projeção</h2>
       <div className="projection-grid">
