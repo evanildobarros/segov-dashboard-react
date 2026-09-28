@@ -15,89 +15,52 @@
   "jev_analysis": {
    "model": "typesafe/jev-1.13-20260917",
    "provider": "TypeSafe",
-   "gerado_em": "2026-09-26T14:09:21",
-   "usage": {
-    "input_tokens": 15550,
-    "output_tokens": 1370,
-    "cost": 0.0006531
-   },
-   "revision": "Reavaliação25/set: IPPI/Café Quente 6ª onda confirmada (MA-09665) + Quaest25/set (MA-07074) + IP Sensus20/set (MA-02374) + Real Time (MA-02569).",
+   "data_atualizacao": "28/09/2026",
+   "revision": "Reexecutado em 28/09 com pesquisas recentes e contexto municipal histórico TSE 2018/2022. O resultado municipal foi usado como contexto descritivo, sem calibrar parâmetros eleitorais.",
    "desfecho_1t": {
     "tipo": "choice",
     "escolha": "segundo_turno_braide_lidera",
-    "confianca": 0.68,
+    "confianca": 0.64,
     "probs": {
-     "vitoria_1t_braide": 0.22,
-     "segundo_turno_braide_lidera": 0.75,
-     "disputa_muito_apertada": 0.02,
+     "vitoria_1t_braide": 0.01,
+     "segundo_turno_braide_lidera": 0.73,
+     "disputa_muito_apertada": 0.25,
      "segundo_turno_orleans_lidera": 0.01
     }
    },
    "desfecho_2t": {
     "tipo": "choice",
     "escolha": "braide_x_orleans",
-    "confianca": 1,
+    "confianca": 0.85,
     "probs": {
-     "braide_x_camarao": 0,
-     "braide_x_orleans": 1,
-     "outro_confronto": 0
+     "braide_x_orleans": 0.89,
+     "braide_outro": 0,
+     "orleans_outro": 0.01,
+     "indeterminado": 0.1
     }
-   },
-   "prob_vitoria_braide": {
-    "nota": 2.39,
-    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada61%, Alta39%",
-    "probs": {
-     "0": 0,
-     "1": 0,
-     "2": 0.61,
-     "3": 0.39,
-     "4": 0
-    }
-   },
-   "prob_vitoria_orleans": {
-    "nota": 1.23,
-    "faixa": "Baixa (20-40% rubrica); distribuição JEV: Baixa72%, Moderada25%",
-    "probs": {
-     "0": 0.03,
-     "1": 0.72,
-     "2": 0.25,
-     "3": 0,
-     "4": 0
-    }
-   },
-   "risco_orleans_2t": {
-    "nota": 1.88,
-    "faixa": "Moderada (30-45% rubrica); distribuição JEV: Moderada84%",
-    "probs": {
-     "0": 0.02,
-     "1": 0.11,
-     "2": 0.84,
-     "3": 0.02,
-     "4": 0.01
-    }
-   },
-   "fator_determinante": {
-    "tipo": "choice",
-    "escolha": "queda_aprovacao",
-    "confianca": 0.43,
-    "probs": {
-     "queda_aprovacao": 0.58,
-     "estrutura_municipal": 0.14,
-     "volatilidade_braide": 0.26,
-     "rejeicao_orleans": 0.02
-    }
-   },
-   "queda_aprovacao_limita_base_sim": 0.69,
-   "confianca_mapa_municipal": {
-    "nota": 1.41,
-    "faixa": "Baixa/Moderada; distribuição 55%/43%"
    },
    "mapa_apoio_final": {
     "Orleans": 156,
     "Braide": 38,
     "Indefinido": 23
    },
-   "metodologia": "JEV é decisão estruturada, não previsão estatística calibrada. Probabilidades sobre categorias da rubrica não são probabilidades eleitorais absolutas; a votação não foi simulada por município/turnout."
+   "metodologia": "Distribuições e confiança são avaliações internas do JEV, não probabilidades eleitorais calibradas nem acurácia. Apoio municipal é proxy político; não foi simulada votação por município."
+  },
+  "historical_validation": {
+   "data_atualizacao": "28/09/2026",
+   "fonte": "Resultados TSE por seção, eleições para governador de 2018 e 2022",
+   "cobertura_municipios": {
+    "2018": 217,
+    "2022": 217
+   },
+   "votos_validos_2022": 3449390,
+   "diagnostico_espacial": {
+    "transicao": "2018→2022",
+    "wmae_ols_loo_pp": 10.229,
+    "wmae_baseline_media_estadual_pp": 10.188,
+    "r2_espacial": -0.0141
+   },
+   "limitacoes": "Uma única transição temporal; o teste LOO é espacial, não validação temporal nem medida de acurácia do JEV. O modelo OLS não superou o baseline. CSV de votos válidos de 2018 soma 3.149.910, 70 acima do DOCX; eleitorado municipal não ponderado por divergências frente ao total TRE-MA."
   },
   "trend_full": [
    {
