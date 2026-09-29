@@ -159,6 +159,21 @@
    "spontaneous_orleans": 16.5
   },
   {
+   "date": "17–20/set/2026",
+   "institute": "Vox Brasil (MA-04968/2026)",
+   "sample": 1910,
+   "margin": "2,35 p.p.",
+   "braide": 46.02,
+   "orleans": 29.69,
+   "camarao": 7.28,
+   "rocha": 3.46,
+   "others": 4.03,
+   "undecided": 3.61,
+   "blank_null": 5.91,
+   "chart": true,
+   "note": "Campo17–20/set; divulgação não informada. Instituto M R Borges Promoções/Vox Brasil Publicidade Marketing; cenário estimulado; n=1.910; margem2,35 p.p.;95%. Vantagem de Braide16,33 p.p. Rejeição: Camarão19,74%; Rocha18,22%; Orleans16,54%; Braide6,34%. Demais: Arcangeli (PSTU)1,41%; Reginaldo Lima (PCB)0,99%; André Luis (Missão)0,84%; Dimas Casimiro (PCO)0,79%."
+  },
+  {
    "date": "20/set/2026",
    "institute": "IP Sensus (MA-02374/2026)",
    "sample": 1000,
@@ -215,7 +230,8 @@
   "MA-02569 Real Time Big Data reconciliado por CartaCapital: Braide45×Orleans32 (campo05-09/set); o DOCX omitia Orleans, não é divergência do resultado da pesquisa.",
   "Institutos e datas diferentes: diferenças de resultados não demonstram uma variação temporal equivalente; considerar efeito-casa, amostra e composição territorial.",
   "Atualização29/09: IP Sensus de14/set completado (Braide36,1×Orleans43; Camarão7; Rocha3,9; André Luís1,3; br/nul3,2; indecisos4; campo05–10/set) — números informados em compilação do usuário; transcrição soma98,5%. Esta onda NÃO integrou a rodada JEV de28/09.",
-  "Atualização29/09: adicionada aprovação Quaest21–24/set (MA-07074):55% aprovação,28% desaprovação. Espontânea: Quaest50% NS/NR e Real Time Big Data47% NS/NR."
+  "Atualização29/09: adicionada aprovação Quaest21–24/set (MA-07074):55% aprovação,28% desaprovação. Espontânea: Quaest50% NS/NR e Real Time Big Data47% NS/NR.",
+  "Atualização29/09: adicionada Vox Brasil (MA-04968/2026), campo17–20/set, divulgado após20/set (data exata não informada): Braide46,02×Orleans29,69 (+16,33 p.p.); n=1.910; margem2,35 p.p.;95%; estímulo com lista; rejeição Camarão19,74/Rocha18,22/Orleans16,54/Braide6,34. Alinha-se ao bloco com liderança de Braide; ainda NÃO integrou rodada JEV de29/09."
  ],
  "approval": [
   {

@@ -15,117 +15,117 @@
   "jev_analysis": {
    "model": "typesafe/jev-1.13-20260917",
    "provider": "TypeSafe",
-   "gerado_em": "2026-09-29T10:06:25",
+   "gerado_em": "2026-09-29T12:18:41",
    "data_atualizacao": "29/09/2026",
    "usage": {
-    "input_tokens": 10704,
-    "output_tokens": 1357,
-    "cost": 0.000449568
+    "input_tokens": 11524,
+    "output_tokens": 1363,
+    "cost": 0.000484008
    },
-   "revision": "Reexecução29/09 com estado atualizado:13 pesquisas curadas (IP Sensus de14/set agora completo), aprovação Quaest55/28, espontânea NS/NR e diagnóstico TSE 2018/2022; 31 perguntas.",
+   "revision": "Reexecução29/09 (2ª rodada):14 pesquisas — Vox Brasil MA-04968/2026 incorporada — e rejeição ampliada para9 leituras (planilha sem data × Vox17–20/set), divergências mantidas. Cenário de2ºT com Braide na liderança subiu para90% (conf0,86).",
    "desfecho_1t": {
     "tipo": "choice",
     "escolha": "segundo_turno_braide_lidera",
-    "confianca": 0.78,
+    "confianca": 0.86,
     "probs": {
-     "vitoria_1t_braide": 0.09,
-     "disputa_muito_apertada": 0.03,
-     "segundo_turno_orleans_lidera": 0.05,
-     "segundo_turno_braide_lidera": 0.83
+     "disputa_muito_apertada": 0.01,
+     "vitoria_1t_braide": 0.05,
+     "segundo_turno_orleans_lidera": 0.04,
+     "segundo_turno_braide_lidera": 0.9
     }
    },
    "desfecho_2t": {
     "tipo": "choice",
     "escolha": "braide_x_orleans",
-    "confianca": 0.99,
+    "confianca": 0.94,
     "probs": {
-     "braide_x_orleans": 0.99,
      "outro_confronto": 0,
-     "braide_x_camarao": 0.01
+     "braide_x_camarao": 0.04,
+     "braide_x_orleans": 0.96
     }
    },
    "prob_vitoria_braide": {
     "tipo": "score",
-    "nota": 2.46,
-    "confianca": 0.57,
-    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada50%, Alta47%",
+    "nota": 2.83,
+    "confianca": 0.79,
     "probs": {
      "0": 0,
-     "1": 0.02,
-     "2": 0.5,
-     "3": 0.47,
-     "4": 0.01
-    }
+     "1": 0.01,
+     "2": 0.19,
+     "3": 0.76,
+     "4": 0.04
+    },
+    "faixa": "Alta (60-80%) rubrica; distribuição JEV: Alta76%, Moderada19%"
    },
    "prob_vitoria_orleans": {
     "tipo": "score",
-    "nota": 1.67,
-    "confianca": 0.6,
-    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada54%, Baixa38%",
+    "nota": 1.38,
+    "confianca": 0.63,
     "probs": {
-     "0": 0.01,
-     "1": 0.38,
-     "2": 0.54,
-     "3": 0.07,
+     "0": 0.03,
+     "1": 0.61,
+     "2": 0.32,
+     "3": 0.04,
      "4": 0
-    }
+    },
+    "faixa": "Baixa (20-40%) rubrica; distribuição JEV: Baixa61%, Moderada32%"
    },
    "risco_orleans_2t": {
     "tipo": "score",
-    "nota": 1.1,
-    "confianca": 0.56,
-    "faixa": "Baixa (15-30% rubrica); distribuição JEV: Baixa54%, Muito baixa21%",
+    "nota": 1.12,
+    "confianca": 0.58,
     "probs": {
-     "0": 0.21,
-     "1": 0.54,
-     "2": 0.2,
-     "3": 0.04,
+     "0": 0.19,
+     "1": 0.56,
+     "2": 0.21,
+     "3": 0.03,
      "4": 0.01
-    }
+    },
+    "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Baixa56%, Moderada21%"
    },
    "fator_determinante": {
     "tipo": "choice",
     "escolha": "estrutura_municipal",
-    "confianca": 0.43,
+    "confianca": 0.57,
     "probs": {
-     "estrutura_municipal": 0.58,
-     "rejeicao_orleans": 0.01,
-     "queda_aprovacao": 0.01,
-     "volatilidade_braide": 0.4
+     "estrutura_municipal": 0.67,
+     "rejeicao_orleans": 0.02,
+     "queda_aprovacao": 0.02,
+     "volatilidade_braide": 0.29
     }
    },
    "queda_aprovacao_limita_base": {
     "tipo": "noul",
-    "sim": 0.6,
+    "sim": 0.62,
     "confianca": null
    },
    "confianca_mapa_municipal": {
     "tipo": "score",
-    "nota": 1.72,
-    "confianca": 0.7,
-    "faixa": "Moderada; distribuição JEV: Moderada67%, Baixa29%",
+    "nota": 1.71,
+    "confianca": 0.69,
     "probs": {
      "0": 0.01,
-     "1": 0.29,
-     "2": 0.67,
-     "3": 0.03,
+     "1": 0.31,
+     "2": 0.64,
+     "3": 0.04,
      "4": 0
-    }
+    },
+    "faixa": "Moderada rubrica; distribuição JEV: Moderada64%, Baixa31%"
    },
    "avaliacao_municipal_interna": {
-    "orleans": 7,
+    "orleans": 4,
     "braide": 0,
-    "indefinido": 16,
+    "indefinido": 19,
     "total": 23,
     "aplicada_ao_mapa": false,
-    "motivo": "Distribuição interna do JEV sobre os23 sem alinhamento; NÃO aplicada ao mapa oficial por regra de evidência (municípios sem apoio declarado permanecem indefinidos; JEV não classifica por partido)."
+    "motivo": "Regra de evidência: municípios sem apoio declarado permanecem indefinidos no mapa oficial; JEV não classifica por partido."
    },
    "mapa_apoio_final": {
     "Orleans": 156,
     "Braide": 38,
     "Indefinido": 23
    },
-   "metodologia": "Rodada29/09/2026 (31 perguntas, custo US$0.000449568). Distribuições e confiança são avaliações internas do JEV, não probabilidades eleitorais calibradas nem acurácia. Apoio municipal é proxy político; votação não simulada por município/turnout."
+   "metodologia": "Análise estruturada JEV (TypeSafe), não calibrada estatisticamente; distribuições são avaliações internas do modelo, não probabilidades eleitorais. Estado:14 pesquisas + rejeição9 leituras divergentes (planilha sem data × Vox17–20/set) + diagnóstico TSE 2018/2022 sem ganho vs baseline; eleitorado não ponderado (divergências CSV×TRE-MA); institutos/datas distintos não formam série homogênea; mapa oficial156/38/23 preservado (sem evidência = indefinido)."
   },
   "historical_validation": {
    "data_atualizacao": "28/09/2026",
@@ -197,6 +197,12 @@
     "braide": 46.0,
     "orleans": 27.0,
     "institute": "Quaest MA-07074/2026"
+   },
+   {
+    "date": "17–20/set/2026",
+    "institute": "Vox Brasil (MA-04968/2026)",
+    "braide": 46.02,
+    "orleans": 29.69
    }
   ],
   "ultima_pesquisa_1T": {
