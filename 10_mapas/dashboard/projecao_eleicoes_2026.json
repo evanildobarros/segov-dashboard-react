@@ -1,7 +1,7 @@
 {
  "state_metrics": {
   "braide_current_pct": 46.0,
-  "gov_approval_pct": 53.0,
+  "gov_approval_pct": 55.0,
   "trend": [
    {
     "date": "15/set/2026",
@@ -15,89 +15,133 @@
   "jev_analysis": {
    "model": "typesafe/jev-1.13-20260917",
    "provider": "TypeSafe",
-   "gerado_em": "2026-09-26T14:09:21",
+   "gerado_em": "2026-09-29T10:06:25",
+   "data_atualizacao": "29/09/2026",
    "usage": {
-    "input_tokens": 15550,
-    "output_tokens": 1370,
-    "cost": 0.0006531
+    "input_tokens": 10704,
+    "output_tokens": 1357,
+    "cost": 0.000449568
    },
-   "revision": "Reavaliação25/set: IPPI/Café Quente 6ª onda confirmada (MA-09665) + Quaest25/set (MA-07074) + IP Sensus20/set (MA-02374) + Real Time (MA-02569).",
+   "revision": "Reexecução29/09 com estado atualizado:13 pesquisas curadas (IP Sensus de14/set agora completo), aprovação Quaest55/28, espontânea NS/NR e diagnóstico TSE 2018/2022; 31 perguntas.",
    "desfecho_1t": {
     "tipo": "choice",
     "escolha": "segundo_turno_braide_lidera",
-    "confianca": 0.68,
+    "confianca": 0.78,
     "probs": {
-     "vitoria_1t_braide": 0.22,
-     "segundo_turno_braide_lidera": 0.75,
-     "disputa_muito_apertada": 0.02,
-     "segundo_turno_orleans_lidera": 0.01
+     "vitoria_1t_braide": 0.09,
+     "disputa_muito_apertada": 0.03,
+     "segundo_turno_orleans_lidera": 0.05,
+     "segundo_turno_braide_lidera": 0.83
     }
    },
    "desfecho_2t": {
     "tipo": "choice",
     "escolha": "braide_x_orleans",
-    "confianca": 1,
+    "confianca": 0.99,
     "probs": {
-     "braide_x_camarao": 0,
-     "braide_x_orleans": 1,
-     "outro_confronto": 0
+     "braide_x_orleans": 0.99,
+     "outro_confronto": 0,
+     "braide_x_camarao": 0.01
     }
    },
    "prob_vitoria_braide": {
-    "nota": 2.39,
-    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada61%, Alta39%",
+    "tipo": "score",
+    "nota": 2.46,
+    "confianca": 0.57,
+    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada50%, Alta47%",
     "probs": {
      "0": 0,
-     "1": 0,
-     "2": 0.61,
-     "3": 0.39,
-     "4": 0
+     "1": 0.02,
+     "2": 0.5,
+     "3": 0.47,
+     "4": 0.01
     }
    },
    "prob_vitoria_orleans": {
-    "nota": 1.23,
-    "faixa": "Baixa (20-40% rubrica); distribuição JEV: Baixa72%, Moderada25%",
+    "tipo": "score",
+    "nota": 1.67,
+    "confianca": 0.6,
+    "faixa": "Moderada (40-60% rubrica); distribuição JEV: Moderada54%, Baixa38%",
     "probs": {
-     "0": 0.03,
-     "1": 0.72,
-     "2": 0.25,
-     "3": 0,
+     "0": 0.01,
+     "1": 0.38,
+     "2": 0.54,
+     "3": 0.07,
      "4": 0
     }
    },
    "risco_orleans_2t": {
-    "nota": 1.88,
-    "faixa": "Moderada (30-45% rubrica); distribuição JEV: Moderada84%",
+    "tipo": "score",
+    "nota": 1.1,
+    "confianca": 0.56,
+    "faixa": "Baixa (15-30% rubrica); distribuição JEV: Baixa54%, Muito baixa21%",
     "probs": {
-     "0": 0.02,
-     "1": 0.11,
-     "2": 0.84,
-     "3": 0.02,
+     "0": 0.21,
+     "1": 0.54,
+     "2": 0.2,
+     "3": 0.04,
      "4": 0.01
     }
    },
    "fator_determinante": {
     "tipo": "choice",
-    "escolha": "queda_aprovacao",
+    "escolha": "estrutura_municipal",
     "confianca": 0.43,
     "probs": {
-     "queda_aprovacao": 0.58,
-     "estrutura_municipal": 0.14,
-     "volatilidade_braide": 0.26,
-     "rejeicao_orleans": 0.02
+     "estrutura_municipal": 0.58,
+     "rejeicao_orleans": 0.01,
+     "queda_aprovacao": 0.01,
+     "volatilidade_braide": 0.4
     }
    },
-   "queda_aprovacao_limita_base_sim": 0.69,
+   "queda_aprovacao_limita_base": {
+    "tipo": "noul",
+    "sim": 0.6,
+    "confianca": null
+   },
    "confianca_mapa_municipal": {
-    "nota": 1.41,
-    "faixa": "Baixa/Moderada; distribuição 55%/43%"
+    "tipo": "score",
+    "nota": 1.72,
+    "confianca": 0.7,
+    "faixa": "Moderada; distribuição JEV: Moderada67%, Baixa29%",
+    "probs": {
+     "0": 0.01,
+     "1": 0.29,
+     "2": 0.67,
+     "3": 0.03,
+     "4": 0
+    }
+   },
+   "avaliacao_municipal_interna": {
+    "orleans": 7,
+    "braide": 0,
+    "indefinido": 16,
+    "total": 23,
+    "aplicada_ao_mapa": false,
+    "motivo": "Distribuição interna do JEV sobre os23 sem alinhamento; NÃO aplicada ao mapa oficial por regra de evidência (municípios sem apoio declarado permanecem indefinidos; JEV não classifica por partido)."
    },
    "mapa_apoio_final": {
     "Orleans": 156,
     "Braide": 38,
     "Indefinido": 23
    },
-   "metodologia": "JEV é decisão estruturada, não previsão estatística calibrada. Probabilidades sobre categorias da rubrica não são probabilidades eleitorais absolutas; a votação não foi simulada por município/turnout."
+   "metodologia": "Rodada29/09/2026 (31 perguntas, custo US$0.000449568). Distribuições e confiança são avaliações internas do JEV, não probabilidades eleitorais calibradas nem acurácia. Apoio municipal é proxy político; votação não simulada por município/turnout."
+  },
+  "historical_validation": {
+   "data_atualizacao": "28/09/2026",
+   "fonte": "Resultados TSE por seção, eleições para governador de 2018 e 2022",
+   "cobertura_municipios": {
+    "2018": 217,
+    "2022": 217
+   },
+   "votos_validos_2022": 3449390,
+   "diagnostico_espacial": {
+    "transicao": "2018→2022",
+    "wmae_ols_loo_pp": 10.229,
+    "wmae_baseline_media_estadual_pp": 10.188,
+    "r2_espacial": -0.0141
+   },
+   "limitacoes": "Uma única transição temporal; o teste LOO é espacial, não validação temporal nem medida de acurácia do JEV. O modelo OLS não superou o baseline. CSV de votos válidos de 2018 soma 3.149.910, 70 acima do DOCX; eleitorado municipal não ponderado por divergências frente ao total TRE-MA."
   },
   "trend_full": [
    {

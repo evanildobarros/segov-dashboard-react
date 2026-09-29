@@ -121,19 +121,23 @@
    "chart": true,
    "note": "Registro e percentuais confirmados em cobertura pública; o DOCX anterior omitia Orleans.",
    "undecided": 3.0,
-   "blank_null": 2.0
+   "blank_null": 2.0,
+   "spontaneous_undecided": 47.0
   },
   {
    "date": "14/set/2026",
-   "institute": "IP Sensus (DOCX)",
+   "institute": "IP Sensus",
    "sample": null,
    "margin": null,
-   "braide": null,
+   "braide": 36.1,
    "orleans": 43.0,
-   "camarao": null,
-   "others": null,
-   "chart": false,
-   "note": "Resultado unilateral reportado no DOCX; registro/metadados não confirmados. Mantido separado da pesquisa MA-02374 divulgada20/set."
+   "camarao": 7.0,
+   "rocha": 3.9,
+   "others": 1.3,
+   "undecided": 4.0,
+   "blank_null": 3.2,
+   "chart": true,
+   "note": "Divulgado14/set; campo05–10/set. Números completos informados em compilação do usuário em29/09/2026 (antes só Orleans estava disponível). Registro TSE não confirmado; mantida separada da MA-02374 (campo14–18/set, divulgada20/set). Transcrição soma98,5%;1,5 p.p. não discriminados na fonte."
   },
   {
    "date": "15/set/2026",
@@ -182,6 +186,7 @@
    "undecided": 9.0,
    "blank_null": 3.0,
    "chart": true,
+   "spontaneous_undecided": 50.0,
    "note": "Divulgada25/set; 95%. 2º turno: Braide55×Orleans33. Escolha declarada definitiva70%; ainda pode mudar28%."
   }
  ],
@@ -201,14 +206,16 @@
   "- Exame, InfoMoney, Diário do Nordeste — resultado oficial do 1º turno de 2022 (apuração TSE)",
   "Atualização por Análise Eleitoral Maranhão 2026.docx (enviado pelo usuário): pesquisas Quaest, Qualitativa, IP Sensus e IPPI são transcritas como reportadas no documento; não tiveram registro/amostra completos verificados aqui.",
   "Conflito: MA-02569/2026 de05–09/set aparece na planilha anterior como instituto n.i. e 45% Braide/32% Orleans; o DOCX identifica Real Time Big Data e informa Braide45% sem percentual de Orleans. Mantido como registro contestado, excluído da série gráfica comparativa até reconciliação.",
-  "IP Sensus de14/set e20/set reporta apenas Orleans (43,0% e43,6%); não comparar diretamente nem inferir liderança sem os percentuais dos demais candidatos.",
+  "O DOCX original reportava apenas Orleans para as ondas IP Sensus de14/set e20/set; os números completos foram preenchidos depois —20/set por cobertura pública (MA-02374) e14/set por compilação do usuário em29/09 (campo05–10/set, registro não confirmado).",
   "Questionamentos jurídicos/metodológicos a pesquisas são alegações narradas no DOCX; não foram validados como decisões judiciais e não geram desconto automático.",
   "A série mistura institutos, metodologias e bases diferentes; gráfico é apenas registro de levantamentos, não tendência amostral homogênea.",
   "Atualização25/09: adicionada Quaest21-24/set (MA-07074; TV Mirante; n900; margem3 p.p.; Braide46×Orleans27; 2º turno55×33).",
   "IPPI/Café Quente 6ª onda, divulgação15/set (MA-09665): campo10-14/set, n1500/80 municípios, margem2,5 p.p.; Braide44,5×Orleans27,8 no total e51,7×32,3 nos votos válidos.",
   "IP Sensus MA-02374, divulgação20/set: resultado completo confirmado por cobertura, Orleans43,6×Braide35,7; campo14-18/set, n1000/62 municípios, margem3,1 p.p. O registro unilateral de14/set no DOCX é mantido separado, sem substituir este.",
   "MA-02569 Real Time Big Data reconciliado por CartaCapital: Braide45×Orleans32 (campo05-09/set); o DOCX omitia Orleans, não é divergência do resultado da pesquisa.",
-  "Institutos e datas diferentes: diferenças de resultados não demonstram uma variação temporal equivalente; considerar efeito-casa, amostra e composição territorial."
+  "Institutos e datas diferentes: diferenças de resultados não demonstram uma variação temporal equivalente; considerar efeito-casa, amostra e composição territorial.",
+  "Atualização29/09: IP Sensus de14/set completado (Braide36,1×Orleans43; Camarão7; Rocha3,9; André Luís1,3; br/nul3,2; indecisos4; campo05–10/set) — números informados em compilação do usuário; transcrição soma98,5%. Esta onda NÃO integrou a rodada JEV de28/09.",
+  "Atualização29/09: adicionada aprovação Quaest21–24/set (MA-07074):55% aprovação,28% desaprovação. Espontânea: Quaest50% NS/NR e Real Time Big Data47% NS/NR."
  ],
  "approval": [
   {
@@ -230,6 +237,14 @@
    "disapproval": 40.3,
    "sample": 1500,
    "margin": "2,5 p.p."
+  },
+  {
+   "date": "21–24/set/2026",
+   "institute": "Quaest (MA-07074/2026)",
+   "value": 55.0,
+   "disapproval": 28.0,
+   "sample": 900,
+   "margin": "3,0 p.p."
   }
  ]
 }
