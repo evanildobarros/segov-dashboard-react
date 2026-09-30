@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import projection from '../data/projecao_eleicoes_2026.json';
 import sources from '../data/projecao_fontes.json';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Projecao2026.css';
 
 const colors = { Orleans: '#3b82f6', Braide: '#f97316', Indefinido: '#94a3b8' };
@@ -25,6 +25,10 @@ export default function Projecao2026() {
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const analysis = projection.state_metrics.jev_analysis;
+  const rubrica = ['Muito baixa', 'Baixa', 'Moderada', 'Alta', 'Muito alta'];
+  const corCenario = key => key === 'segundo_turno_braide_lidera' ? '#f97316' : key === 'vitoria_1t_braide' ? '#fb923c' : key === 'segundo_turno_orleans_lidera' ? '#3b82f6' : '#94a3b8';
+  const cenarios1t = Object.entries(analysis?.desfecho_1t?.probs ?? {}).map(([key, value]) => ({ name: outcomes[key] ?? key, value: +(value * 100).toFixed(1), cor: corCenario(key) })).sort((a, b) => b.value - a.value);
+  const faixasVitoria = rubrica.map((label, index) => ({ name: label, Braide: +((analysis?.prob_vitoria_braide?.probs?.[String(index)] ?? 0) * 100).toFixed(1), Orleans: +((analysis?.prob_vitoria_orleans?.probs?.[String(index)] ?? 0) * 100).toFixed(1) }));
   const latestBraide = [...sources.polls].reverse().find(p => p.braide != null && p.chart !== false);
   const latestOrleans = [...sources.polls].reverse().find(p => p.orleans != null);
   const approval = sources.approval.at(-1);
@@ -49,7 +53,40 @@ export default function Projecao2026() {
       <div className="projection-grid">
         <article><h3>Cenário de primeiro turno</h3><p>{outcomes[analysis.desfecho_1t.escolha] ?? analysis.desfecho_1t.escolha}</p><small>Distribuição interna do JEV: {percent(analysis.desfecho_1t.probs[analysis.desfecho_1t.escolha] * 100)} · confiança interna: {percent(Number(analysis.desfecho_1t.confianca || 0) * 100)}. Não é probabilidade eleitoral calibrada.</small></article>
         <article><h3>Cenário de segundo turno</h3><p>{outcomes[analysis.desfecho_2t.escolha] ?? analysis.desfecho_2t.escolha}</p><small>Distribuição interna do JEV: {percent(analysis.desfecho_2t.probs[analysis.desfecho_2t.escolha] * 100)} · confiança interna: {percent(Number(analysis.desfecho_2t.confianca || 0) * 100)}. Não é probabilidade eleitoral calibrada.</small></article>
-      </div><p className="projection-note">{analysis.revision} {analysis.metodologia} Pesquisas de institutos e períodos distintos não formam uma série homogênea.</p>
+      </div>
+      <div className="projection-grid">
+        <article><h3>Gráfico da predição — cenários do 1º turno</h3>
+          <div style={{ height: '300px' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={cenarios1t} margin={{ top: 8, right: 8, bottom: 8, left: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
+                <XAxis dataKey="name" fontSize={10} interval={0} height={72} angle={-15} textAnchor="end" />
+                <YAxis domain={[0, 100]} unit="%" fontSize={11} />
+                <Tooltip formatter={(v) => `${v}%`} />
+                <Bar dataKey="value" radius={[4, 4, 0, 0]}>{cenarios1t.map(entry => <Cell key={entry.name} fill={entry.cor} />)}</Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <small>Distribuição interna do modelo entre os cenários do 1º turno — não é probabilidade eleitoral calibrada.</small>
+        </article>
+        <article><h3>Faixas de vitória (rubrica JEV) — Braide × Orleans</h3>
+          <div style={{ height: '300px' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={faixasVitoria} margin={{ top: 8, right: 8, bottom: 8, left: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#eee" />
+                <XAxis dataKey="name" fontSize={11} />
+                <YAxis domain={[0, 100]} unit="%" fontSize={11} />
+                <Tooltip formatter={(v) => `${v}%`} />
+                <Legend />
+                <Bar dataKey="Braide" fill="#f97316" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="Orleans" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <small>Massa de probabilidade interna por faixa de rubrica de cada candidato; faixas distintas não somam 100% entre candidatos.</small>
+        </article>
+      </div>
+      <p className="projection-note">{analysis.revision} {analysis.metodologia} Pesquisas de institutos e períodos distintos não formam uma série homogênea.</p>
     </section>}
     {projection.state_metrics.historical_validation && <section className="projection-card"><h2>Validação histórica exploratória · TSE</h2>
       <p>Base de 2018 e 2022: {projection.state_metrics.historical_validation.cobertura_municipios['2018']}/217 e {projection.state_metrics.historical_validation.cobertura_municipios['2022']}/217 municípios. O total de votos válidos de 2022 ({projection.state_metrics.historical_validation.votos_validos_2022.toLocaleString('pt-BR')}) confere com a totalização estadual do TSE.</p>

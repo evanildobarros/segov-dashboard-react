@@ -22,7 +22,7 @@
     "output_tokens": 1357,
     "cost": 0.000562506
    },
-   "revision": "Reexecución 30/09 (rodada con contexto municipal): se incorporaron 11 municipios de votos válidos (Café Quente/IPPI + Quaest). Señal: en 6 de 8 municipios del bloque oficialista la intención supera el apoyo político (el proxy de alineación sobrestima la base de Orleans). Escenario 2ºT con Braide en la delantera: 87% interna (conf0,83); victoria en 1ª vuelta subió a 12%.",
+   "revision": "Reexecução 30/09 (rodada com contexto municipal): incorporados 11 municípios de votos válidos (Café Quente/IPPI + Quaest). Sinal: em 6 de 8 municípios do bloco oficialista a intenção supera o apoio político (o proxy de alinhamento superestima a base de Orleans). Cenário de 2º turno com Braide na liderança: 87% interno (conf. 0,83); vitória no 1º turno subiu para 12%.",
    "desfecho_1t": {
     "tipo": "choice",
     "escolha": "segundo_turno_braide_lidera",
@@ -55,7 +55,7 @@
      "3": 0.8,
      "4": 0.07
     },
-    "faixa": "Alta (60-80%) rubrica; distribución JEV: Alta80%, Moderada13%"
+    "faixa": "Alta (60-80%) rubrica; distribuição JEV: Alta80%, Moderada13%"
    },
    "prob_vitoria_orleans": {
     "tipo": "score",
@@ -68,7 +68,7 @@
      "3": 0.01,
      "4": 0
     },
-    "faixa": "Baixa (20-40%) rubrica; distribución JEV: Baixa75%, Moderada16%"
+    "faixa": "Baixa (20-40%) rubrica; distribuição JEV: Baixa75%, Moderada16%"
    },
    "risco_orleans_2t": {
     "tipo": "score",
@@ -81,7 +81,7 @@
      "3": 0.02,
      "4": 0.01
     },
-    "faixa": "Baixa (15-30%) rubrica; distribución JEV: Baixa52%, Muito baixa31%"
+    "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Baixa52%, Muito baixa31%"
    },
    "fator_determinante": {
     "tipo": "choice",
@@ -110,7 +110,7 @@
      "3": 0,
      "4": 0
     },
-    "faixa": "Baixa rubrica; distribución JEV: Baixa66%, Moderada28%"
+    "faixa": "Baixa rubrica; distribuição JEV: Baixa66%, Moderada28%"
    },
    "avaliacao_municipal_interna": {
     "orleans": 6,
@@ -118,14 +118,14 @@
     "indefinido": 16,
     "total": 23,
     "aplicada_ao_mapa": false,
-    "motivo": "Regla de evidencia: municipios sin apoyo declarado permanecen indefinidos en el mapa oficial; JEV no clasifica por partido."
+    "motivo": "Regra de evidência: municípios sem apoio declarado permanecem indefinidos no mapa oficial; o JEV não classifica por partido."
    },
    "mapa_apoio_final": {
     "Orleans": 156,
     "Braide": 38,
     "Indefinido": 23
    },
-   "metodologia": "Análisis estructurado JEV (TypeSafe), no calibrado estadísticamente; las distribuciones son evaluaciones internas del modelo, no probabilidades electorales. En esta rodada se anexó contexto municipal (11 municipios, votos válidos) que señala divergencia entre intención y alineación política; esto BAJÓ la confianza del mapa municipal (rubrica Baixa) y subió el sesgo pro-Braide, sin modificar la clasificación oficial 156/38/23."
+   "metodologia": "Análise estruturada JEV (TypeSafe), não calibrada estatisticamente; as distribuições são avaliações internas do modelo, não probabilidades eleitorais. Nesta rodada anexou-se contexto municipal (11 municípios, votos válidos) que aponta divergência entre intenção e alinhamento político; isso reduziu a confiança do mapa municipal (rubrica Baixa) e elevou o viés pró-Braide, sem alterar a classificação oficial 156/38/23."
   },
   "historical_validation": {
    "data_atualizacao": "28/09/2026",
@@ -272,7 +272,7 @@
    "caveat": "Pesquisas de casas/metodologias distintas divergem; não são série comparável."
   },
   "projection_source_document": "Análise Eleitoral Maranhão 2026.docx",
-  "pesquisas_municipais_set2026": {
+  "contexto_municipal_votacao_set2026": {
    "series": [
     {
      "municipio": "Santa Inês",
@@ -280,18 +280,18 @@
      "orleans": 28.5,
      "camarao": 8.9,
      "rocha": 2.0,
-     "otros": {
+     "n": 260,
+     "registro": null,
+     "nota": null,
+     "delta_braide_orleans": 29.2,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {
       "André Luis": 2.0,
       "Reginaldo Lima": 0.3,
       "Saulo Arcangeli": 0.3,
       "Dimas Casimiro": 0.3
-     },
-     "n": 260,
-     "margen": null,
-     "registro": null,
-     "fecha": null,
-     "nota": null,
-     "delta_braide_orleans": 29.2
+     }
     },
     {
      "municipio": "Timon",
@@ -299,13 +299,13 @@
      "orleans": 51.1,
      "camarao": 11.0,
      "rocha": 7.0,
-     "otros": {},
      "n": null,
-     "margen": null,
      "registro": null,
-     "fecha": null,
-     "nota": "Orleans lidera; fuerte voto PT (Camarão11)",
-     "delta_braide_orleans": -26.1
+     "nota": "Orleans lidera; forte voto do PT local (Camarão 11)",
+     "delta_braide_orleans": -26.1,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {}
     },
     {
      "municipio": "São João dos Patos",
@@ -313,15 +313,15 @@
      "orleans": 46.1,
      "camarao": 2.9,
      "rocha": 1.5,
-     "otros": {
-      "André Luis": 1.0
-     },
      "n": null,
-     "margen": null,
      "registro": null,
-     "fecha": null,
-     "nota": "Competencia casi empate (+2,4)",
-     "delta_braide_orleans": 2.4
+     "nota": "Competição quase empatada (+2,4)",
+     "delta_braide_orleans": 2.4,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {
+      "André Luis": 1.0
+     }
     },
     {
      "municipio": "Barreirinhas",
@@ -329,35 +329,35 @@
      "orleans": 38.6,
      "camarao": 4.1,
      "rocha": 0.4,
-     "otros": {
+     "n": 300,
+     "registro": null,
+     "nota": "Município do bloco oficialista Brandão",
+     "delta_braide_orleans": 16.3,
+     "periodo_campo": "21-22/set/2026",
+     "margem": null,
+     "outros": {
       "Reginaldo Lima": 0.8,
       "Dimas Casimiro": 0.4,
       "André Luis": 0.4,
       "Saulo Arcangeli": 0.4
-     },
-     "n": 300,
-     "margen": null,
-     "registro": null,
-     "fecha": "21-22/set/2026",
-     "nota": "Grupo oficialista Brandão",
-     "delta_braide_orleans": 16.3
+     }
     },
     {
      "municipio": "Chapadinha",
      "braide": 61.5,
      "orleans": 17.6,
      "camarao": 14.9,
-     "otros": {
+     "n": null,
+     "registro": null,
+     "nota": "Município do bloco Braide",
+     "delta_braide_orleans": 43.9,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {
       "André Luis": 2.7,
       "Roberto Rocha": 2.4,
       "Dimas Casimiro": 1.0
-     },
-     "n": null,
-     "margen": null,
-     "registro": null,
-     "fecha": null,
-     "nota": "Grupo Braide",
-     "delta_braide_orleans": 43.9
+     }
     },
     {
      "municipio": "Viana",
@@ -365,13 +365,13 @@
      "orleans": 28.5,
      "camarao": 8.9,
      "rocha": 2.0,
-     "otros": {},
      "n": null,
-     "margen": null,
      "registro": null,
-     "fecha": null,
-     "nota": "Cifras idénticas a Santa Inês — posible duplicado/regional compartido",
-     "delta_braide_orleans": 29.2
+     "nota": "Cifras idênticas às de Santa Inês — possível duplicidade/regional compartilhado",
+     "delta_braide_orleans": 29.2,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {}
     },
     {
      "municipio": "Balsas",
@@ -379,13 +379,13 @@
      "orleans": 33.0,
      "camarao": 8.9,
      "rocha": 13.1,
-     "otros": {},
      "n": null,
-     "margen": 4.9,
      "registro": null,
-     "fecha": null,
-     "nota": "Ventaja Braide dentro de la margen → empate técnico",
-     "delta_braide_orleans": 9.4
+     "nota": "Vantagem de Braide dentro da margem → empate técnico",
+     "delta_braide_orleans": 9.4,
+     "periodo_campo": null,
+     "margem": 4.9,
+     "outros": {}
     },
     {
      "municipio": "Caxias",
@@ -393,13 +393,13 @@
      "orleans": 30.3,
      "camarao": 25.8,
      "rocha": 4.3,
-     "otros": {},
      "n": null,
-     "margen": null,
      "registro": null,
-     "fecha": null,
-     "nota": "Fuerte voto PT local (Camarão25,8)",
-     "delta_braide_orleans": 6.8
+     "nota": "Forte voto do PT local (Camarão 25,8)",
+     "delta_braide_orleans": 6.8,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {}
     },
     {
      "municipio": "Pinheiro",
@@ -407,13 +407,13 @@
      "orleans": 25.3,
      "camarao": 6.0,
      "rocha": 3.2,
-     "otros": {},
      "n": 400,
-     "margen": 4.9,
      "registro": "MA-08531/2026",
-     "fecha": "15-17/set/2026",
-     "nota": "Grupo oficialista Brandão; 6/8 divergencia",
-     "delta_braide_orleans": 38.6
+     "nota": "Município do bloco oficialista Brandão; um dos 6 de 8 em divergência",
+     "delta_braide_orleans": 38.6,
+     "periodo_campo": "15-17/set/2026",
+     "margem": 4.9,
+     "outros": {}
     },
     {
      "municipio": "Presidente Dutra",
@@ -421,15 +421,15 @@
      "orleans": 35.8,
      "camarao": 3.5,
      "rocha": 3.5,
-     "otros": {
-      "André Luis": 0.4
-     },
      "n": 300,
-     "margen": 5.7,
      "registro": "MA-07139/2026",
-     "fecha": "15-17/set/2026",
-     "nota": "Grupo Braide",
-     "delta_braide_orleans": 21.0
+     "nota": "Município do bloco Braide",
+     "delta_braide_orleans": 21.0,
+     "periodo_campo": "15-17/set/2026",
+     "margem": 5.7,
+     "outros": {
+      "André Luis": 0.4
+     }
     },
     {
      "municipio": "São Luís",
@@ -437,24 +437,24 @@
      "orleans": 11.9,
      "camarao": 5.9,
      "rocha": 1.0,
-     "otros": {},
      "n": 1000,
-     "margen": null,
      "registro": "MA-02079/2026",
-     "fecha": null,
-     "nota": "Capital, ~14% del electorado estatal; bastión Braide",
-     "delta_braide_orleans": 67.3
+     "nota": "Capital, ~14% do eleitorado estadual; bastião de Braide",
+     "delta_braide_orleans": 67.3,
+     "periodo_campo": null,
+     "margem": null,
+     "outros": {}
     }
    ],
-   "resumen": {
-    "municipios_con_dato": 11,
+   "resumo": {
+    "municipios_com_dado": 11,
     "braide_lidera": 10,
     "orleans_lidera": 1,
-    "oficialismo_8_mas_braide": [
+    "oficialistas_com_braide_a_frente": [
      "Barreirinhas",
      "Pinheiro"
     ],
-    "lectura": "Braide lidera en 10 de 11 municipios en votos válidos; en 6 de 8 del bloque oficialista (Brandão/Orleans) la intención de voto supera el apoyo político (proxy de alineación sobrestima la base de Orleans); São Luís 79,2 refuerza el sesgo pro-Braide. Muestras chicas (n260-1000, margen ±4,9-5,7): contextual, no agregado estatal ponderado; no se promedia a estatal."
+    "leitura": "Braide lidera em 10 de 11 municípios em votos válidos; em 6 de 8 municípios do bloco oficialista (Brandão/Orleans) a intenção de voto supera o apoio político (o proxy de alinhamento superestima a base de Orleans); São Luís com 79,2 reforça o viés pró-Braide. Amostras pequenas (n 260–1000; margem ±4,9–5,7): é contexto, não agregado estadual ponderado; não se promedia para o estado."
    }
   }
  },
