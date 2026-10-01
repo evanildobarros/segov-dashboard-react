@@ -15,107 +15,107 @@
     "jev_analysis": {
       "model": "typesafe/jev-1.13-20260917",
       "provider": "TypeSafe",
-      "gerado_em": "2026-09-30T14:28:59",
-      "data_atualizacao": "30/09/2026",
+      "gerado_em": "2026-10-01T14:20:55",
+      "data_atualizacao": "01/10/2026",
       "usage": {
-        "input_tokens": 13393,
-        "output_tokens": 1357,
-        "cost": 0.000562506
+        "input_tokens": 13797,
+        "output_tokens": 1363,
+        "cost": 0.000579474
       },
-      "revision": "Reexecução 30/09 (rodada com contexto municipal): incorporados 11 municípios de votos válidos (Café Quente/IPPI + Quaest). Sinal: em 6 de 8 municípios do bloco oficialista a intenção supera o apoio político (o proxy de alinhamento superestima a base de Orleans). Cenário de 2º turno com Braide na liderança: 87% interno (conf. 0,83); vitória no 1º turno subiu para 12%.",
+      "revision": "Reexecução 01/10 (rodada com a Viva Voz/Tribuna 98, MA-05333/2026, campo 22–27/set, base de VOTOS VÁLIDOS, divulgada 29/09 — 15ª pesquisa no state). Efeito: a vitória de Braide já no 1º turno subiu de 12% para 28% interno e a confiança do desfecho do 1º turno caiu de 0,83 para 0,57 — o cenário ficou mais incerto, com o modelo dividido entre 2º turno (68%) e 1º turno (28%). O 2º turno Braide×Orleans subiu para 98% (conf 0,98). Faixa de vitória de Braide segue Alta (Alta70%, Moderada22%, Muito alta7%; nota 2,83); Orleans sobe de nota 1,10 para 1,47 mas continua Baixa (Baixa52%, Moderada41%). Risco de Orleans virar no 2º turno: Baixa (54%). Confiança do mapa municipal permanece Baixa (69%). Municípios internos: 19 indefinidos, 3 Orleans, 1 Braide — não aplicados ao mapa oficial. A pesquisa anterior da mesma Viva Voz (MA-02471/2026) segue fora por suspensão do TRE-MA.",
       "desfecho_1t": {
         "tipo": "choice",
         "escolha": "segundo_turno_braide_lidera",
-        "confianca": 0.83,
+        "confianca": 0.57,
         "probs": {
-          "disputa_muito_apertada": 0,
-          "segundo_turno_braide_lidera": 0.87,
-          "vitoria_1t_braide": 0.12,
-          "segundo_turno_orleans_lidera": 0.01
+          "segundo_turno_orleans_lidera": 0.02,
+          "vitoria_1t_braide": 0.28,
+          "disputa_muito_apertada": 0.02,
+          "segundo_turno_braide_lidera": 0.68
         }
       },
       "desfecho_2t": {
         "tipo": "choice",
         "escolha": "braide_x_orleans",
-        "confianca": 0.97,
+        "confianca": 0.98,
         "probs": {
-          "outro_confronto": 0,
           "braide_x_camarao": 0.02,
-          "braide_x_orleans": 0.98
+          "braide_x_orleans": 0.98,
+          "outro_confronto": 0
         }
       },
       "prob_vitoria_braide": {
         "tipo": "score",
-        "nota": 2.93,
-        "confianca": 0.83,
+        "nota": 2.83,
+        "confianca": 0.75,
         "probs": {
           "0": 0,
-          "1": 0,
-          "2": 0.13,
-          "3": 0.8,
+          "1": 0.01,
+          "2": 0.22,
+          "3": 0.7,
           "4": 0.07
         },
-        "faixa": "Alta (60-80%) rubrica; distribuição JEV: Alta80%, Moderada13%"
+        "faixa": "Alta (60-80%) rubrica; distribuição JEV: Baixa1%, Moderada22%, Alta70%, Muito alta7%"
       },
       "prob_vitoria_orleans": {
         "tipo": "score",
-        "nota": 1.1,
-        "confianca": 0.78,
+        "nota": 1.47,
+        "confianca": 0.55,
         "probs": {
-          "0": 0.08,
-          "1": 0.75,
-          "2": 0.16,
-          "3": 0.01,
+          "0": 0.03,
+          "1": 0.52,
+          "2": 0.41,
+          "3": 0.04,
           "4": 0
         },
-        "faixa": "Baixa (20-40%) rubrica; distribuição JEV: Baixa75%, Moderada16%"
+        "faixa": "Baixa (20-40%) rubrica; distribuição JEV: Muito baixa3%, Baixa52%, Moderada41%, Alta4%"
       },
       "risco_orleans_2t": {
         "tipo": "score",
-        "nota": 0.89,
-        "confianca": 0.57,
+        "nota": 1.02,
+        "confianca": 0.59,
         "probs": {
-          "0": 0.31,
-          "1": 0.52,
-          "2": 0.14,
-          "3": 0.02,
+          "0": 0.24,
+          "1": 0.54,
+          "2": 0.18,
+          "3": 0.03,
           "4": 0.01
         },
-        "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Baixa52%, Muito baixa31%"
+        "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Muito baixa24%, Baixa54%, Moderada18%, Alta3%, Muito alta1%"
       },
       "fator_determinante": {
         "tipo": "choice",
         "escolha": "estrutura_municipal",
-        "confianca": 0.38,
+        "confianca": 0.33,
         "probs": {
-          "rejeicao_orleans": 0.04,
-          "queda_aprovacao": 0.06,
-          "volatilidade_braide": 0.37,
-          "estrutura_municipal": 0.53
+          "rejeicao_orleans": 0.03,
+          "volatilidade_braide": 0.44,
+          "estrutura_municipal": 0.5,
+          "queda_aprovacao": 0.03
         }
       },
       "queda_aprovacao_limita_base": {
         "tipo": "noul",
-        "sim": 0.67,
+        "sim": 0.61,
         "confianca": null
       },
       "confianca_mapa_municipal": {
         "tipo": "score",
-        "nota": 1.23,
-        "confianca": 0.71,
+        "nota": 1.17,
+        "confianca": 0.73,
         "probs": {
-          "0": 0.06,
-          "1": 0.66,
-          "2": 0.28,
+          "0": 0.08,
+          "1": 0.69,
+          "2": 0.23,
           "3": 0,
           "4": 0
         },
-        "faixa": "Baixa rubrica; distribuição JEV: Baixa66%, Moderada28%"
+        "faixa": "Baixa rubrica; distribuição JEV: Muito baixa8%, Baixa69%, Moderada23%"
       },
       "avaliacao_municipal_interna": {
-        "orleans": 6,
+        "orleans": 3,
         "braide": 1,
-        "indefinido": 16,
+        "indefinido": 19,
         "total": 23,
         "aplicada_ao_mapa": false,
         "motivo": "Regra de evidência: municípios sem apoio declarado permanecem indefinidos no mapa oficial; o JEV não classifica por partido."
@@ -125,7 +125,7 @@
         "Braide": 38,
         "Indefinido": 23
       },
-      "metodologia": "Análise estruturada JEV (TypeSafe), não calibrada estatisticamente; as distribuições são avaliações internas do modelo, não probabilidades eleitorais. Nesta rodada anexou-se contexto municipal (11 municípios, votos válidos) que aponta divergência entre intenção e alinhamento político; isso reduziu a confiança do mapa municipal (rubrica Baixa) e elevou o viés pró-Braide, sem alterar a classificação oficial 156/38/23."
+      "metodologia": "Análise estruturada JEV (TypeSafe), não calibrada estatisticamente; as distribuições são avaliações internas do modelo, não probabilidades eleitorais. Nesta rodada incorporou-se a Viva Voz/Tribuna 98 (MA-05333/2026), a única pesquisa de setembro em base de votos válidos que permanece acima de 50% no limite inferior da margem (51,31%) — isso elevou a chance interna de 1º turno (12%→28%) e reduziu a confiança no desfecho (0,83→0,57), sem alterar a classificação oficial do mapa (156/38/23). Pesquisas de bases diferentes não são médias entre si; a linha de evolução mantém apenas a base 100 (chart=false nas de válidos)."
     },
     "historical_validation": {
       "data_atualizacao": "28/09/2026",
