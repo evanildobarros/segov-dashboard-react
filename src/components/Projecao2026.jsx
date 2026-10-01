@@ -32,6 +32,7 @@ export default function Projecao2026() {
   const latestBraide = [...sources.polls].reverse().find(p => p.braide != null && p.chart !== false);
   const latestOrleans = [...sources.polls].reverse().find(p => p.orleans != null);
   const approval = sources.approval.at(-1);
+  const poly = projection.state_metrics.polymarket_indicator;
   const serie = sources.polls.filter(p => p.chart !== false && p.braide != null && p.orleans != null);
   useEffect(() => {
     const controller = new AbortController();
@@ -117,6 +118,16 @@ export default function Projecao2026() {
       <div className="projection-table-wrap" tabIndex={0} role="region" aria-label="Tabela de pesquisas"><table><thead><tr>{['Data', 'Instituto', 'Amostra', 'Margem', 'Braide', 'Orleans', 'Nota'].map(label => <th key={label} scope="col">{label}</th>)}</tr></thead><tbody>{sources.polls.map(poll => <tr key={`${poll.date}-${poll.institute}`}><td>{poll.date}</td><td>{poll.institute}</td><td>{poll.sample ?? 'Não informada'}</td><td>{poll.margin ?? 'Não informada'}</td><td>{percent(poll.braide)}</td><td>{percent(poll.orleans)}</td><td>{poll.note || '—'}</td></tr>)}</tbody></table></div>
       <small>Fontes: planilha enviada, cobertura pública das pesquisas e documento de contexto. IPPI MA-09665, Quaest MA-07074, IP Sensus MA-02374 e Real Time MA-02569 foram conferidos em fontes independentes; as demais linhas mantêm as ressalvas próprias. Alegações judiciais do documento não foram tratadas como decisões confirmadas.</small>
     </section>
+    {poly && <section className="projection-card"><h2>Indicador de mercado de previsão · Polymarket</h2>
+      <p>Probabilidade de vitória para governador do Maranhão, segundo a casa de apostas americana Polymarket.</p>
+      <div className="projection-bars">{poly.values.map(v => <div className="projection-bar-row" key={v.nome}>
+        <span className="projection-bar-label">{v.nome} ({v.partido})</span>
+        <span className="projection-bar-track"><i style={{ width: `${v.pct}%`, background: v.nome.startsWith('Eduardo') ? '#f97316' : v.nome.startsWith('Orleans') ? '#3b82f6' : '#94a3b8' }} /></span>
+        <strong className="projection-bar-pct">{v.pct}%</strong>
+      </div>)}</div>
+      <p className="projection-note">Leitura em {poly.leitura_em} · {poly.resumo}. {poly.ressalvas.join(' ')}</p>
+      <small>Texto original informado: “{poly.texto_original}” Este é um mercado de apostas, não uma pesquisa eleitoral, e não compõe a tabela de pesquisas de referência acima.</small>
+    </section>}
     <section className="projection-card"><h2>Apoio municipal · {projection.municipalities.length} municípios</h2><div className="projection-legend">{Object.entries(counts).map(([name, count]) => <span key={name}><i style={{ background: colors[name] }} />{name}: <strong>{count}</strong></span>)}</div><p>Classificação oficial SEGOV: Orleans156 · Braide38 · indefinidos23. O JEV manteve os23 sem evidência direta como indefinidos. A contagem de municípios é proxy de alinhamento político, não proporção de votos; a ponderação pelo eleitorado municipal está suspensa até reconciliação das fontes.</p>
       {error ? <p role="alert">Não foi possível carregar o mapa. <button onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button></p> : !geometry ? <p role="status">Carregando limites municipais…</p> : <div className="projection-map"><MapContainer bounds={[[-10.3, -48.8], [-1, -41.7]]} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}><TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}" attribution='Tiles &copy; Esri — Sources: Esri, HERE, Garmin, USGS, Intermap, INCREMENT P, NRCan, Esri Japan, METI, Esri China (Hong Kong), Esri Korea, Esri (Thailand), NGCC, &copy; OpenStreetMap contributors, and the GIS User Community' /><GeoJSON data={geometry} style={styleFeature} onEachFeature={bindFeature} /></MapContainer></div>}
     </section>
