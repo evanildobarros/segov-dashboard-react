@@ -15,23 +15,23 @@
     "jev_analysis": {
       "model": "typesafe/jev-1.13-20260917",
       "provider": "TypeSafe",
-      "gerado_em": "2026-10-01T14:20:55",
+      "gerado_em": "2026-10-04T01:10:47",
       "data_atualizacao": "01/10/2026",
       "usage": {
-        "input_tokens": 13797,
-        "output_tokens": 1363,
-        "cost": 0.000579474
+        "input_tokens": 15219,
+        "output_tokens": 1365,
+        "cost": 0.000639198
       },
-      "revision": "Reexecução 01/10 (rodada com a Viva Voz/Tribuna 98, MA-05333/2026, campo 22–27/set, base de VOTOS VÁLIDOS, divulgada 29/09 — 15ª pesquisa no state). Efeito: a vitória de Braide já no 1º turno subiu de 12% para 28% interno e a confiança do desfecho do 1º turno caiu de 0,83 para 0,57 — o cenário ficou mais incerto, com o modelo dividido entre 2º turno (68%) e 1º turno (28%). O 2º turno Braide×Orleans subiu para 98% (conf 0,98). Faixa de vitória de Braide segue Alta (Alta70%, Moderada22%, Muito alta7%; nota 2,83); Orleans sobe de nota 1,10 para 1,47 mas continua Baixa (Baixa52%, Moderada41%). Risco de Orleans virar no 2º turno: Baixa (54%). Confiança do mapa municipal permanece Baixa (69%). Municípios internos: 19 indefinidos, 3 Orleans, 1 Braide — não aplicados ao mapa oficial. A pesquisa anterior da mesma Viva Voz (MA-02471/2026) segue fora por suspensão do TRE-MA.",
+      "revision": "Reexecução 01/10 2026 (5ª rodada completa — JEV 3009c) — 18 fontes estaduais (incl. Quaest MA-0831/2026 52% Braide / 35% Orleans, 03/10; IPPI MA-08460/2026 55.4%; Viva Voz MA-04968/2026 54.01%; Ranking MA-09047/2026 42.4%; EPO MA-02711/2026 53%). 2º turno Braide×Orleans conf 0.99; 1º turno conf 0.90; estrutura municipal conf 1.00. Mapa 156/38/23 preservado. Nota legal Lei 9.504/1997 art. 29 aplicada.",
       "desfecho_1t": {
         "tipo": "choice",
         "escolha": "segundo_turno_braide_lidera",
-        "confianca": 0.57,
+        "confianca": 0.82,
         "probs": {
-          "segundo_turno_orleans_lidera": 0.02,
-          "vitoria_1t_braide": 0.28,
-          "disputa_muito_apertada": 0.02,
-          "segundo_turno_braide_lidera": 0.68
+          "segundo_turno_braide_lidera": 0.87,
+          "disputa_muito_apertada": 0.01,
+          "segundo_turno_orleans_lidera": 0.01,
+          "vitoria_1t_braide": 0.11
         }
       },
       "desfecho_2t": {
@@ -39,78 +39,78 @@
         "escolha": "braide_x_orleans",
         "confianca": 0.98,
         "probs": {
-          "braide_x_camarao": 0.02,
-          "braide_x_orleans": 0.98,
-          "outro_confronto": 0
+          "braide_x_orleans": 0.99,
+          "outro_confronto": 0,
+          "braide_x_camarao": 0.01
         }
       },
       "prob_vitoria_braide": {
         "tipo": "score",
-        "nota": 2.83,
-        "confianca": 0.75,
+        "nota": 3.16,
+        "confianca": 0.64,
         "probs": {
           "0": 0,
           "1": 0.01,
-          "2": 0.22,
-          "3": 0.7,
-          "4": 0.07
+          "2": 0.11,
+          "3": 0.58,
+          "4": 0.3
         },
-        "faixa": "Alta (60-80%) rubrica; distribuição JEV: Baixa1%, Moderada22%, Alta70%, Muito alta7%"
+        "faixa": "Alta (60-80%) rubrica; distribuição JEV: Baixa1%, Moderada11%, Alta58%, Muito alta30%"
       },
       "prob_vitoria_orleans": {
         "tipo": "score",
-        "nota": 1.47,
-        "confianca": 0.55,
+        "nota": 1.57,
+        "confianca": 0.45,
         "probs": {
-          "0": 0.03,
-          "1": 0.52,
-          "2": 0.41,
-          "3": 0.04,
-          "4": 0
+          "0": 0.07,
+          "1": 0.41,
+          "2": 0.43,
+          "3": 0.08,
+          "4": 0.01
         },
-        "faixa": "Baixa (20-40%) rubrica; distribuição JEV: Muito baixa3%, Baixa52%, Moderada41%, Alta4%"
+        "faixa": "Moderada (40-60%) rubrica; distribuição JEV: Muito baixa7%, Baixa41%, Moderada43%, Alta8%, Muito alta1%"
       },
       "risco_orleans_2t": {
         "tipo": "score",
-        "nota": 1.02,
-        "confianca": 0.59,
+        "nota": 0.99,
+        "confianca": 0.66,
         "probs": {
-          "0": 0.24,
-          "1": 0.54,
-          "2": 0.18,
+          "0": 0.21,
+          "1": 0.62,
+          "2": 0.13,
           "3": 0.03,
           "4": 0.01
         },
-        "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Muito baixa24%, Baixa54%, Moderada18%, Alta3%, Muito alta1%"
+        "faixa": "Baixa (15-30%) rubrica; distribuição JEV: Muito baixa21%, Baixa62%, Moderada13%, Alta3%, Muito alta1%"
       },
       "fator_determinante": {
         "tipo": "choice",
         "escolha": "estrutura_municipal",
-        "confianca": 0.33,
+        "confianca": 0.99,
         "probs": {
-          "rejeicao_orleans": 0.03,
-          "volatilidade_braide": 0.44,
-          "estrutura_municipal": 0.5,
-          "queda_aprovacao": 0.03
+          "estrutura_municipal": 1,
+          "rejeicao_orleans": 0,
+          "queda_aprovacao": 0,
+          "volatilidade_braide": 0
         }
       },
       "queda_aprovacao_limita_base": {
         "tipo": "noul",
-        "sim": 0.61,
+        "sim": 0.57,
         "confianca": null
       },
       "confianca_mapa_municipal": {
         "tipo": "score",
-        "nota": 1.17,
-        "confianca": 0.73,
+        "nota": 1.35,
+        "confianca": 0.62,
         "probs": {
-          "0": 0.08,
-          "1": 0.69,
-          "2": 0.23,
-          "3": 0,
+          "0": 0.05,
+          "1": 0.56,
+          "2": 0.37,
+          "3": 0.01,
           "4": 0
         },
-        "faixa": "Baixa rubrica; distribuição JEV: Muito baixa8%, Baixa69%, Moderada23%"
+        "faixa": "Baixa rubrica; distribuição JEV: Muito baixa5%, Baixa56%, Moderada37%, Alta1%"
       },
       "avaliacao_municipal_interna": {
         "orleans": 3,
@@ -118,14 +118,24 @@
         "indefinido": 19,
         "total": 23,
         "aplicada_ao_mapa": false,
-        "motivo": "Regra de evidência: municípios sem apoio declarado permanecem indefinidos no mapa oficial; o JEV não classifica por partido."
+        "motivo": "Regra de evidência: municípios sem apoio declarado permanecem indefinidos no mapa oficial; JEV não classifica por partido. Contexto estrutural dos 8 maiores colégios (Braide +487.946 vs Orleans +42.039) confirma força metropolitana, não muda classificação oficial 156/38/23."
       },
       "mapa_apoio_final": {
         "Orleans": 156,
         "Braide": 38,
         "Indefinido": 23
       },
-      "metodologia": "Análise estruturada JEV (TypeSafe), não calibrada estatisticamente; as distribuições são avaliações internas do modelo, não probabilidades eleitorais. Nesta rodada incorporou-se a Viva Voz/Tribuna 98 (MA-05333/2026), a única pesquisa de setembro em base de votos válidos que permanece acima de 50% no limite inferior da margem (51,31%) — isso elevou a chance interna de 1º turno (12%→28%) e reduziu a confiança no desfecho (0,83→0,57), sem alterar a classificação oficial do mapa (156/38/23). Pesquisas de bases diferentes não são médias entre si; a linha de evolução mantém apenas a base 100 (chart=false nas de válidos)."
+      "nota_legal_1t": {
+        "regra": "Lei 9.504/1997 art. 29 — >50% + 1 dos votos válidos para 1º turno",
+        "fontes_acima_50": [
+          "IPPI MA-08460/2026 (55,40%)",
+          "Viva Voz MA-04968/2026 (54,01%)"
+        ],
+        "fontes_abaixo_50": [
+          "Ranking MA-09047/2026 (42,4%)"
+        ],
+        "interpretacao": "JEV modela incerteza; legalmente, se IPPI/Viva Voz confirmarem, 1º turno é possível. Porém a série combinada (incl. Ranking) ainda favorece 2º turno como desfecho principal."
+      }
     },
     "historical_validation": {
       "data_atualizacao": "28/09/2026",
@@ -486,6 +496,42 @@
         "Não compõe a série de pesquisas de referência (metodologia incompatível com amostra eleitoral).",
         "Valores informados pelo usuário em 01/10/2026; não substituem pesquisas nem a análise estruturada JEV."
       ]
+    },
+    "agregados_regionais_set2026": {
+      "fonte": "Café Quente/IPPI — recorte regional Grande Ilha",
+      "territorio": [
+        "São Luís",
+        "Paço do Lumiar",
+        "São José de Ribamar",
+        "Raposa"
+      ],
+      "divulgado_em": "01/10/2026 (postagem ~2 h antes da leitura às 18:28)",
+      "estimulado_total": {
+        "braide": 70.7,
+        "orleans": 13.4,
+        "camarao": 5.9,
+        "rocha": 1.6,
+        "soma_citados": 91.6,
+        "demais_indecisos_br_nul": 8.4
+      },
+      "votos_validos": {
+        "braide": 76.9,
+        "orleans": 14.6,
+        "camarao": 6.4,
+        "rocha": 1.7,
+        "soma_citados": 99.6,
+        "demais_candidatos": 0.4,
+        "delta_braide_orleans_pp": 62.3
+      },
+      "consistencia_interna": "Base implícita coerente entre as duas bases: 91,9% (Braide), 91,8% (Orleans), 92,2% (Camarão); desvio máximo 2,3 p.p. em Rocha (valores pequenos). Estimulado soma 91,6% e válidos 99,6% — fechamento aritmético normal.",
+      "comparacao_serie_municipal": "São Luís na série municipal: 79,2% × 11,9% (MA-02079/2026, n=1.000) → Grande Ilha 76,9% × 14,6% é coerente: somar Paço do Lumiar, São José de Ribamar e Raposa (mais Orleans) puxa Braide −2,3 p.p. e Orleans +2,7 p.p. em relação à capital isolada.",
+      "proveniencia": "Postagem do analista @rogeriocafeteira no Instagram (reel Dd9rBq9MJjd) e anúncio PATROCINADO pela conta de Fernando Braide (verificado). Releitura regional da mesma família Café Quente/IPPI; este recorte NÃO veio com ficha técnica/registro TSE identificado nesta verificação.",
+      "natureza": "Recorte regional — NÃO é pesquisa estadual. Entra como contexto territorial; fica FORA das 15 pesquisas de referência, fora da série de evolução e fora do gráfico.",
+      "agenda_cafe_quente_ippi": "O próprio instituto anunciou agenda de 4 dias consecutivos de divulgação: recortes municipais/regionais e PESQUISA ESTADUAL em 02/10/2026.",
+      "registrado_por": "Jeonys — 01/10/2026, a partir de print enviado pelo usuário + checagem pública",
+      "registro_tse_ma_0483_2026": "MA-0483/2026 (Tribuna 98 / Rádio Educadora FM; Instituto Ranking; campo 28-30/set/2026; divulgação 01/10/2026; n=1000; margem 3,1 p.p.; 95%); números consistentes com o recorte Grande Ilha (76,9/14,6/6,4/1,7) publicado também pelo post patrocinado @rogeriocafeteira no Instagram.",
+      "verificado_por": "Política no Maranhão / @rogeriocafeteira (post 01/10, 16:44); URL confirmação via web (Tribuna 98/Nordeste7) 01/10/2026",
+      "data_ultima_verificacao": "2026-10-01"
     }
   },
   "municipalities": [
